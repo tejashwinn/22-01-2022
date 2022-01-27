@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'main.ui'
+# Form implementation generated from reading ui file 'c:\Users\tejas\Desktop\22-01-22\main copy.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -988,14 +988,4 @@ class Ui_MainWindow(object):
         self.label_27.setText(_translate("MainWindow", "Time"))
         self.label_22.setText(_translate("MainWindow", "Name"))
         self.label_23.setText(_translate("MainWindow", "Time"))
-# import resource_rc
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec_())
+import resource_rc
