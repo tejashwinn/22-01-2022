@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'c:\Users\tejas\Desktop\22-01-22\signup.ui'
+# Form implementation generated from reading ui file 'c:\Users\tejas\Desktop\22-01-22\signin.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(497, 693)
+        Form.resize(515, 448)
         Form.setStyleSheet("")
         self.gridLayout = QtWidgets.QGridLayout(Form)
         self.gridLayout.setObjectName("gridLayout")
@@ -25,7 +25,7 @@ class Ui_Form(object):
         self.gridLayout_2 = QtWidgets.QGridLayout(self.outer)
         self.gridLayout_2.setObjectName("gridLayout_2")
         self.frame = QtWidgets.QFrame(self.outer)
-        self.frame.setMaximumSize(QtCore.QSize(445, 650))
+        self.frame.setMaximumSize(QtCore.QSize(460, 400))
         self.frame.setStyleSheet("#frame{/* Auto layout */\n"
 "\n"
 "display: flex;\n"
@@ -67,104 +67,13 @@ class Ui_Form(object):
 "background: rgba(0, 0, 0, 0.01);\n"
 "color: #000000;")
         self.signup.setObjectName("signup")
-        self.frame_2 = QtWidgets.QFrame(self.frame)
-        self.frame_2.setGeometry(QtCore.QRect(0, 80, 445, 80))
-        self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_2.setObjectName("frame_2")
-        self.label = QtWidgets.QLabel(self.frame_2)
-        self.label.setGeometry(QtCore.QRect(20, 5, 141, 21))
-        font = QtGui.QFont()
-        font.setFamily("poppins")
-        font.setPointSize(-1)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setWeight(50)
-        self.label.setFont(font)
-        self.label.setStyleSheet("position: absolute;\n"
-"left: 0%;\n"
-"right: 12.33%;\n"
-"top: 15%;\n"
-"bottom: 14.17%;\n"
-"\n"
-"font-family: poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 14px;\n"
-"line-height: 17px;\n"
-"\n"
-"/* Dark / Medium */\n"
-"\n"
-"color: #4F4F4F;")
-        self.label.setObjectName("label")
-        self.lineEdit = QtWidgets.QLineEdit(self.frame_2)
-        self.lineEdit.setGeometry(QtCore.QRect(10, 30, 425, 40))
-        self.lineEdit.setStyleSheet("position: static;\n"
-"width: 535px;\n"
-"height: 53px;\n"
-"left: 0px;\n"
-"top: 0px;\n"
-"\n"
-"/* White */\n"
-"\n"
-"background: #FFFFFF;\n"
-"/* Dark / Medium */\n"
-"\n"
-"border: 1px solid #4F4F4F;\n"
-"box-sizing: border-box;\n"
-"border-radius: 7px;\n"
-"\n"
-"")
-        self.lineEdit.setObjectName("lineEdit")
-        self.frame_3 = QtWidgets.QFrame(self.frame)
-        self.frame_3.setGeometry(QtCore.QRect(0, 170, 445, 80))
-        self.frame_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_3.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_3.setObjectName("frame_3")
-        self.label_2 = QtWidgets.QLabel(self.frame_3)
-        self.label_2.setGeometry(QtCore.QRect(20, 5, 141, 21))
-        self.label_2.setStyleSheet("position: absolute;\n"
-"left: 0%;\n"
-"right: 12.33%;\n"
-"top: 15%;\n"
-"bottom: 14.17%;\n"
-"\n"
-"font-family: poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 14px;\n"
-"line-height: 17px;\n"
-"\n"
-"/* Dark / Medium */\n"
-"\n"
-"color: #4F4F4F;")
-        self.label_2.setObjectName("label_2")
-        self.lineEdit_2 = QtWidgets.QLineEdit(self.frame_3)
-        self.lineEdit_2.setGeometry(QtCore.QRect(10, 30, 425, 40))
-        self.lineEdit_2.setStyleSheet("position: static;\n"
-"width: 535px;\n"
-"height: 53px;\n"
-"left: 0px;\n"
-"top: 0px;\n"
-"\n"
-"/* White */\n"
-"\n"
-"background: #FFFFFF;\n"
-"/* Dark / Medium */\n"
-"\n"
-"border: 1px solid #4F4F4F;\n"
-"box-sizing: border-box;\n"
-"border-radius: 7px;\n"
-"\n"
-"")
-        self.lineEdit_2.setObjectName("lineEdit_2")
         self.frame_4 = QtWidgets.QFrame(self.frame)
-        self.frame_4.setGeometry(QtCore.QRect(0, 260, 445, 80))
+        self.frame_4.setGeometry(QtCore.QRect(0, 80, 461, 80))
         self.frame_4.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_4.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_4.setObjectName("frame_4")
         self.label_3 = QtWidgets.QLabel(self.frame_4)
-        self.label_3.setGeometry(QtCore.QRect(20, 0, 411, 31))
+        self.label_3.setGeometry(QtCore.QRect(20, 0, 425, 31))
         self.label_3.setStyleSheet("position: absolute;\n"
 "left: 0%;\n"
 "right: 12.33%;\n"
@@ -182,7 +91,7 @@ class Ui_Form(object):
 "color: #4F4F4F;")
         self.label_3.setObjectName("label_3")
         self.lineEdit_3 = QtWidgets.QLineEdit(self.frame_4)
-        self.lineEdit_3.setGeometry(QtCore.QRect(10, 30, 425, 40))
+        self.lineEdit_3.setGeometry(QtCore.QRect(15, 30, 430, 40))
         self.lineEdit_3.setStyleSheet("position: static;\n"
 "width: 535px;\n"
 "height: 53px;\n"
@@ -194,14 +103,14 @@ class Ui_Form(object):
 "background: #FFFFFF;\n"
 "/* Dark / Medium */\n"
 "\n"
-"border: 1px solid #4F4F4F;\n"
+"border: 2px solid #4F4F4F;\n"
 "box-sizing: border-box;\n"
 "border-radius: 7px;\n"
 "\n"
 "")
         self.lineEdit_3.setObjectName("lineEdit_3")
         self.frame_5 = QtWidgets.QFrame(self.frame)
-        self.frame_5.setGeometry(QtCore.QRect(0, 350, 445, 80))
+        self.frame_5.setGeometry(QtCore.QRect(0, 180, 461, 80))
         self.frame_5.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_5.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_5.setObjectName("frame_5")
@@ -224,7 +133,7 @@ class Ui_Form(object):
 "color: #4F4F4F;")
         self.label_4.setObjectName("label_4")
         self.lineEdit_4 = QtWidgets.QLineEdit(self.frame_5)
-        self.lineEdit_4.setGeometry(QtCore.QRect(10, 30, 425, 40))
+        self.lineEdit_4.setGeometry(QtCore.QRect(15, 30, 430, 40))
         self.lineEdit_4.setStyleSheet("position: static;\n"
 "width: 535px;\n"
 "height: 53px;\n"
@@ -242,69 +151,8 @@ class Ui_Form(object):
 "\n"
 "")
         self.lineEdit_4.setObjectName("lineEdit_4")
-        self.war = QtWidgets.QLabel(self.frame)
-        self.war.setGeometry(QtCore.QRect(10, 40, 421, 41))
-        self.war.setStyleSheet("position: absolute;\n"
-"left: 0%;\n"
-"right: 12.33%;\n"
-"top: 15%;\n"
-"bottom: 14.17%;\n"
-"\n"
-"font-family: poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 14px;\n"
-"line-height: 17px;\n"
-"\n"
-"/* Dark / Medium */\n"
-"\n"
-"color: #FF0000;")
-        self.war.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
-        self.war.setObjectName("war")
-        self.frame_6 = QtWidgets.QFrame(self.frame)
-        self.frame_6.setGeometry(QtCore.QRect(0, 440, 445, 80))
-        self.frame_6.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_6.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_6.setObjectName("frame_6")
-        self.label_6 = QtWidgets.QLabel(self.frame_6)
-        self.label_6.setGeometry(QtCore.QRect(20, 5, 141, 21))
-        self.label_6.setStyleSheet("position: absolute;\n"
-"left: 0%;\n"
-"right: 12.33%;\n"
-"top: 15%;\n"
-"bottom: 14.17%;\n"
-"\n"
-"font-family: poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 14px;\n"
-"line-height: 17px;\n"
-"\n"
-"/* Dark / Medium */\n"
-"\n"
-"color: #4F4F4F;")
-        self.label_6.setObjectName("label_6")
-        self.lineEdit_6 = QtWidgets.QLineEdit(self.frame_6)
-        self.lineEdit_6.setGeometry(QtCore.QRect(10, 30, 425, 40))
-        self.lineEdit_6.setStyleSheet("position: static;\n"
-"width: 535px;\n"
-"height: 53px;\n"
-"left: 0px;\n"
-"top: 0px;\n"
-"\n"
-"/* White */\n"
-"\n"
-"background: #FFFFFF;\n"
-"/* Dark / Medium */\n"
-"\n"
-"border: 2px solid #4F4F4F;\n"
-"box-sizing: border-box;\n"
-"border-radius: 7px;\n"
-"\n"
-"")
-        self.lineEdit_6.setObjectName("lineEdit_6")
         self.sign_up_button = QtWidgets.QPushButton(self.frame)
-        self.sign_up_button.setGeometry(QtCore.QRect(10, 540, 425, 40))
+        self.sign_up_button.setGeometry(QtCore.QRect(15, 290, 430, 40))
         self.sign_up_button.setStyleSheet("\n"
 "#sign_up_button{\n"
 "font-family: Inter;\n"
@@ -334,7 +182,7 @@ class Ui_Form(object):
 "")
         self.sign_up_button.setObjectName("sign_up_button")
         self.sign_in_button = QtWidgets.QPushButton(self.frame)
-        self.sign_in_button.setGeometry(QtCore.QRect(10, 590, 425, 40))
+        self.sign_in_button.setGeometry(QtCore.QRect(15, 340, 430, 40))
         self.sign_in_button.setStyleSheet("\n"
 "#sign_in_button{\n"
 "font-family: Inter;\n"
@@ -366,6 +214,25 @@ class Ui_Form(object):
 "\n"
 "")
         self.sign_in_button.setObjectName("sign_in_button")
+        self.war_2 = QtWidgets.QLabel(self.frame)
+        self.war_2.setGeometry(QtCore.QRect(10, 40, 421, 41))
+        self.war_2.setStyleSheet("position: absolute;\n"
+"left: 0%;\n"
+"right: 12.33%;\n"
+"top: 15%;\n"
+"bottom: 14.17%;\n"
+"\n"
+"font-family: poppins;\n"
+"font-style: normal;\n"
+"font-weight: normal;\n"
+"font-size: 14px;\n"
+"line-height: 17px;\n"
+"\n"
+"/* Dark / Medium */\n"
+"\n"
+"color: #FF0000;")
+        self.war_2.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.war_2.setObjectName("war_2")
         self.gridLayout_2.addWidget(self.frame, 0, 0, 1, 1)
         self.gridLayout.addWidget(self.outer, 0, 0, 1, 1)
 
@@ -375,12 +242,9 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
-        self.signup.setText(_translate("Form", "Sign Up"))
-        self.label.setText(_translate("Form", "Name"))
-        self.label_2.setText(_translate("Form", "Username"))
+        self.signup.setText(_translate("Form", "Sign In"))
         self.label_3.setText(_translate("Form", "Email Id"))
         self.label_4.setText(_translate("Form", "Password"))
-        self.war.setText(_translate("Form", "Please enter your details to continue."))
-        self.label_6.setText(_translate("Form", "Confirm Password"))
-        self.sign_up_button.setText(_translate("Form", "Sign Up"))
-        self.sign_in_button.setText(_translate("Form", "Already a user? Sign In"))
+        self.sign_up_button.setText(_translate("Form", "Sign In"))
+        self.sign_in_button.setText(_translate("Form", "New user? Sign Up"))
+        self.war_2.setText(_translate("Form", "Please enter your details to continue."))
