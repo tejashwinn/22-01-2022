@@ -988,4 +988,3 @@ class Ui_MainWindow(object):
         self.label_27.setText(_translate("MainWindow", "Time"))
         self.label_22.setText(_translate("MainWindow", "Name"))
         self.label_23.setText(_translate("MainWindow", "Time"))
-import resource_rc
