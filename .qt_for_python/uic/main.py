@@ -531,9 +531,9 @@ class Ui_MainWindow(object):
 "")
         self.label_5.setAlignment(QtCore.Qt.AlignCenter)
         self.label_5.setObjectName("label_5")
-        self.events_scroll_area_2 = QtWidgets.QScrollArea(self.main_frame)
-        self.events_scroll_area_2.setGeometry(QtCore.QRect(820, 80, 251, 521))
-        self.events_scroll_area_2.setStyleSheet("#events_scroll_area{\n"
+        self.assign_scroll_area = QtWidgets.QScrollArea(self.main_frame)
+        self.assign_scroll_area.setGeometry(QtCore.QRect(820, 80, 251, 521))
+        self.assign_scroll_area.setStyleSheet("#assign_scroll_area{\n"
 "text-align: center;\n"
 "letter-spacing: 0.05em;\n"
 "\n"
@@ -550,13 +550,13 @@ class Ui_MainWindow(object):
 "\n"
 "border-radius: 10;\n"
 "}")
-        self.events_scroll_area_2.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAsNeeded)
-        self.events_scroll_area_2.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAsNeeded)
-        self.events_scroll_area_2.setWidgetResizable(True)
-        self.events_scroll_area_2.setObjectName("events_scroll_area_2")
-        self.events_scroll_area_widget_2 = QtWidgets.QWidget()
-        self.events_scroll_area_widget_2.setGeometry(QtCore.QRect(0, 0, 249, 519))
-        self.events_scroll_area_widget_2.setStyleSheet("text-align: center;\n"
+        self.assign_scroll_area.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.assign_scroll_area.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAsNeeded)
+        self.assign_scroll_area.setWidgetResizable(True)
+        self.assign_scroll_area.setObjectName("assign_scroll_area")
+        self.assign_scroll_area_widget = QtWidgets.QWidget()
+        self.assign_scroll_area_widget.setGeometry(QtCore.QRect(0, 0, 251, 554))
+        self.assign_scroll_area_widget.setStyleSheet("text-align: center;\n"
 "letter-spacing: 0.05em;\n"
 "\n"
 "color: #000000;\n"
@@ -572,12 +572,13 @@ class Ui_MainWindow(object):
 "\n"
 "border-radius: 10px;\n"
 "")
-        self.events_scroll_area_widget_2.setObjectName("events_scroll_area_widget_2")
-        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.events_scroll_area_widget_2)
+        self.assign_scroll_area_widget.setObjectName("assign_scroll_area_widget")
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.assign_scroll_area_widget)
         self.verticalLayout_3.setObjectName("verticalLayout_3")
-        self.events_view_3 = QtWidgets.QFrame(self.events_scroll_area_widget_2)
-        self.events_view_3.setMaximumSize(QtCore.QSize(16777215, 70))
-        self.events_view_3.setStyleSheet("#events_view{\n"
+        self.events_view_4 = QtWidgets.QFrame(self.assign_scroll_area_widget)
+        self.events_view_4.setMinimumSize(QtCore.QSize(229, 70))
+        self.events_view_4.setMaximumSize(QtCore.QSize(229, 70))
+        self.events_view_4.setStyleSheet("#events_view_4{\n"
 "position: absolute;\n"
 "width: 370px;\n"
 "height: 110px;\n"
@@ -588,12 +589,12 @@ class Ui_MainWindow(object):
 "border: 1px solid rgba(0, 0, 0, 0.3);\n"
 "box-sizing: border-box;\n"
 "border-radius: 10px}")
-        self.events_view_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.events_view_3.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.events_view_3.setObjectName("events_view_3")
-        self.label_14 = QtWidgets.QLabel(self.events_view_3)
-        self.label_14.setGeometry(QtCore.QRect(10, 0, 211, 41))
-        self.label_14.setStyleSheet("position: absolute;\n"
+        self.events_view_4.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.events_view_4.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.events_view_4.setObjectName("events_view_4")
+        self.label_18 = QtWidgets.QLabel(self.events_view_4)
+        self.label_18.setGeometry(QtCore.QRect(10, 0, 211, 41))
+        self.label_18.setStyleSheet("position: absolute;\n"
 "left: 20px;\n"
 "right: 30px;\n"
 "top: 10px;\n"
@@ -607,10 +608,10 @@ class Ui_MainWindow(object):
 "letter-spacing: 0.05em;\n"
 "background: rgba(0, 0, 0, 0.01);\n"
 "color: #000000;")
-        self.label_14.setObjectName("label_14")
-        self.label_15 = QtWidgets.QLabel(self.events_view_3)
-        self.label_15.setGeometry(QtCore.QRect(10, 40, 211, 41))
-        self.label_15.setStyleSheet("position: absolute;\n"
+        self.label_18.setObjectName("label_18")
+        self.label_19 = QtWidgets.QLabel(self.events_view_4)
+        self.label_19.setGeometry(QtCore.QRect(10, 40, 211, 21))
+        self.label_19.setStyleSheet("position: absolute;\n"
 "left: 20px;\n"
 "right: 30px;\n"
 "top: 10px;\n"
@@ -624,14 +625,13 @@ class Ui_MainWindow(object):
 "letter-spacing: 0.05em;\n"
 "background: rgba(0, 0, 0, 0.01);\n"
 "color: #000000;")
-        self.label_15.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
-        self.label_15.setObjectName("label_15")
-        self.verticalLayout_3.addWidget(self.events_view_3)
-        self.events_scroll_area_2.setWidget(self.events_scroll_area_widget_2)
-        self.events_view_2 = QtWidgets.QFrame(self.centralwidget)
-        self.events_view_2.setGeometry(QtCore.QRect(590, 590, 229, 70))
-        self.events_view_2.setMaximumSize(QtCore.QSize(16777215, 70))
-        self.events_view_2.setStyleSheet("#events_view{\n"
+        self.label_19.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
+        self.label_19.setObjectName("label_19")
+        self.verticalLayout_3.addWidget(self.events_view_4)
+        self.events_view_2 = QtWidgets.QFrame(self.assign_scroll_area_widget)
+        self.events_view_2.setMinimumSize(QtCore.QSize(229, 70))
+        self.events_view_2.setMaximumSize(QtCore.QSize(229, 70))
+        self.events_view_2.setStyleSheet("#events_view_2{\n"
 "position: absolute;\n"
 "width: 370px;\n"
 "height: 110px;\n"
@@ -663,7 +663,7 @@ class Ui_MainWindow(object):
 "color: #000000;")
         self.label_12.setObjectName("label_12")
         self.label_13 = QtWidgets.QLabel(self.events_view_2)
-        self.label_13.setGeometry(QtCore.QRect(10, 40, 211, 41))
+        self.label_13.setGeometry(QtCore.QRect(10, 40, 211, 21))
         self.label_13.setStyleSheet("position: absolute;\n"
 "left: 20px;\n"
 "right: 30px;\n"
@@ -680,6 +680,275 @@ class Ui_MainWindow(object):
 "color: #000000;")
         self.label_13.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
         self.label_13.setObjectName("label_13")
+        self.verticalLayout_3.addWidget(self.events_view_2)
+        self.events_view_8 = QtWidgets.QFrame(self.assign_scroll_area_widget)
+        self.events_view_8.setMinimumSize(QtCore.QSize(229, 70))
+        self.events_view_8.setMaximumSize(QtCore.QSize(229, 70))
+        self.events_view_8.setStyleSheet("#events_view_4{\n"
+"position: absolute;\n"
+"width: 370px;\n"
+"height: 110px;\n"
+"left: 7px;\n"
+"top: 28px;\n"
+"\n"
+"background: rgba(0, 0, 0, 0.05);\n"
+"border: 1px solid rgba(0, 0, 0, 0.3);\n"
+"box-sizing: border-box;\n"
+"border-radius: 10px}")
+        self.events_view_8.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.events_view_8.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.events_view_8.setObjectName("events_view_8")
+        self.label_34 = QtWidgets.QLabel(self.events_view_8)
+        self.label_34.setGeometry(QtCore.QRect(10, 0, 211, 41))
+        self.label_34.setStyleSheet("position: absolute;\n"
+"left: 20px;\n"
+"right: 30px;\n"
+"top: 10px;\n"
+"bottom: 10px;\n"
+"\n"
+"font-family: Poppins;\n"
+"font-style: normal;\n"
+"font-weight: normal;\n"
+"font-size: 25px;\n"
+"line-height: 37px;\n"
+"letter-spacing: 0.05em;\n"
+"background: rgba(0, 0, 0, 0.01);\n"
+"color: #000000;")
+        self.label_34.setObjectName("label_34")
+        self.label_35 = QtWidgets.QLabel(self.events_view_8)
+        self.label_35.setGeometry(QtCore.QRect(10, 40, 211, 21))
+        self.label_35.setStyleSheet("position: absolute;\n"
+"left: 20px;\n"
+"right: 30px;\n"
+"top: 10px;\n"
+"bottom: 10px;\n"
+"\n"
+"font-family: Poppins;\n"
+"font-style: normal;\n"
+"font-weight: normal;\n"
+"font-size: 15px;\n"
+"line-height: 37px;\n"
+"letter-spacing: 0.05em;\n"
+"background: rgba(0, 0, 0, 0.01);\n"
+"color: #000000;")
+        self.label_35.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
+        self.label_35.setObjectName("label_35")
+        self.verticalLayout_3.addWidget(self.events_view_8)
+        self.events_view_5 = QtWidgets.QFrame(self.assign_scroll_area_widget)
+        self.events_view_5.setMinimumSize(QtCore.QSize(229, 70))
+        self.events_view_5.setMaximumSize(QtCore.QSize(229, 70))
+        self.events_view_5.setStyleSheet("#events_view_5{\n"
+"position: absolute;\n"
+"width: 370px;\n"
+"height: 110px;\n"
+"left: 7px;\n"
+"top: 28px;\n"
+"\n"
+"background: rgba(0, 0, 0, 0.05);\n"
+"border: 1px solid rgba(0, 0, 0, 0.3);\n"
+"box-sizing: border-box;\n"
+"border-radius: 10px}")
+        self.events_view_5.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.events_view_5.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.events_view_5.setObjectName("events_view_5")
+        self.label_20 = QtWidgets.QLabel(self.events_view_5)
+        self.label_20.setGeometry(QtCore.QRect(10, 0, 211, 41))
+        self.label_20.setStyleSheet("position: absolute;\n"
+"left: 20px;\n"
+"right: 30px;\n"
+"top: 10px;\n"
+"bottom: 10px;\n"
+"\n"
+"font-family: Poppins;\n"
+"font-style: normal;\n"
+"font-weight: normal;\n"
+"font-size: 25px;\n"
+"line-height: 37px;\n"
+"letter-spacing: 0.05em;\n"
+"background: rgba(0, 0, 0, 0.01);\n"
+"color: #000000;")
+        self.label_20.setObjectName("label_20")
+        self.label_21 = QtWidgets.QLabel(self.events_view_5)
+        self.label_21.setGeometry(QtCore.QRect(10, 40, 211, 21))
+        self.label_21.setStyleSheet("position: absolute;\n"
+"left: 20px;\n"
+"right: 30px;\n"
+"top: 10px;\n"
+"bottom: 10px;\n"
+"\n"
+"font-family: Poppins;\n"
+"font-style: normal;\n"
+"font-weight: normal;\n"
+"font-size: 15px;\n"
+"line-height: 37px;\n"
+"letter-spacing: 0.05em;\n"
+"background: rgba(0, 0, 0, 0.01);\n"
+"color: #000000;")
+        self.label_21.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
+        self.label_21.setObjectName("label_21")
+        self.verticalLayout_3.addWidget(self.events_view_5)
+        self.events_view_3 = QtWidgets.QFrame(self.assign_scroll_area_widget)
+        self.events_view_3.setMinimumSize(QtCore.QSize(229, 70))
+        self.events_view_3.setMaximumSize(QtCore.QSize(229, 70))
+        self.events_view_3.setStyleSheet("#events_view_3{\n"
+"position: absolute;\n"
+"width: 370px;\n"
+"height: 110px;\n"
+"left: 7px;\n"
+"top: 28px;\n"
+"\n"
+"background: rgba(0, 0, 0, 0.05);\n"
+"border: 1px solid rgba(0, 0, 0, 0.3);\n"
+"box-sizing: border-box;\n"
+"border-radius: 10px}")
+        self.events_view_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.events_view_3.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.events_view_3.setObjectName("events_view_3")
+        self.label_14 = QtWidgets.QLabel(self.events_view_3)
+        self.label_14.setGeometry(QtCore.QRect(10, 0, 211, 41))
+        self.label_14.setStyleSheet("position: absolute;\n"
+"left: 20px;\n"
+"right: 30px;\n"
+"top: 10px;\n"
+"bottom: 10px;\n"
+"\n"
+"font-family: Poppins;\n"
+"font-style: normal;\n"
+"font-weight: normal;\n"
+"font-size: 25px;\n"
+"line-height: 37px;\n"
+"letter-spacing: 0.05em;\n"
+"background: rgba(0, 0, 0, 0.01);\n"
+"color: #000000;")
+        self.label_14.setObjectName("label_14")
+        self.label_15 = QtWidgets.QLabel(self.events_view_3)
+        self.label_15.setGeometry(QtCore.QRect(10, 40, 211, 21))
+        self.label_15.setStyleSheet("position: absolute;\n"
+"left: 20px;\n"
+"right: 30px;\n"
+"top: 10px;\n"
+"bottom: 10px;\n"
+"\n"
+"font-family: Poppins;\n"
+"font-style: normal;\n"
+"font-weight: normal;\n"
+"font-size: 15px;\n"
+"line-height: 37px;\n"
+"letter-spacing: 0.05em;\n"
+"background: rgba(0, 0, 0, 0.01);\n"
+"color: #000000;")
+        self.label_15.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
+        self.label_15.setObjectName("label_15")
+        self.verticalLayout_3.addWidget(self.events_view_3)
+        self.events_view_7 = QtWidgets.QFrame(self.assign_scroll_area_widget)
+        self.events_view_7.setMinimumSize(QtCore.QSize(229, 70))
+        self.events_view_7.setMaximumSize(QtCore.QSize(229, 70))
+        self.events_view_7.setStyleSheet("#events_view_7\n"
+"{\n"
+"position: absolute;\n"
+"width: 370px;\n"
+"height: 110px;\n"
+"left: 7px;\n"
+"top: 28px;\n"
+"\n"
+"background: rgba(0, 0, 0, 0.05);\n"
+"border: 1px solid rgba(0, 0, 0, 0.3);\n"
+"box-sizing: border-box;\n"
+"border-radius: 10px}")
+        self.events_view_7.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.events_view_7.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.events_view_7.setObjectName("events_view_7")
+        self.label_26 = QtWidgets.QLabel(self.events_view_7)
+        self.label_26.setGeometry(QtCore.QRect(10, 0, 211, 41))
+        self.label_26.setStyleSheet("position: absolute;\n"
+"left: 20px;\n"
+"right: 30px;\n"
+"top: 10px;\n"
+"bottom: 10px;\n"
+"\n"
+"font-family: Poppins;\n"
+"font-style: normal;\n"
+"font-weight: normal;\n"
+"font-size: 25px;\n"
+"line-height: 37px;\n"
+"letter-spacing: 0.05em;\n"
+"background: rgba(0, 0, 0, 0.01);\n"
+"color: #000000;")
+        self.label_26.setObjectName("label_26")
+        self.label_27 = QtWidgets.QLabel(self.events_view_7)
+        self.label_27.setGeometry(QtCore.QRect(10, 40, 211, 21))
+        self.label_27.setStyleSheet("position: absolute;\n"
+"left: 20px;\n"
+"right: 30px;\n"
+"top: 10px;\n"
+"bottom: 10px;\n"
+"\n"
+"font-family: Poppins;\n"
+"font-style: normal;\n"
+"font-weight: normal;\n"
+"font-size: 15px;\n"
+"line-height: 37px;\n"
+"letter-spacing: 0.05em;\n"
+"background: rgba(0, 0, 0, 0.01);\n"
+"color: #000000;")
+        self.label_27.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
+        self.label_27.setObjectName("label_27")
+        self.verticalLayout_3.addWidget(self.events_view_7)
+        self.events_view_6 = QtWidgets.QFrame(self.assign_scroll_area_widget)
+        self.events_view_6.setMinimumSize(QtCore.QSize(229, 70))
+        self.events_view_6.setMaximumSize(QtCore.QSize(229, 70))
+        self.events_view_6.setStyleSheet("#events_view_6\n"
+"{\n"
+"position: absolute;\n"
+"width: 370px;\n"
+"height: 110px;\n"
+"left: 7px;\n"
+"top: 28px;\n"
+"\n"
+"background: rgba(0, 0, 0, 0.05);\n"
+"border: 1px solid rgba(0, 0, 0, 0.3);\n"
+"box-sizing: border-box;\n"
+"border-radius: 10px}")
+        self.events_view_6.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.events_view_6.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.events_view_6.setObjectName("events_view_6")
+        self.label_22 = QtWidgets.QLabel(self.events_view_6)
+        self.label_22.setGeometry(QtCore.QRect(10, 0, 211, 41))
+        self.label_22.setStyleSheet("position: absolute;\n"
+"left: 20px;\n"
+"right: 30px;\n"
+"top: 10px;\n"
+"bottom: 10px;\n"
+"\n"
+"font-family: Poppins;\n"
+"font-style: normal;\n"
+"font-weight: normal;\n"
+"font-size: 25px;\n"
+"line-height: 37px;\n"
+"letter-spacing: 0.05em;\n"
+"background: rgba(0, 0, 0, 0.01);\n"
+"color: #000000;")
+        self.label_22.setObjectName("label_22")
+        self.label_23 = QtWidgets.QLabel(self.events_view_6)
+        self.label_23.setGeometry(QtCore.QRect(10, 40, 211, 21))
+        self.label_23.setStyleSheet("position: absolute;\n"
+"left: 20px;\n"
+"right: 30px;\n"
+"top: 10px;\n"
+"bottom: 10px;\n"
+"\n"
+"font-family: Poppins;\n"
+"font-style: normal;\n"
+"font-weight: normal;\n"
+"font-size: 15px;\n"
+"line-height: 37px;\n"
+"letter-spacing: 0.05em;\n"
+"background: rgba(0, 0, 0, 0.01);\n"
+"color: #000000;")
+        self.label_23.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
+        self.label_23.setObjectName("label_23")
+        self.verticalLayout_3.addWidget(self.events_view_6)
+        self.assign_scroll_area.setWidget(self.assign_scroll_area_widget)
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -705,8 +974,18 @@ class Ui_MainWindow(object):
         self.label_6.setText(_translate("MainWindow", "Name"))
         self.label_7.setText(_translate("MainWindow", "Time"))
         self.label_5.setText(_translate("MainWindow", "Assignments"))
-        self.label_14.setText(_translate("MainWindow", "Name"))
-        self.label_15.setText(_translate("MainWindow", "Time"))
+        self.label_18.setText(_translate("MainWindow", "Name"))
+        self.label_19.setText(_translate("MainWindow", "Time"))
         self.label_12.setText(_translate("MainWindow", "Name"))
         self.label_13.setText(_translate("MainWindow", "Time"))
+        self.label_34.setText(_translate("MainWindow", "Name"))
+        self.label_35.setText(_translate("MainWindow", "Time"))
+        self.label_20.setText(_translate("MainWindow", "Name"))
+        self.label_21.setText(_translate("MainWindow", "Time"))
+        self.label_14.setText(_translate("MainWindow", "Name"))
+        self.label_15.setText(_translate("MainWindow", "Time"))
+        self.label_26.setText(_translate("MainWindow", "Name"))
+        self.label_27.setText(_translate("MainWindow", "Time"))
+        self.label_22.setText(_translate("MainWindow", "Name"))
+        self.label_23.setText(_translate("MainWindow", "Time"))
 import resource_rc

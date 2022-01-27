@@ -1,50 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
-    <class>mainwindow</class>
-    <widget class="QWidget" name="mainwindow">
-        <property name="geometry">
-            <rect>
-                <x>0</x>
-                <y>0</y>
-                <width>1070</width>
-                <height>625</height>
-            </rect>
-        </property>
-        <property name="windowTitle">
-            <string>Form</string>
-        </property>
-        <property name="styleSheet">
-            <string notr="true" />
-        </property>
-        <widget class="QPushButton" name="post_button">
-            <property name="geometry">
-                <rect>
-                    <x>10</x>
-                    <y>10</y>
-                    <width>525</width>
-                    <height>80</height>
-                </rect>
-            </property>
-            <property name="maximumSize">
-                <size>
-                    <width>525</width>
-                    <height>80</height>
-                </size>
-            </property>
-            <property name="font">
-                <font>
-                    <family>Poppins Medium</family>
-                    <pointsize>14</pointsize>
-                </font>
-            </property>
-            <property name="cursor">
-                <cursorShape>PointingHandCursor</cursorShape>
-            </property>
-            <property name="layoutDirection">
-                <enum>Qt::LeftToRight</enum>
-            </property>
-            <property name="styleSheet">
-                <string notr="true">position: absolute;
+ <class>mainwindow</class>
+ <widget class="QWidget" name="mainwindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1070</width>
+    <height>625</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QPushButton" name="post_button">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>525</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>525</width>
+     <height>80</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Poppins Medium</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">position: absolute;
 width: 1000px;
 height: 148px;
 left: calc(50% - 1000px/2 + 2px);
@@ -56,28 +56,28 @@ box-sizing: border-box;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 10px;
 </string>
-            </property>
-            <property name="text">
-                <string>Text Label</string>
-            </property>
-        </widget>
-        <widget class="QFrame" name="events_view">
-            <property name="geometry">
-                <rect>
-                    <x>600</x>
-                    <y>170</y>
-                    <width>229</width>
-                    <height>70</height>
-                </rect>
-            </property>
-            <property name="maximumSize">
-                <size>
-                    <width>16777215</width>
-                    <height>70</height>
-                </size>
-            </property>
-            <property name="styleSheet">
-                <string notr="true">#events_view{
+   </property>
+   <property name="text">
+    <string>Text Label</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="events_view">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>170</y>
+     <width>229</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>70</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#events_view{
 position: absolute;
 width: 370px;
 height: 110px;
@@ -88,24 +88,24 @@ background: rgba(0, 0, 0, 0.05);
 border: 1px solid rgba(0, 0, 0, 0.3);
 box-sizing: border-box;
 border-radius: 10px}</string>
-            </property>
-            <property name="frameShape">
-                <enum>QFrame::StyledPanel</enum>
-            </property>
-            <property name="frameShadow">
-                <enum>QFrame::Raised</enum>
-            </property>
-            <widget class="QLabel" name="label_6">
-                <property name="geometry">
-                    <rect>
-                        <x>10</x>
-                        <y>0</y>
-                        <width>211</width>
-                        <height>41</height>
-                    </rect>
-                </property>
-                <property name="styleSheet">
-                    <string notr="true">position: absolute;
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>211</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">position: absolute;
 left: 20px;
 right: 30px;
 top: 10px;
@@ -119,22 +119,22 @@ line-height: 37px;
 letter-spacing: 0.05em;
 background: rgba(0, 0, 0, 0.01);
 color: #000000;</string>
-                </property>
-                <property name="text">
-                    <string>Name</string>
-                </property>
-            </widget>
-            <widget class="QLabel" name="label_7">
-                <property name="geometry">
-                    <rect>
-                        <x>10</x>
-                        <y>40</y>
-                        <width>211</width>
-                        <height>41</height>
-                    </rect>
-                </property>
-                <property name="styleSheet">
-                    <string notr="true">position: absolute;
+    </property>
+    <property name="text">
+     <string>Name</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>211</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">position: absolute;
 left: 20px;
 right: 30px;
 top: 10px;
@@ -148,16 +148,16 @@ line-height: 37px;
 letter-spacing: 0.05em;
 background: rgba(0, 0, 0, 0.01);
 color: #000000;</string>
-                </property>
-                <property name="text">
-                    <string>Time</string>
-                </property>
-                <property name="alignment">
-                    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-                </property>
-            </widget>
-        </widget>
-    </widget>
-    <resources />
-    <connections />
+    </property>
+    <property name="text">
+     <string>Time</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
 </ui>

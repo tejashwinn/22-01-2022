@@ -888,7 +888,7 @@ border-radius: 10px;
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QScrollArea" name="events_scroll_area_2">
+    <widget class="QScrollArea" name="assign_scroll_area">
      <property name="geometry">
       <rect>
        <x>820</x>
@@ -898,7 +898,7 @@ border-radius: 10px;
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">#events_scroll_area{
+      <string notr="true">#assign_scroll_area{
 text-align: center;
 letter-spacing: 0.05em;
 
@@ -917,7 +917,7 @@ border-radius: 10;
 }</string>
      </property>
      <property name="verticalScrollBarPolicy">
-      <enum>Qt::ScrollBarAsNeeded</enum>
+      <enum>Qt::ScrollBarAlwaysOff</enum>
      </property>
      <property name="horizontalScrollBarPolicy">
       <enum>Qt::ScrollBarAsNeeded</enum>
@@ -925,13 +925,13 @@ border-radius: 10;
      <property name="widgetResizable">
       <bool>true</bool>
      </property>
-     <widget class="QWidget" name="events_scroll_area_widget_2">
+     <widget class="QWidget" name="assign_scroll_area_widget">
       <property name="geometry">
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>249</width>
-        <height>519</height>
+        <width>251</width>
+        <height>554</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -954,15 +954,405 @@ border-radius: 10px;
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_3">
        <item>
-        <widget class="QFrame" name="events_view_3">
+        <widget class="QFrame" name="events_view_4">
+         <property name="minimumSize">
+          <size>
+           <width>229</width>
+           <height>70</height>
+          </size>
+         </property>
          <property name="maximumSize">
           <size>
-           <width>16777215</width>
+           <width>229</width>
            <height>70</height>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">#events_view{
+          <string notr="true">#events_view_4{
+position: absolute;
+width: 370px;
+height: 110px;
+left: 7px;
+top: 28px;
+
+background: rgba(0, 0, 0, 0.05);
+border: 1px solid rgba(0, 0, 0, 0.3);
+box-sizing: border-box;
+border-radius: 10px}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="label_18">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>0</y>
+            <width>211</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">position: absolute;
+left: 20px;
+right: 30px;
+top: 10px;
+bottom: 10px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 25px;
+line-height: 37px;
+letter-spacing: 0.05em;
+background: rgba(0, 0, 0, 0.01);
+color: #000000;</string>
+          </property>
+          <property name="text">
+           <string>Name</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_19">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>40</y>
+            <width>211</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">position: absolute;
+left: 20px;
+right: 30px;
+top: 10px;
+bottom: 10px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+line-height: 37px;
+letter-spacing: 0.05em;
+background: rgba(0, 0, 0, 0.01);
+color: #000000;</string>
+          </property>
+          <property name="text">
+           <string>Time</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+          </property>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="events_view_2">
+         <property name="minimumSize">
+          <size>
+           <width>229</width>
+           <height>70</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>229</width>
+           <height>70</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#events_view_2{
+position: absolute;
+width: 370px;
+height: 110px;
+left: 7px;
+top: 28px;
+
+background: rgba(0, 0, 0, 0.05);
+border: 1px solid rgba(0, 0, 0, 0.3);
+box-sizing: border-box;
+border-radius: 10px}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="label_12">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>0</y>
+            <width>211</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">position: absolute;
+left: 20px;
+right: 30px;
+top: 10px;
+bottom: 10px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 25px;
+line-height: 37px;
+letter-spacing: 0.05em;
+background: rgba(0, 0, 0, 0.01);
+color: #000000;</string>
+          </property>
+          <property name="text">
+           <string>Name</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_13">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>40</y>
+            <width>211</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">position: absolute;
+left: 20px;
+right: 30px;
+top: 10px;
+bottom: 10px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+line-height: 37px;
+letter-spacing: 0.05em;
+background: rgba(0, 0, 0, 0.01);
+color: #000000;</string>
+          </property>
+          <property name="text">
+           <string>Time</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+          </property>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="events_view_8">
+         <property name="minimumSize">
+          <size>
+           <width>229</width>
+           <height>70</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>229</width>
+           <height>70</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#events_view_4{
+position: absolute;
+width: 370px;
+height: 110px;
+left: 7px;
+top: 28px;
+
+background: rgba(0, 0, 0, 0.05);
+border: 1px solid rgba(0, 0, 0, 0.3);
+box-sizing: border-box;
+border-radius: 10px}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="label_34">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>0</y>
+            <width>211</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">position: absolute;
+left: 20px;
+right: 30px;
+top: 10px;
+bottom: 10px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 25px;
+line-height: 37px;
+letter-spacing: 0.05em;
+background: rgba(0, 0, 0, 0.01);
+color: #000000;</string>
+          </property>
+          <property name="text">
+           <string>Name</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_35">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>40</y>
+            <width>211</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">position: absolute;
+left: 20px;
+right: 30px;
+top: 10px;
+bottom: 10px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+line-height: 37px;
+letter-spacing: 0.05em;
+background: rgba(0, 0, 0, 0.01);
+color: #000000;</string>
+          </property>
+          <property name="text">
+           <string>Time</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+          </property>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="events_view_5">
+         <property name="minimumSize">
+          <size>
+           <width>229</width>
+           <height>70</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>229</width>
+           <height>70</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#events_view_5{
+position: absolute;
+width: 370px;
+height: 110px;
+left: 7px;
+top: 28px;
+
+background: rgba(0, 0, 0, 0.05);
+border: 1px solid rgba(0, 0, 0, 0.3);
+box-sizing: border-box;
+border-radius: 10px}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="label_20">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>0</y>
+            <width>211</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">position: absolute;
+left: 20px;
+right: 30px;
+top: 10px;
+bottom: 10px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 25px;
+line-height: 37px;
+letter-spacing: 0.05em;
+background: rgba(0, 0, 0, 0.01);
+color: #000000;</string>
+          </property>
+          <property name="text">
+           <string>Name</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_21">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>40</y>
+            <width>211</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">position: absolute;
+left: 20px;
+right: 30px;
+top: 10px;
+bottom: 10px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+line-height: 37px;
+letter-spacing: 0.05em;
+background: rgba(0, 0, 0, 0.01);
+color: #000000;</string>
+          </property>
+          <property name="text">
+           <string>Time</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+          </property>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="events_view_3">
+         <property name="minimumSize">
+          <size>
+           <width>229</width>
+           <height>70</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>229</width>
+           <height>70</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#events_view_3{
 position: absolute;
 width: 370px;
 height: 110px;
@@ -1015,7 +1405,201 @@ color: #000000;</string>
             <x>10</x>
             <y>40</y>
             <width>211</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">position: absolute;
+left: 20px;
+right: 30px;
+top: 10px;
+bottom: 10px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+line-height: 37px;
+letter-spacing: 0.05em;
+background: rgba(0, 0, 0, 0.01);
+color: #000000;</string>
+          </property>
+          <property name="text">
+           <string>Time</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+          </property>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="events_view_7">
+         <property name="minimumSize">
+          <size>
+           <width>229</width>
+           <height>70</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>229</width>
+           <height>70</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#events_view_7
+{
+position: absolute;
+width: 370px;
+height: 110px;
+left: 7px;
+top: 28px;
+
+background: rgba(0, 0, 0, 0.05);
+border: 1px solid rgba(0, 0, 0, 0.3);
+box-sizing: border-box;
+border-radius: 10px}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="label_26">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>0</y>
+            <width>211</width>
             <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">position: absolute;
+left: 20px;
+right: 30px;
+top: 10px;
+bottom: 10px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 25px;
+line-height: 37px;
+letter-spacing: 0.05em;
+background: rgba(0, 0, 0, 0.01);
+color: #000000;</string>
+          </property>
+          <property name="text">
+           <string>Name</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_27">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>40</y>
+            <width>211</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">position: absolute;
+left: 20px;
+right: 30px;
+top: 10px;
+bottom: 10px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+line-height: 37px;
+letter-spacing: 0.05em;
+background: rgba(0, 0, 0, 0.01);
+color: #000000;</string>
+          </property>
+          <property name="text">
+           <string>Time</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+          </property>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="events_view_6">
+         <property name="minimumSize">
+          <size>
+           <width>229</width>
+           <height>70</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>229</width>
+           <height>70</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#events_view_6
+{
+position: absolute;
+width: 370px;
+height: 110px;
+left: 7px;
+top: 28px;
+
+background: rgba(0, 0, 0, 0.05);
+border: 1px solid rgba(0, 0, 0, 0.3);
+box-sizing: border-box;
+border-radius: 10px}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="label_22">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>0</y>
+            <width>211</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">position: absolute;
+left: 20px;
+right: 30px;
+top: 10px;
+bottom: 10px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 25px;
+line-height: 37px;
+letter-spacing: 0.05em;
+background: rgba(0, 0, 0, 0.01);
+color: #000000;</string>
+          </property>
+          <property name="text">
+           <string>Name</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_23">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>40</y>
+            <width>211</width>
+            <height>21</height>
            </rect>
           </property>
           <property name="styleSheet">
@@ -1045,102 +1629,6 @@ color: #000000;</string>
        </item>
       </layout>
      </widget>
-    </widget>
-   </widget>
-   <widget class="QFrame" name="events_view_2">
-    <property name="geometry">
-     <rect>
-      <x>590</x>
-      <y>590</y>
-      <width>229</width>
-      <height>70</height>
-     </rect>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>16777215</width>
-      <height>70</height>
-     </size>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">#events_view{
-position: absolute;
-width: 370px;
-height: 110px;
-left: 7px;
-top: 28px;
-
-background: rgba(0, 0, 0, 0.05);
-border: 1px solid rgba(0, 0, 0, 0.3);
-box-sizing: border-box;
-border-radius: 10px}</string>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
-    </property>
-    <widget class="QLabel" name="label_12">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>0</y>
-       <width>211</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">position: absolute;
-left: 20px;
-right: 30px;
-top: 10px;
-bottom: 10px;
-
-font-family: Poppins;
-font-style: normal;
-font-weight: normal;
-font-size: 25px;
-line-height: 37px;
-letter-spacing: 0.05em;
-background: rgba(0, 0, 0, 0.01);
-color: #000000;</string>
-     </property>
-     <property name="text">
-      <string>Name</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_13">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>40</y>
-       <width>211</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">position: absolute;
-left: 20px;
-right: 30px;
-top: 10px;
-bottom: 10px;
-
-font-family: Poppins;
-font-style: normal;
-font-weight: normal;
-font-size: 15px;
-line-height: 37px;
-letter-spacing: 0.05em;
-background: rgba(0, 0, 0, 0.01);
-color: #000000;</string>
-     </property>
-     <property name="text">
-      <string>Time</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-     </property>
     </widget>
    </widget>
   </widget>
