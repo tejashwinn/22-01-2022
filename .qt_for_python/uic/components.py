@@ -40,7 +40,9 @@ class Ui_mainwindow(object):
         self.post_button.setObjectName("post_button")
         self.events_view = QtWidgets.QFrame(mainwindow)
         self.events_view.setGeometry(QtCore.QRect(600, 170, 229, 70))
+        self.events_view.setMinimumSize(QtCore.QSize(0, 70))
         self.events_view.setMaximumSize(QtCore.QSize(16777215, 70))
+        self.events_view.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.events_view.setStyleSheet("#events_view{\n"
 "position: absolute;\n"
 "width: 370px;\n"
@@ -57,6 +59,14 @@ class Ui_mainwindow(object):
         self.events_view.setObjectName("events_view")
         self.label_6 = QtWidgets.QLabel(self.events_view)
         self.label_6.setGeometry(QtCore.QRect(10, 0, 211, 41))
+        font = QtGui.QFont()
+        font.setFamily("Poppins")
+        font.setPointSize(-1)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.label_6.setFont(font)
+        self.label_6.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.label_6.setStyleSheet("position: absolute;\n"
 "left: 20px;\n"
 "right: 30px;\n"
@@ -66,7 +76,7 @@ class Ui_mainwindow(object):
 "font-family: Poppins;\n"
 "font-style: normal;\n"
 "font-weight: normal;\n"
-"font-size: 25px;\n"
+"font-size: 20px;\n"
 "line-height: 37px;\n"
 "letter-spacing: 0.05em;\n"
 "background: rgba(0, 0, 0, 0.01);\n"
@@ -74,6 +84,7 @@ class Ui_mainwindow(object):
         self.label_6.setObjectName("label_6")
         self.label_7 = QtWidgets.QLabel(self.events_view)
         self.label_7.setGeometry(QtCore.QRect(10, 40, 211, 41))
+        self.label_7.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.label_7.setStyleSheet("position: absolute;\n"
 "left: 20px;\n"
 "right: 30px;\n"

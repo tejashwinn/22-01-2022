@@ -72,7 +72,7 @@ class Ui_MainWindow(object):
         self.class_name_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.class_name_frame.setObjectName("class_name_frame")
         self.class_name_label = QtWidgets.QLabel(self.class_name_frame)
-        self.class_name_label.setGeometry(QtCore.QRect(10, 0, 541, 51))
+        self.class_name_label.setGeometry(QtCore.QRect(10, 0, 521, 51))
         self.class_name_label.setStyleSheet("#class_name_label{\n"
 "/* ADA */\n"
 "\n"
@@ -95,7 +95,7 @@ class Ui_MainWindow(object):
 "}")
         self.class_name_label.setObjectName("class_name_label")
         self.class_description_label = QtWidgets.QLabel(self.class_name_frame)
-        self.class_description_label.setGeometry(QtCore.QRect(10, 40, 531, 61))
+        self.class_description_label.setGeometry(QtCore.QRect(10, 40, 521, 51))
         self.class_description_label.setStyleSheet("#class_description_label{\n"
 "/* ADA */\n"
 "\n"
@@ -436,7 +436,7 @@ class Ui_MainWindow(object):
 "top: 119px;\n"
 "bottom: 9px;\n"
 "\n"
-"background: rgba(209, 233, 215, 0.6);\n"
+"background: rgba(209, 233, 215, 0.01);\n"
 "backdrop-filter: blur(4px);\n"
 "/* Note: backdrop-filter has minimal browser support */\n"
 "\n"
@@ -523,7 +523,7 @@ class Ui_MainWindow(object):
 "top: 119px;\n"
 "bottom: 9px;\n"
 "\n"
-"background: rgba(209, 233, 215, 0.6);\n"
+"background: rgba(252, 202, 201, 0.6);\n"
 "backdrop-filter: blur(4px);\n"
 "/* Note: backdrop-filter has minimal browser support */\n"
 "\n"
@@ -544,7 +544,7 @@ class Ui_MainWindow(object):
 "top: 119px;\n"
 "bottom: 9px;\n"
 "\n"
-"background: rgba(209, 233, 215, 0.6);\n"
+"background:rgba(252, 202, 201, 0.6);\n"
 "backdrop-filter: blur(4px);\n"
 "/* Note: backdrop-filter has minimal browser support */\n"
 "\n"
@@ -566,7 +566,7 @@ class Ui_MainWindow(object):
 "top: 119px;\n"
 "bottom: 9px;\n"
 "\n"
-"background: rgba(209, 233, 215, 0.6);\n"
+"background: rgba(252, 202, 201, 0.01);\n"
 "backdrop-filter: blur(4px);\n"
 "/* Note: backdrop-filter has minimal browser support */\n"
 "\n"
@@ -684,7 +684,7 @@ class Ui_MainWindow(object):
         self.events_view_8 = QtWidgets.QFrame(self.assign_scroll_area_widget)
         self.events_view_8.setMinimumSize(QtCore.QSize(229, 70))
         self.events_view_8.setMaximumSize(QtCore.QSize(229, 70))
-        self.events_view_8.setStyleSheet("#events_view_4{\n"
+        self.events_view_8.setStyleSheet("#events_view_8{\n"
 "position: absolute;\n"
 "width: 370px;\n"
 "height: 110px;\n"

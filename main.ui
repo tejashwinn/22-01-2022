@@ -126,7 +126,7 @@ border-radius: 10px;}</string>
        <rect>
         <x>10</x>
         <y>0</y>
-        <width>541</width>
+        <width>521</width>
         <height>51</height>
        </rect>
       </property>
@@ -161,8 +161,8 @@ color: #FFFFFF;
        <rect>
         <x>10</x>
         <y>40</y>
-        <width>531</width>
-        <height>61</height>
+        <width>521</width>
+        <height>51</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -740,7 +740,7 @@ left: 12px;
 top: 119px;
 bottom: 9px;
 
-background: rgba(209, 233, 215, 0.6);
+background: rgba(209, 233, 215, 0.01);
 backdrop-filter: blur(4px);
 /* Note: backdrop-filter has minimal browser support */
 
@@ -874,7 +874,7 @@ left: 12px;
 top: 119px;
 bottom: 9px;
 
-background: rgba(209, 233, 215, 0.6);
+background: rgba(252, 202, 201, 0.6);
 backdrop-filter: blur(4px);
 /* Note: backdrop-filter has minimal browser support */
 
@@ -909,7 +909,7 @@ left: 12px;
 top: 119px;
 bottom: 9px;
 
-background: rgba(209, 233, 215, 0.6);
+background:rgba(252, 202, 201, 0.6);
 backdrop-filter: blur(4px);
 /* Note: backdrop-filter has minimal browser support */
 
@@ -945,7 +945,7 @@ left: 12px;
 top: 119px;
 bottom: 9px;
 
-background: rgba(209, 233, 215, 0.6);
+background: rgba(252, 202, 201, 0.01);
 backdrop-filter: blur(4px);
 /* Note: backdrop-filter has minimal browser support */
 
@@ -1160,7 +1160,7 @@ color: #000000;</string>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">#events_view_4{
+          <string notr="true">#events_view_8{
 position: absolute;
 width: 370px;
 height: 110px;
