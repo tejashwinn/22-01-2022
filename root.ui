@@ -6,25 +6,19 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1078</width>
-    <height>658</height>
+    <width>1081</width>
+    <height>698</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <property name="autoFillBackground">
-   <bool>false</bool>
-  </property>
-  <property name="styleSheet">
-   <string notr="true"/>
-  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QFrame" name="heading_frame">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>10</y>
+      <x>11</x>
+      <y>1</y>
       <width>1061</width>
       <height>41</height>
      </rect>
@@ -79,38 +73,12 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>0</y>
-       <width>101</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>10</pointsize>
-       <weight>75</weight>
-       <italic>false</italic>
-       <bold>true</bold>
-       <underline>false</underline>
-      </font>
-     </property>
-     <property name="text">
-      <string>Menu</string>
-     </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>:/icons/assests/icons/align-justify.svg</normaloff>:/icons/assests/icons/align-justify.svg</iconset>
-     </property>
-    </widget>
    </widget>
    <widget class="QFrame" name="main_frame">
     <property name="geometry">
      <rect>
-      <x>-1</x>
-      <y>49</y>
+      <x>0</x>
+      <y>40</y>
       <width>1081</width>
       <height>611</height>
      </rect>
@@ -1658,6 +1626,97 @@ color: #000000;</string>
     </widget>
    </widget>
   </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1081</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <widget class="QMenu" name="usersettings">
+    <property name="title">
+     <string>User</string>
+    </property>
+    <addaction name="actionSign_Up"/>
+    <addaction name="separator"/>
+    <addaction name="actionLogin"/>
+    <addaction name="separator"/>
+    <addaction name="actionLog_Out"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuViews">
+    <property name="title">
+     <string>Views</string>
+    </property>
+    <addaction name="actionClasses"/>
+    <addaction name="separator"/>
+    <addaction name="actionEvents"/>
+    <addaction name="separator"/>
+    <addaction name="actionAssignments"/>
+   </widget>
+   <addaction name="usersettings"/>
+   <addaction name="menuViews"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionSign_Up">
+   <property name="icon">
+    <iconset>
+     <normaloff>assests/icons/user-plus.svg</normaloff>assests/icons/user-plus.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Sign Up</string>
+   </property>
+  </action>
+  <action name="actionLogin">
+   <property name="icon">
+    <iconset>
+     <normaloff>assests/icons/user.svg</normaloff>assests/icons/user.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Log In</string>
+   </property>
+  </action>
+  <action name="actionLog_Out">
+   <property name="icon">
+    <iconset>
+     <normaloff>assests/icons/log-out.svg</normaloff>assests/icons/log-out.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Log Out</string>
+   </property>
+  </action>
+  <action name="actionClasses">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/icons/assests/icons/users.svg</normaloff>:/icons/assests/icons/users.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Classes</string>
+   </property>
+  </action>
+  <action name="actionEvents">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/icons/assests/icons/calendar.svg</normaloff>:/icons/assests/icons/calendar.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Events</string>
+   </property>
+  </action>
+  <action name="actionAssignments">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/icons/assests/icons/share.svg</normaloff>:/icons/assests/icons/share.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Assignments</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

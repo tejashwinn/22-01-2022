@@ -26,17 +26,17 @@ class Ui_mainwindow(object):
         self.post_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.post_button.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.post_button.setStyleSheet("position: absolute;\n"
-                                       "width: 1000px;\n"
-                                       "height: 148px;\n"
-                                       "left: calc(50% - 1000px/2 + 2px);\n"
-                                       "top: calc(50% - 148px/2 + 249px);\n"
-                                       "\n"
-                                       "background: #FFFFFF;\n"
-                                       "border: 2px solid #000000;\n"
-                                       "box-sizing: border-box;\n"
-                                       "box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\n"
-                                       "border-radius: 10px;\n"
-                                       "")
+"width: 1000px;\n"
+"height: 148px;\n"
+"left: calc(50% - 1000px/2 + 2px);\n"
+"top: calc(50% - 148px/2 + 249px);\n"
+"\n"
+"background: #FFFFFF;\n"
+"border: 2px solid #000000;\n"
+"box-sizing: border-box;\n"
+"box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\n"
+"border-radius: 10px;\n"
+"")
         self.post_button.setObjectName("post_button")
         self.events_view = QtWidgets.QFrame(mainwindow)
         self.events_view.setGeometry(QtCore.QRect(600, 170, 229, 70))
@@ -44,16 +44,16 @@ class Ui_mainwindow(object):
         self.events_view.setMaximumSize(QtCore.QSize(16777215, 70))
         self.events_view.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.events_view.setStyleSheet("#events_view{\n"
-                                       "position: absolute;\n"
-                                       "width: 370px;\n"
-                                       "height: 110px;\n"
-                                       "left: 7px;\n"
-                                       "top: 28px;\n"
-                                       "\n"
-                                       "background: rgba(0, 0, 0, 0.05);\n"
-                                       "border: 1px solid rgba(0, 0, 0, 0.3);\n"
-                                       "box-sizing: border-box;\n"
-                                       "border-radius: 10px}")
+"position: absolute;\n"
+"width: 370px;\n"
+"height: 110px;\n"
+"left: 7px;\n"
+"top: 28px;\n"
+"\n"
+"background: rgba(0, 0, 0, 0.05);\n"
+"border: 1px solid rgba(0, 0, 0, 0.3);\n"
+"box-sizing: border-box;\n"
+"border-radius: 10px}")
         self.events_view.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.events_view.setFrameShadow(QtWidgets.QFrame.Raised)
         self.events_view.setObjectName("events_view")
@@ -68,40 +68,102 @@ class Ui_mainwindow(object):
         self.label_6.setFont(font)
         self.label_6.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.label_6.setStyleSheet("position: absolute;\n"
-                                   "left: 20px;\n"
-                                   "right: 30px;\n"
-                                   "top: 10px;\n"
-                                   "bottom: 10px;\n"
-                                   "\n"
-                                   "font-family: Poppins;\n"
-                                   "font-style: normal;\n"
-                                   "font-weight: normal;\n"
-                                   "font-size: 20px;\n"
-                                   "line-height: 37px;\n"
-                                   "letter-spacing: 0.05em;\n"
-                                   "background: rgba(0, 0, 0, 0.01);\n"
-                                   "color: #000000;")
+"left: 20px;\n"
+"right: 30px;\n"
+"top: 10px;\n"
+"bottom: 10px;\n"
+"\n"
+"font-family: Poppins;\n"
+"font-style: normal;\n"
+"font-weight: normal;\n"
+"font-size: 20px;\n"
+"line-height: 37px;\n"
+"letter-spacing: 0.05em;\n"
+"background: rgba(0, 0, 0, 0.01);\n"
+"color: #000000;")
         self.label_6.setObjectName("label_6")
         self.label_7 = QtWidgets.QLabel(self.events_view)
         self.label_7.setGeometry(QtCore.QRect(10, 40, 211, 41))
         self.label_7.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.label_7.setStyleSheet("position: absolute;\n"
-                                   "left: 20px;\n"
-                                   "right: 30px;\n"
-                                   "top: 10px;\n"
-                                   "bottom: 10px;\n"
-                                   "\n"
-                                   "font-family: Poppins;\n"
-                                   "font-style: normal;\n"
-                                   "font-weight: normal;\n"
-                                   "font-size: 15px;\n"
-                                   "line-height: 37px;\n"
-                                   "letter-spacing: 0.05em;\n"
-                                   "background: rgba(0, 0, 0, 0.01);\n"
-                                   "color: #000000;")
-        self.label_7.setAlignment(
-            QtCore.Qt.AlignLeading | QtCore.Qt.AlignLeft | QtCore.Qt.AlignTop)
+"left: 20px;\n"
+"right: 30px;\n"
+"top: 10px;\n"
+"bottom: 10px;\n"
+"\n"
+"font-family: Poppins;\n"
+"font-style: normal;\n"
+"font-weight: normal;\n"
+"font-size: 15px;\n"
+"line-height: 37px;\n"
+"letter-spacing: 0.05em;\n"
+"background: rgba(0, 0, 0, 0.01);\n"
+"color: #000000;")
+        self.label_7.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
         self.label_7.setObjectName("label_7")
+        self.events_view_2 = QtWidgets.QFrame(mainwindow)
+        self.events_view_2.setGeometry(QtCore.QRect(410, 430, 461, 70))
+        self.events_view_2.setMinimumSize(QtCore.QSize(0, 70))
+        self.events_view_2.setMaximumSize(QtCore.QSize(16777215, 70))
+        self.events_view_2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.events_view_2.setStyleSheet("#events_view_2{\n"
+"position: absolute;\n"
+"width: 370px;\n"
+"height: 110px;\n"
+"left: 7px;\n"
+"top: 28px;\n"
+"\n"
+"background: rgba(0, 0, 0, 0.05);\n"
+"border: 1px solid rgba(0, 0, 0, 0.3);\n"
+"box-sizing: border-box;\n"
+"border-radius: 10px}")
+        self.events_view_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.events_view_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.events_view_2.setObjectName("events_view_2")
+        self.label_8 = QtWidgets.QLabel(self.events_view_2)
+        self.label_8.setGeometry(QtCore.QRect(10, 0, 431, 41))
+        font = QtGui.QFont()
+        font.setFamily("Poppins")
+        font.setPointSize(-1)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.label_8.setFont(font)
+        self.label_8.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.label_8.setStyleSheet("position: absolute;\n"
+"left: 20px;\n"
+"right: 30px;\n"
+"top: 10px;\n"
+"bottom: 10px;\n"
+"\n"
+"font-family: Poppins;\n"
+"font-style: normal;\n"
+"font-weight: normal;\n"
+"font-size: 20px;\n"
+"line-height: 37px;\n"
+"letter-spacing: 0.05em;\n"
+"background: rgba(0, 0, 0, 0.01);\n"
+"color: #000000;")
+        self.label_8.setObjectName("label_8")
+        self.label_9 = QtWidgets.QLabel(self.events_view_2)
+        self.label_9.setGeometry(QtCore.QRect(10, 40, 441, 21))
+        self.label_9.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.label_9.setStyleSheet("position: absolute;\n"
+"left: 20px;\n"
+"right: 30px;\n"
+"top: 10px;\n"
+"bottom: 10px;\n"
+"\n"
+"font-family: Poppins;\n"
+"font-style: normal;\n"
+"font-weight: normal;\n"
+"font-size: 15px;\n"
+"line-height: 37px;\n"
+"letter-spacing: 0.05em;\n"
+"background: rgba(0, 0, 0, 0.01);\n"
+"color: #000000;")
+        self.label_9.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
+        self.label_9.setObjectName("label_9")
 
         self.retranslateUi(mainwindow)
         QtCore.QMetaObject.connectSlotsByName(mainwindow)
@@ -112,6 +174,8 @@ class Ui_mainwindow(object):
         self.post_button.setText(_translate("mainwindow", "Text Label"))
         self.label_6.setText(_translate("mainwindow", "Name"))
         self.label_7.setText(_translate("mainwindow", "Time"))
+        self.label_8.setText(_translate("mainwindow", "Comment"))
+        self.label_9.setText(_translate("mainwindow", "User"))
 
 
 if __name__ == "__main__":

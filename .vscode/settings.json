@@ -1,6 +1,6 @@
 {
     "cSpell.words": [
-        "clickme",
+        "assests",
         "calibri",
         "centralwidget",
         "cget",
@@ -12,6 +12,7 @@
         "padx",
         "pady",
         "plabel",
+        "pyuic",
         "relx",
         "ulabel",
         "wlabel"

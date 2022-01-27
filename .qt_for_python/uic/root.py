@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'c:\Users\tejas\Desktop\22-01-22\archive\main copy.ui'
+# Form implementation generated from reading ui file 'c:\Users\tejas\Desktop\22-01-22\root.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -14,13 +14,11 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1079, 658)
-        MainWindow.setAutoFillBackground(False)
-        MainWindow.setStyleSheet("")
+        MainWindow.resize(1081, 698)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.heading_frame = QtWidgets.QFrame(self.centralwidget)
-        self.heading_frame.setGeometry(QtCore.QRect(10, 10, 1061, 41))
+        self.heading_frame.setGeometry(QtCore.QRect(11, 1, 1061, 41))
         self.heading_frame.setStyleSheet("position: absolute;\n"
 "width: 1895px;\n"
 "height: 81px;\n"
@@ -53,7 +51,7 @@ class Ui_MainWindow(object):
         self.label_2.setAlignment(QtCore.Qt.AlignCenter)
         self.label_2.setObjectName("label_2")
         self.main_frame = QtWidgets.QFrame(self.centralwidget)
-        self.main_frame.setGeometry(QtCore.QRect(-1, 49, 1081, 611))
+        self.main_frame.setGeometry(QtCore.QRect(0, 40, 1081, 611))
         self.main_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.main_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.main_frame.setObjectName("main_frame")
@@ -72,7 +70,7 @@ class Ui_MainWindow(object):
         self.class_name_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.class_name_frame.setObjectName("class_name_frame")
         self.class_name_label = QtWidgets.QLabel(self.class_name_frame)
-        self.class_name_label.setGeometry(QtCore.QRect(10, 0, 541, 51))
+        self.class_name_label.setGeometry(QtCore.QRect(10, 0, 521, 51))
         self.class_name_label.setStyleSheet("#class_name_label{\n"
 "/* ADA */\n"
 "\n"
@@ -95,7 +93,7 @@ class Ui_MainWindow(object):
 "}")
         self.class_name_label.setObjectName("class_name_label")
         self.class_description_label = QtWidgets.QLabel(self.class_name_frame)
-        self.class_description_label.setGeometry(QtCore.QRect(10, 40, 531, 61))
+        self.class_description_label.setGeometry(QtCore.QRect(10, 40, 521, 51))
         self.class_description_label.setStyleSheet("#class_description_label{\n"
 "/* ADA */\n"
 "\n"
@@ -436,7 +434,7 @@ class Ui_MainWindow(object):
 "top: 119px;\n"
 "bottom: 9px;\n"
 "\n"
-"background: rgba(209, 233, 215, 0.6);\n"
+"background: rgba(209, 233, 215, 0.01);\n"
 "backdrop-filter: blur(4px);\n"
 "/* Note: backdrop-filter has minimal browser support */\n"
 "\n"
@@ -523,7 +521,7 @@ class Ui_MainWindow(object):
 "top: 119px;\n"
 "bottom: 9px;\n"
 "\n"
-"background: rgba(209, 233, 215, 0.6);\n"
+"background: rgba(252, 202, 201, 0.6);\n"
 "backdrop-filter: blur(4px);\n"
 "/* Note: backdrop-filter has minimal browser support */\n"
 "\n"
@@ -544,7 +542,7 @@ class Ui_MainWindow(object):
 "top: 119px;\n"
 "bottom: 9px;\n"
 "\n"
-"background: rgba(209, 233, 215, 0.6);\n"
+"background:rgba(252, 202, 201, 0.6);\n"
 "backdrop-filter: blur(4px);\n"
 "/* Note: backdrop-filter has minimal browser support */\n"
 "\n"
@@ -566,7 +564,7 @@ class Ui_MainWindow(object):
 "top: 119px;\n"
 "bottom: 9px;\n"
 "\n"
-"background: rgba(209, 233, 215, 0.6);\n"
+"background: rgba(252, 202, 201, 0.01);\n"
 "backdrop-filter: blur(4px);\n"
 "/* Note: backdrop-filter has minimal browser support */\n"
 "\n"
@@ -684,7 +682,7 @@ class Ui_MainWindow(object):
         self.events_view_8 = QtWidgets.QFrame(self.assign_scroll_area_widget)
         self.events_view_8.setMinimumSize(QtCore.QSize(229, 70))
         self.events_view_8.setMaximumSize(QtCore.QSize(229, 70))
-        self.events_view_8.setStyleSheet("#events_view_4{\n"
+        self.events_view_8.setStyleSheet("#events_view_8{\n"
 "position: absolute;\n"
 "width: 370px;\n"
 "height: 110px;\n"
@@ -950,6 +948,61 @@ class Ui_MainWindow(object):
         self.verticalLayout_3.addWidget(self.events_view_6)
         self.assign_scroll_area.setWidget(self.assign_scroll_area_widget)
         MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1081, 26))
+        self.menubar.setAutoFillBackground(False)
+        self.menubar.setObjectName("menubar")
+        self.usersettings = QtWidgets.QMenu(self.menubar)
+        self.usersettings.setObjectName("usersettings")
+        self.menuViews = QtWidgets.QMenu(self.menubar)
+        self.menuViews.setObjectName("menuViews")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+        self.actionSign_Up = QtWidgets.QAction(MainWindow)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("c:\\Users\\tejas\\Desktop\\22-01-22\\assests/icons/user-plus.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.actionSign_Up.setIcon(icon)
+        self.actionSign_Up.setObjectName("actionSign_Up")
+        self.actionLogin = QtWidgets.QAction(MainWindow)
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap("c:\\Users\\tejas\\Desktop\\22-01-22\\assests/icons/user.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.actionLogin.setIcon(icon1)
+        self.actionLogin.setObjectName("actionLogin")
+        self.actionLog_Out = QtWidgets.QAction(MainWindow)
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap("c:\\Users\\tejas\\Desktop\\22-01-22\\assests/icons/log-out.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.actionLog_Out.setIcon(icon2)
+        self.actionLog_Out.setObjectName("actionLog_Out")
+        self.actionClasses = QtWidgets.QAction(MainWindow)
+        icon3 = QtGui.QIcon()
+        icon3.addPixmap(QtGui.QPixmap(":/icons/assests/icons/users.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.actionClasses.setIcon(icon3)
+        self.actionClasses.setObjectName("actionClasses")
+        self.actionEvents = QtWidgets.QAction(MainWindow)
+        icon4 = QtGui.QIcon()
+        icon4.addPixmap(QtGui.QPixmap(":/icons/assests/icons/calendar.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.actionEvents.setIcon(icon4)
+        self.actionEvents.setObjectName("actionEvents")
+        self.actionAssignments = QtWidgets.QAction(MainWindow)
+        icon5 = QtGui.QIcon()
+        icon5.addPixmap(QtGui.QPixmap(":/icons/assests/icons/share.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.actionAssignments.setIcon(icon5)
+        self.actionAssignments.setObjectName("actionAssignments")
+        self.usersettings.addAction(self.actionSign_Up)
+        self.usersettings.addSeparator()
+        self.usersettings.addAction(self.actionLogin)
+        self.usersettings.addSeparator()
+        self.usersettings.addAction(self.actionLog_Out)
+        self.usersettings.addSeparator()
+        self.menuViews.addAction(self.actionClasses)
+        self.menuViews.addSeparator()
+        self.menuViews.addAction(self.actionEvents)
+        self.menuViews.addSeparator()
+        self.menuViews.addAction(self.actionAssignments)
+        self.menubar.addAction(self.usersettings.menuAction())
+        self.menubar.addAction(self.menuViews.menuAction())
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
@@ -988,4 +1041,11 @@ class Ui_MainWindow(object):
         self.label_27.setText(_translate("MainWindow", "Time"))
         self.label_22.setText(_translate("MainWindow", "Name"))
         self.label_23.setText(_translate("MainWindow", "Time"))
-import resource_rc
+        self.usersettings.setTitle(_translate("MainWindow", "User"))
+        self.menuViews.setTitle(_translate("MainWindow", "Views"))
+        self.actionSign_Up.setText(_translate("MainWindow", "Sign Up"))
+        self.actionLogin.setText(_translate("MainWindow", "Log In"))
+        self.actionLog_Out.setText(_translate("MainWindow", "Log Out"))
+        self.actionClasses.setText(_translate("MainWindow", "Classes"))
+        self.actionEvents.setText(_translate("MainWindow", "Events"))
+        self.actionAssignments.setText(_translate("MainWindow", "Assignments"))
