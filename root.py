@@ -36,9 +36,9 @@ class Ui_MainWindow(object):
         self.class_name_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.class_name_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.class_name_frame.setObjectName("class_name_frame")
-        self.class_name_label = QtWidgets.QLabel(self.class_name_frame)
-        self.class_name_label.setGeometry(QtCore.QRect(10, 0, 521, 51))
-        self.class_name_label.setStyleSheet("#class_name_label{\n"
+        self.class_name_label_dynamic = QtWidgets.QLabel(self.class_name_frame)
+        self.class_name_label_dynamic.setGeometry(QtCore.QRect(10, 0, 521, 51))
+        self.class_name_label_dynamic.setStyleSheet("#class_name_label{\n"
 "/* ADA */\n"
 "\n"
 "\n"
@@ -58,10 +58,10 @@ class Ui_MainWindow(object):
 "color: #FFFFFF;\n"
 "\n"
 "}")
-        self.class_name_label.setObjectName("class_name_label")
-        self.class_description_label = QtWidgets.QLabel(self.class_name_frame)
-        self.class_description_label.setGeometry(QtCore.QRect(10, 40, 521, 51))
-        self.class_description_label.setStyleSheet("#class_description_label{\n"
+        self.class_name_label_dynamic.setObjectName("class_name_label_dynamic")
+        self.class_description_label_dynamic = QtWidgets.QLabel(self.class_name_frame)
+        self.class_description_label_dynamic.setGeometry(QtCore.QRect(10, 40, 521, 51))
+        self.class_description_label_dynamic.setStyleSheet("#class_description_label{\n"
 "/* ADA */\n"
 "\n"
 "\n"
@@ -81,8 +81,8 @@ class Ui_MainWindow(object):
 "color: #000000;\n"
 "\n"
 "}")
-        self.class_description_label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
-        self.class_description_label.setObjectName("class_description_label")
+        self.class_description_label_dynamic.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
+        self.class_description_label_dynamic.setObjectName("class_description_label_dynamic")
         self.posts_scroll_area = QtWidgets.QScrollArea(self.main_frame)
         self.posts_scroll_area.setGeometry(QtCore.QRect(269, 129, 541, 471))
         self.posts_scroll_area.setStyleSheet("#posts_scroll_area{\n"
@@ -113,9 +113,9 @@ class Ui_MainWindow(object):
         self.verticalLayout = QtWidgets.QVBoxLayout(self.posts_scroll_area_widget)
         self.verticalLayout.setObjectName("verticalLayout")
         self.posts_scroll_area.setWidget(self.posts_scroll_area_widget)
-        self.label_4 = QtWidgets.QLabel(self.main_frame)
-        self.label_4.setGeometry(QtCore.QRect(10, 20, 251, 51))
-        self.label_4.setStyleSheet("position: absolute;\n"
+        self.static_events = QtWidgets.QLabel(self.main_frame)
+        self.static_events.setGeometry(QtCore.QRect(10, 20, 251, 51))
+        self.static_events.setStyleSheet("position: absolute;\n"
 "width: 143px;\n"
 "height: 62px;\n"
 "left: 133px;\n"
@@ -144,8 +144,8 @@ class Ui_MainWindow(object):
 "\n"
 "border-radius: 10px;\n"
 "")
-        self.label_4.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_4.setObjectName("label_4")
+        self.static_events.setAlignment(QtCore.Qt.AlignCenter)
+        self.static_events.setObjectName("static_events")
         self.events_scroll_area = QtWidgets.QScrollArea(self.main_frame)
         self.events_scroll_area.setGeometry(QtCore.QRect(10, 80, 251, 521))
         self.events_scroll_area.setStyleSheet("#events_scroll_area{\n"
@@ -191,9 +191,9 @@ class Ui_MainWindow(object):
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.events_scroll_area_widget)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.events_scroll_area.setWidget(self.events_scroll_area_widget)
-        self.label_5 = QtWidgets.QLabel(self.main_frame)
-        self.label_5.setGeometry(QtCore.QRect(820, 20, 251, 51))
-        self.label_5.setStyleSheet("position: absolute;\n"
+        self.static_assignment = QtWidgets.QLabel(self.main_frame)
+        self.static_assignment.setGeometry(QtCore.QRect(820, 20, 251, 51))
+        self.static_assignment.setStyleSheet("position: absolute;\n"
 "width: 143px;\n"
 "height: 62px;\n"
 "left: 133px;\n"
@@ -222,8 +222,8 @@ class Ui_MainWindow(object):
 "\n"
 "border-radius: 10px;\n"
 "")
-        self.label_5.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_5.setObjectName("label_5")
+        self.static_assignment.setAlignment(QtCore.Qt.AlignCenter)
+        self.static_assignment.setObjectName("static_assignment")
         self.assign_scroll_area = QtWidgets.QScrollArea(self.main_frame)
         self.assign_scroll_area.setGeometry(QtCore.QRect(820, 80, 251, 521))
         self.assign_scroll_area.setStyleSheet("#assign_scroll_area{\n"
@@ -368,10 +368,10 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.class_name_label.setText(_translate("MainWindow", "Class Name"))
-        self.class_description_label.setText(_translate("MainWindow", "Class description"))
-        self.label_4.setText(_translate("MainWindow", "Events"))
-        self.label_5.setText(_translate("MainWindow", "Assignments"))
+        self.class_name_label_dynamic.setText(_translate("MainWindow", "Class Name"))
+        self.class_description_label_dynamic.setText(_translate("MainWindow", "Class description"))
+        self.static_events.setText(_translate("MainWindow", "Events"))
+        self.static_assignment.setText(_translate("MainWindow", "Assignments"))
         self.menuUser.setTitle(_translate("MainWindow", "User"))
         self.menuViews.setTitle(_translate("MainWindow", "Views"))
         self.menuClass_Admin.setTitle(_translate("MainWindow", "Class Admin"))

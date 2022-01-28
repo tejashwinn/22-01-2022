@@ -55,7 +55,7 @@ border-radius: 10px;}</string>
      <property name="frameShadow">
       <enum>QFrame::Raised</enum>
      </property>
-     <widget class="QLabel" name="class_name_label">
+     <widget class="QLabel" name="class_name_label_dynamic">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -90,7 +90,7 @@ color: #FFFFFF;
        <string>Class Name</string>
       </property>
      </widget>
-     <widget class="QLabel" name="class_description_label">
+     <widget class="QLabel" name="class_description_label_dynamic">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -179,7 +179,7 @@ border-radius: 10px;}</string>
       <layout class="QVBoxLayout" name="verticalLayout"/>
      </widget>
     </widget>
-    <widget class="QLabel" name="label_4">
+    <widget class="QLabel" name="static_events">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -293,7 +293,7 @@ border-radius: 10px;
       <layout class="QVBoxLayout" name="verticalLayout_2"/>
      </widget>
     </widget>
-    <widget class="QLabel" name="label_5">
+    <widget class="QLabel" name="static_assignment">
      <property name="geometry">
       <rect>
        <x>820</x>

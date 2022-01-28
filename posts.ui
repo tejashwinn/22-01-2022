@@ -50,7 +50,7 @@ border-radius: 8px;</string>
         <x>0</x>
         <y>0</y>
         <width>541</width>
-        <height>323</height>
+        <height>291</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -71,464 +71,7 @@ backdrop-filter: blur(4px);
 border-radius: 10px;
 </string>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_3">
-       <item>
-        <widget class="QFrame" name="events_view_2">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>70</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>70</height>
-          </size>
-         </property>
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">#events_view_2{
-position: absolute;
-width: 370px;
-height: 110px;
-left: 7px;
-top: 28px;
-
-background: rgba(0, 0, 0, 0.05);
-border: 1px solid rgba(0, 0, 0, 0.3);
-box-sizing: border-box;
-border-radius: 10px}</string>
-         </property>
-         <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
-         </property>
-         <widget class="QLabel" name="label_8">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>0</y>
-            <width>501</width>
-            <height>41</height>
-           </rect>
-          </property>
-          <property name="font">
-           <font>
-            <family>Poppins</family>
-            <pointsize>-1</pointsize>
-            <weight>50</weight>
-            <italic>false</italic>
-            <bold>false</bold>
-           </font>
-          </property>
-          <property name="cursor">
-           <cursorShape>PointingHandCursor</cursorShape>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">position: absolute;
-left: 20px;
-right: 30px;
-top: 10px;
-bottom: 10px;
-
-font-family: Poppins;
-font-style: normal;
-font-weight: normal;
-font-size: 20px;
-line-height: 37px;
-letter-spacing: 0.05em;
-background: rgba(0, 0, 0, 0.01);
-color: #000000;</string>
-          </property>
-          <property name="text">
-           <string>Comment</string>
-          </property>
-         </widget>
-         <widget class="QLabel" name="label_9">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>40</y>
-            <width>441</width>
-            <height>21</height>
-           </rect>
-          </property>
-          <property name="cursor">
-           <cursorShape>PointingHandCursor</cursorShape>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">position: absolute;
-left: 20px;
-right: 30px;
-top: 10px;
-bottom: 10px;
-
-font-family: Poppins;
-font-style: normal;
-font-weight: normal;
-font-size: 15px;
-line-height: 37px;
-letter-spacing: 0.05em;
-background: rgba(0, 0, 0, 0.01);
-color: #000000;</string>
-          </property>
-          <property name="text">
-           <string>User</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-          </property>
-         </widget>
-        </widget>
-       </item>
-       <item>
-        <widget class="QFrame" name="events_view_5">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>70</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>70</height>
-          </size>
-         </property>
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">#events_view_2{
-position: absolute;
-width: 370px;
-height: 110px;
-left: 7px;
-top: 28px;
-
-background: rgba(0, 0, 0, 0.05);
-border: 1px solid rgba(0, 0, 0, 0.3);
-box-sizing: border-box;
-border-radius: 10px}</string>
-         </property>
-         <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
-         </property>
-         <widget class="QLabel" name="label_14">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>0</y>
-            <width>431</width>
-            <height>41</height>
-           </rect>
-          </property>
-          <property name="font">
-           <font>
-            <family>Poppins</family>
-            <pointsize>-1</pointsize>
-            <weight>50</weight>
-            <italic>false</italic>
-            <bold>false</bold>
-           </font>
-          </property>
-          <property name="cursor">
-           <cursorShape>PointingHandCursor</cursorShape>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">position: absolute;
-left: 20px;
-right: 30px;
-top: 10px;
-bottom: 10px;
-
-font-family: Poppins;
-font-style: normal;
-font-weight: normal;
-font-size: 20px;
-line-height: 37px;
-letter-spacing: 0.05em;
-background: rgba(0, 0, 0, 0.01);
-color: #000000;</string>
-          </property>
-          <property name="text">
-           <string>Comment</string>
-          </property>
-         </widget>
-         <widget class="QLabel" name="label_15">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>40</y>
-            <width>441</width>
-            <height>21</height>
-           </rect>
-          </property>
-          <property name="cursor">
-           <cursorShape>PointingHandCursor</cursorShape>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">position: absolute;
-left: 20px;
-right: 30px;
-top: 10px;
-bottom: 10px;
-
-font-family: Poppins;
-font-style: normal;
-font-weight: normal;
-font-size: 15px;
-line-height: 37px;
-letter-spacing: 0.05em;
-background: rgba(0, 0, 0, 0.01);
-color: #000000;</string>
-          </property>
-          <property name="text">
-           <string>User</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-          </property>
-         </widget>
-        </widget>
-       </item>
-       <item>
-        <widget class="QFrame" name="events_view_6">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>70</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>70</height>
-          </size>
-         </property>
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">#events_view_3{
-position: absolute;
-width: 370px;
-height: 110px;
-left: 7px;
-top: 28px;
-
-background: rgba(0, 0, 0, 0.05);
-border: 1px solid rgba(0, 0, 0, 0.3);
-box-sizing: border-box;
-border-radius: 10px}</string>
-         </property>
-         <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
-         </property>
-         <widget class="QLabel" name="label_16">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>0</y>
-            <width>431</width>
-            <height>41</height>
-           </rect>
-          </property>
-          <property name="font">
-           <font>
-            <family>Poppins</family>
-            <pointsize>-1</pointsize>
-            <weight>50</weight>
-            <italic>false</italic>
-            <bold>false</bold>
-           </font>
-          </property>
-          <property name="cursor">
-           <cursorShape>PointingHandCursor</cursorShape>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">position: absolute;
-left: 20px;
-right: 30px;
-top: 10px;
-bottom: 10px;
-
-font-family: Poppins;
-font-style: normal;
-font-weight: normal;
-font-size: 20px;
-line-height: 37px;
-letter-spacing: 0.05em;
-background: rgba(0, 0, 0, 0.01);
-color: #000000;</string>
-          </property>
-          <property name="text">
-           <string>Comment</string>
-          </property>
-         </widget>
-         <widget class="QLabel" name="label_17">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>40</y>
-            <width>441</width>
-            <height>21</height>
-           </rect>
-          </property>
-          <property name="cursor">
-           <cursorShape>PointingHandCursor</cursorShape>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">position: absolute;
-left: 20px;
-right: 30px;
-top: 10px;
-bottom: 10px;
-
-font-family: Poppins;
-font-style: normal;
-font-weight: normal;
-font-size: 15px;
-line-height: 37px;
-letter-spacing: 0.05em;
-background: rgba(0, 0, 0, 0.01);
-color: #000000;</string>
-          </property>
-          <property name="text">
-           <string>User</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-          </property>
-         </widget>
-        </widget>
-       </item>
-       <item>
-        <widget class="QFrame" name="events_view_3">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>70</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>70</height>
-          </size>
-         </property>
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">#events_view_3{
-position: absolute;
-width: 370px;
-height: 110px;
-left: 7px;
-top: 28px;
-
-background: rgba(0, 0, 0, 0.05);
-border: 1px solid rgba(0, 0, 0, 0.3);
-box-sizing: border-box;
-border-radius: 10px}</string>
-         </property>
-         <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
-         </property>
-         <widget class="QLabel" name="label_10">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>0</y>
-            <width>431</width>
-            <height>41</height>
-           </rect>
-          </property>
-          <property name="font">
-           <font>
-            <family>Poppins</family>
-            <pointsize>-1</pointsize>
-            <weight>50</weight>
-            <italic>false</italic>
-            <bold>false</bold>
-           </font>
-          </property>
-          <property name="cursor">
-           <cursorShape>PointingHandCursor</cursorShape>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">position: absolute;
-left: 20px;
-right: 30px;
-top: 10px;
-bottom: 10px;
-
-font-family: Poppins;
-font-style: normal;
-font-weight: normal;
-font-size: 20px;
-line-height: 37px;
-letter-spacing: 0.05em;
-background: rgba(0, 0, 0, 0.01);
-color: #000000;</string>
-          </property>
-          <property name="text">
-           <string>Comment</string>
-          </property>
-         </widget>
-         <widget class="QLabel" name="label_11">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>40</y>
-            <width>441</width>
-            <height>21</height>
-           </rect>
-          </property>
-          <property name="cursor">
-           <cursorShape>PointingHandCursor</cursorShape>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">position: absolute;
-left: 20px;
-right: 30px;
-top: 10px;
-bottom: 10px;
-
-font-family: Poppins;
-font-style: normal;
-font-weight: normal;
-font-size: 15px;
-line-height: 37px;
-letter-spacing: 0.05em;
-background: rgba(0, 0, 0, 0.01);
-color: #000000;</string>
-          </property>
-          <property name="text">
-           <string>User</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-          </property>
-         </widget>
-        </widget>
-       </item>
-      </layout>
+      <layout class="QVBoxLayout" name="verticalLayout_3"/>
      </widget>
     </widget>
    </item>
@@ -575,7 +118,7 @@ border-radius: 8px;}</string>
      <property name="frameShadow">
       <enum>QFrame::Raised</enum>
      </property>
-     <widget class="QLabel" name="post_heading_posts">
+     <widget class="QLabel" name="dynamic_posts_heading_label">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -618,7 +161,7 @@ color: #000000;
        <string>Post Heading</string>
       </property>
      </widget>
-     <widget class="QLabel" name="des">
+     <widget class="QLabel" name="dynamic_posts_description_label">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -660,7 +203,7 @@ color: #000000;</string>
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="static_comments_label">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -685,17 +228,48 @@ text-transform: capitalize;
        <string>Comments 🔽</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="button_add_comment">
       <property name="geometry">
        <rect>
-        <x>412</x>
+        <x>410</x>
         <y>250</y>
         <width>121</width>
         <height>31</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">*{
+font-family: Inter;
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 17px;
+/* identical to box height */
+
+align-items: center;
+
+/* Grey / Light */
+
+
+    border-style: inset;
+	border: 1px solid  #4F4F4F;
+color: #4F4F4F;
+background: #FFFFFF;
+border-radius:7px;
+}
+
+:pressed {
+    border-style: inset;
+	color: white;
+background: #4F4F4F;
+border-radius: 8px;
+}
+/* Inside auto layout */
+
+</string>
+      </property>
       <property name="text">
-       <string>Add comment</string>
+       <string>Add Comment</string>
       </property>
       <property name="icon">
        <iconset>
@@ -705,7 +279,7 @@ text-transform: capitalize;
      <widget class="QLineEdit" name="lineEdit">
       <property name="geometry">
        <rect>
-        <x>152</x>
+        <x>150</x>
         <y>250</y>
         <width>251</width>
         <height>31</height>
@@ -727,15 +301,38 @@ border: 2px solid #4F4F4F;
 box-sizing: border-box;
 border-radius: 7px;
 
+
+
+font-family: Inter;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+align-items: center;
+
+/* Grey / Light */
+
+
+ 
+
+
+
+
+
 </string>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </widget>
      <widget class="QLabel" name="label_2">
       <property name="geometry">
        <rect>
-        <x>30</x>
+        <x>20</x>
         <y>210</y>
-        <width>391</width>
+        <width>401</width>
         <height>31</height>
        </rect>
       </property>
@@ -755,20 +352,48 @@ text-transform: capitalize;
        <string>Files: </string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_2">
+     <widget class="QPushButton" name="button_file_download">
       <property name="geometry">
        <rect>
-        <x>430</x>
+        <x>440</x>
         <y>210</y>
         <width>93</width>
         <height>28</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">*{
+font-family: Inter;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+align-items: center;
+
+/* Grey / Light */
+
+color: white;
+background: #4F4F4F;
+border-radius: 8px;
+}
+
+:pressed {
+    border-style: inset;
+	border: 1px solid  #4F4F4F;
+color: #4F4F4F;
+background: #FFFFFF;
+}
+/* Inside auto layout */
+
+</string>
+      </property>
       <property name="text">
        <string>Download</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_3">
+     <widget class="QLabel" name="dynamic_time_label">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -796,10 +421,10 @@ text-transform: capitalize;
      <widget class="QPushButton" name="close_button_posts">
       <property name="geometry">
        <rect>
-        <x>490</x>
+        <x>489</x>
         <y>10</y>
-        <width>40</width>
-        <height>40</height>
+        <width>35</width>
+        <height>35</height>
        </rect>
       </property>
       <property name="styleSheet">

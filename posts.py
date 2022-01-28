@@ -28,7 +28,7 @@ class Ui_Form(object):
         self.assign_scroll_area.setWidgetResizable(True)
         self.assign_scroll_area.setObjectName("assign_scroll_area")
         self.assign_scroll_area_widget = QtWidgets.QWidget()
-        self.assign_scroll_area_widget.setGeometry(QtCore.QRect(0, 0, 541, 323))
+        self.assign_scroll_area_widget.setGeometry(QtCore.QRect(0, 0, 541, 291))
         self.assign_scroll_area_widget.setStyleSheet("text-align: center;\n"
 "letter-spacing: 0.05em;\n"
 "\n"
@@ -48,258 +48,6 @@ class Ui_Form(object):
         self.assign_scroll_area_widget.setObjectName("assign_scroll_area_widget")
         self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.assign_scroll_area_widget)
         self.verticalLayout_3.setObjectName("verticalLayout_3")
-        self.events_view_2 = QtWidgets.QFrame(self.assign_scroll_area_widget)
-        self.events_view_2.setMinimumSize(QtCore.QSize(0, 70))
-        self.events_view_2.setMaximumSize(QtCore.QSize(16777215, 70))
-        self.events_view_2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.events_view_2.setStyleSheet("#events_view_2{\n"
-"position: absolute;\n"
-"width: 370px;\n"
-"height: 110px;\n"
-"left: 7px;\n"
-"top: 28px;\n"
-"\n"
-"background: rgba(0, 0, 0, 0.05);\n"
-"border: 1px solid rgba(0, 0, 0, 0.3);\n"
-"box-sizing: border-box;\n"
-"border-radius: 10px}")
-        self.events_view_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.events_view_2.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.events_view_2.setObjectName("events_view_2")
-        self.label_8 = QtWidgets.QLabel(self.events_view_2)
-        self.label_8.setGeometry(QtCore.QRect(10, 0, 501, 41))
-        font = QtGui.QFont()
-        font.setFamily("Poppins")
-        font.setPointSize(-1)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setWeight(50)
-        self.label_8.setFont(font)
-        self.label_8.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.label_8.setStyleSheet("position: absolute;\n"
-"left: 20px;\n"
-"right: 30px;\n"
-"top: 10px;\n"
-"bottom: 10px;\n"
-"\n"
-"font-family: Poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 20px;\n"
-"line-height: 37px;\n"
-"letter-spacing: 0.05em;\n"
-"background: rgba(0, 0, 0, 0.01);\n"
-"color: #000000;")
-        self.label_8.setObjectName("label_8")
-        self.label_9 = QtWidgets.QLabel(self.events_view_2)
-        self.label_9.setGeometry(QtCore.QRect(10, 40, 441, 21))
-        self.label_9.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.label_9.setStyleSheet("position: absolute;\n"
-"left: 20px;\n"
-"right: 30px;\n"
-"top: 10px;\n"
-"bottom: 10px;\n"
-"\n"
-"font-family: Poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 15px;\n"
-"line-height: 37px;\n"
-"letter-spacing: 0.05em;\n"
-"background: rgba(0, 0, 0, 0.01);\n"
-"color: #000000;")
-        self.label_9.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
-        self.label_9.setObjectName("label_9")
-        self.verticalLayout_3.addWidget(self.events_view_2)
-        self.events_view_5 = QtWidgets.QFrame(self.assign_scroll_area_widget)
-        self.events_view_5.setMinimumSize(QtCore.QSize(0, 70))
-        self.events_view_5.setMaximumSize(QtCore.QSize(16777215, 70))
-        self.events_view_5.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.events_view_5.setStyleSheet("#events_view_2{\n"
-"position: absolute;\n"
-"width: 370px;\n"
-"height: 110px;\n"
-"left: 7px;\n"
-"top: 28px;\n"
-"\n"
-"background: rgba(0, 0, 0, 0.05);\n"
-"border: 1px solid rgba(0, 0, 0, 0.3);\n"
-"box-sizing: border-box;\n"
-"border-radius: 10px}")
-        self.events_view_5.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.events_view_5.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.events_view_5.setObjectName("events_view_5")
-        self.label_14 = QtWidgets.QLabel(self.events_view_5)
-        self.label_14.setGeometry(QtCore.QRect(10, 0, 431, 41))
-        font = QtGui.QFont()
-        font.setFamily("Poppins")
-        font.setPointSize(-1)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setWeight(50)
-        self.label_14.setFont(font)
-        self.label_14.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.label_14.setStyleSheet("position: absolute;\n"
-"left: 20px;\n"
-"right: 30px;\n"
-"top: 10px;\n"
-"bottom: 10px;\n"
-"\n"
-"font-family: Poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 20px;\n"
-"line-height: 37px;\n"
-"letter-spacing: 0.05em;\n"
-"background: rgba(0, 0, 0, 0.01);\n"
-"color: #000000;")
-        self.label_14.setObjectName("label_14")
-        self.label_15 = QtWidgets.QLabel(self.events_view_5)
-        self.label_15.setGeometry(QtCore.QRect(10, 40, 441, 21))
-        self.label_15.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.label_15.setStyleSheet("position: absolute;\n"
-"left: 20px;\n"
-"right: 30px;\n"
-"top: 10px;\n"
-"bottom: 10px;\n"
-"\n"
-"font-family: Poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 15px;\n"
-"line-height: 37px;\n"
-"letter-spacing: 0.05em;\n"
-"background: rgba(0, 0, 0, 0.01);\n"
-"color: #000000;")
-        self.label_15.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
-        self.label_15.setObjectName("label_15")
-        self.verticalLayout_3.addWidget(self.events_view_5)
-        self.events_view_6 = QtWidgets.QFrame(self.assign_scroll_area_widget)
-        self.events_view_6.setMinimumSize(QtCore.QSize(0, 70))
-        self.events_view_6.setMaximumSize(QtCore.QSize(16777215, 70))
-        self.events_view_6.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.events_view_6.setStyleSheet("#events_view_3{\n"
-"position: absolute;\n"
-"width: 370px;\n"
-"height: 110px;\n"
-"left: 7px;\n"
-"top: 28px;\n"
-"\n"
-"background: rgba(0, 0, 0, 0.05);\n"
-"border: 1px solid rgba(0, 0, 0, 0.3);\n"
-"box-sizing: border-box;\n"
-"border-radius: 10px}")
-        self.events_view_6.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.events_view_6.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.events_view_6.setObjectName("events_view_6")
-        self.label_16 = QtWidgets.QLabel(self.events_view_6)
-        self.label_16.setGeometry(QtCore.QRect(10, 0, 431, 41))
-        font = QtGui.QFont()
-        font.setFamily("Poppins")
-        font.setPointSize(-1)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setWeight(50)
-        self.label_16.setFont(font)
-        self.label_16.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.label_16.setStyleSheet("position: absolute;\n"
-"left: 20px;\n"
-"right: 30px;\n"
-"top: 10px;\n"
-"bottom: 10px;\n"
-"\n"
-"font-family: Poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 20px;\n"
-"line-height: 37px;\n"
-"letter-spacing: 0.05em;\n"
-"background: rgba(0, 0, 0, 0.01);\n"
-"color: #000000;")
-        self.label_16.setObjectName("label_16")
-        self.label_17 = QtWidgets.QLabel(self.events_view_6)
-        self.label_17.setGeometry(QtCore.QRect(10, 40, 441, 21))
-        self.label_17.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.label_17.setStyleSheet("position: absolute;\n"
-"left: 20px;\n"
-"right: 30px;\n"
-"top: 10px;\n"
-"bottom: 10px;\n"
-"\n"
-"font-family: Poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 15px;\n"
-"line-height: 37px;\n"
-"letter-spacing: 0.05em;\n"
-"background: rgba(0, 0, 0, 0.01);\n"
-"color: #000000;")
-        self.label_17.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
-        self.label_17.setObjectName("label_17")
-        self.verticalLayout_3.addWidget(self.events_view_6)
-        self.events_view_3 = QtWidgets.QFrame(self.assign_scroll_area_widget)
-        self.events_view_3.setMinimumSize(QtCore.QSize(0, 70))
-        self.events_view_3.setMaximumSize(QtCore.QSize(16777215, 70))
-        self.events_view_3.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.events_view_3.setStyleSheet("#events_view_3{\n"
-"position: absolute;\n"
-"width: 370px;\n"
-"height: 110px;\n"
-"left: 7px;\n"
-"top: 28px;\n"
-"\n"
-"background: rgba(0, 0, 0, 0.05);\n"
-"border: 1px solid rgba(0, 0, 0, 0.3);\n"
-"box-sizing: border-box;\n"
-"border-radius: 10px}")
-        self.events_view_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.events_view_3.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.events_view_3.setObjectName("events_view_3")
-        self.label_10 = QtWidgets.QLabel(self.events_view_3)
-        self.label_10.setGeometry(QtCore.QRect(10, 0, 431, 41))
-        font = QtGui.QFont()
-        font.setFamily("Poppins")
-        font.setPointSize(-1)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setWeight(50)
-        self.label_10.setFont(font)
-        self.label_10.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.label_10.setStyleSheet("position: absolute;\n"
-"left: 20px;\n"
-"right: 30px;\n"
-"top: 10px;\n"
-"bottom: 10px;\n"
-"\n"
-"font-family: Poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 20px;\n"
-"line-height: 37px;\n"
-"letter-spacing: 0.05em;\n"
-"background: rgba(0, 0, 0, 0.01);\n"
-"color: #000000;")
-        self.label_10.setObjectName("label_10")
-        self.label_11 = QtWidgets.QLabel(self.events_view_3)
-        self.label_11.setGeometry(QtCore.QRect(10, 40, 441, 21))
-        self.label_11.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.label_11.setStyleSheet("position: absolute;\n"
-"left: 20px;\n"
-"right: 30px;\n"
-"top: 10px;\n"
-"bottom: 10px;\n"
-"\n"
-"font-family: Poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 15px;\n"
-"line-height: 37px;\n"
-"letter-spacing: 0.05em;\n"
-"background: rgba(0, 0, 0, 0.01);\n"
-"color: #000000;")
-        self.label_11.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
-        self.label_11.setObjectName("label_11")
-        self.verticalLayout_3.addWidget(self.events_view_3)
         self.assign_scroll_area.setWidget(self.assign_scroll_area_widget)
         self.gridLayout.addWidget(self.assign_scroll_area, 1, 0, 1, 1)
         self.frame_2 = QtWidgets.QFrame(Form)
@@ -329,16 +77,16 @@ class Ui_Form(object):
         self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_2.setObjectName("frame_2")
-        self.post_heading_posts = QtWidgets.QLabel(self.frame_2)
-        self.post_heading_posts.setGeometry(QtCore.QRect(20, 30, 171, 31))
+        self.dynamic_posts_heading_label = QtWidgets.QLabel(self.frame_2)
+        self.dynamic_posts_heading_label.setGeometry(QtCore.QRect(20, 30, 171, 31))
         font = QtGui.QFont()
         font.setFamily("Poppins")
         font.setPointSize(-1)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(50)
-        self.post_heading_posts.setFont(font)
-        self.post_heading_posts.setStyleSheet("position: absolute;\n"
+        self.dynamic_posts_heading_label.setFont(font)
+        self.dynamic_posts_heading_label.setStyleSheet("position: absolute;\n"
 "width: 233px;\n"
 "height: 60px;\n"
 "left: 92px;\n"
@@ -357,11 +105,11 @@ class Ui_Form(object):
 "\n"
 "color: #000000;\n"
 "")
-        self.post_heading_posts.setObjectName("post_heading_posts")
-        self.des = QtWidgets.QLabel(self.frame_2)
-        self.des.setGeometry(QtCore.QRect(20, 70, 511, 131))
-        self.des.setMaximumSize(QtCore.QSize(511, 16777215))
-        self.des.setStyleSheet("background: rgba(196, 196, 196, 0.1);\n"
+        self.dynamic_posts_heading_label.setObjectName("dynamic_posts_heading_label")
+        self.dynamic_posts_description_label = QtWidgets.QLabel(self.frame_2)
+        self.dynamic_posts_description_label.setGeometry(QtCore.QRect(20, 70, 511, 131))
+        self.dynamic_posts_description_label.setMaximumSize(QtCore.QSize(511, 16777215))
+        self.dynamic_posts_description_label.setStyleSheet("background: rgba(196, 196, 196, 0.1);\n"
 "font-family: Poppins;\n"
 "font-style: normal;\n"
 "font-weight: normal;\n"
@@ -373,13 +121,13 @@ class Ui_Form(object):
 "text-transform: capitalize;\n"
 "\n"
 "color: #000000;")
-        self.des.setScaledContents(False)
-        self.des.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
-        self.des.setWordWrap(True)
-        self.des.setObjectName("des")
-        self.label = QtWidgets.QLabel(self.frame_2)
-        self.label.setGeometry(QtCore.QRect(20, 250, 111, 31))
-        self.label.setStyleSheet("font-family: Poppins;\n"
+        self.dynamic_posts_description_label.setScaledContents(False)
+        self.dynamic_posts_description_label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
+        self.dynamic_posts_description_label.setWordWrap(True)
+        self.dynamic_posts_description_label.setObjectName("dynamic_posts_description_label")
+        self.static_comments_label = QtWidgets.QLabel(self.frame_2)
+        self.static_comments_label.setGeometry(QtCore.QRect(20, 250, 111, 31))
+        self.static_comments_label.setStyleSheet("font-family: Poppins;\n"
 "font-style: normal;\n"
 "font-weight: normal;\n"
 "font-size: 15px;\n"
@@ -389,15 +137,44 @@ class Ui_Form(object):
 "letter-spacing: 0.05em;\n"
 "text-transform: capitalize;\n"
 "")
-        self.label.setObjectName("label")
-        self.pushButton = QtWidgets.QPushButton(self.frame_2)
-        self.pushButton.setGeometry(QtCore.QRect(412, 250, 121, 31))
+        self.static_comments_label.setObjectName("static_comments_label")
+        self.button_add_comment = QtWidgets.QPushButton(self.frame_2)
+        self.button_add_comment.setGeometry(QtCore.QRect(410, 250, 121, 31))
+        self.button_add_comment.setStyleSheet("*{\n"
+"font-family: Inter;\n"
+"font-style: normal;\n"
+"font-weight: 500;\n"
+"font-size: 12px;\n"
+"line-height: 17px;\n"
+"/* identical to box height */\n"
+"\n"
+"align-items: center;\n"
+"\n"
+"/* Grey / Light */\n"
+"\n"
+"\n"
+"    border-style: inset;\n"
+"    border: 1px solid  #4F4F4F;\n"
+"color: #4F4F4F;\n"
+"background: #FFFFFF;\n"
+"border-radius:7px;\n"
+"}\n"
+"\n"
+":pressed {\n"
+"    border-style: inset;\n"
+"    color: white;\n"
+"background: #4F4F4F;\n"
+"border-radius: 8px;\n"
+"}\n"
+"/* Inside auto layout */\n"
+"\n"
+"")
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("assests/icons/plus.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton.setIcon(icon)
-        self.pushButton.setObjectName("pushButton")
+        self.button_add_comment.setIcon(icon)
+        self.button_add_comment.setObjectName("button_add_comment")
         self.lineEdit = QtWidgets.QLineEdit(self.frame_2)
-        self.lineEdit.setGeometry(QtCore.QRect(152, 250, 251, 31))
+        self.lineEdit.setGeometry(QtCore.QRect(150, 250, 251, 31))
         self.lineEdit.setStyleSheet("position: static;\n"
 "width: 535px;\n"
 "height: 53px;\n"
@@ -413,10 +190,31 @@ class Ui_Form(object):
 "box-sizing: border-box;\n"
 "border-radius: 7px;\n"
 "\n"
+"\n"
+"\n"
+"font-family: Inter;\n"
+"font-style: normal;\n"
+"font-weight: 500;\n"
+"font-size: 14px;\n"
+"line-height: 17px;\n"
+"/* identical to box height */\n"
+"\n"
+"align-items: center;\n"
+"\n"
+"/* Grey / Light */\n"
+"\n"
+"\n"
+" \n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
 "")
+        self.lineEdit.setText("")
         self.lineEdit.setObjectName("lineEdit")
         self.label_2 = QtWidgets.QLabel(self.frame_2)
-        self.label_2.setGeometry(QtCore.QRect(30, 210, 391, 31))
+        self.label_2.setGeometry(QtCore.QRect(20, 210, 401, 31))
         self.label_2.setStyleSheet("font-family: Poppins;\n"
 "font-style: normal;\n"
 "font-weight: normal;\n"
@@ -428,12 +226,38 @@ class Ui_Form(object):
 "text-transform: capitalize;\n"
 "")
         self.label_2.setObjectName("label_2")
-        self.pushButton_2 = QtWidgets.QPushButton(self.frame_2)
-        self.pushButton_2.setGeometry(QtCore.QRect(430, 210, 93, 28))
-        self.pushButton_2.setObjectName("pushButton_2")
-        self.label_3 = QtWidgets.QLabel(self.frame_2)
-        self.label_3.setGeometry(QtCore.QRect(10, 10, 201, 16))
-        self.label_3.setStyleSheet("font-family: Poppins;\n"
+        self.button_file_download = QtWidgets.QPushButton(self.frame_2)
+        self.button_file_download.setGeometry(QtCore.QRect(440, 210, 93, 28))
+        self.button_file_download.setStyleSheet("*{\n"
+"font-family: Inter;\n"
+"font-style: normal;\n"
+"font-weight: 500;\n"
+"font-size: 14px;\n"
+"line-height: 17px;\n"
+"/* identical to box height */\n"
+"\n"
+"align-items: center;\n"
+"\n"
+"/* Grey / Light */\n"
+"\n"
+"color: white;\n"
+"background: #4F4F4F;\n"
+"border-radius: 8px;\n"
+"}\n"
+"\n"
+":pressed {\n"
+"    border-style: inset;\n"
+"    border: 1px solid  #4F4F4F;\n"
+"color: #4F4F4F;\n"
+"background: #FFFFFF;\n"
+"}\n"
+"/* Inside auto layout */\n"
+"\n"
+"")
+        self.button_file_download.setObjectName("button_file_download")
+        self.dynamic_time_label = QtWidgets.QLabel(self.frame_2)
+        self.dynamic_time_label.setGeometry(QtCore.QRect(10, 10, 201, 16))
+        self.dynamic_time_label.setStyleSheet("font-family: Poppins;\n"
 "font-style: normal;\n"
 "font-weight: normal;\n"
 "font-size: 13px;\n"
@@ -443,9 +267,9 @@ class Ui_Form(object):
 "letter-spacing: 0.05em;\n"
 "text-transform: capitalize;\n"
 "")
-        self.label_3.setObjectName("label_3")
+        self.dynamic_time_label.setObjectName("dynamic_time_label")
         self.close_button_posts = QtWidgets.QPushButton(self.frame_2)
-        self.close_button_posts.setGeometry(QtCore.QRect(490, 10, 40, 40))
+        self.close_button_posts.setGeometry(QtCore.QRect(489, 10, 35, 35))
         self.close_button_posts.setStyleSheet("*{border-radius:0px;}\n"
 ":pressed{\n"
 "    border: 3px solid  #FF0000;\n"
@@ -466,21 +290,13 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
-        self.label_8.setText(_translate("Form", "Comment"))
-        self.label_9.setText(_translate("Form", "User"))
-        self.label_14.setText(_translate("Form", "Comment"))
-        self.label_15.setText(_translate("Form", "User"))
-        self.label_16.setText(_translate("Form", "Comment"))
-        self.label_17.setText(_translate("Form", "User"))
-        self.label_10.setText(_translate("Form", "Comment"))
-        self.label_11.setText(_translate("Form", "User"))
-        self.post_heading_posts.setText(_translate("Form", "Post Heading"))
-        self.des.setText(_translate("Form", "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec."))
-        self.label.setText(_translate("Form", "Comments 🔽"))
-        self.pushButton.setText(_translate("Form", "Add comment"))
+        self.dynamic_posts_heading_label.setText(_translate("Form", "Post Heading"))
+        self.dynamic_posts_description_label.setText(_translate("Form", "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec."))
+        self.static_comments_label.setText(_translate("Form", "Comments 🔽"))
+        self.button_add_comment.setText(_translate("Form", "Add Comment"))
         self.label_2.setText(_translate("Form", "Files: "))
-        self.pushButton_2.setText(_translate("Form", "Download"))
-        self.label_3.setText(_translate("Form", "Time"))
+        self.button_file_download.setText(_translate("Form", "Download"))
+        self.dynamic_time_label.setText(_translate("Form", "Time"))
 
 
 if __name__ == "__main__":

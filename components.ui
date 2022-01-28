@@ -358,6 +358,93 @@ border-radius: 8px;
     </size>
    </property>
   </widget>
+  <widget class="QPushButton" name="sign_up_button">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>280</y>
+     <width>425</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+#sign_up_button{
+font-family: Inter;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+align-items: center;
+
+/* Grey / Light */
+
+color: white;
+background: #4F4F4F;
+border-radius: 8px;
+}
+
+#sign_up_button:pressed {
+    border-style: inset;
+	border: 1px solid  #4F4F4F;
+color: #4F4F4F;
+background: #FFFFFF;
+}
+/* Inside auto layout */
+
+</string>
+   </property>
+   <property name="text">
+    <string>Sign Up</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="sign_in_button">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>330</y>
+     <width>425</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+#sign_in_button{
+font-family: Inter;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+align-items: center;
+
+/* Grey / Light */
+
+
+    border-style: inset;
+	border: 1px solid  #4F4F4F;
+color: #4F4F4F;
+background: #FFFFFF;
+border-radius:10px;
+}
+
+#sign_in_button:pressed {
+    border-style: inset;
+	color: white;
+background: #4F4F4F;
+border-radius: 8px;
+}
+/* Inside auto layout */
+
+</string>
+   </property>
+   <property name="text">
+    <string>Already a user? Sign In</string>
+   </property>
+  </widget>
  </widget>
  <resources>
   <include location="temp.qrc"/>
