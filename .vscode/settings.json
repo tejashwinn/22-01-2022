@@ -12,6 +12,7 @@
         "padx",
         "pady",
         "plabel",
+        "pymongo",
         "pyuic",
         "relx",
         "ulabel",

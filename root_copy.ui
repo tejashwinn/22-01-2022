@@ -6,20 +6,1451 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1081</width>
-    <height>663</height>
+    <width>1094</width>
+    <height>658</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1094</width>
+    <height>658</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QWidget" name="centralwidget">
+   <property name="maximumSize">
+    <size>
+     <width>1081</width>
+     <height>607</height>
+    </size>
+   </property>
+   <widget class="QFrame" name="up_outer_frame">
+    <property name="geometry">
+     <rect>
+      <x>11</x>
+      <y>11</y>
+      <width>1081</width>
+      <height>601</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>1081</width>
+      <height>601</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>1081</width>
+      <height>601</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background:white;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="0">
+      <widget class="QFrame" name="up_inner_frame">
+       <property name="maximumSize">
+        <size>
+         <width>445</width>
+         <height>650</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#up_inner_frame{/* Auto layout */
+
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 40px 25px;
+
+position: absolute;
+width: 593px;
+height: 594px;
+left: calc(50% - 593px/2 - 0.5px);
+top: 243px;
+
+/* White */
+
+background: #FFFFFF;
+/* Grey / Dark */
+
+border: 1px solid #D1D1D1;
+box-sizing: border-box;
+border-radius: 8px;}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QLabel" name="up_heading_label">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>0</y>
+          <width>81</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">position: absolute;
+left: 20px;
+right: 30px;
+top: 10px;
+bottom: 10px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 37px;
+letter-spacing: 0.05em;
+background: rgba(0, 0, 0, 0.01);
+color: #000000;</string>
+        </property>
+        <property name="text">
+         <string>Sign Up</string>
+        </property>
+       </widget>
+       <widget class="QFrame" name="up_name_frame">
+        <property name="geometry">
+         <rect>
+          <x>1</x>
+          <y>60</y>
+          <width>443</width>
+          <height>80</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="up_name_label">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>5</y>
+           <width>141</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>poppins</family>
+           <pointsize>-1</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">position: absolute;
+left: 0%;
+right: 12.33%;
+top: 15%;
+bottom: 14.17%;
+
+font-family: poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 17px;
+
+/* Dark / Medium */
+
+color: #4F4F4F;</string>
+         </property>
+         <property name="text">
+          <string>Name</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="up_name_entry">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>30</y>
+           <width>425</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">position: static;
+width: 535px;
+height: 53px;
+left: 0px;
+top: 0px;
+
+/* White */
+
+background: #FFFFFF;
+/* Dark / Medium */
+
+border: 1px solid #4F4F4F;
+box-sizing: border-box;
+border-radius: 7px;
+
+font-family: poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="username_frame">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>1</x>
+          <y>140</y>
+          <width>443</width>
+          <height>80</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="up_username_label">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>5</y>
+           <width>141</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">position: absolute;
+left: 0%;
+right: 12.33%;
+top: 15%;
+bottom: 14.17%;
+
+font-family: poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 17px;
+
+/* Dark / Medium */
+
+color: #4F4F4F;</string>
+         </property>
+         <property name="text">
+          <string>Username</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="up_username_entry">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>30</y>
+           <width>425</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">position: static;
+width: 535px;
+height: 53px;
+left: 0px;
+top: 0px;
+
+/* White */
+
+background: #FFFFFF;
+/* Dark / Medium */
+
+border: 1px solid #4F4F4F;
+box-sizing: border-box;
+border-radius: 7px;
+font-family: poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+
+</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="up_email_frame">
+        <property name="geometry">
+         <rect>
+          <x>1</x>
+          <y>220</y>
+          <width>443</width>
+          <height>80</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="up_email_label">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>0</y>
+           <width>411</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">position: absolute;
+left: 0%;
+right: 12.33%;
+top: 15%;
+bottom: 14.17%;
+
+font-family: poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 17px;
+
+/* Dark / Medium */
+
+color: #4F4F4F;</string>
+         </property>
+         <property name="text">
+          <string>Email Id</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="up_email_entry">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>30</y>
+           <width>425</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-family: poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+position: static;
+width: 535px;
+height: 53px;
+left: 0px;
+top: 0px;
+
+/* White */
+
+background: #FFFFFF;
+/* Dark / Medium */
+
+border: 1px solid #4F4F4F;
+box-sizing: border-box;
+border-radius: 7px;
+
+</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="up_password_frame">
+        <property name="geometry">
+         <rect>
+          <x>1</x>
+          <y>300</y>
+          <width>443</width>
+          <height>80</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="up_password_label">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>5</y>
+           <width>141</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">position: absolute;
+left: 0%;
+right: 12.33%;
+top: 15%;
+bottom: 14.17%;
+
+font-family: poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 17px;
+
+/* Dark / Medium */
+
+color: #4F4F4F;</string>
+         </property>
+         <property name="text">
+          <string>Password</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="up_password_entry">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>30</y>
+           <width>425</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+font-family: poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+position: static;
+width: 535px;
+height: 53px;
+left: 0px;
+top: 0px;
+
+/* White */
+
+background: #FFFFFF;
+/* Dark / Medium */
+
+border: 1px solid #4F4F4F;
+box-sizing: border-box;
+border-radius: 7px;
+
+</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QLabel" name="up_warning_label">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>35</y>
+          <width>421</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">position: absolute;
+left: 0%;
+right: 12.33%;
+top: 15%;
+bottom: 14.17%;
+
+font-family: poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 17px;
+
+/* Dark / Medium */
+
+color: #FF0000;</string>
+        </property>
+        <property name="text">
+         <string>Please enter your details to continue.</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+       <widget class="QFrame" name="up_confirm_password_frame">
+        <property name="geometry">
+         <rect>
+          <x>1</x>
+          <y>380</y>
+          <width>443</width>
+          <height>80</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="up_confirm_password_label">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>5</y>
+           <width>141</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">position: absolute;
+left: 0%;
+right: 12.33%;
+top: 15%;
+bottom: 14.17%;
+
+font-family: poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 17px;
+
+/* Dark / Medium */
+
+color: #4F4F4F;</string>
+         </property>
+         <property name="text">
+          <string>Confirm Password</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="up_confirm_password_entry">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>30</y>
+           <width>425</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-family: poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+position: static;
+width: 535px;
+height: 53px;
+left: 0px;
+top: 0px;
+
+/* White */
+
+background: #FFFFFF;
+/* Dark / Medium */
+
+border: 2px solid #4F4F4F;
+box-sizing: border-box;
+border-radius: 7px;
+
+</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QPushButton" name="up_sign_up_button">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>470</y>
+          <width>425</width>
+          <height>40</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+*{
+font-family: Inter;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+align-items: center;
+
+/* Grey / Light */
+
+color: white;
+background: #4F4F4F;
+border-radius: 8px;
+}
+
+:pressed {
+    border-style: inset;
+	border: 1px solid  #4F4F4F;
+color: #4F4F4F;
+background: #FFFFFF;
+}
+/* Inside auto layout */
+
+</string>
+        </property>
+        <property name="text">
+         <string>Sign Up</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="up_sign_in_button">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>520</y>
+          <width>425</width>
+          <height>40</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+*{
+font-family: Inter;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+align-items: center;
+
+/* Grey / Light */
+
+
+    border-style: inset;
+	border: 1px solid  #4F4F4F;
+color: #4F4F4F;
+background: #FFFFFF;
+border-radius:10px;
+}
+
+:pressed {
+    border-style: inset;
+	color: white;
+background: #4F4F4F;
+border-radius: 8px;
+}
+/* Inside auto layout */
+
+</string>
+        </property>
+        <property name="text">
+         <string>Already a user? Sign In</string>
+        </property>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QFrame" name="in_outer_frame">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>1081</width>
+      <height>601</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>1081</width>
+      <height>601</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>1081</width>
+      <height>601</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background:white;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_3">
+     <item row="0" column="0">
+      <widget class="QFrame" name="in_inner_frame">
+       <property name="minimumSize">
+        <size>
+         <width>460</width>
+         <height>410</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>460</width>
+         <height>410</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#in_inner_frame{/* Auto layout */
+
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 40px 25px;
+
+position: absolute;
+width: 593px;
+height: 594px;
+left: calc(50% - 593px/2 - 0.5px);
+top: 243px;
+
+/* White */
+
+background: #FFFFFF;
+/* Grey / Dark */
+
+border: 1px solid #D1D1D1;
+box-sizing: border-box;
+border-radius: 8px;}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QLabel" name="static_in_heading">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>81</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">position: absolute;
+left: 20px;
+right: 30px;
+top: 10px;
+bottom: 10px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 37px;
+letter-spacing: 0.05em;
+background: rgba(0, 0, 0, 0.01);
+color: #000000;</string>
+        </property>
+        <property name="text">
+         <string>Sign In</string>
+        </property>
+       </widget>
+       <widget class="QFrame" name="in_email_frame">
+        <property name="geometry">
+         <rect>
+          <x>1</x>
+          <y>80</y>
+          <width>457</width>
+          <height>80</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="in_email_label">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>0</y>
+           <width>425</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">position: absolute;
+left: 0%;
+right: 12.33%;
+top: 15%;
+bottom: 14.17%;
+
+font-family: poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 17px;
+
+/* Dark / Medium */
+
+color: #4F4F4F;</string>
+         </property>
+         <property name="text">
+          <string>Email Id</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="in_email_entry">
+         <property name="geometry">
+          <rect>
+           <x>15</x>
+           <y>30</y>
+           <width>430</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">position: static;
+width: 535px;
+height: 53px;
+left: 0px;
+top: 0px;
+
+/* White */
+
+background: #FFFFFF;
+/* Dark / Medium */
+
+border: 2px solid #4F4F4F;
+box-sizing: border-box;
+border-radius: 7px;
+
+</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="in_password_frame">
+        <property name="geometry">
+         <rect>
+          <x>1</x>
+          <y>180</y>
+          <width>457</width>
+          <height>80</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="in_password_label">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>5</y>
+           <width>141</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">position: absolute;
+left: 0%;
+right: 12.33%;
+top: 15%;
+bottom: 14.17%;
+
+font-family: poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 17px;
+
+/* Dark / Medium */
+
+color: #4F4F4F;</string>
+         </property>
+         <property name="text">
+          <string>Password</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="in_password_entry">
+         <property name="geometry">
+          <rect>
+           <x>15</x>
+           <y>30</y>
+           <width>430</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">position: static;
+width: 535px;
+height: 53px;
+left: 0px;
+top: 0px;
+
+/* White */
+
+background: #FFFFFF;
+/* Dark / Medium */
+
+border: 1px solid #4F4F4F;
+box-sizing: border-box;
+border-radius: 7px;
+
+</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QPushButton" name="in_sign_in_button">
+        <property name="geometry">
+         <rect>
+          <x>15</x>
+          <y>290</y>
+          <width>430</width>
+          <height>40</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+*{font-family: Inter;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+align-items: center;
+
+/* Grey / Light */
+
+color: white;
+background: #4F4F4F;
+border-radius: 8px;
+}
+:pressed {
+    border-style: inset;
+	border: 1px solid  #4F4F4F;
+color: #4F4F4F;
+background: #FFFFFF;
+}
+/* Inside auto layout */
+
+</string>
+        </property>
+        <property name="text">
+         <string>Sign In</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="in_sign_up_button">
+        <property name="geometry">
+         <rect>
+          <x>15</x>
+          <y>350</y>
+          <width>430</width>
+          <height>40</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+*{font-family: Inter;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+align-items: center;
+
+/* Grey / Light */
+
+
+    border-style: inset;
+	border: 1px solid  #4F4F4F;
+color: #4F4F4F;
+background: #FFFFFF;
+border-radius:10px;
+}
+
+:pressed {
+    border-style: inset;
+	color: white;
+background: #4F4F4F;
+border-radius: 8px;
+}
+/* Inside auto layout */
+
+</string>
+        </property>
+        <property name="text">
+         <string>New user? Sign Up</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="in_warning_label">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>40</y>
+          <width>421</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">position: absolute;
+left: 0%;
+right: 12.33%;
+top: 15%;
+bottom: 14.17%;
+
+font-family: poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 17px;
+
+/* Dark / Medium */
+
+color: #FF0000;</string>
+        </property>
+        <property name="text">
+         <string>Please enter your details to continue.</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QFrame" name="main_class_framework">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1081</width>
+      <height>601</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background:white;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QFrame" name="class_name_frame">
+     <property name="geometry">
+      <rect>
+       <x>269</x>
+       <y>20</y>
+       <width>541</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#class_name_frame{position: absolute;
+left: 435px;
+right: 429px;
+top: 119px;
+bottom: 756px;
+
+background: rgba(118, 158, 161, 0.4);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="class_name_label_dynamic">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>521</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Poppins</family>
+        <pointsize>-1</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#class_name_label_dynamic{
+/* ADA */
+
+
+position: absolute;
+width: 266px;
+height: 61px;
+left: 26px;
+top: 21px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: bold;
+font-size: 25px;
+line-height: 61px;
+letter-spacing: 0.05em;
+
+color: #FFFFFF;
+background:rgba(118, 158, 161, 0.01);
+}</string>
+      </property>
+      <property name="text">
+       <string>Class Name</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="class_description_label_dynamic">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>521</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#class_description_label_dynamic
+{
+/* ADA */
+
+
+position: absolute;
+width: 266px;
+height: 61px;
+left: 26px;
+top: 21px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+line-height: 61px;
+letter-spacing: 0.05em;
+
+color: #000000;
+background:rgba(118, 158, 161, 0.01);
+
+
+}</string>
+      </property>
+      <property name="text">
+       <string>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QScrollArea" name="posts_scroll_area">
+     <property name="geometry">
+      <rect>
+       <x>269</x>
+       <y>129</y>
+       <width>541</width>
+       <height>471</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#posts_scroll_area{
+width: 1056px;
+height: 710px;
+left: 438px;
+top: 343px;
+
+background: #FFFFFF;
+mix-blend-mode: hard-light;
+border-radius: 10px;}</string>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOn</enum>
+     </property>
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="posts_scroll_area_widget">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>520</width>
+        <height>471</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#posts_scroll_area_widget{
+
+width: 1056px;
+height: 710px;
+left: 438px;
+top: 343px;
+
+background: #FFFFFF;
+mix-blend-mode: hard-light;
+border-radius: 10px;}</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout"/>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="static_events">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>251</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">position: absolute;
+width: 143px;
+height: 62px;
+left: 133px;
+top: 44px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 25px;
+line-height: 61px;
+/* identical to box height */
+
+text-align: center;
+letter-spacing: 0.05em;
+
+color: #000000;
+position: absolute;
+width: 409px;
+left: 12px;
+top: 119px;
+bottom: 9px;
+
+background: rgba(209, 233, 215, 0.6);
+backdrop-filter: blur(4px);
+/* Note: backdrop-filter has minimal browser support */
+
+border-radius: 10px;
+</string>
+     </property>
+     <property name="text">
+      <string>Events</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QScrollArea" name="events_scroll_area">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>251</width>
+       <height>521</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#events_scroll_area{
+text-align: center;
+letter-spacing: 0.05em;
+
+color: #000000;
+position: absolute;
+width: 409px;
+left: 12px;
+top: 119px;
+bottom: 9px;
+
+background: rgba(209, 233, 215, 0.6);
+backdrop-filter: blur(4px);
+/* Note: backdrop-filter has minimal browser support */
+
+border-radius: 10;
+}</string>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAsNeeded</enum>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarAsNeeded</enum>
+     </property>
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="events_scroll_area_widget">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>251</width>
+        <height>521</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">text-align: center;
+letter-spacing: 0.05em;
+
+color: #000000;
+position: absolute;
+width: 409px;
+left: 12px;
+top: 119px;
+bottom: 9px;
+
+background: rgba(209, 233, 215, 0.01);
+backdrop-filter: blur(4px);
+/* Note: backdrop-filter has minimal browser support */
+
+border-radius: 10px;
+</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2"/>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="static_assignment">
+     <property name="geometry">
+      <rect>
+       <x>820</x>
+       <y>20</y>
+       <width>251</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">position: absolute;
+width: 143px;
+height: 62px;
+left: 133px;
+top: 44px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 25px;
+line-height: 61px;
+/* identical to box height */
+
+text-align: center;
+letter-spacing: 0.05em;
+
+color: #000000;
+position: absolute;
+width: 409px;
+left: 12px;
+top: 119px;
+bottom: 9px;
+
+background: rgba(252, 202, 201, 0.6);
+backdrop-filter: blur(4px);
+/* Note: backdrop-filter has minimal browser support */
+
+border-radius: 10px;
+</string>
+     </property>
+     <property name="text">
+      <string>Assignments</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QScrollArea" name="assign_scroll_area">
+     <property name="geometry">
+      <rect>
+       <x>820</x>
+       <y>80</y>
+       <width>251</width>
+       <height>521</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#assign_scroll_area{
+text-align: center;
+letter-spacing: 0.05em;
+
+color: #000000;
+position: absolute;
+width: 409px;
+left: 12px;
+top: 119px;
+bottom: 9px;
+
+background:rgba(252, 202, 201, 0.6);
+backdrop-filter: blur(4px);
+/* Note: backdrop-filter has minimal browser support */
+
+border-radius: 10;
+}</string>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarAsNeeded</enum>
+     </property>
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="assign_scroll_area_widget">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>251</width>
+        <height>521</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">text-align: center;
+letter-spacing: 0.05em;
+
+color: #000000;
+position: absolute;
+width: 409px;
+left: 12px;
+top: 119px;
+bottom: 9px;
+
+background: rgba(252, 202, 201, 0.01);
+backdrop-filter: blur(4px);
+/* Note: backdrop-filter has minimal browser support */
+
+border-radius: 10px;
+</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3"/>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1081</width>
+     <width>1094</width>
      <height>26</height>
     </rect>
    </property>
@@ -30,11 +1461,11 @@
     <property name="title">
      <string>User</string>
     </property>
-    <addaction name="actionSignup"/>
+    <addaction name="actionSignUp"/>
     <addaction name="separator"/>
-    <addaction name="actionLogin"/>
+    <addaction name="actionSignIn"/>
     <addaction name="separator"/>
-    <addaction name="actionLog_Out"/>
+    <addaction name="actionLogOut"/>
     <addaction name="separator"/>
    </widget>
    <widget class="QMenu" name="menuViews">
@@ -47,14 +1478,14 @@
     <addaction name="separator"/>
     <addaction name="actionAssignments"/>
    </widget>
-   <widget class="QMenu" name="menuClass_Admin">
+   <widget class="QMenu" name="menuAdmin">
     <property name="title">
-     <string>Class Admin</string>
+     <string>Admin</string>
     </property>
-    <addaction name="actionCreate_Post"/>
-    <addaction name="actionCreate_Assignment"/>
-    <addaction name="actionView_Assignment"/>
-    <addaction name="actionView_Classes"/>
+    <addaction name="actionCreatePost"/>
+    <addaction name="actionCreateAssignment"/>
+    <addaction name="actionViewAssignment"/>
+    <addaction name="actionViewClasses"/>
    </widget>
    <widget class="QMenu" name="menuClub">
     <property name="title">
@@ -65,11 +1496,11 @@
    </widget>
    <addaction name="menuUser"/>
    <addaction name="menuViews"/>
-   <addaction name="menuClass_Admin"/>
+   <addaction name="menuAdmin"/>
    <addaction name="menuClub"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionSignup">
+  <action name="actionSignUp">
    <property name="icon">
     <iconset>
      <normaloff>assests/icons/user-plus.svg</normaloff>assests/icons/user-plus.svg</iconset>
@@ -78,7 +1509,7 @@
     <string>Sign Up</string>
    </property>
   </action>
-  <action name="actionLogin">
+  <action name="actionSignIn">
    <property name="icon">
     <iconset>
      <normaloff>assests/icons/user.svg</normaloff>assests/icons/user.svg</iconset>
@@ -87,7 +1518,7 @@
     <string>Log In</string>
    </property>
   </action>
-  <action name="actionLog_Out">
+  <action name="actionLogOut">
    <property name="icon">
     <iconset>
      <normaloff>assests/icons/log-out.svg</normaloff>assests/icons/log-out.svg</iconset>
@@ -123,7 +1554,7 @@
     <string>Assignments</string>
    </property>
   </action>
-  <action name="actionCreate_Post">
+  <action name="actionCreatePost">
    <property name="icon">
     <iconset>
      <normaloff>assests/icons/plus-square.svg</normaloff>assests/icons/plus-square.svg</iconset>
@@ -132,7 +1563,7 @@
     <string>Create Post</string>
    </property>
   </action>
-  <action name="actionCreate_Assignment">
+  <action name="actionCreateAssignment">
    <property name="icon">
     <iconset>
      <normaloff>assests/icons/file-plus.svg</normaloff>assests/icons/file-plus.svg</iconset>
@@ -141,7 +1572,7 @@
     <string>Create Assignment</string>
    </property>
   </action>
-  <action name="actionView_Assignment">
+  <action name="actionViewAssignment">
    <property name="icon">
     <iconset>
      <normaloff>assests/icons/eye.svg</normaloff>assests/icons/eye.svg</iconset>
@@ -150,7 +1581,7 @@
     <string>View Assignment</string>
    </property>
   </action>
-  <action name="actionView_Classes">
+  <action name="actionViewClasses">
    <property name="icon">
     <iconset>
      <normaloff>assests/icons/trello.svg</normaloff>assests/icons/trello.svg</iconset>

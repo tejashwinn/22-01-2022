@@ -199,6 +199,9 @@ font-size: 14px;
          </widget>
         </widget>
         <widget class="QFrame" name="username_frame">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
          <property name="geometry">
           <rect>
            <x>1</x>
@@ -466,7 +469,7 @@ color: #FF0000;</string>
           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
          </property>
         </widget>
-        <widget class="QFrame" name="confirm_frame">
+        <widget class="QFrame" name="confirm_password_frame">
          <property name="geometry">
           <rect>
            <x>1</x>
@@ -481,7 +484,7 @@ color: #FF0000;</string>
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <widget class="QLabel" name="confirm_passowrd_label">
+         <widget class="QLabel" name="confirm_password_label">
           <property name="geometry">
            <rect>
             <x>20</x>
@@ -511,7 +514,7 @@ color: #4F4F4F;</string>
            <string>Confirm Password</string>
           </property>
          </widget>
-         <widget class="QLineEdit" name="confirm_passowrd_entry">
+         <widget class="QLineEdit" name="confirm_password_entry">
           <property name="geometry">
            <rect>
             <x>10</x>

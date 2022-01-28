@@ -30,45 +30,45 @@ class Ui_Form(object):
         self.frame = QtWidgets.QFrame(self.outer)
         self.frame.setMaximumSize(QtCore.QSize(445, 650))
         self.frame.setStyleSheet("#frame{/* Auto layout */\n"
-"\n"
-"display: flex;\n"
-"flex-direction: column;\n"
-"align-items: flex-start;\n"
-"padding: 40px 25px;\n"
-"\n"
-"position: absolute;\n"
-"width: 593px;\n"
-"height: 594px;\n"
-"left: calc(50% - 593px/2 - 0.5px);\n"
-"top: 243px;\n"
-"\n"
-"/* White */\n"
-"\n"
-"background: #FFFFFF;\n"
-"/* Grey / Dark */\n"
-"\n"
-"border: 1px solid #D1D1D1;\n"
-"box-sizing: border-box;\n"
-"border-radius: 8px;}")
+                                 "\n"
+                                 "display: flex;\n"
+                                 "flex-direction: column;\n"
+                                 "align-items: flex-start;\n"
+                                 "padding: 40px 25px;\n"
+                                 "\n"
+                                 "position: absolute;\n"
+                                 "width: 593px;\n"
+                                 "height: 594px;\n"
+                                 "left: calc(50% - 593px/2 - 0.5px);\n"
+                                 "top: 243px;\n"
+                                 "\n"
+                                 "/* White */\n"
+                                 "\n"
+                                 "background: #FFFFFF;\n"
+                                 "/* Grey / Dark */\n"
+                                 "\n"
+                                 "border: 1px solid #D1D1D1;\n"
+                                 "box-sizing: border-box;\n"
+                                 "border-radius: 8px;}")
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
         self.signup_heading_label = QtWidgets.QLabel(self.frame)
         self.signup_heading_label.setGeometry(QtCore.QRect(10, 0, 81, 30))
         self.signup_heading_label.setStyleSheet("position: absolute;\n"
-"left: 20px;\n"
-"right: 30px;\n"
-"top: 10px;\n"
-"bottom: 10px;\n"
-"\n"
-"font-family: Poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 20px;\n"
-"line-height: 37px;\n"
-"letter-spacing: 0.05em;\n"
-"background: rgba(0, 0, 0, 0.01);\n"
-"color: #000000;")
+                                                "left: 20px;\n"
+                                                "right: 30px;\n"
+                                                "top: 10px;\n"
+                                                "bottom: 10px;\n"
+                                                "\n"
+                                                "font-family: Poppins;\n"
+                                                "font-style: normal;\n"
+                                                "font-weight: normal;\n"
+                                                "font-size: 20px;\n"
+                                                "line-height: 37px;\n"
+                                                "letter-spacing: 0.05em;\n"
+                                                "background: rgba(0, 0, 0, 0.01);\n"
+                                                "color: #000000;")
         self.signup_heading_label.setObjectName("signup_heading_label")
         self.name_frame = QtWidgets.QFrame(self.frame)
         self.name_frame.setGeometry(QtCore.QRect(1, 60, 443, 80))
@@ -85,47 +85,48 @@ class Ui_Form(object):
         font.setWeight(50)
         self.name_label.setFont(font)
         self.name_label.setStyleSheet("position: absolute;\n"
-"left: 0%;\n"
-"right: 12.33%;\n"
-"top: 15%;\n"
-"bottom: 14.17%;\n"
-"\n"
-"font-family: poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 14px;\n"
-"line-height: 17px;\n"
-"\n"
-"/* Dark / Medium */\n"
-"\n"
-"color: #4F4F4F;")
+                                      "left: 0%;\n"
+                                      "right: 12.33%;\n"
+                                      "top: 15%;\n"
+                                      "bottom: 14.17%;\n"
+                                      "\n"
+                                      "font-family: poppins;\n"
+                                      "font-style: normal;\n"
+                                      "font-weight: normal;\n"
+                                      "font-size: 14px;\n"
+                                      "line-height: 17px;\n"
+                                      "\n"
+                                      "/* Dark / Medium */\n"
+                                      "\n"
+                                      "color: #4F4F4F;")
         self.name_label.setObjectName("name_label")
         self.name_entry = QtWidgets.QLineEdit(self.name_frame)
         self.name_entry.setGeometry(QtCore.QRect(10, 30, 425, 40))
         self.name_entry.setStyleSheet("position: static;\n"
-"width: 535px;\n"
-"height: 53px;\n"
-"left: 0px;\n"
-"top: 0px;\n"
-"\n"
-"/* White */\n"
-"\n"
-"background: #FFFFFF;\n"
-"/* Dark / Medium */\n"
-"\n"
-"border: 1px solid #4F4F4F;\n"
-"box-sizing: border-box;\n"
-"border-radius: 7px;\n"
-"\n"
-"font-family: poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 14px;\n"
-"\n"
-"")
+                                      "width: 535px;\n"
+                                      "height: 53px;\n"
+                                      "left: 0px;\n"
+                                      "top: 0px;\n"
+                                      "\n"
+                                      "/* White */\n"
+                                      "\n"
+                                      "background: #FFFFFF;\n"
+                                      "/* Dark / Medium */\n"
+                                      "\n"
+                                      "border: 1px solid #4F4F4F;\n"
+                                      "box-sizing: border-box;\n"
+                                      "border-radius: 7px;\n"
+                                      "\n"
+                                      "font-family: poppins;\n"
+                                      "font-style: normal;\n"
+                                      "font-weight: normal;\n"
+                                      "font-size: 14px;\n"
+                                      "\n"
+                                      "")
         self.name_entry.setText("")
         self.name_entry.setObjectName("name_entry")
         self.username_frame = QtWidgets.QFrame(self.frame)
+        self.username_frame.setEnabled(True)
         self.username_frame.setGeometry(QtCore.QRect(1, 140, 443, 80))
         self.username_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.username_frame.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -133,43 +134,43 @@ class Ui_Form(object):
         self.label_2 = QtWidgets.QLabel(self.username_frame)
         self.label_2.setGeometry(QtCore.QRect(20, 5, 141, 21))
         self.label_2.setStyleSheet("position: absolute;\n"
-"left: 0%;\n"
-"right: 12.33%;\n"
-"top: 15%;\n"
-"bottom: 14.17%;\n"
-"\n"
-"font-family: poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 14px;\n"
-"line-height: 17px;\n"
-"\n"
-"/* Dark / Medium */\n"
-"\n"
-"color: #4F4F4F;")
+                                   "left: 0%;\n"
+                                   "right: 12.33%;\n"
+                                   "top: 15%;\n"
+                                   "bottom: 14.17%;\n"
+                                   "\n"
+                                   "font-family: poppins;\n"
+                                   "font-style: normal;\n"
+                                   "font-weight: normal;\n"
+                                   "font-size: 14px;\n"
+                                   "line-height: 17px;\n"
+                                   "\n"
+                                   "/* Dark / Medium */\n"
+                                   "\n"
+                                   "color: #4F4F4F;")
         self.label_2.setObjectName("label_2")
         self.lineEdit_2 = QtWidgets.QLineEdit(self.username_frame)
         self.lineEdit_2.setGeometry(QtCore.QRect(10, 30, 425, 40))
         self.lineEdit_2.setStyleSheet("position: static;\n"
-"width: 535px;\n"
-"height: 53px;\n"
-"left: 0px;\n"
-"top: 0px;\n"
-"\n"
-"/* White */\n"
-"\n"
-"background: #FFFFFF;\n"
-"/* Dark / Medium */\n"
-"\n"
-"border: 1px solid #4F4F4F;\n"
-"box-sizing: border-box;\n"
-"border-radius: 7px;\n"
-"font-family: poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 14px;\n"
-"\n"
-"")
+                                      "width: 535px;\n"
+                                      "height: 53px;\n"
+                                      "left: 0px;\n"
+                                      "top: 0px;\n"
+                                      "\n"
+                                      "/* White */\n"
+                                      "\n"
+                                      "background: #FFFFFF;\n"
+                                      "/* Dark / Medium */\n"
+                                      "\n"
+                                      "border: 1px solid #4F4F4F;\n"
+                                      "box-sizing: border-box;\n"
+                                      "border-radius: 7px;\n"
+                                      "font-family: poppins;\n"
+                                      "font-style: normal;\n"
+                                      "font-weight: normal;\n"
+                                      "font-size: 14px;\n"
+                                      "\n"
+                                      "")
         self.lineEdit_2.setObjectName("lineEdit_2")
         self.email_frame = QtWidgets.QFrame(self.frame)
         self.email_frame.setGeometry(QtCore.QRect(1, 220, 443, 80))
@@ -179,43 +180,43 @@ class Ui_Form(object):
         self.email_label = QtWidgets.QLabel(self.email_frame)
         self.email_label.setGeometry(QtCore.QRect(20, 0, 411, 31))
         self.email_label.setStyleSheet("position: absolute;\n"
-"left: 0%;\n"
-"right: 12.33%;\n"
-"top: 15%;\n"
-"bottom: 14.17%;\n"
-"\n"
-"font-family: poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 14px;\n"
-"line-height: 17px;\n"
-"\n"
-"/* Dark / Medium */\n"
-"\n"
-"color: #4F4F4F;")
+                                       "left: 0%;\n"
+                                       "right: 12.33%;\n"
+                                       "top: 15%;\n"
+                                       "bottom: 14.17%;\n"
+                                       "\n"
+                                       "font-family: poppins;\n"
+                                       "font-style: normal;\n"
+                                       "font-weight: normal;\n"
+                                       "font-size: 14px;\n"
+                                       "line-height: 17px;\n"
+                                       "\n"
+                                       "/* Dark / Medium */\n"
+                                       "\n"
+                                       "color: #4F4F4F;")
         self.email_label.setObjectName("email_label")
         self.email_entry = QtWidgets.QLineEdit(self.email_frame)
         self.email_entry.setGeometry(QtCore.QRect(10, 30, 425, 40))
         self.email_entry.setStyleSheet("font-family: poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 14px;\n"
-"position: static;\n"
-"width: 535px;\n"
-"height: 53px;\n"
-"left: 0px;\n"
-"top: 0px;\n"
-"\n"
-"/* White */\n"
-"\n"
-"background: #FFFFFF;\n"
-"/* Dark / Medium */\n"
-"\n"
-"border: 1px solid #4F4F4F;\n"
-"box-sizing: border-box;\n"
-"border-radius: 7px;\n"
-"\n"
-"")
+                                       "font-style: normal;\n"
+                                       "font-weight: normal;\n"
+                                       "font-size: 14px;\n"
+                                       "position: static;\n"
+                                       "width: 535px;\n"
+                                       "height: 53px;\n"
+                                       "left: 0px;\n"
+                                       "top: 0px;\n"
+                                       "\n"
+                                       "/* White */\n"
+                                       "\n"
+                                       "background: #FFFFFF;\n"
+                                       "/* Dark / Medium */\n"
+                                       "\n"
+                                       "border: 1px solid #4F4F4F;\n"
+                                       "box-sizing: border-box;\n"
+                                       "border-radius: 7px;\n"
+                                       "\n"
+                                       "")
         self.email_entry.setObjectName("email_entry")
         self.password_frame = QtWidgets.QFrame(self.frame)
         self.password_frame.setGeometry(QtCore.QRect(1, 300, 443, 80))
@@ -225,172 +226,175 @@ class Ui_Form(object):
         self.password_label = QtWidgets.QLabel(self.password_frame)
         self.password_label.setGeometry(QtCore.QRect(20, 5, 141, 21))
         self.password_label.setStyleSheet("position: absolute;\n"
-"left: 0%;\n"
-"right: 12.33%;\n"
-"top: 15%;\n"
-"bottom: 14.17%;\n"
-"\n"
-"font-family: poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 14px;\n"
-"line-height: 17px;\n"
-"\n"
-"/* Dark / Medium */\n"
-"\n"
-"color: #4F4F4F;")
+                                          "left: 0%;\n"
+                                          "right: 12.33%;\n"
+                                          "top: 15%;\n"
+                                          "bottom: 14.17%;\n"
+                                          "\n"
+                                          "font-family: poppins;\n"
+                                          "font-style: normal;\n"
+                                          "font-weight: normal;\n"
+                                          "font-size: 14px;\n"
+                                          "line-height: 17px;\n"
+                                          "\n"
+                                          "/* Dark / Medium */\n"
+                                          "\n"
+                                          "color: #4F4F4F;")
         self.password_label.setObjectName("password_label")
         self.password_entry = QtWidgets.QLineEdit(self.password_frame)
         self.password_entry.setGeometry(QtCore.QRect(10, 30, 425, 40))
         self.password_entry.setStyleSheet("\n"
-"font-family: poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 14px;\n"
-"position: static;\n"
-"width: 535px;\n"
-"height: 53px;\n"
-"left: 0px;\n"
-"top: 0px;\n"
-"\n"
-"/* White */\n"
-"\n"
-"background: #FFFFFF;\n"
-"/* Dark / Medium */\n"
-"\n"
-"border: 1px solid #4F4F4F;\n"
-"box-sizing: border-box;\n"
-"border-radius: 7px;\n"
-"\n"
-"")
+                                          "font-family: poppins;\n"
+                                          "font-style: normal;\n"
+                                          "font-weight: normal;\n"
+                                          "font-size: 14px;\n"
+                                          "position: static;\n"
+                                          "width: 535px;\n"
+                                          "height: 53px;\n"
+                                          "left: 0px;\n"
+                                          "top: 0px;\n"
+                                          "\n"
+                                          "/* White */\n"
+                                          "\n"
+                                          "background: #FFFFFF;\n"
+                                          "/* Dark / Medium */\n"
+                                          "\n"
+                                          "border: 1px solid #4F4F4F;\n"
+                                          "box-sizing: border-box;\n"
+                                          "border-radius: 7px;\n"
+                                          "\n"
+                                          "")
         self.password_entry.setObjectName("password_entry")
         self.war = QtWidgets.QLabel(self.frame)
         self.war.setGeometry(QtCore.QRect(10, 30, 421, 16))
         self.war.setStyleSheet("position: absolute;\n"
-"left: 0%;\n"
-"right: 12.33%;\n"
-"top: 15%;\n"
-"bottom: 14.17%;\n"
-"\n"
-"font-family: poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 14px;\n"
-"line-height: 17px;\n"
-"\n"
-"/* Dark / Medium */\n"
-"\n"
-"color: #FF0000;")
-        self.war.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+                               "left: 0%;\n"
+                               "right: 12.33%;\n"
+                               "top: 15%;\n"
+                               "bottom: 14.17%;\n"
+                               "\n"
+                               "font-family: poppins;\n"
+                               "font-style: normal;\n"
+                               "font-weight: normal;\n"
+                               "font-size: 14px;\n"
+                               "line-height: 17px;\n"
+                               "\n"
+                               "/* Dark / Medium */\n"
+                               "\n"
+                               "color: #FF0000;")
+        self.war.setAlignment(QtCore.Qt.AlignLeading |
+                              QtCore.Qt.AlignLeft | QtCore.Qt.AlignVCenter)
         self.war.setObjectName("war")
-        self.confirm_frame = QtWidgets.QFrame(self.frame)
-        self.confirm_frame.setGeometry(QtCore.QRect(1, 380, 443, 80))
-        self.confirm_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.confirm_frame.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.confirm_frame.setObjectName("confirm_frame")
-        self.confirm_passowrd_label = QtWidgets.QLabel(self.confirm_frame)
-        self.confirm_passowrd_label.setGeometry(QtCore.QRect(20, 5, 141, 21))
-        self.confirm_passowrd_label.setStyleSheet("position: absolute;\n"
-"left: 0%;\n"
-"right: 12.33%;\n"
-"top: 15%;\n"
-"bottom: 14.17%;\n"
-"\n"
-"font-family: poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 14px;\n"
-"line-height: 17px;\n"
-"\n"
-"/* Dark / Medium */\n"
-"\n"
-"color: #4F4F4F;")
-        self.confirm_passowrd_label.setObjectName("confirm_passowrd_label")
-        self.confirm_passowrd_entry = QtWidgets.QLineEdit(self.confirm_frame)
-        self.confirm_passowrd_entry.setGeometry(QtCore.QRect(10, 30, 425, 40))
-        self.confirm_passowrd_entry.setStyleSheet("font-family: poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 14px;\n"
-"position: static;\n"
-"width: 535px;\n"
-"height: 53px;\n"
-"left: 0px;\n"
-"top: 0px;\n"
-"\n"
-"/* White */\n"
-"\n"
-"background: #FFFFFF;\n"
-"/* Dark / Medium */\n"
-"\n"
-"border: 2px solid #4F4F4F;\n"
-"box-sizing: border-box;\n"
-"border-radius: 7px;\n"
-"\n"
-"")
-        self.confirm_passowrd_entry.setObjectName("confirm_passowrd_entry")
+        self.confirm_password_frame = QtWidgets.QFrame(self.frame)
+        self.confirm_password_frame.setGeometry(QtCore.QRect(1, 380, 443, 80))
+        self.confirm_password_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.confirm_password_frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.confirm_password_frame.setObjectName("confirm_password_frame")
+        self.confirm_password_label = QtWidgets.QLabel(
+            self.confirm_password_frame)
+        self.confirm_password_label.setGeometry(QtCore.QRect(20, 5, 141, 21))
+        self.confirm_password_label.setStyleSheet("position: absolute;\n"
+                                                  "left: 0%;\n"
+                                                  "right: 12.33%;\n"
+                                                  "top: 15%;\n"
+                                                  "bottom: 14.17%;\n"
+                                                  "\n"
+                                                  "font-family: poppins;\n"
+                                                  "font-style: normal;\n"
+                                                  "font-weight: normal;\n"
+                                                  "font-size: 14px;\n"
+                                                  "line-height: 17px;\n"
+                                                  "\n"
+                                                  "/* Dark / Medium */\n"
+                                                  "\n"
+                                                  "color: #4F4F4F;")
+        self.confirm_password_label.setObjectName("confirm_password_label")
+        self.confirm_password_entry = QtWidgets.QLineEdit(
+            self.confirm_password_frame)
+        self.confirm_password_entry.setGeometry(QtCore.QRect(10, 30, 425, 40))
+        self.confirm_password_entry.setStyleSheet("font-family: poppins;\n"
+                                                  "font-style: normal;\n"
+                                                  "font-weight: normal;\n"
+                                                  "font-size: 14px;\n"
+                                                  "position: static;\n"
+                                                  "width: 535px;\n"
+                                                  "height: 53px;\n"
+                                                  "left: 0px;\n"
+                                                  "top: 0px;\n"
+                                                  "\n"
+                                                  "/* White */\n"
+                                                  "\n"
+                                                  "background: #FFFFFF;\n"
+                                                  "/* Dark / Medium */\n"
+                                                  "\n"
+                                                  "border: 2px solid #4F4F4F;\n"
+                                                  "box-sizing: border-box;\n"
+                                                  "border-radius: 7px;\n"
+                                                  "\n"
+                                                  "")
+        self.confirm_password_entry.setObjectName("confirm_password_entry")
         self.up_sign_up_button = QtWidgets.QPushButton(self.frame)
         self.up_sign_up_button.setGeometry(QtCore.QRect(10, 470, 425, 40))
         self.up_sign_up_button.setStyleSheet("\n"
-"*{\n"
-"font-family: Inter;\n"
-"font-style: normal;\n"
-"font-weight: 500;\n"
-"font-size: 14px;\n"
-"line-height: 17px;\n"
-"/* identical to box height */\n"
-"\n"
-"align-items: center;\n"
-"\n"
-"/* Grey / Light */\n"
-"\n"
-"color: white;\n"
-"background: #4F4F4F;\n"
-"border-radius: 8px;\n"
-"}\n"
-"\n"
-":pressed {\n"
-"    border-style: inset;\n"
-"    border: 1px solid  #4F4F4F;\n"
-"color: #4F4F4F;\n"
-"background: #FFFFFF;\n"
-"}\n"
-"/* Inside auto layout */\n"
-"\n"
-"")
+                                             "*{\n"
+                                             "font-family: Inter;\n"
+                                             "font-style: normal;\n"
+                                             "font-weight: 500;\n"
+                                             "font-size: 14px;\n"
+                                             "line-height: 17px;\n"
+                                             "/* identical to box height */\n"
+                                             "\n"
+                                             "align-items: center;\n"
+                                             "\n"
+                                             "/* Grey / Light */\n"
+                                             "\n"
+                                             "color: white;\n"
+                                             "background: #4F4F4F;\n"
+                                             "border-radius: 8px;\n"
+                                             "}\n"
+                                             "\n"
+                                             ":pressed {\n"
+                                             "    border-style: inset;\n"
+                                             "    border: 1px solid  #4F4F4F;\n"
+                                             "color: #4F4F4F;\n"
+                                             "background: #FFFFFF;\n"
+                                             "}\n"
+                                             "/* Inside auto layout */\n"
+                                             "\n"
+                                             "")
         self.up_sign_up_button.setObjectName("up_sign_up_button")
         self.up_sign_in_button = QtWidgets.QPushButton(self.frame)
         self.up_sign_in_button.setGeometry(QtCore.QRect(10, 520, 425, 40))
         self.up_sign_in_button.setStyleSheet("\n"
-"*{\n"
-"font-family: Inter;\n"
-"font-style: normal;\n"
-"font-weight: 500;\n"
-"font-size: 14px;\n"
-"line-height: 17px;\n"
-"/* identical to box height */\n"
-"\n"
-"align-items: center;\n"
-"\n"
-"/* Grey / Light */\n"
-"\n"
-"\n"
-"    border-style: inset;\n"
-"    border: 1px solid  #4F4F4F;\n"
-"color: #4F4F4F;\n"
-"background: #FFFFFF;\n"
-"border-radius:10px;\n"
-"}\n"
-"\n"
-":pressed {\n"
-"    border-style: inset;\n"
-"    color: white;\n"
-"background: #4F4F4F;\n"
-"border-radius: 8px;\n"
-"}\n"
-"/* Inside auto layout */\n"
-"\n"
-"")
+                                             "*{\n"
+                                             "font-family: Inter;\n"
+                                             "font-style: normal;\n"
+                                             "font-weight: 500;\n"
+                                             "font-size: 14px;\n"
+                                             "line-height: 17px;\n"
+                                             "/* identical to box height */\n"
+                                             "\n"
+                                             "align-items: center;\n"
+                                             "\n"
+                                             "/* Grey / Light */\n"
+                                             "\n"
+                                             "\n"
+                                             "    border-style: inset;\n"
+                                             "    border: 1px solid  #4F4F4F;\n"
+                                             "color: #4F4F4F;\n"
+                                             "background: #FFFFFF;\n"
+                                             "border-radius:10px;\n"
+                                             "}\n"
+                                             "\n"
+                                             ":pressed {\n"
+                                             "    border-style: inset;\n"
+                                             "    color: white;\n"
+                                             "background: #4F4F4F;\n"
+                                             "border-radius: 8px;\n"
+                                             "}\n"
+                                             "/* Inside auto layout */\n"
+                                             "\n"
+                                             "")
         self.up_sign_in_button.setObjectName("up_sign_in_button")
         self.gridLayout_2.addWidget(self.frame, 0, 0, 1, 1)
         self.gridLayout.addWidget(self.outer, 0, 0, 1, 1)
@@ -406,7 +410,10 @@ class Ui_Form(object):
         self.label_2.setText(_translate("Form", "Username"))
         self.email_label.setText(_translate("Form", "Email Id"))
         self.password_label.setText(_translate("Form", "Password"))
-        self.war.setText(_translate("Form", "Please enter your details to continue."))
-        self.confirm_passowrd_label.setText(_translate("Form", "Confirm Password"))
+        self.war.setText(_translate(
+            "Form", "Please enter your details to continue."))
+        self.confirm_password_label.setText(
+            _translate("Form", "Confirm Password"))
         self.up_sign_up_button.setText(_translate("Form", "Sign Up"))
-        self.up_sign_in_button.setText(_translate("Form", "Already a user? Sign In"))
+        self.up_sign_in_button.setText(
+            _translate("Form", "Already a user? Sign In"))
