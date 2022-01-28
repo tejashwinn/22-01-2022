@@ -10,11 +10,43 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from create_posts import Ui_create_posts_form
+from posts import Ui_posts_form
 
 
 class Ui_MainWindow(object):
+    def show_post(self):
+        self.post_mainwindow = QtWidgets.QMainWindow()
+        self.ui_post = Ui_posts_form()
+        self.ui_post.setupUi(self.post_mainwindow)
+        self.post_mainwindow.show()
 
-    # def createPosts(self,list)
+    def return_post_button(self, window, head):
+
+        _translate = QtCore.QCoreApplication.translate
+        post_button = QtWidgets.QPushButton(window, clicked=self.show_post)
+        post_button.setMaximumSize(QtCore.QSize(505, 80))
+        font = QtGui.QFont()
+        font.setFamily("Poppins Medium")
+        font.setPointSize(14)
+        post_button.setFont(font)
+        post_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        post_button.setLayoutDirection(QtCore.Qt.LeftToRight)
+        post_button.setStyleSheet("position: absolute;\n"
+                                  "width: 1000px;\n"
+                                  "height: 148px;\n"
+                                  "left: calc(50% - 1000px/2 + 2px);\n"
+                                  "top: calc(50% - 148px/2 + 249px);\n"
+                                  "\n"
+                                  "background: #FFFFFF;\n"
+                                  "border: 2px solid #000000;\n"
+                                  "box-sizing: border-box;\n"
+                                  "box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\n"
+                                  "border-radius: 10px;\n"
+                                  "")
+        post_button.setObjectName(head)
+        post_button.setText(_translate("mainwindow", head))
+
+        return post_button
 
     def show_create_post(self):
         self.create_post_mainwindow = QtWidgets.QMainWindow()

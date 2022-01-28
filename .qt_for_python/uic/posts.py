@@ -11,14 +11,14 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_Form(object):
-    def setupUi(self, Form):
-        Form.setObjectName("Form")
-        Form.resize(563, 611)
-        Form.setStyleSheet("")
-        self.gridLayout = QtWidgets.QGridLayout(Form)
+class Ui_posts_form(object):
+    def setupUi(self, posts_form):
+        posts_form.setObjectName("posts_form")
+        posts_form.resize(563, 611)
+        posts_form.setStyleSheet("")
+        self.gridLayout = QtWidgets.QGridLayout(posts_form)
         self.gridLayout.setObjectName("gridLayout")
-        self.post_posts_scroll_area = QtWidgets.QScrollArea(Form)
+        self.post_posts_scroll_area = QtWidgets.QScrollArea(posts_form)
         self.post_posts_scroll_area.setMinimumSize(QtCore.QSize(541, 290))
         self.post_posts_scroll_area.setMaximumSize(QtCore.QSize(541, 291))
         self.post_posts_scroll_area.setStyleSheet("background: #FFFFFF;\n"
@@ -50,7 +50,7 @@ class Ui_Form(object):
         self.verticalLayout_3.setObjectName("verticalLayout_3")
         self.post_posts_scroll_area.setWidget(self.post_posts_scroll_area_widget)
         self.gridLayout.addWidget(self.post_posts_scroll_area, 1, 0, 1, 1)
-        self.frame_2 = QtWidgets.QFrame(Form)
+        self.frame_2 = QtWidgets.QFrame(posts_form)
         self.frame_2.setMinimumSize(QtCore.QSize(541, 291))
         self.frame_2.setMaximumSize(QtCore.QSize(541, 291))
         self.frame_2.setStyleSheet("#frame_2{/* Auto layout */\n"
@@ -284,16 +284,16 @@ class Ui_Form(object):
         self.close_button_posts.setObjectName("close_button_posts")
         self.gridLayout.addWidget(self.frame_2, 0, 0, 1, 1)
 
-        self.retranslateUi(Form)
-        QtCore.QMetaObject.connectSlotsByName(Form)
+        self.retranslateUi(posts_form)
+        QtCore.QMetaObject.connectSlotsByName(posts_form)
 
-    def retranslateUi(self, Form):
+    def retranslateUi(self, posts_form):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
-        self.dynamic_posts_heading_label.setText(_translate("Form", "Post Heading"))
-        self.dynamic_posts_description_label.setText(_translate("Form", "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec."))
-        self.static_comments_label.setText(_translate("Form", "Comments 🔽"))
-        self.button_add_comment.setText(_translate("Form", "Add Comment"))
-        self.label_2.setText(_translate("Form", "Files: "))
-        self.button_file_download.setText(_translate("Form", "Download"))
-        self.dynamic_time_label.setText(_translate("Form", "Time"))
+        posts_form.setWindowTitle(_translate("posts_form", "Form"))
+        self.dynamic_posts_heading_label.setText(_translate("posts_form", "Post Heading"))
+        self.dynamic_posts_description_label.setText(_translate("posts_form", "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec."))
+        self.static_comments_label.setText(_translate("posts_form", "Comments 🔽"))
+        self.button_add_comment.setText(_translate("posts_form", "Add Comment"))
+        self.label_2.setText(_translate("posts_form", "Files: "))
+        self.button_file_download.setText(_translate("posts_form", "Download"))
+        self.dynamic_time_label.setText(_translate("posts_form", "Time"))
