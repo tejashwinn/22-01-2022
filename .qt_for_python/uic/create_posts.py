@@ -11,17 +11,17 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_Form(object):
-    def setupUi(self, Form):
-        Form.setObjectName("Form")
-        Form.resize(563, 524)
-        Form.setStyleSheet("")
-        self.gridLayout = QtWidgets.QGridLayout(Form)
+class Ui_create_posts_form(object):
+    def setupUi(self, create_posts_form):
+        create_posts_form.setObjectName("create_posts_form")
+        create_posts_form.resize(563, 524)
+        create_posts_form.setStyleSheet("")
+        self.gridLayout = QtWidgets.QGridLayout(create_posts_form)
         self.gridLayout.setObjectName("gridLayout")
-        self.frame_2 = QtWidgets.QFrame(Form)
-        self.frame_2.setMinimumSize(QtCore.QSize(541, 502))
-        self.frame_2.setMaximumSize(QtCore.QSize(541, 502))
-        self.frame_2.setStyleSheet("#frame_2{/* Auto layout */\n"
+        self.create_posts_frame = QtWidgets.QFrame(create_posts_form)
+        self.create_posts_frame.setMinimumSize(QtCore.QSize(541, 502))
+        self.create_posts_frame.setMaximumSize(QtCore.QSize(541, 502))
+        self.create_posts_frame.setStyleSheet("#create_posts_frame{/* Auto layout */\n"
 "\n"
 "display: flex;\n"
 "flex-direction: column;\n"
@@ -42,10 +42,10 @@ class Ui_Form(object):
 "border: 1px solid #D1D1D1;\n"
 "box-sizing: border-box;\n"
 "border-radius: 8px;}")
-        self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_2.setObjectName("frame_2")
-        self.post_heading_posts = QtWidgets.QLabel(self.frame_2)
+        self.create_posts_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.create_posts_frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.create_posts_frame.setObjectName("create_posts_frame")
+        self.post_heading_posts = QtWidgets.QLabel(self.create_posts_frame)
         self.post_heading_posts.setGeometry(QtCore.QRect(20, 20, 181, 31))
         font = QtGui.QFont()
         font.setFamily("Poppins")
@@ -74,9 +74,9 @@ class Ui_Form(object):
 "color: #000000;\n"
 "")
         self.post_heading_posts.setObjectName("post_heading_posts")
-        self.label_2 = QtWidgets.QLabel(self.frame_2)
-        self.label_2.setGeometry(QtCore.QRect(30, 170, 111, 41))
-        self.label_2.setStyleSheet("font-family: Poppins;\n"
+        self.description_label_posts = QtWidgets.QLabel(self.create_posts_frame)
+        self.description_label_posts.setGeometry(QtCore.QRect(30, 170, 111, 41))
+        self.description_label_posts.setStyleSheet("font-family: Poppins;\n"
 "font-style: normal;\n"
 "font-weight: normal;\n"
 "font-size: 15px;\n"
@@ -86,8 +86,8 @@ class Ui_Form(object):
 "letter-spacing: 0.05em;\n"
 "text-transform: capitalize;\n"
 "")
-        self.label_2.setObjectName("label_2")
-        self.plainTextEdit = QtWidgets.QPlainTextEdit(self.frame_2)
+        self.description_label_posts.setObjectName("description_label_posts")
+        self.plainTextEdit = QtWidgets.QPlainTextEdit(self.create_posts_frame)
         self.plainTextEdit.setGeometry(QtCore.QRect(20, 210, 511, 131))
         self.plainTextEdit.setStyleSheet("background: rgba(196, 196, 196, 0.1);\n"
 "font-family: Poppins;\n"
@@ -101,8 +101,9 @@ class Ui_Form(object):
 "text-transform: capitalize;\n"
 "\n"
 "color: #000000;")
+        self.plainTextEdit.setPlainText("")
         self.plainTextEdit.setObjectName("plainTextEdit")
-        self.plainTextEdit_2 = QtWidgets.QPlainTextEdit(self.frame_2)
+        self.plainTextEdit_2 = QtWidgets.QPlainTextEdit(self.create_posts_frame)
         self.plainTextEdit_2.setGeometry(QtCore.QRect(20, 110, 511, 41))
         self.plainTextEdit_2.setStyleSheet("background: rgba(196, 196, 196, 0.1);\n"
 "font-family: Poppins;\n"
@@ -116,8 +117,9 @@ class Ui_Form(object):
 "text-transform: capitalize;\n"
 "\n"
 "color: #000000;")
+        self.plainTextEdit_2.setPlainText("")
         self.plainTextEdit_2.setObjectName("plainTextEdit_2")
-        self.label_4 = QtWidgets.QLabel(self.frame_2)
+        self.label_4 = QtWidgets.QLabel(self.create_posts_frame)
         self.label_4.setGeometry(QtCore.QRect(30, 70, 81, 41))
         self.label_4.setStyleSheet("font-family: Poppins;\n"
 "font-style: normal;\n"
@@ -130,7 +132,7 @@ class Ui_Form(object):
 "text-transform: capitalize;\n"
 "")
         self.label_4.setObjectName("label_4")
-        self.label_5 = QtWidgets.QLabel(self.frame_2)
+        self.label_5 = QtWidgets.QLabel(self.create_posts_frame)
         self.label_5.setGeometry(QtCore.QRect(20, 370, 511, 41))
         self.label_5.setStyleSheet("font-family: Poppins;\n"
 "font-style: normal;\n"
@@ -143,10 +145,10 @@ class Ui_Form(object):
 "text-transform: capitalize;\n"
 "")
         self.label_5.setObjectName("label_5")
-        self.add_files_button = QtWidgets.QPushButton(self.frame_2)
-        self.add_files_button.setGeometry(QtCore.QRect(160, 440, 221, 40))
-        self.add_files_button.setStyleSheet("\n"
-"#add_files_button{\n"
+        self.add_files_button_posts = QtWidgets.QPushButton(self.create_posts_frame)
+        self.add_files_button_posts.setGeometry(QtCore.QRect(160, 440, 221, 40))
+        self.add_files_button_posts.setStyleSheet("\n"
+"*{\n"
 "font-family: Inter;\n"
 "font-style: normal;\n"
 "font-weight: 500;\n"
@@ -163,7 +165,7 @@ class Ui_Form(object):
 "border-radius: 8px;\n"
 "}\n"
 "\n"
-"#add_files_button:pressed {\n"
+":pressed {\n"
 "    border-style: inset;\n"
 "    border: 1px solid  #4F4F4F;\n"
 "color: #4F4F4F;\n"
@@ -172,8 +174,8 @@ class Ui_Form(object):
 "/* Inside auto layout */\n"
 "\n"
 "")
-        self.add_files_button.setObjectName("add_files_button")
-        self.close_button_create_posts = QtWidgets.QPushButton(self.frame_2)
+        self.add_files_button_posts.setObjectName("add_files_button_posts")
+        self.close_button_create_posts = QtWidgets.QPushButton(self.create_posts_frame)
         self.close_button_create_posts.setGeometry(QtCore.QRect(490, 10, 40, 40))
         self.close_button_create_posts.setStyleSheet("*{border-radius:0px;}\n"
 ":pressed{\n"
@@ -187,18 +189,16 @@ class Ui_Form(object):
         self.close_button_create_posts.setIcon(icon)
         self.close_button_create_posts.setIconSize(QtCore.QSize(40, 40))
         self.close_button_create_posts.setObjectName("close_button_create_posts")
-        self.gridLayout.addWidget(self.frame_2, 0, 0, 1, 1)
+        self.gridLayout.addWidget(self.create_posts_frame, 0, 0, 1, 1)
 
-        self.retranslateUi(Form)
-        QtCore.QMetaObject.connectSlotsByName(Form)
+        self.retranslateUi(create_posts_form)
+        QtCore.QMetaObject.connectSlotsByName(create_posts_form)
 
-    def retranslateUi(self, Form):
+    def retranslateUi(self, create_posts_form):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
-        self.post_heading_posts.setText(_translate("Form", "Create Post"))
-        self.label_2.setText(_translate("Form", "Description"))
-        self.plainTextEdit.setPlainText(_translate("Form", "fdfasdfas"))
-        self.plainTextEdit_2.setPlainText(_translate("Form", "fdfasdfas"))
-        self.label_4.setText(_translate("Form", "Heading"))
-        self.label_5.setText(_translate("Form", "File Name: "))
-        self.add_files_button.setText(_translate("Form", "Add Files"))
+        create_posts_form.setWindowTitle(_translate("create_posts_form", "Form"))
+        self.post_heading_posts.setText(_translate("create_posts_form", "Create Post"))
+        self.description_label_posts.setText(_translate("create_posts_form", "Description"))
+        self.label_4.setText(_translate("create_posts_form", "Heading"))
+        self.label_5.setText(_translate("create_posts_form", "File Name: "))
+        self.add_files_button_posts.setText(_translate("create_posts_form", "Add Files"))

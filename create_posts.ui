@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Form</class>
- <widget class="QWidget" name="Form">
+ <class>create_posts_form</class>
+ <widget class="QWidget" name="create_posts_form">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -18,7 +18,7 @@
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
-    <widget class="QFrame" name="frame_2">
+    <widget class="QFrame" name="create_posts_frame">
      <property name="minimumSize">
       <size>
        <width>541</width>
@@ -32,7 +32,7 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#frame_2{/* Auto layout */
+      <string notr="true">#create_posts_frame{/* Auto layout */
 
 display: flex;
 flex-direction: column;
@@ -103,7 +103,7 @@ color: #000000;
        <string>Create Post</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_2">
+     <widget class="QLabel" name="description_label_posts">
       <property name="geometry">
        <rect>
         <x>30</x>
@@ -152,7 +152,7 @@ text-transform: capitalize;
 color: #000000;</string>
       </property>
       <property name="plainText">
-       <string>fdfasdfas</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPlainTextEdit" name="plainTextEdit_2">
@@ -179,7 +179,7 @@ text-transform: capitalize;
 color: #000000;</string>
       </property>
       <property name="plainText">
-       <string>fdfasdfas</string>
+       <string/>
       </property>
      </widget>
      <widget class="QLabel" name="label_4">
@@ -232,7 +232,7 @@ text-transform: capitalize;
        <string>File Name: </string>
       </property>
      </widget>
-     <widget class="QPushButton" name="add_files_button">
+     <widget class="QPushButton" name="add_files_button_posts">
       <property name="geometry">
        <rect>
         <x>160</x>
@@ -243,7 +243,7 @@ text-transform: capitalize;
       </property>
       <property name="styleSheet">
        <string notr="true">
-#add_files_button{
+*{
 font-family: Inter;
 font-style: normal;
 font-weight: 500;
@@ -260,7 +260,7 @@ background: #4F4F4F;
 border-radius: 8px;
 }
 
-#add_files_button:pressed {
+:pressed {
     border-style: inset;
 	border: 1px solid  #4F4F4F;
 color: #4F4F4F;

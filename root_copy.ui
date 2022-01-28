@@ -1032,7 +1032,7 @@ color: #FF0000;</string>
      </item>
     </layout>
    </widget>
-   <widget class="QFrame" name="main_class_framework">
+   <widget class="QFrame" name="main_class_frame">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -1042,7 +1042,8 @@ color: #FF0000;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background:white;</string>
+     <string notr="true">#main_class_frame{
+background:white;}</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
@@ -1053,9 +1054,9 @@ color: #FF0000;</string>
     <widget class="QFrame" name="class_name_frame">
      <property name="geometry">
       <rect>
-       <x>269</x>
+       <x>273</x>
        <y>20</y>
-       <width>541</width>
+       <width>538</width>
        <height>101</height>
       </rect>
      </property>
@@ -1155,7 +1156,7 @@ background:rgba(118, 158, 161, 0.01);
 }</string>
       </property>
       <property name="text">
-       <string>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.</string>
+       <string>fd</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -1443,7 +1444,96 @@ border-radius: 10px;
       <layout class="QVBoxLayout" name="verticalLayout_3"/>
      </widget>
     </widget>
+    <widget class="QFrame" name="all_classes_frame">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>20</y>
+       <width>541</width>
+       <height>581</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#all_classes_frame{background:white;}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QScrollArea" name="all_classes_scroll_area">
+      <property name="geometry">
+       <rect>
+        <x>2</x>
+        <y>2</y>
+        <width>541</width>
+        <height>581</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#all_classes_scroll_area{
+
+width: 1056px;
+height: 710px;
+left: 438px;
+top: 343px;
+
+background: #FFFFFF;
+mix-blend-mode: hard-light;
+border-radius: 10px;}</string>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOn</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="all_classes_scroll_area_widget">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>521</width>
+         <height>581</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>521</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#all_classes_scroll_area_widget{
+
+width: 1056px;
+height: 710px;
+left: 438px;
+top: 343px;
+
+background: #FFFFFF;
+mix-blend-mode: hard-light;
+border-radius: 10px;}</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_5"/>
+      </widget>
+     </widget>
+    </widget>
+    <zorder>all_classes_frame</zorder>
+    <zorder>class_name_frame</zorder>
+    <zorder>posts_scroll_area</zorder>
+    <zorder>static_events</zorder>
+    <zorder>events_scroll_area</zorder>
+    <zorder>static_assignment</zorder>
+    <zorder>assign_scroll_area</zorder>
    </widget>
+   <zorder>in_outer_frame</zorder>
+   <zorder>up_outer_frame</zorder>
+   <zorder>main_class_frame</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

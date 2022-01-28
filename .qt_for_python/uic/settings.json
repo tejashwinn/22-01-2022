@@ -2,5 +2,8 @@
     "log": {
         "username": "",
         "name": ""
+    },
+    "admin": {
+        "classopen": ""
     }
 }
