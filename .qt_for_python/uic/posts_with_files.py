@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'c:\Users\tejas\Desktop\22-01-22\posts.ui'
+# Form implementation generated from reading ui file 'c:\Users\tejas\Desktop\22-01-22\archive\posts_with_files.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -109,7 +109,7 @@ class Ui_Form(object):
         self.pushButton = QtWidgets.QPushButton(self.frame_2)
         self.pushButton.setGeometry(QtCore.QRect(412, 250, 121, 31))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("c:\\Users\\tejas\\Desktop\\22-01-22\\assests/icons/plus.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("c:\\Users\\tejas\\Desktop\\22-01-22\\archive\\assests/icons/plus.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton.setIcon(icon)
         self.pushButton.setObjectName("pushButton")
         self.lineEdit = QtWidgets.QLineEdit(self.frame_2)

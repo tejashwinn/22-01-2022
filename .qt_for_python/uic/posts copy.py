@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'c:\Users\tejas\Desktop\22-01-22\posts.ui'
+# Form implementation generated from reading ui file 'c:\Users\tejas\Desktop\22-01-22\posts copy.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #

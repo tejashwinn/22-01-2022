@@ -7,78 +7,18 @@
     <x>0</x>
     <y>0</y>
     <width>1081</width>
-    <height>698</height>
+    <height>661</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QFrame" name="heading_frame">
-    <property name="geometry">
-     <rect>
-      <x>11</x>
-      <y>1</y>
-      <width>1061</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">position: absolute;
-width: 1895px;
-height: 81px;
-left: 12px;
-top: 15px;
-
-border-radius: 10px;</string>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
-    </property>
-    <widget class="QLabel" name="label_2">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>5</y>
-       <width>1061</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">position: absolute;
-width: 572px;
-height: 48px;
-left: 680px;
-top: 6px;
-
-font-family: Poppins;
-font-style: normal;
-font-weight: normal;
-font-size: 35px;
-line-height: 61px;
-text-align: center;
-letter-spacing: 0.07em;
-text-transform: uppercase;
-
-text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-</string>
-     </property>
-     <property name="text">
-      <string>College Virtual Space</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-   </widget>
    <widget class="QFrame" name="main_frame">
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>40</y>
+      <y>0</y>
       <width>1081</width>
       <height>611</height>
      </rect>
@@ -1638,11 +1578,11 @@ color: #000000;</string>
    <property name="autoFillBackground">
     <bool>false</bool>
    </property>
-   <widget class="QMenu" name="usersettings">
+   <widget class="QMenu" name="menuUser">
     <property name="title">
      <string>User</string>
     </property>
-    <addaction name="actionSign_Up"/>
+    <addaction name="actionSignup"/>
     <addaction name="separator"/>
     <addaction name="actionLogin"/>
     <addaction name="separator"/>
@@ -1659,11 +1599,21 @@ color: #000000;</string>
     <addaction name="separator"/>
     <addaction name="actionAssignments"/>
    </widget>
-   <addaction name="usersettings"/>
+   <widget class="QMenu" name="menuClass_Admin">
+    <property name="title">
+     <string>Class Admin</string>
+    </property>
+    <addaction name="actionCreate_Post"/>
+    <addaction name="actionCreate_Assignment"/>
+    <addaction name="actionView_Assignment"/>
+    <addaction name="actionView_Classes"/>
+   </widget>
+   <addaction name="menuUser"/>
    <addaction name="menuViews"/>
+   <addaction name="menuClass_Admin"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionSign_Up">
+  <action name="actionSignup">
    <property name="icon">
     <iconset>
      <normaloff>assests/icons/user-plus.svg</normaloff>assests/icons/user-plus.svg</iconset>
@@ -1693,7 +1643,7 @@ color: #000000;</string>
   <action name="actionClasses">
    <property name="icon">
     <iconset>
-     <normaloff>:/icons/assests/icons/users.svg</normaloff>:/icons/assests/icons/users.svg</iconset>
+     <normaloff>assests/icons/users.svg</normaloff>assests/icons/users.svg</iconset>
    </property>
    <property name="text">
     <string>Classes</string>
@@ -1702,7 +1652,7 @@ color: #000000;</string>
   <action name="actionEvents">
    <property name="icon">
     <iconset>
-     <normaloff>:/icons/assests/icons/calendar.svg</normaloff>:/icons/assests/icons/calendar.svg</iconset>
+     <normaloff>assests/icons/calendar.svg</normaloff>assests/icons/calendar.svg</iconset>
    </property>
    <property name="text">
     <string>Events</string>
@@ -1711,10 +1661,46 @@ color: #000000;</string>
   <action name="actionAssignments">
    <property name="icon">
     <iconset>
-     <normaloff>:/icons/assests/icons/share.svg</normaloff>:/icons/assests/icons/share.svg</iconset>
+     <normaloff>assests/icons/tag.svg</normaloff>assests/icons/tag.svg</iconset>
    </property>
    <property name="text">
     <string>Assignments</string>
+   </property>
+  </action>
+  <action name="actionCreate_Post">
+   <property name="icon">
+    <iconset>
+     <normaloff>assests/icons/plus-square.svg</normaloff>assests/icons/plus-square.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Create Post</string>
+   </property>
+  </action>
+  <action name="actionCreate_Assignment">
+   <property name="icon">
+    <iconset>
+     <normaloff>assests/icons/file-plus.svg</normaloff>assests/icons/file-plus.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Create Assignment</string>
+   </property>
+  </action>
+  <action name="actionView_Assignment">
+   <property name="icon">
+    <iconset>
+     <normaloff>assests/icons/eye.svg</normaloff>assests/icons/eye.svg</iconset>
+   </property>
+   <property name="text">
+    <string>View Assignment</string>
+   </property>
+  </action>
+  <action name="actionView_Classes">
+   <property name="icon">
+    <iconset>
+     <normaloff>assests/icons/trello.svg</normaloff>assests/icons/trello.svg</iconset>
+   </property>
+   <property name="text">
+    <string>View Classes</string>
    </property>
   </action>
  </widget>

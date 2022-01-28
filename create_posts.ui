@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>563</width>
+    <height>631</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QFrame" name="frame_2">
+     <property name="minimumSize">
+      <size>
+       <width>541</width>
+       <height>291</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>541</width>
+       <height>291</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#frame_2{/* Auto layout */
+
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 40px 25px;
+
+position: absolute;
+width: 593px;
+height: 594px;
+left: calc(50% - 593px/2 - 0.5px);
+top: 243px;
+
+/* White */
+
+background: #FFFFFF;
+/* Grey / Dark */
+
+border: 1px solid #D1D1D1;
+box-sizing: border-box;
+border-radius: 8px;}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="post_heading_posts">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>181</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Poppins</family>
+        <pointsize>-1</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">position: absolute;
+width: 233px;
+height: 60px;
+left: 92px;
+top: 48px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 30px;
+line-height: 60px;
+/* identical to box height */
+
+letter-spacing: 0.05em;
+text-decoration-line: underline;
+text-transform: capitalize;
+
+color: #000000;
+</string>
+      </property>
+      <property name="text">
+       <string>Create Post</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="des">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>60</y>
+        <width>511</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>511</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: rgba(196, 196, 196, 0.1);
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+line-height: 30px;
+/* identical to box height */
+
+letter-spacing: 0.05em;
+text-transform: capitalize;
+
+color: #000000;</string>
+      </property>
+      <property name="text">
+       <string>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.</string>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>200</y>
+        <width>391</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+line-height: 30px;
+/* identical to box height */
+
+letter-spacing: 0.05em;
+text-transform: capitalize;
+</string>
+      </property>
+      <property name="text">
+       <string>Files: </string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>210</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Download</string>
+      </property>
+     </widget>
+     <widget class="QPlainTextEdit" name="plainTextEdit">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>60</y>
+        <width>511</width>
+        <height>131</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -121,10 +121,9 @@ class Ui_mainwindow(object):
         self.events_view_2.setFrameShadow(QtWidgets.QFrame.Raised)
         self.events_view_2.setObjectName("events_view_2")
         self.label_8 = QtWidgets.QLabel(self.events_view_2)
-        self.label_8.setGeometry(QtCore.QRect(10, 0, 431, 41))
+        self.label_8.setGeometry(QtCore.QRect(10, 0, 441, 41))
         font = QtGui.QFont()
         font.setFamily("Poppins")
-        font.setPointSize(-1)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(50)
@@ -139,7 +138,8 @@ class Ui_mainwindow(object):
 "font-family: Poppins;\n"
 "font-style: normal;\n"
 "font-weight: normal;\n"
-"font-size: 20px;\n"
+"font-size: 15\n"
+"px;\n"
 "line-height: 37px;\n"
 "letter-spacing: 0.05em;\n"
 "background: rgba(0, 0, 0, 0.01);\n"
