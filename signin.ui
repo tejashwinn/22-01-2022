@@ -272,8 +272,7 @@ border-radius: 7px;
          </property>
          <property name="styleSheet">
           <string notr="true">
-#sign_up_button{
-font-family: Inter;
+*{font-family: Inter;
 font-style: normal;
 font-weight: 500;
 font-size: 14px;
@@ -288,8 +287,7 @@ color: white;
 background: #4F4F4F;
 border-radius: 8px;
 }
-
-#sign_up_button:pressed {
+:pressed {
     border-style: inset;
 	border: 1px solid  #4F4F4F;
 color: #4F4F4F;
@@ -314,8 +312,7 @@ background: #FFFFFF;
          </property>
          <property name="styleSheet">
           <string notr="true">
-#sign_in_button{
-font-family: Inter;
+*{font-family: Inter;
 font-style: normal;
 font-weight: 500;
 font-size: 14px;
@@ -334,7 +331,7 @@ background: #FFFFFF;
 border-radius:10px;
 }
 
-#sign_in_button:pressed {
+:pressed {
     border-style: inset;
 	color: white;
 background: #4F4F4F;

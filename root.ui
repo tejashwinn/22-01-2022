@@ -65,7 +65,7 @@ border-radius: 10px;}</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">#class_name_label{
+       <string notr="true">#class_name_label_dynamic{
 /* ADA */
 
 
@@ -100,7 +100,8 @@ color: #FFFFFF;
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">#class_description_label{
+       <string notr="true">#class_description_label_dynamic
+{
 /* ADA */
 
 

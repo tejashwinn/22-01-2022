@@ -158,8 +158,7 @@ class Ui_Form(object):
         self.sign_up_button = QtWidgets.QPushButton(self.frame)
         self.sign_up_button.setGeometry(QtCore.QRect(15, 290, 430, 40))
         self.sign_up_button.setStyleSheet("\n"
-"#sign_up_button{\n"
-"font-family: Inter;\n"
+"*{font-family: Inter;\n"
 "font-style: normal;\n"
 "font-weight: 500;\n"
 "font-size: 14px;\n"
@@ -174,8 +173,7 @@ class Ui_Form(object):
 "background: #4F4F4F;\n"
 "border-radius: 8px;\n"
 "}\n"
-"\n"
-"#sign_up_button:pressed {\n"
+":pressed {\n"
 "    border-style: inset;\n"
 "    border: 1px solid  #4F4F4F;\n"
 "color: #4F4F4F;\n"
@@ -188,8 +186,7 @@ class Ui_Form(object):
         self.sign_in_button = QtWidgets.QPushButton(self.frame)
         self.sign_in_button.setGeometry(QtCore.QRect(15, 350, 430, 40))
         self.sign_in_button.setStyleSheet("\n"
-"#sign_in_button{\n"
-"font-family: Inter;\n"
+"*{font-family: Inter;\n"
 "font-style: normal;\n"
 "font-weight: 500;\n"
 "font-size: 14px;\n"
@@ -208,7 +205,7 @@ class Ui_Form(object):
 "border-radius:10px;\n"
 "}\n"
 "\n"
-"#sign_in_button:pressed {\n"
+":pressed {\n"
 "    border-style: inset;\n"
 "    color: white;\n"
 "background: #4F4F4F;\n"

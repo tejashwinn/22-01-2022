@@ -18,18 +18,18 @@ class Ui_Form(object):
         Form.setStyleSheet("")
         self.gridLayout = QtWidgets.QGridLayout(Form)
         self.gridLayout.setObjectName("gridLayout")
-        self.assign_scroll_area = QtWidgets.QScrollArea(Form)
-        self.assign_scroll_area.setMinimumSize(QtCore.QSize(541, 290))
-        self.assign_scroll_area.setMaximumSize(QtCore.QSize(541, 291))
-        self.assign_scroll_area.setStyleSheet("background: #FFFFFF;\n"
+        self.post_posts_scroll_area = QtWidgets.QScrollArea(Form)
+        self.post_posts_scroll_area.setMinimumSize(QtCore.QSize(541, 290))
+        self.post_posts_scroll_area.setMaximumSize(QtCore.QSize(541, 291))
+        self.post_posts_scroll_area.setStyleSheet("background: #FFFFFF;\n"
 "border-radius: 8px;")
-        self.assign_scroll_area.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.assign_scroll_area.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAsNeeded)
-        self.assign_scroll_area.setWidgetResizable(True)
-        self.assign_scroll_area.setObjectName("assign_scroll_area")
-        self.assign_scroll_area_widget = QtWidgets.QWidget()
-        self.assign_scroll_area_widget.setGeometry(QtCore.QRect(0, 0, 541, 291))
-        self.assign_scroll_area_widget.setStyleSheet("text-align: center;\n"
+        self.post_posts_scroll_area.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.post_posts_scroll_area.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAsNeeded)
+        self.post_posts_scroll_area.setWidgetResizable(True)
+        self.post_posts_scroll_area.setObjectName("post_posts_scroll_area")
+        self.post_posts_scroll_area_widget = QtWidgets.QWidget()
+        self.post_posts_scroll_area_widget.setGeometry(QtCore.QRect(0, 0, 541, 291))
+        self.post_posts_scroll_area_widget.setStyleSheet("text-align: center;\n"
 "letter-spacing: 0.05em;\n"
 "\n"
 "color: #000000;\n"
@@ -45,11 +45,11 @@ class Ui_Form(object):
 "\n"
 "border-radius: 10px;\n"
 "")
-        self.assign_scroll_area_widget.setObjectName("assign_scroll_area_widget")
-        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.assign_scroll_area_widget)
+        self.post_posts_scroll_area_widget.setObjectName("post_posts_scroll_area_widget")
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.post_posts_scroll_area_widget)
         self.verticalLayout_3.setObjectName("verticalLayout_3")
-        self.assign_scroll_area.setWidget(self.assign_scroll_area_widget)
-        self.gridLayout.addWidget(self.assign_scroll_area, 1, 0, 1, 1)
+        self.post_posts_scroll_area.setWidget(self.post_posts_scroll_area_widget)
+        self.gridLayout.addWidget(self.post_posts_scroll_area, 1, 0, 1, 1)
         self.frame_2 = QtWidgets.QFrame(Form)
         self.frame_2.setMinimumSize(QtCore.QSize(541, 291))
         self.frame_2.setMaximumSize(QtCore.QSize(541, 291))

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1081</width>
+    <height>663</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1081</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <widget class="QMenu" name="menuUser">
+    <property name="title">
+     <string>User</string>
+    </property>
+    <addaction name="actionSignup"/>
+    <addaction name="separator"/>
+    <addaction name="actionLogin"/>
+    <addaction name="separator"/>
+    <addaction name="actionLog_Out"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuViews">
+    <property name="title">
+     <string>Views</string>
+    </property>
+    <addaction name="actionClasses"/>
+    <addaction name="separator"/>
+    <addaction name="actionEvents"/>
+    <addaction name="separator"/>
+    <addaction name="actionAssignments"/>
+   </widget>
+   <widget class="QMenu" name="menuClass_Admin">
+    <property name="title">
+     <string>Class Admin</string>
+    </property>
+    <addaction name="actionCreate_Post"/>
+    <addaction name="actionCreate_Assignment"/>
+    <addaction name="actionView_Assignment"/>
+    <addaction name="actionView_Classes"/>
+   </widget>
+   <widget class="QMenu" name="menuClub">
+    <property name="title">
+     <string>Club</string>
+    </property>
+    <addaction name="actionEvents_2"/>
+    <addaction name="actionClubs"/>
+   </widget>
+   <addaction name="menuUser"/>
+   <addaction name="menuViews"/>
+   <addaction name="menuClass_Admin"/>
+   <addaction name="menuClub"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionSignup">
+   <property name="icon">
+    <iconset>
+     <normaloff>assests/icons/user-plus.svg</normaloff>assests/icons/user-plus.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Sign Up</string>
+   </property>
+  </action>
+  <action name="actionLogin">
+   <property name="icon">
+    <iconset>
+     <normaloff>assests/icons/user.svg</normaloff>assests/icons/user.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Log In</string>
+   </property>
+  </action>
+  <action name="actionLog_Out">
+   <property name="icon">
+    <iconset>
+     <normaloff>assests/icons/log-out.svg</normaloff>assests/icons/log-out.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Log Out</string>
+   </property>
+  </action>
+  <action name="actionClasses">
+   <property name="icon">
+    <iconset>
+     <normaloff>assests/icons/users.svg</normaloff>assests/icons/users.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Classes</string>
+   </property>
+  </action>
+  <action name="actionEvents">
+   <property name="icon">
+    <iconset>
+     <normaloff>assests/icons/calendar.svg</normaloff>assests/icons/calendar.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Events</string>
+   </property>
+  </action>
+  <action name="actionAssignments">
+   <property name="icon">
+    <iconset>
+     <normaloff>assests/icons/tag.svg</normaloff>assests/icons/tag.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Assignments</string>
+   </property>
+  </action>
+  <action name="actionCreate_Post">
+   <property name="icon">
+    <iconset>
+     <normaloff>assests/icons/plus-square.svg</normaloff>assests/icons/plus-square.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Create Post</string>
+   </property>
+  </action>
+  <action name="actionCreate_Assignment">
+   <property name="icon">
+    <iconset>
+     <normaloff>assests/icons/file-plus.svg</normaloff>assests/icons/file-plus.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Create Assignment</string>
+   </property>
+  </action>
+  <action name="actionView_Assignment">
+   <property name="icon">
+    <iconset>
+     <normaloff>assests/icons/eye.svg</normaloff>assests/icons/eye.svg</iconset>
+   </property>
+   <property name="text">
+    <string>View Assignment</string>
+   </property>
+  </action>
+  <action name="actionView_Classes">
+   <property name="icon">
+    <iconset>
+     <normaloff>assests/icons/trello.svg</normaloff>assests/icons/trello.svg</iconset>
+   </property>
+   <property name="text">
+    <string>View Classes</string>
+   </property>
+  </action>
+  <action name="actionEvents_2">
+   <property name="text">
+    <string>Events</string>
+   </property>
+  </action>
+  <action name="actionClubs">
+   <property name="text">
+    <string>Clubs</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

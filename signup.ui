@@ -78,7 +78,7 @@ border-radius: 8px;}</string>
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
         </property>
-        <widget class="QLabel" name="signup">
+        <widget class="QLabel" name="signup_heading_label">
          <property name="geometry">
           <rect>
            <x>10</x>
@@ -107,7 +107,7 @@ color: #000000;</string>
           <string>Sign Up</string>
          </property>
         </widget>
-        <widget class="QFrame" name="frame_2">
+        <widget class="QFrame" name="name_frame">
          <property name="geometry">
           <rect>
            <x>1</x>
@@ -122,7 +122,7 @@ color: #000000;</string>
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <widget class="QLabel" name="label">
+         <widget class="QLabel" name="name_label">
           <property name="geometry">
            <rect>
             <x>20</x>
@@ -161,7 +161,7 @@ color: #4F4F4F;</string>
            <string>Name</string>
           </property>
          </widget>
-         <widget class="QLineEdit" name="lineEdit">
+         <widget class="QLineEdit" name="name_entry">
           <property name="geometry">
            <rect>
             <x>10</x>
@@ -198,7 +198,7 @@ font-size: 14px;
           </property>
          </widget>
         </widget>
-        <widget class="QFrame" name="frame_3">
+        <widget class="QFrame" name="username_frame">
          <property name="geometry">
           <rect>
            <x>1</x>
@@ -276,7 +276,7 @@ font-size: 14px;
           </property>
          </widget>
         </widget>
-        <widget class="QFrame" name="frame_4">
+        <widget class="QFrame" name="email_frame">
          <property name="geometry">
           <rect>
            <x>1</x>
@@ -291,7 +291,7 @@ font-size: 14px;
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <widget class="QLabel" name="label_3">
+         <widget class="QLabel" name="email_label">
           <property name="geometry">
            <rect>
             <x>20</x>
@@ -321,7 +321,7 @@ color: #4F4F4F;</string>
            <string>Email Id</string>
           </property>
          </widget>
-         <widget class="QLineEdit" name="lineEdit_3">
+         <widget class="QLineEdit" name="email_entry">
           <property name="geometry">
            <rect>
             <x>10</x>
@@ -354,7 +354,7 @@ border-radius: 7px;
           </property>
          </widget>
         </widget>
-        <widget class="QFrame" name="frame_5">
+        <widget class="QFrame" name="password_frame">
          <property name="geometry">
           <rect>
            <x>1</x>
@@ -369,7 +369,7 @@ border-radius: 7px;
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <widget class="QLabel" name="label_4">
+         <widget class="QLabel" name="password_label">
           <property name="geometry">
            <rect>
             <x>20</x>
@@ -399,7 +399,7 @@ color: #4F4F4F;</string>
            <string>Password</string>
           </property>
          </widget>
-         <widget class="QLineEdit" name="lineEdit_4">
+         <widget class="QLineEdit" name="password_entry">
           <property name="geometry">
            <rect>
             <x>10</x>
@@ -466,7 +466,7 @@ color: #FF0000;</string>
           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
          </property>
         </widget>
-        <widget class="QFrame" name="frame_6">
+        <widget class="QFrame" name="confirm_frame">
          <property name="geometry">
           <rect>
            <x>1</x>
@@ -481,7 +481,7 @@ color: #FF0000;</string>
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <widget class="QLabel" name="label_6">
+         <widget class="QLabel" name="confirm_passowrd_label">
           <property name="geometry">
            <rect>
             <x>20</x>
@@ -511,7 +511,7 @@ color: #4F4F4F;</string>
            <string>Confirm Password</string>
           </property>
          </widget>
-         <widget class="QLineEdit" name="lineEdit_6">
+         <widget class="QLineEdit" name="confirm_passowrd_entry">
           <property name="geometry">
            <rect>
             <x>10</x>
@@ -544,7 +544,7 @@ border-radius: 7px;
           </property>
          </widget>
         </widget>
-        <widget class="QPushButton" name="sign_up_button">
+        <widget class="QPushButton" name="up_sign_up_button">
          <property name="geometry">
           <rect>
            <x>10</x>
@@ -555,7 +555,7 @@ border-radius: 7px;
          </property>
          <property name="styleSheet">
           <string notr="true">
-#sign_up_button{
+*{
 font-family: Inter;
 font-style: normal;
 font-weight: 500;
@@ -572,7 +572,7 @@ background: #4F4F4F;
 border-radius: 8px;
 }
 
-#sign_up_button:pressed {
+:pressed {
     border-style: inset;
 	border: 1px solid  #4F4F4F;
 color: #4F4F4F;
@@ -586,7 +586,7 @@ background: #FFFFFF;
           <string>Sign Up</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="sign_in_button">
+        <widget class="QPushButton" name="up_sign_in_button">
          <property name="geometry">
           <rect>
            <x>10</x>
@@ -597,7 +597,7 @@ background: #FFFFFF;
          </property>
          <property name="styleSheet">
           <string notr="true">
-#sign_in_button{
+*{
 font-family: Inter;
 font-style: normal;
 font-weight: 500;
@@ -617,7 +617,7 @@ background: #FFFFFF;
 border-radius:10px;
 }
 
-#sign_in_button:pressed {
+:pressed {
     border-style: inset;
 	color: white;
 background: #4F4F4F;

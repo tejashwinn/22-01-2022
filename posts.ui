@@ -18,7 +18,7 @@
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="1" column="0">
-    <widget class="QScrollArea" name="assign_scroll_area">
+    <widget class="QScrollArea" name="post_posts_scroll_area">
      <property name="minimumSize">
       <size>
        <width>541</width>
@@ -44,7 +44,7 @@ border-radius: 8px;</string>
      <property name="widgetResizable">
       <bool>true</bool>
      </property>
-     <widget class="QWidget" name="assign_scroll_area_widget">
+     <widget class="QWidget" name="post_posts_scroll_area_widget">
       <property name="geometry">
        <rect>
         <x>0</x>
