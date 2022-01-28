@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'c:\Users\tejas\Desktop\22-01-22\posts.ui'
+# Form implementation generated from reading ui file 'c:\Users\tejas\Desktop\22-01-22\assignemnts.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -46,7 +46,7 @@ class Ui_Form(object):
         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_2.setObjectName("frame_2")
         self.post_heading_posts = QtWidgets.QLabel(self.frame_2)
-        self.post_heading_posts.setGeometry(QtCore.QRect(20, 30, 171, 31))
+        self.post_heading_posts.setGeometry(QtCore.QRect(20, 20, 511, 31))
         font = QtGui.QFont()
         font.setFamily("Poppins")
         font.setPointSize(-1)
@@ -63,7 +63,7 @@ class Ui_Form(object):
 "font-family: Poppins;\n"
 "font-style: normal;\n"
 "font-weight: normal;\n"
-"font-size: 25px;\n"
+"font-size: 30px;\n"
 "line-height: 60px;\n"
 "/* identical to box height */\n"
 "\n"
@@ -75,7 +75,7 @@ class Ui_Form(object):
 "")
         self.post_heading_posts.setObjectName("post_heading_posts")
         self.des = QtWidgets.QLabel(self.frame_2)
-        self.des.setGeometry(QtCore.QRect(20, 70, 511, 131))
+        self.des.setGeometry(QtCore.QRect(20, 60, 511, 131))
         self.des.setMaximumSize(QtCore.QSize(511, 16777215))
         self.des.setStyleSheet("background: rgba(196, 196, 196, 0.1);\n"
 "font-family: Poppins;\n"
@@ -132,7 +132,7 @@ class Ui_Form(object):
 "")
         self.lineEdit.setObjectName("lineEdit")
         self.label_2 = QtWidgets.QLabel(self.frame_2)
-        self.label_2.setGeometry(QtCore.QRect(30, 210, 391, 31))
+        self.label_2.setGeometry(QtCore.QRect(30, 200, 391, 41))
         self.label_2.setStyleSheet("font-family: Poppins;\n"
 "font-style: normal;\n"
 "font-weight: normal;\n"
@@ -148,7 +148,7 @@ class Ui_Form(object):
         self.pushButton_2.setGeometry(QtCore.QRect(430, 210, 93, 28))
         self.pushButton_2.setObjectName("pushButton_2")
         self.label_3 = QtWidgets.QLabel(self.frame_2)
-        self.label_3.setGeometry(QtCore.QRect(10, 10, 201, 16))
+        self.label_3.setGeometry(QtCore.QRect(330, 10, 201, 16))
         self.label_3.setStyleSheet("font-family: Poppins;\n"
 "font-style: normal;\n"
 "font-weight: normal;\n"
@@ -160,20 +160,6 @@ class Ui_Form(object):
 "text-transform: capitalize;\n"
 "")
         self.label_3.setObjectName("label_3")
-        self.close_button_posts = QtWidgets.QPushButton(self.frame_2)
-        self.close_button_posts.setGeometry(QtCore.QRect(490, 10, 40, 40))
-        self.close_button_posts.setStyleSheet("*{border-radius:0px;}\n"
-":pressed{\n"
-"    border: 3px solid  #FF0000;\n"
-"boder:10px;\n"
-"border-radius: 8px;\n"
-"}")
-        self.close_button_posts.setText("")
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("c:\\Users\\tejas\\Desktop\\22-01-22\\assests/icons/x-square.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.close_button_posts.setIcon(icon1)
-        self.close_button_posts.setIconSize(QtCore.QSize(40, 40))
-        self.close_button_posts.setObjectName("close_button_posts")
         self.gridLayout.addWidget(self.frame_2, 0, 0, 1, 1)
         self.assign_scroll_area = QtWidgets.QScrollArea(Form)
         self.assign_scroll_area.setMinimumSize(QtCore.QSize(539, 291))

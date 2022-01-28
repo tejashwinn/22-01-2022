@@ -14,11 +14,14 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(495, 693)
+        Form.resize(1103, 623)
         Form.setStyleSheet("")
         self.gridLayout = QtWidgets.QGridLayout(Form)
         self.gridLayout.setObjectName("gridLayout")
         self.outer = QtWidgets.QFrame(Form)
+        self.outer.setMinimumSize(QtCore.QSize(1081, 601))
+        self.outer.setMaximumSize(QtCore.QSize(1081, 601))
+        self.outer.setStyleSheet("background:white;")
         self.outer.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.outer.setFrameShadow(QtWidgets.QFrame.Raised)
         self.outer.setObjectName("outer")
@@ -51,7 +54,7 @@ class Ui_Form(object):
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
         self.signup = QtWidgets.QLabel(self.frame)
-        self.signup.setGeometry(QtCore.QRect(10, 10, 81, 30))
+        self.signup.setGeometry(QtCore.QRect(10, 0, 81, 30))
         self.signup.setStyleSheet("position: absolute;\n"
 "left: 20px;\n"
 "right: 30px;\n"
@@ -68,7 +71,7 @@ class Ui_Form(object):
 "color: #000000;")
         self.signup.setObjectName("signup")
         self.frame_2 = QtWidgets.QFrame(self.frame)
-        self.frame_2.setGeometry(QtCore.QRect(0, 80, 445, 80))
+        self.frame_2.setGeometry(QtCore.QRect(1, 60, 443, 80))
         self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_2.setObjectName("frame_2")
@@ -114,10 +117,16 @@ class Ui_Form(object):
 "box-sizing: border-box;\n"
 "border-radius: 7px;\n"
 "\n"
+"font-family: poppins;\n"
+"font-style: normal;\n"
+"font-weight: normal;\n"
+"font-size: 14px;\n"
+"\n"
 "")
+        self.lineEdit.setText("")
         self.lineEdit.setObjectName("lineEdit")
         self.frame_3 = QtWidgets.QFrame(self.frame)
-        self.frame_3.setGeometry(QtCore.QRect(0, 170, 445, 80))
+        self.frame_3.setGeometry(QtCore.QRect(1, 140, 443, 80))
         self.frame_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_3.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_3.setObjectName("frame_3")
@@ -155,11 +164,15 @@ class Ui_Form(object):
 "border: 1px solid #4F4F4F;\n"
 "box-sizing: border-box;\n"
 "border-radius: 7px;\n"
+"font-family: poppins;\n"
+"font-style: normal;\n"
+"font-weight: normal;\n"
+"font-size: 14px;\n"
 "\n"
 "")
         self.lineEdit_2.setObjectName("lineEdit_2")
         self.frame_4 = QtWidgets.QFrame(self.frame)
-        self.frame_4.setGeometry(QtCore.QRect(0, 260, 445, 80))
+        self.frame_4.setGeometry(QtCore.QRect(1, 220, 443, 80))
         self.frame_4.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_4.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_4.setObjectName("frame_4")
@@ -183,7 +196,11 @@ class Ui_Form(object):
         self.label_3.setObjectName("label_3")
         self.lineEdit_3 = QtWidgets.QLineEdit(self.frame_4)
         self.lineEdit_3.setGeometry(QtCore.QRect(10, 30, 425, 40))
-        self.lineEdit_3.setStyleSheet("position: static;\n"
+        self.lineEdit_3.setStyleSheet("font-family: poppins;\n"
+"font-style: normal;\n"
+"font-weight: normal;\n"
+"font-size: 14px;\n"
+"position: static;\n"
 "width: 535px;\n"
 "height: 53px;\n"
 "left: 0px;\n"
@@ -201,7 +218,7 @@ class Ui_Form(object):
 "")
         self.lineEdit_3.setObjectName("lineEdit_3")
         self.frame_5 = QtWidgets.QFrame(self.frame)
-        self.frame_5.setGeometry(QtCore.QRect(0, 350, 445, 80))
+        self.frame_5.setGeometry(QtCore.QRect(1, 300, 443, 80))
         self.frame_5.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_5.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_5.setObjectName("frame_5")
@@ -225,7 +242,12 @@ class Ui_Form(object):
         self.label_4.setObjectName("label_4")
         self.lineEdit_4 = QtWidgets.QLineEdit(self.frame_5)
         self.lineEdit_4.setGeometry(QtCore.QRect(10, 30, 425, 40))
-        self.lineEdit_4.setStyleSheet("position: static;\n"
+        self.lineEdit_4.setStyleSheet("\n"
+"font-family: poppins;\n"
+"font-style: normal;\n"
+"font-weight: normal;\n"
+"font-size: 14px;\n"
+"position: static;\n"
 "width: 535px;\n"
 "height: 53px;\n"
 "left: 0px;\n"
@@ -243,7 +265,7 @@ class Ui_Form(object):
 "")
         self.lineEdit_4.setObjectName("lineEdit_4")
         self.war = QtWidgets.QLabel(self.frame)
-        self.war.setGeometry(QtCore.QRect(10, 40, 421, 41))
+        self.war.setGeometry(QtCore.QRect(10, 30, 421, 16))
         self.war.setStyleSheet("position: absolute;\n"
 "left: 0%;\n"
 "right: 12.33%;\n"
@@ -262,7 +284,7 @@ class Ui_Form(object):
         self.war.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.war.setObjectName("war")
         self.frame_6 = QtWidgets.QFrame(self.frame)
-        self.frame_6.setGeometry(QtCore.QRect(0, 440, 445, 80))
+        self.frame_6.setGeometry(QtCore.QRect(1, 380, 443, 80))
         self.frame_6.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_6.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_6.setObjectName("frame_6")
@@ -286,7 +308,11 @@ class Ui_Form(object):
         self.label_6.setObjectName("label_6")
         self.lineEdit_6 = QtWidgets.QLineEdit(self.frame_6)
         self.lineEdit_6.setGeometry(QtCore.QRect(10, 30, 425, 40))
-        self.lineEdit_6.setStyleSheet("position: static;\n"
+        self.lineEdit_6.setStyleSheet("font-family: poppins;\n"
+"font-style: normal;\n"
+"font-weight: normal;\n"
+"font-size: 14px;\n"
+"position: static;\n"
 "width: 535px;\n"
 "height: 53px;\n"
 "left: 0px;\n"
@@ -304,7 +330,7 @@ class Ui_Form(object):
 "")
         self.lineEdit_6.setObjectName("lineEdit_6")
         self.sign_up_button = QtWidgets.QPushButton(self.frame)
-        self.sign_up_button.setGeometry(QtCore.QRect(10, 540, 425, 40))
+        self.sign_up_button.setGeometry(QtCore.QRect(10, 470, 425, 40))
         self.sign_up_button.setStyleSheet("\n"
 "#sign_up_button{\n"
 "font-family: Inter;\n"
@@ -334,7 +360,7 @@ class Ui_Form(object):
 "")
         self.sign_up_button.setObjectName("sign_up_button")
         self.sign_in_button = QtWidgets.QPushButton(self.frame)
-        self.sign_in_button.setGeometry(QtCore.QRect(10, 590, 425, 40))
+        self.sign_in_button.setGeometry(QtCore.QRect(10, 520, 425, 40))
         self.sign_in_button.setStyleSheet("\n"
 "#sign_in_button{\n"
 "font-family: Inter;\n"

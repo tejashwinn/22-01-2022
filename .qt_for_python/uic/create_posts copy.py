@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'c:\Users\tejas\Desktop\22-01-22\create_posts.ui'
+# Form implementation generated from reading ui file 'c:\Users\tejas\Desktop\22-01-22\create_posts copy.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -173,20 +173,6 @@ class Ui_Form(object):
 "\n"
 "")
         self.add_files_button.setObjectName("add_files_button")
-        self.close_button_create_posts = QtWidgets.QPushButton(self.frame_2)
-        self.close_button_create_posts.setGeometry(QtCore.QRect(490, 10, 40, 40))
-        self.close_button_create_posts.setStyleSheet("*{border-radius:0px;}\n"
-":pressed{\n"
-"    border: 3px solid  #FF0000;\n"
-"boder:10px;\n"
-"border-radius: 8px;\n"
-"}")
-        self.close_button_create_posts.setText("")
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("c:\\Users\\tejas\\Desktop\\22-01-22\\assests/icons/x-square.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.close_button_create_posts.setIcon(icon)
-        self.close_button_create_posts.setIconSize(QtCore.QSize(40, 40))
-        self.close_button_create_posts.setObjectName("close_button_create_posts")
         self.gridLayout.addWidget(self.frame_2, 0, 0, 1, 1)
 
         self.retranslateUi(Form)

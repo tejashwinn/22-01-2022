@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'c:\Users\tejas\Desktop\22-01-22\create_posts.ui'
+# Form implementation generated from reading ui file 'c:\Users\tejas\Desktop\22-01-22\create_assignments.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -14,13 +14,13 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(563, 524)
+        Form.resize(567, 587)
         Form.setStyleSheet("")
         self.gridLayout = QtWidgets.QGridLayout(Form)
         self.gridLayout.setObjectName("gridLayout")
         self.frame_2 = QtWidgets.QFrame(Form)
-        self.frame_2.setMinimumSize(QtCore.QSize(541, 502))
-        self.frame_2.setMaximumSize(QtCore.QSize(541, 502))
+        self.frame_2.setMinimumSize(QtCore.QSize(541, 565))
+        self.frame_2.setMaximumSize(QtCore.QSize(541, 565))
         self.frame_2.setStyleSheet("#frame_2{/* Auto layout */\n"
 "\n"
 "display: flex;\n"
@@ -46,7 +46,7 @@ class Ui_Form(object):
         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_2.setObjectName("frame_2")
         self.post_heading_posts = QtWidgets.QLabel(self.frame_2)
-        self.post_heading_posts.setGeometry(QtCore.QRect(20, 20, 181, 31))
+        self.post_heading_posts.setGeometry(QtCore.QRect(20, 20, 361, 31))
         font = QtGui.QFont()
         font.setFamily("Poppins")
         font.setPointSize(-1)
@@ -131,7 +131,7 @@ class Ui_Form(object):
 "")
         self.label_4.setObjectName("label_4")
         self.label_5 = QtWidgets.QLabel(self.frame_2)
-        self.label_5.setGeometry(QtCore.QRect(20, 370, 511, 41))
+        self.label_5.setGeometry(QtCore.QRect(20, 430, 511, 41))
         self.label_5.setStyleSheet("font-family: Poppins;\n"
 "font-style: normal;\n"
 "font-weight: normal;\n"
@@ -144,7 +144,7 @@ class Ui_Form(object):
 "")
         self.label_5.setObjectName("label_5")
         self.add_files_button = QtWidgets.QPushButton(self.frame_2)
-        self.add_files_button.setGeometry(QtCore.QRect(160, 440, 221, 40))
+        self.add_files_button.setGeometry(QtCore.QRect(160, 490, 221, 40))
         self.add_files_button.setStyleSheet("\n"
 "#add_files_button{\n"
 "font-family: Inter;\n"
@@ -173,20 +173,75 @@ class Ui_Form(object):
 "\n"
 "")
         self.add_files_button.setObjectName("add_files_button")
-        self.close_button_create_posts = QtWidgets.QPushButton(self.frame_2)
-        self.close_button_create_posts.setGeometry(QtCore.QRect(490, 10, 40, 40))
-        self.close_button_create_posts.setStyleSheet("*{border-radius:0px;}\n"
+        self.label_6 = QtWidgets.QLabel(self.frame_2)
+        self.label_6.setGeometry(QtCore.QRect(20, 370, 51, 41))
+        self.label_6.setStyleSheet("font-family: Poppins;\n"
+"font-style: normal;\n"
+"font-weight: normal;\n"
+"font-size: 15px;\n"
+"line-height: 30px;\n"
+"/* identical to box height */\n"
+"\n"
+"letter-spacing: 0.05em;\n"
+"text-transform: capitalize;\n"
+"")
+        self.label_6.setWordWrap(True)
+        self.label_6.setObjectName("label_6")
+        self.dateTimeEdit = QtWidgets.QDateTimeEdit(self.frame_2)
+        self.dateTimeEdit.setGeometry(QtCore.QRect(70, 370, 211, 41))
+        self.dateTimeEdit.setStyleSheet("font-family: Poppins;\n"
+"font-style: normal;\n"
+"font-weight: normal;\n"
+"font-size: 15px;\n"
+"line-height: 30px;\n"
+"/* identical to box height */\n"
+"\n"
+"letter-spacing: 0.05em;\n"
+"text-transform: capitalize;\n"
+"")
+        self.dateTimeEdit.setObjectName("dateTimeEdit")
+        self.plainTextEdit_3 = QtWidgets.QPlainTextEdit(self.frame_2)
+        self.plainTextEdit_3.setGeometry(QtCore.QRect(390, 370, 81, 41))
+        self.plainTextEdit_3.setStyleSheet("background: rgba(196, 196, 196, 0.1);\n"
+"font-family: Poppins;\n"
+"font-style: normal;\n"
+"font-weight: normal;\n"
+"font-size: 15px;\n"
+"line-height: 30px;\n"
+"/* identical to box height */\n"
+"\n"
+"letter-spacing: 0.05em;\n"
+"text-transform: capitalize;\n"
+"\n"
+"color: #000000;")
+        self.plainTextEdit_3.setObjectName("plainTextEdit_3")
+        self.label_7 = QtWidgets.QLabel(self.frame_2)
+        self.label_7.setGeometry(QtCore.QRect(330, 370, 51, 41))
+        self.label_7.setStyleSheet("font-family: Poppins;\n"
+"font-style: normal;\n"
+"font-weight: normal;\n"
+"font-size: 15px;\n"
+"line-height: 30px;\n"
+"/* identical to box height */\n"
+"\n"
+"letter-spacing: 0.05em;\n"
+"text-transform: capitalize;\n"
+"")
+        self.label_7.setObjectName("label_7")
+        self.close_button_create_assignment = QtWidgets.QPushButton(self.frame_2)
+        self.close_button_create_assignment.setGeometry(QtCore.QRect(490, 10, 40, 40))
+        self.close_button_create_assignment.setStyleSheet("*{border-radius:0px;}\n"
 ":pressed{\n"
 "    border: 3px solid  #FF0000;\n"
 "boder:10px;\n"
 "border-radius: 8px;\n"
 "}")
-        self.close_button_create_posts.setText("")
+        self.close_button_create_assignment.setText("")
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("c:\\Users\\tejas\\Desktop\\22-01-22\\assests/icons/x-square.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.close_button_create_posts.setIcon(icon)
-        self.close_button_create_posts.setIconSize(QtCore.QSize(40, 40))
-        self.close_button_create_posts.setObjectName("close_button_create_posts")
+        self.close_button_create_assignment.setIcon(icon)
+        self.close_button_create_assignment.setIconSize(QtCore.QSize(40, 40))
+        self.close_button_create_assignment.setObjectName("close_button_create_assignment")
         self.gridLayout.addWidget(self.frame_2, 0, 0, 1, 1)
 
         self.retranslateUi(Form)
@@ -195,10 +250,13 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
-        self.post_heading_posts.setText(_translate("Form", "Create Post"))
+        self.post_heading_posts.setText(_translate("Form", "Create Assignment"))
         self.label_2.setText(_translate("Form", "Description"))
         self.plainTextEdit.setPlainText(_translate("Form", "fdfasdfas"))
         self.plainTextEdit_2.setPlainText(_translate("Form", "fdfasdfas"))
         self.label_4.setText(_translate("Form", "Heading"))
         self.label_5.setText(_translate("Form", "File Name: "))
         self.add_files_button.setText(_translate("Form", "Add Files"))
+        self.label_6.setText(_translate("Form", "Date"))
+        self.plainTextEdit_3.setPlainText(_translate("Form", "fdfasdfas"))
+        self.label_7.setText(_translate("Form", "Marks:"))

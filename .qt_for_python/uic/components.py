@@ -40,8 +40,8 @@ class Ui_mainwindow(object):
         self.post_button.setObjectName("post_button")
         self.events_view = QtWidgets.QFrame(mainwindow)
         self.events_view.setGeometry(QtCore.QRect(600, 170, 229, 70))
-        self.events_view.setMinimumSize(QtCore.QSize(0, 70))
-        self.events_view.setMaximumSize(QtCore.QSize(16777215, 70))
+        self.events_view.setMinimumSize(QtCore.QSize(229, 70))
+        self.events_view.setMaximumSize(QtCore.QSize(229, 70))
         self.events_view.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.events_view.setStyleSheet("#events_view{\n"
 "position: absolute;\n"
@@ -177,6 +177,20 @@ class Ui_mainwindow(object):
         icon.addPixmap(QtGui.QPixmap(":/icons/assests/icons/align-justify.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton.setIcon(icon)
         self.pushButton.setObjectName("pushButton")
+        self.pushButton_2 = QtWidgets.QPushButton(mainwindow)
+        self.pushButton_2.setGeometry(QtCore.QRect(200, 380, 40, 40))
+        self.pushButton_2.setStyleSheet("*{border-radius:0px;}\n"
+":pressed{\n"
+"    border: 3px solid  #FF0000;\n"
+"boder:10px;\n"
+"border-radius: 8px;\n"
+"}")
+        self.pushButton_2.setText("")
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap("c:\\Users\\tejas\\Desktop\\22-01-22\\assests/icons/x-square.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_2.setIcon(icon1)
+        self.pushButton_2.setIconSize(QtCore.QSize(40, 40))
+        self.pushButton_2.setObjectName("pushButton_2")
 
         self.retranslateUi(mainwindow)
         QtCore.QMetaObject.connectSlotsByName(mainwindow)

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>515</width>
-    <height>443</height>
+    <width>1103</width>
+    <height>623</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,6 +19,21 @@
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
     <widget class="QFrame" name="outer">
+     <property name="minimumSize">
+      <size>
+       <width>1081</width>
+       <height>601</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>1081</width>
+       <height>601</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background:white;</string>
+     </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
      </property>
@@ -28,10 +43,16 @@
      <layout class="QGridLayout" name="gridLayout_2">
       <item row="0" column="0">
        <widget class="QFrame" name="frame">
+        <property name="minimumSize">
+         <size>
+          <width>460</width>
+          <height>410</height>
+         </size>
+        </property>
         <property name="maximumSize">
          <size>
           <width>460</width>
-          <height>400</height>
+          <height>410</height>
          </size>
         </property>
         <property name="styleSheet">
@@ -95,9 +116,9 @@ color: #000000;</string>
         <widget class="QFrame" name="frame_4">
          <property name="geometry">
           <rect>
-           <x>0</x>
+           <x>1</x>
            <y>80</y>
-           <width>461</width>
+           <width>457</width>
            <height>80</height>
           </rect>
          </property>
@@ -169,9 +190,9 @@ border-radius: 7px;
         <widget class="QFrame" name="frame_5">
          <property name="geometry">
           <rect>
-           <x>0</x>
+           <x>1</x>
            <y>180</y>
-           <width>461</width>
+           <width>457</width>
            <height>80</height>
           </rect>
          </property>
@@ -286,7 +307,7 @@ background: #FFFFFF;
          <property name="geometry">
           <rect>
            <x>15</x>
-           <y>340</y>
+           <y>350</y>
            <width>430</width>
            <height>40</height>
           </rect>

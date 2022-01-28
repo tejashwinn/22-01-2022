@@ -14,18 +14,22 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(515, 443)
+        Form.resize(1103, 623)
         Form.setStyleSheet("")
         self.gridLayout = QtWidgets.QGridLayout(Form)
         self.gridLayout.setObjectName("gridLayout")
         self.outer = QtWidgets.QFrame(Form)
+        self.outer.setMinimumSize(QtCore.QSize(1081, 601))
+        self.outer.setMaximumSize(QtCore.QSize(1081, 601))
+        self.outer.setStyleSheet("background:white;")
         self.outer.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.outer.setFrameShadow(QtWidgets.QFrame.Raised)
         self.outer.setObjectName("outer")
         self.gridLayout_2 = QtWidgets.QGridLayout(self.outer)
         self.gridLayout_2.setObjectName("gridLayout_2")
         self.frame = QtWidgets.QFrame(self.outer)
-        self.frame.setMaximumSize(QtCore.QSize(460, 400))
+        self.frame.setMinimumSize(QtCore.QSize(460, 410))
+        self.frame.setMaximumSize(QtCore.QSize(460, 410))
         self.frame.setStyleSheet("#frame{/* Auto layout */\n"
 "\n"
 "display: flex;\n"
@@ -68,7 +72,7 @@ class Ui_Form(object):
 "color: #000000;")
         self.signup.setObjectName("signup")
         self.frame_4 = QtWidgets.QFrame(self.frame)
-        self.frame_4.setGeometry(QtCore.QRect(0, 80, 461, 80))
+        self.frame_4.setGeometry(QtCore.QRect(1, 80, 457, 80))
         self.frame_4.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_4.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_4.setObjectName("frame_4")
@@ -110,7 +114,7 @@ class Ui_Form(object):
 "")
         self.lineEdit_3.setObjectName("lineEdit_3")
         self.frame_5 = QtWidgets.QFrame(self.frame)
-        self.frame_5.setGeometry(QtCore.QRect(0, 180, 461, 80))
+        self.frame_5.setGeometry(QtCore.QRect(1, 180, 457, 80))
         self.frame_5.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_5.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_5.setObjectName("frame_5")
@@ -182,7 +186,7 @@ class Ui_Form(object):
 "")
         self.sign_up_button.setObjectName("sign_up_button")
         self.sign_in_button = QtWidgets.QPushButton(self.frame)
-        self.sign_in_button.setGeometry(QtCore.QRect(15, 340, 430, 40))
+        self.sign_in_button.setGeometry(QtCore.QRect(15, 350, 430, 40))
         self.sign_in_button.setStyleSheet("\n"
 "#sign_in_button{\n"
 "font-family: Inter;\n"

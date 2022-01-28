@@ -14,11 +14,11 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1081, 661)
+        MainWindow.resize(1081, 663)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.main_frame = QtWidgets.QFrame(self.centralwidget)
-        self.main_frame.setGeometry(QtCore.QRect(0, 0, 1081, 611))
+        self.main_frame.setGeometry(QtCore.QRect(0, 0, 1081, 601))
         self.main_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.main_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.main_frame.setObjectName("main_frame")
@@ -411,6 +411,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.events_scroll_area_widget)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.events_view = QtWidgets.QFrame(self.events_scroll_area_widget)
+        self.events_view.setMinimumSize(QtCore.QSize(0, 70))
         self.events_view.setMaximumSize(QtCore.QSize(16777215, 70))
         self.events_view.setStyleSheet("#events_view{\n"
 "position: absolute;\n"
@@ -462,6 +463,110 @@ class Ui_MainWindow(object):
         self.label_7.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
         self.label_7.setObjectName("label_7")
         self.verticalLayout_2.addWidget(self.events_view)
+        self.events_view_10 = QtWidgets.QFrame(self.events_scroll_area_widget)
+        self.events_view_10.setMaximumSize(QtCore.QSize(16777215, 70))
+        self.events_view_10.setStyleSheet("#events_view{\n"
+"position: absolute;\n"
+"width: 370px;\n"
+"height: 110px;\n"
+"left: 7px;\n"
+"top: 28px;\n"
+"\n"
+"background: rgba(0, 0, 0, 0.05);\n"
+"border: 1px solid rgba(0, 0, 0, 0.3);\n"
+"box-sizing: border-box;\n"
+"border-radius: 10px}")
+        self.events_view_10.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.events_view_10.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.events_view_10.setObjectName("events_view_10")
+        self.label_10 = QtWidgets.QLabel(self.events_view_10)
+        self.label_10.setGeometry(QtCore.QRect(10, 0, 211, 41))
+        self.label_10.setStyleSheet("position: absolute;\n"
+"left: 20px;\n"
+"right: 30px;\n"
+"top: 10px;\n"
+"bottom: 10px;\n"
+"\n"
+"font-family: Poppins;\n"
+"font-style: normal;\n"
+"font-weight: normal;\n"
+"font-size: 25px;\n"
+"line-height: 37px;\n"
+"letter-spacing: 0.05em;\n"
+"background: rgba(0, 0, 0, 0.01);\n"
+"color: #000000;")
+        self.label_10.setObjectName("label_10")
+        self.label_11 = QtWidgets.QLabel(self.events_view_10)
+        self.label_11.setGeometry(QtCore.QRect(10, 40, 211, 41))
+        self.label_11.setStyleSheet("position: absolute;\n"
+"left: 20px;\n"
+"right: 30px;\n"
+"top: 10px;\n"
+"bottom: 10px;\n"
+"\n"
+"font-family: Poppins;\n"
+"font-style: normal;\n"
+"font-weight: normal;\n"
+"font-size: 15px;\n"
+"line-height: 37px;\n"
+"letter-spacing: 0.05em;\n"
+"background: rgba(0, 0, 0, 0.01);\n"
+"color: #000000;")
+        self.label_11.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
+        self.label_11.setObjectName("label_11")
+        self.verticalLayout_2.addWidget(self.events_view_10)
+        self.events_view_9 = QtWidgets.QFrame(self.events_scroll_area_widget)
+        self.events_view_9.setMaximumSize(QtCore.QSize(16777215, 70))
+        self.events_view_9.setStyleSheet("#events_view{\n"
+"position: absolute;\n"
+"width: 370px;\n"
+"height: 110px;\n"
+"left: 7px;\n"
+"top: 28px;\n"
+"\n"
+"background: rgba(0, 0, 0, 0.05);\n"
+"border: 1px solid rgba(0, 0, 0, 0.3);\n"
+"box-sizing: border-box;\n"
+"border-radius: 10px}")
+        self.events_view_9.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.events_view_9.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.events_view_9.setObjectName("events_view_9")
+        self.label_8 = QtWidgets.QLabel(self.events_view_9)
+        self.label_8.setGeometry(QtCore.QRect(10, 0, 211, 41))
+        self.label_8.setStyleSheet("position: absolute;\n"
+"left: 20px;\n"
+"right: 30px;\n"
+"top: 10px;\n"
+"bottom: 10px;\n"
+"\n"
+"font-family: Poppins;\n"
+"font-style: normal;\n"
+"font-weight: normal;\n"
+"font-size: 25px;\n"
+"line-height: 37px;\n"
+"letter-spacing: 0.05em;\n"
+"background: rgba(0, 0, 0, 0.01);\n"
+"color: #000000;")
+        self.label_8.setObjectName("label_8")
+        self.label_9 = QtWidgets.QLabel(self.events_view_9)
+        self.label_9.setGeometry(QtCore.QRect(10, 40, 211, 41))
+        self.label_9.setStyleSheet("position: absolute;\n"
+"left: 20px;\n"
+"right: 30px;\n"
+"top: 10px;\n"
+"bottom: 10px;\n"
+"\n"
+"font-family: Poppins;\n"
+"font-style: normal;\n"
+"font-weight: normal;\n"
+"font-size: 15px;\n"
+"line-height: 37px;\n"
+"letter-spacing: 0.05em;\n"
+"background: rgba(0, 0, 0, 0.01);\n"
+"color: #000000;")
+        self.label_9.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
+        self.label_9.setObjectName("label_9")
+        self.verticalLayout_2.addWidget(self.events_view_9)
         self.events_scroll_area.setWidget(self.events_scroll_area_widget)
         self.label_5 = QtWidgets.QLabel(self.main_frame)
         self.label_5.setGeometry(QtCore.QRect(820, 20, 251, 51))
@@ -925,6 +1030,8 @@ class Ui_MainWindow(object):
         self.menuViews.setObjectName("menuViews")
         self.menuClass_Admin = QtWidgets.QMenu(self.menubar)
         self.menuClass_Admin.setObjectName("menuClass_Admin")
+        self.menuClub = QtWidgets.QMenu(self.menubar)
+        self.menuClub.setObjectName("menuClub")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
@@ -979,6 +1086,10 @@ class Ui_MainWindow(object):
         icon9.addPixmap(QtGui.QPixmap("c:\\Users\\tejas\\Desktop\\22-01-22\\assests/icons/trello.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.actionView_Classes.setIcon(icon9)
         self.actionView_Classes.setObjectName("actionView_Classes")
+        self.actionEvents_2 = QtWidgets.QAction(MainWindow)
+        self.actionEvents_2.setObjectName("actionEvents_2")
+        self.actionClubs = QtWidgets.QAction(MainWindow)
+        self.actionClubs.setObjectName("actionClubs")
         self.menuUser.addAction(self.actionSignup)
         self.menuUser.addSeparator()
         self.menuUser.addAction(self.actionLogin)
@@ -994,9 +1105,12 @@ class Ui_MainWindow(object):
         self.menuClass_Admin.addAction(self.actionCreate_Assignment)
         self.menuClass_Admin.addAction(self.actionView_Assignment)
         self.menuClass_Admin.addAction(self.actionView_Classes)
+        self.menuClub.addAction(self.actionEvents_2)
+        self.menuClub.addAction(self.actionClubs)
         self.menubar.addAction(self.menuUser.menuAction())
         self.menubar.addAction(self.menuViews.menuAction())
         self.menubar.addAction(self.menuClass_Admin.menuAction())
+        self.menubar.addAction(self.menuClub.menuAction())
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
@@ -1019,6 +1133,10 @@ class Ui_MainWindow(object):
         self.label_4.setText(_translate("MainWindow", "Events"))
         self.label_6.setText(_translate("MainWindow", "Name"))
         self.label_7.setText(_translate("MainWindow", "Time"))
+        self.label_10.setText(_translate("MainWindow", "Name"))
+        self.label_11.setText(_translate("MainWindow", "Time"))
+        self.label_8.setText(_translate("MainWindow", "Name"))
+        self.label_9.setText(_translate("MainWindow", "Time"))
         self.label_5.setText(_translate("MainWindow", "Assignments"))
         self.label_18.setText(_translate("MainWindow", "Name"))
         self.label_19.setText(_translate("MainWindow", "Time"))
@@ -1037,6 +1155,7 @@ class Ui_MainWindow(object):
         self.menuUser.setTitle(_translate("MainWindow", "User"))
         self.menuViews.setTitle(_translate("MainWindow", "Views"))
         self.menuClass_Admin.setTitle(_translate("MainWindow", "Class Admin"))
+        self.menuClub.setTitle(_translate("MainWindow", "Club"))
         self.actionSignup.setText(_translate("MainWindow", "Sign Up"))
         self.actionLogin.setText(_translate("MainWindow", "Log In"))
         self.actionLog_Out.setText(_translate("MainWindow", "Log Out"))
@@ -1047,3 +1166,5 @@ class Ui_MainWindow(object):
         self.actionCreate_Assignment.setText(_translate("MainWindow", "Create Assignment"))
         self.actionView_Assignment.setText(_translate("MainWindow", "View Assignment"))
         self.actionView_Classes.setText(_translate("MainWindow", "View Classes"))
+        self.actionEvents_2.setText(_translate("MainWindow", "Events"))
+        self.actionClubs.setText(_translate("MainWindow", "Clubs"))
