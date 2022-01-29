@@ -10,7 +10,6 @@
 
 # self.actionCreatePost.triggered.connect(lambda: self.show_create_post())
 
-
 # def show_post(self):
 #     self.post_mainwindow = QtWidgets.QMainWindow()
 #     self.ui_post = Ui_create_posts_form()
