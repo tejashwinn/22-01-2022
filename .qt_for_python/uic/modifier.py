@@ -30,13 +30,13 @@ def posts(variable):
 
 
 def return_post_bu1tton(window, head):
-    
+
     def show_post():
         post_mainwindow = QtWidgets.QMainWindow()
         ui_post = Ui_posts_form()
         ui_post.setupUi(post_mainwindow)
         post_mainwindow.show()
-        
+
     _translate = QtCore.QCoreApplication.translate
     post_button = QtWidgets.QPushButton(window, clicked=show_post)
     post_button.setMaximumSize(QtCore.QSize(505, 80))
@@ -83,10 +83,12 @@ if __name__ == "__main__":
     # default hide actions
     ui.all_classes_frame.hide()
 
+    #actions
+    ui.posts_scroll_area.setHorizontalScrollBarPolicy(
+        QtCore.Qt.ScrollBarAlwaysOff)
     for i in range(100):
         temp = ui.return_post_button(MainWindow, str(i))
         ui.verticalLayout.addWidget(temp)
-        ui.posts_scroll_area.setHorizontalScrollBarPolicy(
-            QtCore.Qt.ScrollBarAlwaysOff)
+
     MainWindow.show()
     sys.exit(app.exec_())

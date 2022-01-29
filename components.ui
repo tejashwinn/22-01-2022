@@ -198,7 +198,7 @@ color: #000000;</string>
    </property>
    <property name="maximumSize">
     <size>
-     <width>16777215</width>
+     <width>461</width>
      <height>70</height>
     </size>
    </property>
