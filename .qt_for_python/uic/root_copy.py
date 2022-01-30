@@ -87,12 +87,11 @@ class Ui_MainWindow(object):
             self.up_outer_frame.hide()
             self.in_outer_frame.hide()
             self.all_classes_frame.hide()
-            self.write_cred_to_json(
-                name=check.name, username=check.username, email_id=check.email_id)
         else:
             self.in_warning_label.setText("Credentials doesn't match")
-            self.write_cred_to_json(
-                name=check.name, username=check.username, email_id=check.email_id)
+
+        self.write_cred_to_json(
+            name=check.name, username=check.username, email_id=check.email_id)
 
     def sign_up_insert(self):
         sign_up_insert = Sign_Up_Insert(email_id=self.up_email_entry.text(
