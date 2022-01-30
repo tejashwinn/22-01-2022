@@ -106,6 +106,9 @@ class Ui_MainWindow(object):
     def sign_up_insert(self):
         sign_up_insert = Sign_Up_Insert(email_id=self.up_email_entry.text(
         ), name=self.up_name_entry.text(), username=self.up_username_entry.text(), password=self.up_password_entry.text())
+        if self.up_password_entry.text() != self.up_confirm_password_entry.text():
+            self.up_warning_label.setText("Passwords doesn't match")
+            return
 
         if self.up_email_entry.text() == "" or self.up_name_entry.text() == "" or self.up_username_entry.text() == "" or self.up_password_entry.text() == "":
             self.up_warning_label.setText("Fields can't be empty")
@@ -425,7 +428,7 @@ class Ui_MainWindow(object):
             QtCore.Qt.AlignLeading | QtCore.Qt.AlignLeft | QtCore.Qt.AlignVCenter)
         self.up_warning_label.setObjectName("up_warning_label")
         self.up_confirm_password_frame = QtWidgets.QFrame(self.up_inner_frame)
-        self.up_password_entry.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.up_confirm_password_entry.setEchoMode(QtWidgets.QLineEdit.Password)
 
         self.up_confirm_password_frame.setGeometry(
             QtCore.QRect(1, 380, 443, 80))
