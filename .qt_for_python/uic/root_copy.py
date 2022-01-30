@@ -15,6 +15,7 @@ from sign_up import Sign_Up_Insert
 from sign_in import Sign_In_Check
 from create_classes import Ui_create_classes_form
 
+
 class Ui_MainWindow(object):
     ###
     def checked_connection_up(self):
@@ -1135,8 +1136,8 @@ class Ui_MainWindow(object):
         self.menuUser.setObjectName("menuUser")
         self.menuViews = QtWidgets.QMenu(self.menubar)
         self.menuViews.setObjectName("menuViews")
-        self.menuAdmin = QtWidgets.QMenu(self.menubar)
-        self.menuAdmin.setObjectName("menuAdmin")
+        self.menuClassesMain = QtWidgets.QMenu(self.menubar)
+        self.menuClassesMain.setObjectName("menuAdmin")
         self.menuClub = QtWidgets.QMenu(self.menubar)
         self.menuClub.setObjectName("menuClub")
         MainWindow.setMenuBar(self.menubar)
@@ -1207,34 +1208,23 @@ class Ui_MainWindow(object):
             "c:\\Users\\tejas\\Desktop\\22-01-22\\assests/icons/trello.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.actionViewClasses.setIcon(icon9)
         self.actionViewClasses.setObjectName("actionViewClasses")
-        self.actionEvents_2 = QtWidgets.QAction(MainWindow)
-        self.actionEvents_2.setObjectName("actionEvents_2")
+        ###
+        self.actionClubEvents = QtWidgets.QAction(MainWindow)
+        self.actionClubEvents.setObjectName("actionClubEvents")
+        icon13 = QtGui.QIcon()
+        icon13.addPixmap(QtGui.QPixmap(
+            "c:\\Users\\tejas\\Desktop\\22-01-22\\assests/icons/users.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.actionClubEvents.setIcon(icon13)
+
+        
         self.actionClubs = QtWidgets.QAction(MainWindow)
         self.actionClubs.setObjectName("actionClubs")
-        self.menuUser.addAction(self.actionSignUp)
-        self.menuUser.addSeparator()
-        self.menuUser.addAction(self.actionSignIn)
-        self.menuUser.addSeparator()
-        self.menuUser.addAction(self.actionLogOut)
-        self.menuUser.addSeparator()
-        self.menuViews.addAction(self.actionClasses)
-        self.menuViews.addSeparator()
-        self.menuViews.addAction(self.actionEvents)
-        self.menuViews.addSeparator()
-        self.menuViews.addAction(self.actionAssignments)
-        self.menuAdmin.addAction(self.actionCreatePost)
-        self.menuAdmin.addAction(self.actionCreateAssignment)
-        self.menuAdmin.addAction(self.actionViewAssignment)
-        self.menuAdmin.addAction(self.actionViewClasses)
-        self.menuClub.addAction(self.actionEvents_2)
-        self.menuClub.addAction(self.actionClubs)
-        self.menubar.addAction(self.menuUser.menuAction())
-        self.menubar.addAction(self.menuViews.menuAction())
-        self.menubar.addAction(self.menuAdmin.menuAction())
-        self.menubar.addAction(self.menuClub.menuAction())
-        self.menubar.addAction(self.menuClub.menuAction())
-
-        ###
+        icon12 = QtGui.QIcon()
+        icon12.addPixmap(QtGui.QPixmap(
+            "c:\\Users\\tejas\\Desktop\\22-01-22\\assests/icons/grid.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.actionClubs.setIcon(icon12)
+        
+        
         self.actionCreateClass = QtWidgets.QAction(MainWindow)
         icon10 = QtGui.QIcon()
         icon10.addPixmap(QtGui.QPixmap(
@@ -1243,9 +1233,50 @@ class Ui_MainWindow(object):
         self.actionCreateClass.setObjectName("actionCreateClass")
         self.actionCreateClass.triggered.connect(
             lambda: self.show_create_class())
-        self.menuAdmin.addAction(self.actionCreateClass)
+
+        self.actionJoinCLass = QtWidgets.QAction(MainWindow)
+        self.actionJoinCLass.setObjectName("actionJoinCLass")
+        icon11 = QtGui.QIcon()
+        icon11.addPixmap(QtGui.QPixmap(
+            "c:\\Users\\tejas\\Desktop\\22-01-22\\assests/icons/upload.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.actionJoinCLass.setIcon(icon11)
 
         ###
+
+        self.menuUser.addAction(self.actionSignUp)
+        self.menuUser.addSeparator()
+        self.menuUser.addAction(self.actionSignIn)
+        self.menuUser.addSeparator()
+        self.menuUser.addAction(self.actionLogOut)
+        self.menuUser.addSeparator()
+
+        self.menuViews.addAction(self.actionClasses)
+        self.menuViews.addSeparator()
+        self.menuViews.addAction(self.actionEvents)
+        self.menuViews.addSeparator()
+        self.menuViews.addAction(self.actionAssignments)
+        self.menuViews.addSeparator()
+
+        self.menuClassesMain.addAction(self.actionCreatePost)
+        self.menuClassesMain.addSeparator()
+        self.menuClassesMain.addAction(self.actionCreateAssignment)
+        self.menuClassesMain.addSeparator()
+        self.menuClassesMain.addAction(self.actionViewAssignment)
+        self.menuClassesMain.addSeparator()
+        self.menuClassesMain.addAction(self.actionViewClasses)
+        self.menuClassesMain.addSeparator()
+        self.menuClassesMain.addAction(self.actionCreateClass)
+        self.menuClassesMain.addSeparator()
+        self.menuClassesMain.addAction(self.actionJoinCLass)
+
+        self.menuClub.addAction(self.actionClubEvents)
+        self.menuClub.addSeparator()
+        self.menuClub.addAction(self.actionClubs)
+        self.menubar.addAction(self.menuUser.menuAction())
+        self.menubar.addAction(self.menuViews.menuAction())
+        self.menubar.addAction(self.menuClassesMain.menuAction())
+        self.menubar.addAction(self.menuClub.menuAction())
+
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
@@ -1280,7 +1311,7 @@ class Ui_MainWindow(object):
         self.static_assignment.setText(_translate("MainWindow", "Assignments"))
         self.menuUser.setTitle(_translate("MainWindow", "User"))
         self.menuViews.setTitle(_translate("MainWindow", "Views"))
-        self.menuAdmin.setTitle(_translate("MainWindow", "Admin"))
+        self.menuClassesMain.setTitle(_translate("MainWindow", "Class"))
         self.menuClub.setTitle(_translate("MainWindow", "Club"))
         self.actionSignUp.setText(_translate("MainWindow", "Sign Up"))
         self.actionSignIn.setText(_translate("MainWindow", "Log In"))
@@ -1295,9 +1326,11 @@ class Ui_MainWindow(object):
             _translate("MainWindow", "View Assignment"))
         self.actionViewClasses.setText(
             _translate("MainWindow", "View Classes"))
-        self.actionEvents_2.setText(_translate("MainWindow", "Events"))
+        self.actionClubEvents.setText(_translate("MainWindow", "Events"))
         self.actionClubs.setText(_translate("MainWindow", "Clubs"))
         ###
         self.actionCreateClass.setText(
             _translate("MainWindow", "Create Class"))
+        self.actionJoinCLass.setText(_translate("MainWindow", "Join CLass"))
+
         ###

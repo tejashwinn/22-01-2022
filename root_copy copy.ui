@@ -1594,26 +1594,27 @@ border-radius: 10px;}</string>
     <addaction name="separator"/>
     <addaction name="actionAssignments"/>
    </widget>
-   <widget class="QMenu" name="menuAdmin">
+   <widget class="QMenu" name="menuClassesMain">
     <property name="title">
-     <string>Admin</string>
+     <string>Classes</string>
     </property>
     <addaction name="actionCreatePost"/>
     <addaction name="actionCreateAssignment"/>
     <addaction name="actionViewAssignment"/>
     <addaction name="actionViewClasses"/>
     <addaction name="actionCreateClass"/>
+    <addaction name="actionJoinCLass"/>
    </widget>
    <widget class="QMenu" name="menuClub">
     <property name="title">
      <string>Club</string>
     </property>
-    <addaction name="actionEvents_2"/>
+    <addaction name="actionClubEvents"/>
     <addaction name="actionClubs"/>
    </widget>
    <addaction name="menuUser"/>
    <addaction name="menuViews"/>
-   <addaction name="menuAdmin"/>
+   <addaction name="menuClassesMain"/>
    <addaction name="menuClub"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
@@ -1707,12 +1708,20 @@ border-radius: 10px;}</string>
     <string>View Classes</string>
    </property>
   </action>
-  <action name="actionEvents_2">
+  <action name="actionClubEvents">
+   <property name="icon">
+    <iconset>
+     <normaloff>assests/icons/grid.svg</normaloff>assests/icons/grid.svg</iconset>
+   </property>
    <property name="text">
     <string>Events</string>
    </property>
   </action>
   <action name="actionClubs">
+   <property name="icon">
+    <iconset>
+     <normaloff>assests/icons/users.svg</normaloff>assests/icons/users.svg</iconset>
+   </property>
    <property name="text">
     <string>Clubs</string>
    </property>
@@ -1724,6 +1733,15 @@ border-radius: 10px;}</string>
    </property>
    <property name="text">
     <string>Create Class</string>
+   </property>
+  </action>
+  <action name="actionJoinCLass">
+   <property name="icon">
+    <iconset>
+     <normaloff>assests/icons/upload.svg</normaloff>assests/icons/upload.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Join CLass</string>
    </property>
   </action>
  </widget>
