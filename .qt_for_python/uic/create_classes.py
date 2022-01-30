@@ -9,36 +9,61 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from create_class_in import Create_Classes
 
 
-class Ui_create_posts_form(object):
-    def setupUi(self, create_posts_form):
-        create_posts_form.setObjectName("create_posts_form")
-        create_posts_form.resize(563, 502)
-        create_posts_form.setStyleSheet("")
-        self.gridLayout = QtWidgets.QGridLayout(create_posts_form)
+class Ui_create_classes_form(object):
+    ###
+    def create_class(self):
+        te = Create_Classes(name=self.create_class_name_entry.toPlainText(
+        ), description=self.create_class_description_entry.toPlainText())
+        if (
+            self.create_class_name_entry.toPlainText() == ""
+            and self.create_class_description_entry.toPlainText() == ""
+        ):
+            self.create_class_warning_label.setText("Fields cant be empty")
+        elif te.valid:
+            self.create_class_code_entry_read_only.setPlainText(te.random_name)
+            te.insert()
+            self.create_class_button.setDisabled(True)
+            self.create_class_warning_label.setText(
+                "Class created successfully")
+
+
+        else:
+            self.create_class_warning_label.setText(
+                "You already have a class in the same name")
+    ###
+
+    def setupUi(self, create_classes_form):
+        create_classes_form.setObjectName("create_classes_form")
+        create_classes_form.resize(563, 502)
+        create_classes_form.setStyleSheet("")
+        self.gridLayout = QtWidgets.QGridLayout(create_classes_form)
         self.gridLayout.setObjectName("gridLayout")
-        self.create_posts_frame = QtWidgets.QFrame(create_posts_form)
-        self.create_posts_frame.setEnabled(True)
-        self.create_posts_frame.setMinimumSize(QtCore.QSize(541, 480))
-        self.create_posts_frame.setMaximumSize(QtCore.QSize(541, 520))
-        self.create_posts_frame.setStyleSheet("#create_posts_frame{/* Auto layout */\n"
-"\n"
-"\n"
-"\n"
-"/* White */\n"
-"\n"
-"background: #FFFFFF;\n"
-"/* Grey / Dark */\n"
-"\n"
-"border: 1px solid #D1D1D1;\n"
-"box-sizing: border-box;\n"
-"border-radius: 8px;}")
-        self.create_posts_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.create_posts_frame.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.create_posts_frame.setObjectName("create_posts_frame")
-        self.static_create_class_heading = QtWidgets.QLabel(self.create_posts_frame)
-        self.static_create_class_heading.setGeometry(QtCore.QRect(20, 20, 221, 31))
+        self.create_classes_frame = QtWidgets.QFrame(create_classes_form)
+        self.create_classes_frame.setEnabled(True)
+        self.create_classes_frame.setMinimumSize(QtCore.QSize(541, 480))
+        self.create_classes_frame.setMaximumSize(QtCore.QSize(541, 520))
+        self.create_classes_frame.setStyleSheet("#create_classes_frame{/* Auto layout */\n"
+                                                "\n"
+                                                "\n"
+                                                "\n"
+                                                "/* White */\n"
+                                                "\n"
+                                                "background: #FFFFFF;\n"
+                                                "/* Grey / Dark */\n"
+                                                "\n"
+                                                "border: 1px solid #D1D1D1;\n"
+                                                "box-sizing: border-box;\n"
+                                                "border-radius: 8px;}")
+        self.create_classes_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.create_classes_frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.create_classes_frame.setObjectName("create_classes_frame")
+        self.static_create_class_heading = QtWidgets.QLabel(
+            self.create_classes_frame)
+        self.static_create_class_heading.setGeometry(
+            QtCore.QRect(20, 20, 221, 31))
         font = QtGui.QFont()
         font.setFamily("Poppins")
         font.setPointSize(-1)
@@ -47,187 +72,224 @@ class Ui_create_posts_form(object):
         font.setWeight(50)
         self.static_create_class_heading.setFont(font)
         self.static_create_class_heading.setStyleSheet("position: absolute;\n"
-"width: 233px;\n"
-"height: 60px;\n"
-"left: 92px;\n"
-"top: 48px;\n"
-"\n"
-"font-family: Poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 30px;\n"
-"line-height: 60px;\n"
-"/* identical to box height */\n"
-"\n"
-"letter-spacing: 0.05em;\n"
-"text-decoration-line: underline;\n"
-"text-transform: capitalize;\n"
-"\n"
-"color: #000000;\n"
-"")
-        self.static_create_class_heading.setObjectName("static_create_class_heading")
-        self.static_class_description_label_posts = QtWidgets.QLabel(self.create_posts_frame)
-        self.static_class_description_label_posts.setGeometry(QtCore.QRect(30, 190, 141, 41))
+                                                       "width: 233px;\n"
+                                                       "height: 60px;\n"
+                                                       "left: 92px;\n"
+                                                       "top: 48px;\n"
+                                                       "\n"
+                                                       "font-family: Poppins;\n"
+                                                       "font-style: normal;\n"
+                                                       "font-weight: normal;\n"
+                                                       "font-size: 30px;\n"
+                                                       "line-height: 60px;\n"
+                                                       "/* identical to box height */\n"
+                                                       "\n"
+                                                       "letter-spacing: 0.05em;\n"
+                                                       "text-decoration-line: underline;\n"
+                                                       "text-transform: capitalize;\n"
+                                                       "\n"
+                                                       "color: #000000;\n"
+                                                       "")
+        self.static_create_class_heading.setObjectName(
+            "static_create_class_heading")
+        self.static_class_description_label_posts = QtWidgets.QLabel(
+            self.create_classes_frame)
+        self.static_class_description_label_posts.setGeometry(
+            QtCore.QRect(30, 190, 141, 41))
         self.static_class_description_label_posts.setStyleSheet("font-family: Poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 15px;\n"
-"line-height: 30px;\n"
-"/* identical to box height */\n"
-"\n"
-"letter-spacing: 0.05em;\n"
-"text-transform: capitalize;\n"
-"")
-        self.static_class_description_label_posts.setObjectName("static_class_description_label_posts")
-        self.create_class_description_entry = QtWidgets.QPlainTextEdit(self.create_posts_frame)
-        self.create_class_description_entry.setGeometry(QtCore.QRect(20, 230, 511, 91))
+                                                                "font-style: normal;\n"
+                                                                "font-weight: normal;\n"
+                                                                "font-size: 15px;\n"
+                                                                "line-height: 30px;\n"
+                                                                "/* identical to box height */\n"
+                                                                "\n"
+                                                                "letter-spacing: 0.05em;\n"
+                                                                "text-transform: capitalize;\n"
+                                                                "")
+        self.static_class_description_label_posts.setObjectName(
+            "static_class_description_label_posts")
+        self.create_class_description_entry = QtWidgets.QPlainTextEdit(
+            self.create_classes_frame)
+        self.create_class_description_entry.setGeometry(
+            QtCore.QRect(20, 230, 511, 91))
         self.create_class_description_entry.setStyleSheet("background: rgba(196, 196, 196, 0.1);\n"
-"font-family: Poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 15px;\n"
-"line-height: 30px;\n"
-"/* identical to box height */\n"
-"\n"
-"letter-spacing: 0.05em;\n"
-"text-transform: capitalize;\n"
-"\n"
-"color: #000000;")
+                                                          "font-family: Poppins;\n"
+                                                          "font-style: normal;\n"
+                                                          "font-weight: normal;\n"
+                                                          "font-size: 15px;\n"
+                                                          "line-height: 30px;\n"
+                                                          "/* identical to box height */\n"
+                                                          "\n"
+                                                          "letter-spacing: 0.05em;\n"
+                                                          "text-transform: capitalize;\n"
+                                                          "\n"
+                                                          "color: #000000;")
         self.create_class_description_entry.setPlainText("")
-        self.create_class_description_entry.setObjectName("create_class_description_entry")
-        self.create_class_name_entry = QtWidgets.QPlainTextEdit(self.create_posts_frame)
-        self.create_class_name_entry.setGeometry(QtCore.QRect(20, 130, 511, 41))
+        self.create_class_description_entry.setObjectName(
+            "create_class_description_entry")
+        self.create_class_name_entry = QtWidgets.QPlainTextEdit(
+            self.create_classes_frame)
+        self.create_class_name_entry.setGeometry(
+            QtCore.QRect(20, 130, 511, 41))
         self.create_class_name_entry.setStyleSheet("background: rgba(196, 196, 196, 0.1);\n"
-"font-family: Poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 15px;\n"
-"line-height: 30px;\n"
-"/* identical to box height */\n"
-"\n"
-"letter-spacing: 0.05em;\n"
-"text-transform: capitalize;\n"
-"\n"
-"color: #000000;")
+                                                   "font-family: Poppins;\n"
+                                                   "font-style: normal;\n"
+                                                   "font-weight: normal;\n"
+                                                   "font-size: 15px;\n"
+                                                   "line-height: 30px;\n"
+                                                   "/* identical to box height */\n"
+                                                   "\n"
+                                                   "letter-spacing: 0.05em;\n"
+                                                   "text-transform: capitalize;\n"
+                                                   "\n"
+                                                   "color: #000000;")
         self.create_class_name_entry.setPlainText("")
         self.create_class_name_entry.setObjectName("create_class_name_entry")
-        self.static_create_class_naming_label = QtWidgets.QLabel(self.create_posts_frame)
-        self.static_create_class_naming_label.setGeometry(QtCore.QRect(30, 90, 111, 41))
+        self.static_create_class_naming_label = QtWidgets.QLabel(
+            self.create_classes_frame)
+        self.static_create_class_naming_label.setGeometry(
+            QtCore.QRect(30, 90, 111, 41))
         self.static_create_class_naming_label.setStyleSheet("font-family: Poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 15px;\n"
-"line-height: 30px;\n"
-"/* identical to box height */\n"
-"\n"
-"letter-spacing: 0.05em;\n"
-"text-transform: capitalize;\n"
-"")
-        self.static_create_class_naming_label.setObjectName("static_create_class_naming_label")
-        self.create_class_button = QtWidgets.QPushButton(self.create_posts_frame)
+                                                            "font-style: normal;\n"
+                                                            "font-weight: normal;\n"
+                                                            "font-size: 15px;\n"
+                                                            "line-height: 30px;\n"
+                                                            "/* identical to box height */\n"
+                                                            "\n"
+                                                            "letter-spacing: 0.05em;\n"
+                                                            "text-transform: capitalize;\n"
+                                                            "")
+        self.static_create_class_naming_label.setObjectName(
+            "static_create_class_naming_label")
+        self.create_class_button = QtWidgets.QPushButton(
+            self.create_classes_frame)
         self.create_class_button.setGeometry(QtCore.QRect(160, 420, 221, 40))
         self.create_class_button.setStyleSheet("\n"
-"*{\n"
-"font-family: Inter;\n"
-"font-style: normal;\n"
-"font-weight: 500;\n"
-"font-size: 14px;\n"
-"line-height: 17px;\n"
-"/* identical to box height */\n"
-"\n"
-"align-items: center;\n"
-"\n"
-"/* Grey / Light */\n"
-"\n"
-"color: white;\n"
-"background: #4F4F4F;\n"
-"border-radius: 8px;\n"
-"}\n"
-"\n"
-":pressed {\n"
-"    border-style: inset;\n"
-"    border: 1px solid  #4F4F4F;\n"
-"color: #4F4F4F;\n"
-"background: #FFFFFF;\n"
-"}\n"
-"/* Inside auto layout */\n"
-"\n"
-"")
+                                               "*{\n"
+                                               "font-family: Inter;\n"
+                                               "font-style: normal;\n"
+                                               "font-weight: 500;\n"
+                                               "font-size: 14px;\n"
+                                               "line-height: 17px;\n"
+                                               "/* identical to box height */\n"
+                                               "\n"
+                                               "align-items: center;\n"
+                                               "\n"
+                                               "/* Grey / Light */\n"
+                                               "\n"
+                                               "color: white;\n"
+                                               "background: #4F4F4F;\n"
+                                               "border-radius: 8px;\n"
+                                               "}\n"
+                                               "\n"
+                                               ":pressed {\n"
+                                               "    border-style: inset;\n"
+                                               "    border: 1px solid  #4F4F4F;\n"
+                                               "color: #4F4F4F;\n"
+                                               "background: #FFFFFF;\n"
+                                               "}\n"
+                                               "/* Inside auto layout */\n"
+                                               "\n"
+                                               "")
         self.create_class_button.setObjectName("create_class_button")
-        self.close_button_create_posts = QtWidgets.QPushButton(self.create_posts_frame)
-        self.close_button_create_posts.setGeometry(QtCore.QRect(490, 10, 40, 40))
+        self.close_button_create_posts = QtWidgets.QPushButton(
+            self.create_classes_frame)
+        self.close_button_create_posts.setGeometry(
+            QtCore.QRect(490, 10, 40, 40))
         self.close_button_create_posts.setStyleSheet("*{border-radius:0px;}\n"
-":pressed{\n"
-"    border: 3px solid  #FF0000;\n"
-"boder:10px;\n"
-"border-radius: 8px;\n"
-"}")
+                                                     ":pressed{\n"
+                                                     "    border: 3px solid  #FF0000;\n"
+                                                     "boder:10px;\n"
+                                                     "border-radius: 8px;\n"
+                                                     "}")
         self.close_button_create_posts.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("c:\\Users\\tejas\\Desktop\\22-01-22\\assests/icons/x-square.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(
+            "c:\\Users\\tejas\\Desktop\\22-01-22\\assests/icons/x-square.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.close_button_create_posts.setIcon(icon)
         self.close_button_create_posts.setIconSize(QtCore.QSize(40, 40))
-        self.close_button_create_posts.setObjectName("close_button_create_posts")
-        self.create_class_code_entry_read_only = QtWidgets.QPlainTextEdit(self.create_posts_frame)
-        self.create_class_code_entry_read_only.setGeometry(QtCore.QRect(130, 350, 371, 41))
+        self.close_button_create_posts.setObjectName(
+            "close_button_create_posts")
+        self.create_class_code_entry_read_only = QtWidgets.QPlainTextEdit(
+            self.create_classes_frame)
+        self.create_class_code_entry_read_only.setGeometry(
+            QtCore.QRect(130, 350, 371, 41))
         self.create_class_code_entry_read_only.setStyleSheet("background: rgba(196, 196, 196, 0.1);\n"
-"font-family: Poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 15px;\n"
-"line-height: 30px;\n"
-"/* identical to box height */\n"
-"\n"
-"letter-spacing: 0.05em;\n"
-"text-transform: capitalize;\n"
-"\n"
-"color: #000000;")
+                                                             "font-family: Poppins;\n"
+                                                             "font-style: normal;\n"
+                                                             "font-weight: normal;\n"
+                                                             "font-size: 15px;\n"
+                                                             "line-height: 30px;\n"
+                                                             "/* identical to box height */\n"
+                                                             "\n"
+                                                             "letter-spacing: 0.05em;\n"
+                                                             "text-transform: capitalize;\n"
+                                                             "\n"
+                                                             "color: #000000;")
         self.create_class_code_entry_read_only.setReadOnly(True)
-        self.create_class_code_entry_read_only.setObjectName("create_class_code_entry_read_only")
-        self.static_class_code_label = QtWidgets.QLabel(self.create_posts_frame)
-        self.static_class_code_label.setGeometry(QtCore.QRect(20, 350, 101, 41))
+        self.create_class_code_entry_read_only.setObjectName(
+            "create_class_code_entry_read_only")
+        self.static_class_code_label = QtWidgets.QLabel(
+            self.create_classes_frame)
+        self.static_class_code_label.setGeometry(
+            QtCore.QRect(20, 350, 101, 41))
         self.static_class_code_label.setStyleSheet("font-family: Poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 15px;\n"
-"line-height: 30px;\n"
-"/* identical to box height */\n"
-"\n"
-"letter-spacing: 0.05em;\n"
-"text-transform: capitalize;\n"
-"")
+                                                   "font-style: normal;\n"
+                                                   "font-weight: normal;\n"
+                                                   "font-size: 15px;\n"
+                                                   "line-height: 30px;\n"
+                                                   "/* identical to box height */\n"
+                                                   "\n"
+                                                   "letter-spacing: 0.05em;\n"
+                                                   "text-transform: capitalize;\n"
+                                                   "")
         self.static_class_code_label.setObjectName("static_class_code_label")
-        self.create_class_warning_label = QtWidgets.QLabel(self.create_posts_frame)
-        self.create_class_warning_label.setGeometry(QtCore.QRect(30, 50, 421, 41))
+        self.create_class_warning_label = QtWidgets.QLabel(
+            self.create_classes_frame)
+        self.create_class_warning_label.setGeometry(
+            QtCore.QRect(30, 50, 421, 41))
         self.create_class_warning_label.setStyleSheet("position: absolute;\n"
-"left: 0%;\n"
-"right: 12.33%;\n"
-"top: 15%;\n"
-"bottom: 14.17%;\n"
-"\n"
-"font-family: poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 14px;\n"
-"line-height: 17px;\n"
-"\n"
-"/* Dark / Medium */\n"
-"\n"
-"color: #FF0000;")
+                                                      "left: 0%;\n"
+                                                      "right: 12.33%;\n"
+                                                      "top: 15%;\n"
+                                                      "bottom: 14.17%;\n"
+                                                      "\n"
+                                                      "font-family: poppins;\n"
+                                                      "font-style: normal;\n"
+                                                      "font-weight: normal;\n"
+                                                      "font-size: 14px;\n"
+                                                      "line-height: 17px;\n"
+                                                      "\n"
+                                                      "/* Dark / Medium */\n"
+                                                      "\n"
+                                                      "color: #FF0000;")
         self.create_class_warning_label.setText("")
-        self.create_class_warning_label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
-        self.create_class_warning_label.setObjectName("create_class_warning_label")
-        self.gridLayout.addWidget(self.create_posts_frame, 0, 0, 1, 1)
+        self.create_class_warning_label.setAlignment(
+            QtCore.Qt.AlignLeading | QtCore.Qt.AlignLeft | QtCore.Qt.AlignVCenter)
+        self.create_class_warning_label.setObjectName(
+            "create_class_warning_label")
+        self.gridLayout.addWidget(self.create_classes_frame, 0, 0, 1, 1)
 
-        self.retranslateUi(create_posts_form)
-        QtCore.QMetaObject.connectSlotsByName(create_posts_form)
+        ###
+        self.create_class_button.clicked.connect(self.create_class)
+        self.close_button_create_posts.hide()
+        ###
+        self.retranslateUi(create_classes_form)
+        QtCore.QMetaObject.connectSlotsByName(create_classes_form)
 
-    def retranslateUi(self, create_posts_form):
+    def retranslateUi(self, create_classes_form):
         _translate = QtCore.QCoreApplication.translate
-        create_posts_form.setWindowTitle(_translate("create_posts_form", "Form"))
-        self.static_create_class_heading.setText(_translate("create_posts_form", "Create Class"))
-        self.static_class_description_label_posts.setText(_translate("create_posts_form", "Class Description"))
-        self.static_create_class_naming_label.setText(_translate("create_posts_form", "Class Name"))
-        self.create_class_button.setText(_translate("create_posts_form", "Create Class"))
-        self.create_class_code_entry_read_only.setPlainText(_translate("create_posts_form", "dfas"))
-        self.static_class_code_label.setText(_translate("create_posts_form", "Class Code:"))
+        create_classes_form.setWindowTitle(
+            _translate("create_classes_form", "Form"))
+        self.static_create_class_heading.setText(
+            _translate("create_classes_form", "Create Class"))
+        self.static_class_description_label_posts.setText(
+            _translate("create_classes_form", "Class Description"))
+        self.static_create_class_naming_label.setText(
+            _translate("create_classes_form", "Class Name"))
+        self.create_class_button.setText(
+            _translate("create_classes_form", "Create Class"))
+        self.create_class_code_entry_read_only.setPlainText(
+            _translate("create_classes_form", ""))
+        self.static_class_code_label.setText(
+            _translate("create_classes_form", "Class Code:"))

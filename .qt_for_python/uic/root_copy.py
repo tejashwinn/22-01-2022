@@ -13,7 +13,7 @@ from create_posts import Ui_create_posts_form
 from posts import Ui_posts_form
 from sign_up import Sign_Up_Insert
 from sign_in import Sign_In_Check
-
+from create_classes import Ui_create_classes_form
 
 class Ui_MainWindow(object):
     ###
@@ -38,6 +38,12 @@ class Ui_MainWindow(object):
         self.ui_post = Ui_posts_form()
         self.ui_post.setupUi(self.post_mainwindow)
         self.post_mainwindow.show()
+
+    def show_create_class(self):
+        self.create_class_main_window = QtWidgets.QMainWindow()
+        self.ui_class_create = Ui_create_classes_form()
+        self.ui_class_create.setupUi(self.create_class_main_window)
+        self.create_class_main_window.show()
 
     def return_post_button(self, window, head):
         _translate = QtCore.QCoreApplication.translate
@@ -428,7 +434,6 @@ class Ui_MainWindow(object):
             QtCore.Qt.AlignLeading | QtCore.Qt.AlignLeft | QtCore.Qt.AlignVCenter)
         self.up_warning_label.setObjectName("up_warning_label")
         self.up_confirm_password_frame = QtWidgets.QFrame(self.up_inner_frame)
-        self.up_confirm_password_entry.setEchoMode(QtWidgets.QLineEdit.Password)
 
         self.up_confirm_password_frame.setGeometry(
             QtCore.QRect(1, 380, 443, 80))
@@ -460,6 +465,10 @@ class Ui_MainWindow(object):
             "up_confirm_password_label")
         self.up_confirm_password_entry = QtWidgets.QLineEdit(
             self.up_confirm_password_frame)
+        ###
+        self.up_confirm_password_entry.setEchoMode(
+            QtWidgets.QLineEdit.Password)
+        ###
         self.up_confirm_password_entry.setGeometry(
             QtCore.QRect(10, 30, 425, 40))
         self.up_confirm_password_entry.setStyleSheet("font-family: poppins;\n"
@@ -1171,9 +1180,10 @@ class Ui_MainWindow(object):
         self.actionAssignments.setIcon(icon5)
         self.actionAssignments.setObjectName("actionAssignments")
         self.actionCreatePost = QtWidgets.QAction(MainWindow)
+        ###
         self.actionCreatePost.triggered.connect(
             lambda: self.show_create_post())
-
+        ###
         icon6 = QtGui.QIcon()
         icon6.addPixmap(QtGui.QPixmap(
             "c:\\Users\\tejas\\Desktop\\22-01-22\\assests/icons/plus-square.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -1222,7 +1232,20 @@ class Ui_MainWindow(object):
         self.menubar.addAction(self.menuViews.menuAction())
         self.menubar.addAction(self.menuAdmin.menuAction())
         self.menubar.addAction(self.menuClub.menuAction())
+        self.menubar.addAction(self.menuClub.menuAction())
 
+        ###
+        self.actionCreateClass = QtWidgets.QAction(MainWindow)
+        icon10 = QtGui.QIcon()
+        icon10.addPixmap(QtGui.QPixmap(
+            "c:\\Users\\tejas\\Desktop\\22-01-22\\assests/icons/plus.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.actionCreateClass.setIcon(icon10)
+        self.actionCreateClass.setObjectName("actionCreateClass")
+        self.actionCreateClass.triggered.connect(
+            lambda: self.show_create_class())
+        self.menuAdmin.addAction(self.actionCreateClass)
+
+        ###
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
@@ -1274,3 +1297,7 @@ class Ui_MainWindow(object):
             _translate("MainWindow", "View Classes"))
         self.actionEvents_2.setText(_translate("MainWindow", "Events"))
         self.actionClubs.setText(_translate("MainWindow", "Clubs"))
+        ###
+        self.actionCreateClass.setText(
+            _translate("MainWindow", "Create Class"))
+        ###
