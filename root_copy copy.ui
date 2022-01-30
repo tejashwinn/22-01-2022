@@ -1602,6 +1602,7 @@ border-radius: 10px;}</string>
     <addaction name="actionCreateAssignment"/>
     <addaction name="actionViewAssignment"/>
     <addaction name="actionViewClasses"/>
+    <addaction name="actionCreateClass"/>
    </widget>
    <widget class="QMenu" name="menuClub">
     <property name="title">
@@ -1714,6 +1715,15 @@ border-radius: 10px;}</string>
   <action name="actionClubs">
    <property name="text">
     <string>Clubs</string>
+   </property>
+  </action>
+  <action name="actionCreateClass">
+   <property name="icon">
+    <iconset>
+     <normaloff>assests/icons/plus.svg</normaloff>assests/icons/plus.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Create Class</string>
    </property>
   </action>
  </widget>

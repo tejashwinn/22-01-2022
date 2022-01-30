@@ -7,13 +7,21 @@ def sign_up_switch(variable):
     variable.up_outer_frame.show()
     variable.in_outer_frame.hide()
     variable.main_class_frame.hide()
+    
+    variable.in_email_entry.setText("")
+    variable.in_password_entry.setText("")
 
 
 def sign_in_switch(variable):
-    
+
     variable.in_outer_frame.show()
     variable.up_outer_frame.hide()
     variable.main_class_frame.hide()
+    
+    variable.up_name_entry.setText("")
+    variable.up_username_entry.setText("")
+    variable.up_email_entry.setText("")
+    variable.up_password_entry.setText("")
 
 
 def show_main_frame(variable):
@@ -26,8 +34,7 @@ def show_main_frame(variable):
 def posts(variable):
     variable.all_classes_frame.hide()
 
-    
-    
+
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)

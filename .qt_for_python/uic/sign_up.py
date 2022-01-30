@@ -3,7 +3,6 @@ from sqlite3 import Error
 
 
 class Sign_Up_Insert():
-
     database = r"C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\college_virtual_space.db"
 
     def create_connection(self):
@@ -16,24 +15,24 @@ class Sign_Up_Insert():
             print(e)
 
     def __init__(self, name, username, email_id, password):
-        self.database = r"C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\college_virtual_space.db"
-        self.create_connection()
         self.name = name
         self.username = username
         self.email_id = email_id
-        import hasher
-        temp = hasher.Password_Hasher(password)
-        self.password = temp.hashed_password
+        self.password = password
+        
+        self.create_connection()
         self.unique_username()
         self.unique_emailid()
 
     def insert(self):
+        from hasher import Password_Hasher
+        self.password = Password_Hasher(self.password).hashed_password
         sql = ''' INSERT INTO users_cvs(name,username,emailid,password)
               VALUES(?,?,?,?) '''
         self.cursor.execute(
             sql, [self.name, self.username, self.email_id, self.password])
         self.connection.commit()
-        return self.cursor.lastrowid
+        # return self.cursor.lastrowid
 
     def unique_username(self):
         self.cursor.execute(
@@ -46,3 +45,4 @@ class Sign_Up_Insert():
             "SELECT emailid FROM users_cvs WHERE emailid=?", (self.email_id,))
         rows = self.cursor.fetchall()
         self.unique_emailid_constraint = rows == []
+

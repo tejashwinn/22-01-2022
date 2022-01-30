@@ -14,12 +14,12 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(567, 587)
+        Form.resize(567, 664)
         Form.setStyleSheet("")
         self.gridLayout = QtWidgets.QGridLayout(Form)
         self.gridLayout.setObjectName("gridLayout")
         self.frame_2 = QtWidgets.QFrame(Form)
-        self.frame_2.setMinimumSize(QtCore.QSize(541, 565))
+        self.frame_2.setMinimumSize(QtCore.QSize(541, 598))
         self.frame_2.setMaximumSize(QtCore.QSize(541, 565))
         self.frame_2.setStyleSheet("#frame_2{/* Auto layout */\n"
 "\n"
@@ -242,6 +242,38 @@ class Ui_Form(object):
         self.close_button_create_assignment.setIcon(icon)
         self.close_button_create_assignment.setIconSize(QtCore.QSize(40, 40))
         self.close_button_create_assignment.setObjectName("close_button_create_assignment")
+        self.add_files_button_posts = QtWidgets.QPushButton(self.frame_2)
+        self.add_files_button_posts.setGeometry(QtCore.QRect(160, 550, 221, 40))
+        self.add_files_button_posts.setStyleSheet("*{\n"
+"font-family: Inter;\n"
+"font-style: normal;\n"
+"font-weight: 500;\n"
+"font-size: 14px;\n"
+"line-height: 17px;\n"
+"/* identical to box height */\n"
+"\n"
+"align-items: center;\n"
+"\n"
+"/* Grey / Light */\n"
+"\n"
+"\n"
+"    border-style: inset;\n"
+"    border: 1px solid  #4F4F4F;\n"
+"color: #4F4F4F;\n"
+"background: #FFFFFF;\n"
+"border-radius:10px;\n"
+"}\n"
+"\n"
+":pressed {\n"
+"    border-style: inset;\n"
+"    color: white;\n"
+"background: #4F4F4F;\n"
+"border-radius: 8px;\n"
+"}\n"
+"/* Inside auto layout */\n"
+"\n"
+"")
+        self.add_files_button_posts.setObjectName("add_files_button_posts")
         self.gridLayout.addWidget(self.frame_2, 0, 0, 1, 1)
 
         self.retranslateUi(Form)
@@ -260,3 +292,4 @@ class Ui_Form(object):
         self.label_6.setText(_translate("Form", "Date"))
         self.plainTextEdit_3.setPlainText(_translate("Form", "fdfasdfas"))
         self.label_7.setText(_translate("Form", "Marks:"))
+        self.add_files_button_posts.setText(_translate("Form", "Post Assignment"))

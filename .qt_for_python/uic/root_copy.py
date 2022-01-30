@@ -20,8 +20,12 @@ class Ui_MainWindow(object):
     def checked_connection_up(self):
         if self.up_password_radio.isChecked():
             self.up_password_entry.setEchoMode(QtWidgets.QLineEdit.Normal)
+            self.up_confirm_password_entry.setEchoMode(
+                QtWidgets.QLineEdit.Normal)
         else:
             self.up_password_entry.setEchoMode(QtWidgets.QLineEdit.Password)
+            self.up_confirm_password_entry.setEchoMode(
+                QtWidgets.QLineEdit.Password)
 
     def checked_connection_in(self):
         if self.in_password_radio.isChecked():
@@ -82,9 +86,13 @@ class Ui_MainWindow(object):
     def sign_in_credentials(self):
         check = Sign_In_Check(email_id=self.in_email_entry.text(
         ), password=self.in_password_entry.text())
+        if self.in_email_entry.text() == "" or self.in_password_entry.text() == "":
+            self.in_warning_label.setText("Fields can't be empty")
+            return
         if check.credentials_exists:
             self.main_class_frame.show()
             self.up_outer_frame.hide()
+
             self.in_outer_frame.hide()
             self.all_classes_frame.hide()
             self.in_email_entry.setText("")
@@ -99,24 +107,33 @@ class Ui_MainWindow(object):
         sign_up_insert = Sign_Up_Insert(email_id=self.up_email_entry.text(
         ), name=self.up_name_entry.text(), username=self.up_username_entry.text(), password=self.up_password_entry.text())
 
+        if self.up_email_entry.text() == "" or self.up_name_entry.text() == "" or self.up_username_entry.text() == "" or self.up_password_entry.text() == "":
+            self.up_warning_label.setText("Fields can't be empty")
+            return
+
         if sign_up_insert.unique_username_constraint and sign_up_insert.unique_emailid_constraint:
             sign_up_insert.insert()
             self.in_warning_label.setText(
                 "Successfully Signed up enter details to continue")
+            self.write_cred_to_json("", "", "")
+
             self.in_outer_frame.show()
             self.up_outer_frame.hide()
             self.main_class_frame.hide()
-            self.write_cred_to_json("", "", "")
+
             self.up_name_entry.setText("")
             self.up_username_entry.setText("")
-            self.up_email_id_entry.setText("")
+            self.up_email_entry.setText("")
             self.up_password_entry.setText("")
+
+            self.in_email_entry.setText("")
+            self.in_password_entry.setText("")
         else:
             self.write_cred_to_json("", "", "")
             if sign_up_insert.unique_username_constraint == False:
                 self.up_warning_label.setText(
                     "Username already exists")
-            else:
+            elif sign_up_insert.unique_username_constraint:
                 self.up_warning_label.setText(
                     "Email Id already exists")
 ####
@@ -408,6 +425,8 @@ class Ui_MainWindow(object):
             QtCore.Qt.AlignLeading | QtCore.Qt.AlignLeft | QtCore.Qt.AlignVCenter)
         self.up_warning_label.setObjectName("up_warning_label")
         self.up_confirm_password_frame = QtWidgets.QFrame(self.up_inner_frame)
+        self.up_password_entry.setEchoMode(QtWidgets.QLineEdit.Password)
+
         self.up_confirm_password_frame.setGeometry(
             QtCore.QRect(1, 380, 443, 80))
         self.up_confirm_password_frame.setFrameShape(
