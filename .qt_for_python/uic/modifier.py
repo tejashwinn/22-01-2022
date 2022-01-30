@@ -10,6 +10,7 @@ def sign_up_switch(variable):
 
 
 def sign_in_switch(variable):
+    
     variable.in_outer_frame.show()
     variable.up_outer_frame.hide()
     variable.main_class_frame.hide()
@@ -25,7 +26,8 @@ def show_main_frame(variable):
 def posts(variable):
     variable.all_classes_frame.hide()
 
-
+    
+    
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)

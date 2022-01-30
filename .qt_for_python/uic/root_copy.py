@@ -87,6 +87,8 @@ class Ui_MainWindow(object):
             self.up_outer_frame.hide()
             self.in_outer_frame.hide()
             self.all_classes_frame.hide()
+            self.in_email_entry.setText("")
+            self.in_password_entry.setText("")
         else:
             self.in_warning_label.setText("Credentials doesn't match")
 
@@ -105,6 +107,10 @@ class Ui_MainWindow(object):
             self.up_outer_frame.hide()
             self.main_class_frame.hide()
             self.write_cred_to_json("", "", "")
+            self.up_name_entry.setText("")
+            self.up_username_entry.setText("")
+            self.up_email_id_entry.setText("")
+            self.up_password_entry.setText("")
         else:
             self.write_cred_to_json("", "", "")
             if sign_up_insert.unique_username_constraint == False:

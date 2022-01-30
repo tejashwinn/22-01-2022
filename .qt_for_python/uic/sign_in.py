@@ -21,7 +21,9 @@ class Sign_In_Check():
         self.name = ""
         self.username = ""
         self.email_id = email_id
-        self.password = password
+        import hasher
+        temp = hasher.Password_Hasher(password)
+        self.password = temp.hashed_password
         self.check_credentials()
 
     def check_credentials(self):
@@ -35,4 +37,3 @@ class Sign_In_Check():
         else:
             (self.name, self.username, self.email_id,
              self.password) = ("", "", "", "")
-        

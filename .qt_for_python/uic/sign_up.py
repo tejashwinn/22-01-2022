@@ -21,7 +21,9 @@ class Sign_Up_Insert():
         self.name = name
         self.username = username
         self.email_id = email_id
-        self.password = password
+        import hasher
+        temp = hasher.Password_Hasher(password)
+        self.password = temp.hashed_password
         self.unique_username()
         self.unique_emailid()
 
