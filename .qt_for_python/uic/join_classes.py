@@ -9,9 +9,23 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from join_class_sql import join_classes_cl
 
 
 class Ui_join_classes_form(object):
+    ###
+    def join_class_user(self):
+        te = join_classes_cl(
+            class_code=self.join_class_code_entry.toPlainText())
+        if te.valid and te.errors == "":
+            # te.join()
+            self.join_class_warning_label.setText("Successfully Joined Class")
+            # self.join_class_button.setDisabled(True)
+            # te.valid=False
+        else:
+            self.join_class_warning_label.setText(te.errors)
+    ###
+
     def setupUi(self, join_classes_form):
         join_classes_form.setObjectName("join_classes_form")
         join_classes_form.resize(563, 320)
@@ -24,23 +38,25 @@ class Ui_join_classes_form(object):
         self.join_classes_frame.setEnabled(True)
         self.join_classes_frame.setMinimumSize(QtCore.QSize(541, 300))
         self.join_classes_frame.setMaximumSize(QtCore.QSize(541, 300))
-        self.join_classes_frame.setStyleSheet("#create_classes_frame{/* Auto layout */\n"
-"\n"
-"\n"
-"\n"
-"/* White */\n"
-"\n"
-"background: #FFFFFF;\n"
-"/* Grey / Dark */\n"
-"\n"
-"border: 1px solid #D1D1D1;\n"
-"box-sizing: border-box;\n"
-"border-radius: 8px;}")
+        self.join_classes_frame.setStyleSheet("#join_classes_frame{/* Auto layout */\n"
+                                              "\n"
+                                              "\n"
+                                              "\n"
+                                              "/* White */\n"
+                                              "\n"
+                                              "background: #FFFFFF;\n"
+                                              "/* Grey / Dark */\n"
+                                              "\n"
+                                              "border: 1px solid #D1D1D1;\n"
+                                              "box-sizing: border-box;\n"
+                                              "border-radius: 8px;}")
         self.join_classes_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.join_classes_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.join_classes_frame.setObjectName("join_classes_frame")
-        self.static_join_class_heading = QtWidgets.QLabel(self.join_classes_frame)
-        self.static_join_class_heading.setGeometry(QtCore.QRect(20, 20, 151, 31))
+        self.static_join_class_heading = QtWidgets.QLabel(
+            self.join_classes_frame)
+        self.static_join_class_heading.setGeometry(
+            QtCore.QRect(20, 20, 201, 31))
         font = QtGui.QFont()
         font.setFamily("Poppins")
         font.setPointSize(-1)
@@ -49,112 +65,128 @@ class Ui_join_classes_form(object):
         font.setWeight(50)
         self.static_join_class_heading.setFont(font)
         self.static_join_class_heading.setStyleSheet("position: absolute;\n"
-"width: 233px;\n"
-"height: 60px;\n"
-"left: 92px;\n"
-"top: 48px;\n"
-"\n"
-"font-family: Poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 30px;\n"
-"line-height: 60px;\n"
-"/* identical to box height */\n"
-"\n"
-"letter-spacing: 0.05em;\n"
-"text-decoration-line: underline;\n"
-"text-transform: capitalize;\n"
-"\n"
-"color: #000000;\n"
-"")
-        self.static_join_class_heading.setObjectName("static_join_class_heading")
-        self.join_class_code_entry = QtWidgets.QPlainTextEdit(self.join_classes_frame)
+                                                     "width: 233px;\n"
+                                                     "height: 60px;\n"
+                                                     "left: 92px;\n"
+                                                     "top: 48px;\n"
+                                                     "\n"
+                                                     "font-family: Poppins;\n"
+                                                     "font-style: normal;\n"
+                                                     "font-weight: normal;\n"
+                                                     "font-size: 30px;\n"
+                                                     "line-height: 60px;\n"
+                                                     "/* identical to box height */\n"
+                                                     "\n"
+                                                     "letter-spacing: 0.05em;\n"
+                                                     "text-decoration-line: underline;\n"
+                                                     "text-transform: capitalize;\n"
+                                                     "\n"
+                                                     "color: #000000;\n"
+                                                     "")
+        self.static_join_class_heading.setObjectName(
+            "static_join_class_heading")
+        self.join_class_code_entry = QtWidgets.QPlainTextEdit(
+            self.join_classes_frame)
         self.join_class_code_entry.setGeometry(QtCore.QRect(20, 130, 511, 41))
         self.join_class_code_entry.setStyleSheet("background: rgba(196, 196, 196, 0.1);\n"
-"font-family: Poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 15px;\n"
-"line-height: 30px;\n"
-"/* identical to box height */\n"
-"\n"
-"letter-spacing: 0.05em;\n"
-"text-transform: capitalize;\n"
-"\n"
-"color: #000000;")
+                                                 "font-family: Poppins;\n"
+                                                 "font-style: normal;\n"
+                                                 "font-weight: normal;\n"
+                                                 "font-size: 15px;\n"
+                                                 "line-height: 30px;\n"
+                                                 "/* identical to box height */\n"
+                                                 "\n"
+                                                 "letter-spacing: 0.05em;\n"
+                                                 "text-transform: capitalize;\n"
+                                                 "\n"
+                                                 "color: #000000;")
         self.join_class_code_entry.setPlainText("")
         self.join_class_code_entry.setObjectName("join_class_code_entry")
-        self.static_join_class_naming_label = QtWidgets.QLabel(self.join_classes_frame)
-        self.static_join_class_naming_label.setGeometry(QtCore.QRect(30, 90, 91, 41))
+        self.static_join_class_naming_label = QtWidgets.QLabel(
+            self.join_classes_frame)
+        self.static_join_class_naming_label.setGeometry(
+            QtCore.QRect(30, 90, 91, 41))
         self.static_join_class_naming_label.setStyleSheet("font-family: Poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 15px;\n"
-"line-height: 30px;\n"
-"/* identical to box height */\n"
-"\n"
-"letter-spacing: 0.05em;\n"
-"text-transform: capitalize;\n"
-"")
-        self.static_join_class_naming_label.setObjectName("static_join_class_naming_label")
+                                                          "font-style: normal;\n"
+                                                          "font-weight: normal;\n"
+                                                          "font-size: 15px;\n"
+                                                          "line-height: 30px;\n"
+                                                          "/* identical to box height */\n"
+                                                          "\n"
+                                                          "letter-spacing: 0.05em;\n"
+                                                          "text-transform: capitalize;\n"
+                                                          "")
+        self.static_join_class_naming_label.setObjectName(
+            "static_join_class_naming_label")
         self.join_class_button = QtWidgets.QPushButton(self.join_classes_frame)
         self.join_class_button.setGeometry(QtCore.QRect(160, 200, 221, 40))
         self.join_class_button.setStyleSheet("\n"
-"*{\n"
-"font-family: Inter;\n"
-"font-style: normal;\n"
-"font-weight: 500;\n"
-"font-size: 14px;\n"
-"line-height: 17px;\n"
-"/* identical to box height */\n"
-"\n"
-"align-items: center;\n"
-"\n"
-"/* Grey / Light */\n"
-"\n"
-"color: white;\n"
-"background: #4F4F4F;\n"
-"border-radius: 8px;\n"
-"}\n"
-"\n"
-":pressed {\n"
-"    border-style: inset;\n"
-"    border: 1px solid  #4F4F4F;\n"
-"color: #4F4F4F;\n"
-"background: #FFFFFF;\n"
-"}\n"
-"/* Inside auto layout */\n"
-"\n"
-"")
+                                             "*{\n"
+                                             "font-family: Inter;\n"
+                                             "font-style: normal;\n"
+                                             "font-weight: 500;\n"
+                                             "font-size: 14px;\n"
+                                             "line-height: 17px;\n"
+                                             "/* identical to box height */\n"
+                                             "\n"
+                                             "align-items: center;\n"
+                                             "\n"
+                                             "/* Grey / Light */\n"
+                                             "\n"
+                                             "color: white;\n"
+                                             "background: #4F4F4F;\n"
+                                             "border-radius: 8px;\n"
+                                             "}\n"
+                                             "\n"
+                                             ":pressed {\n"
+                                             "    border-style: inset;\n"
+                                             "    border: 1px solid  #4F4F4F;\n"
+                                             "color: #4F4F4F;\n"
+                                             "background: #FFFFFF;\n"
+                                             "}\n"
+                                             "/* Inside auto layout */\n"
+                                             "\n"
+                                             "")
         self.join_class_button.setObjectName("join_class_button")
-        self.join_class_warning_label = QtWidgets.QLabel(self.join_classes_frame)
-        self.join_class_warning_label.setGeometry(QtCore.QRect(30, 50, 421, 41))
+        self.join_class_warning_label = QtWidgets.QLabel(
+            self.join_classes_frame)
+        self.join_class_warning_label.setGeometry(
+            QtCore.QRect(30, 50, 421, 41))
         self.join_class_warning_label.setStyleSheet("position: absolute;\n"
-"left: 0%;\n"
-"right: 12.33%;\n"
-"top: 15%;\n"
-"bottom: 14.17%;\n"
-"\n"
-"font-family: poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 14px;\n"
-"line-height: 17px;\n"
-"\n"
-"/* Dark / Medium */\n"
-"\n"
-"color: #FF0000;")
-        self.join_class_warning_label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+                                                    "left: 0%;\n"
+                                                    "right: 12.33%;\n"
+                                                    "top: 15%;\n"
+                                                    "bottom: 14.17%;\n"
+                                                    "\n"
+                                                    "font-family: poppins;\n"
+                                                    "font-style: normal;\n"
+                                                    "font-weight: normal;\n"
+                                                    "font-size: 14px;\n"
+                                                    "line-height: 17px;\n"
+                                                    "\n"
+                                                    "/* Dark / Medium */\n"
+                                                    "\n"
+                                                    "color: #FF0000;")
+        self.join_class_warning_label.setAlignment(
+            QtCore.Qt.AlignLeading | QtCore.Qt.AlignLeft | QtCore.Qt.AlignVCenter)
         self.join_class_warning_label.setObjectName("join_class_warning_label")
         self.gridLayout.addWidget(self.join_classes_frame, 0, 0, 1, 1)
 
+        ###
+        self.join_class_button.clicked.connect(self.join_class_user)
+        ###
         self.retranslateUi(join_classes_form)
         QtCore.QMetaObject.connectSlotsByName(join_classes_form)
 
     def retranslateUi(self, join_classes_form):
         _translate = QtCore.QCoreApplication.translate
-        join_classes_form.setWindowTitle(_translate("join_classes_form", "Form"))
-        self.static_join_class_heading.setText(_translate("join_classes_form", "Join Class"))
-        self.static_join_class_naming_label.setText(_translate("join_classes_form", "Class Code"))
-        self.join_class_button.setText(_translate("join_classes_form", "Join Class"))
-        self.join_class_warning_label.setText(_translate("join_classes_form", "Enter the class code to join the class"))
+        join_classes_form.setWindowTitle(
+            _translate("join_classes_form", "Form"))
+        self.static_join_class_heading.setText(
+            _translate("join_classes_form", "Join Class"))
+        self.static_join_class_naming_label.setText(
+            _translate("join_classes_form", "Class Code"))
+        self.join_class_button.setText(
+            _translate("join_classes_form", "Join Class"))
+        self.join_class_warning_label.setText(_translate(
+            "join_classes_form", "Enter the class code to join the class"))

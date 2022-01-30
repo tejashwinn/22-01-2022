@@ -1,8 +1,8 @@
 {
     "log": {
-        "username": 123,
-        "name": "123",
-        "email_id": "123"
+        "username": "123",
+        "name": "12312",
+        "email_id": "1"
     },
     "admin": {
         "classopen": ""

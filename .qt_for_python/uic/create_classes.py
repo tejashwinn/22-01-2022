@@ -9,7 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from create_class_in import Create_Classes
+from create_class_sql import Create_Classes
 
 
 class Ui_create_classes_form(object):
@@ -28,7 +28,6 @@ class Ui_create_classes_form(object):
             self.create_class_button.setDisabled(True)
             self.create_class_warning_label.setText(
                 "Class created successfully")
-
 
         else:
             self.create_class_warning_label.setText(

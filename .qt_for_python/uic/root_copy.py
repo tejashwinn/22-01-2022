@@ -14,7 +14,7 @@ from posts import Ui_posts_form
 from sign_up import Sign_Up_Insert
 from sign_in import Sign_In_Check
 from create_classes import Ui_create_classes_form
-
+from join_classes import Ui_join_classes_form
 
 class Ui_MainWindow(object):
     ###
@@ -45,6 +45,13 @@ class Ui_MainWindow(object):
         self.ui_class_create = Ui_create_classes_form()
         self.ui_class_create.setupUi(self.create_class_main_window)
         self.create_class_main_window.show()
+        
+    
+    def show_join_class(self):
+        self.join_class_main_window = QtWidgets.QMainWindow()
+        self.ui_class_join = Ui_join_classes_form()
+        self.ui_class_join.setupUi(self.join_class_main_window)
+        self.join_class_main_window.show()
 
     def return_post_button(self, window, head):
         _translate = QtCore.QCoreApplication.translate
@@ -1208,6 +1215,7 @@ class Ui_MainWindow(object):
             "c:\\Users\\tejas\\Desktop\\22-01-22\\assests/icons/trello.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.actionViewClasses.setIcon(icon9)
         self.actionViewClasses.setObjectName("actionViewClasses")
+        
         ###
         self.actionClubEvents = QtWidgets.QAction(MainWindow)
         self.actionClubEvents.setObjectName("actionClubEvents")
@@ -1234,13 +1242,14 @@ class Ui_MainWindow(object):
         self.actionCreateClass.triggered.connect(
             lambda: self.show_create_class())
 
-        self.actionJoinCLass = QtWidgets.QAction(MainWindow)
-        self.actionJoinCLass.setObjectName("actionJoinCLass")
+        self.actionJoinClass = QtWidgets.QAction(MainWindow)
+        self.actionJoinClass.setObjectName("actionJoinCLass")
         icon11 = QtGui.QIcon()
         icon11.addPixmap(QtGui.QPixmap(
             "c:\\Users\\tejas\\Desktop\\22-01-22\\assests/icons/upload.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.actionJoinCLass.setIcon(icon11)
-
+        self.actionJoinClass.setIcon(icon11)
+        self.actionJoinClass.triggered.connect(
+            lambda: self.show_join_class())
         ###
 
         self.menuUser.addAction(self.actionSignUp)
@@ -1267,7 +1276,7 @@ class Ui_MainWindow(object):
         self.menuClassesMain.addSeparator()
         self.menuClassesMain.addAction(self.actionCreateClass)
         self.menuClassesMain.addSeparator()
-        self.menuClassesMain.addAction(self.actionJoinCLass)
+        self.menuClassesMain.addAction(self.actionJoinClass)
 
         self.menuClub.addAction(self.actionClubEvents)
         self.menuClub.addSeparator()
@@ -1331,6 +1340,6 @@ class Ui_MainWindow(object):
         ###
         self.actionCreateClass.setText(
             _translate("MainWindow", "Create Class"))
-        self.actionJoinCLass.setText(_translate("MainWindow", "Join CLass"))
+        self.actionJoinClass.setText(_translate("MainWindow", "Join CLass"))
 
         ###
