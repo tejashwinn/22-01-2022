@@ -48,7 +48,7 @@ class join_classes_cl():
             #error
             #error
             #error
-            #gives true insetead of false to change
+            #gives true instead of false to change
             # print(self.valid)
             self.errors = "Can't join class which you had created"
         else:
