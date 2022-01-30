@@ -11,9 +11,17 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from create_posts import Ui_create_posts_form
 from posts import Ui_posts_form
+from sign_up import Sign_Up
 
 
 class Ui_MainWindow(object):
+    ###
+    def checked_connection_up(self):
+        if self.up_password_radio.isChecked():
+            self.up_password_entry.setEchoMode(QtWidgets.QLineEdit.Normal)
+        else:
+            self.up_password_entry.setEchoMode(QtWidgets.QLineEdit.Password)
+
     def show_post(self):
         self.post_mainwindow = QtWidgets.QMainWindow()
         self.ui_post = Ui_posts_form()
@@ -53,6 +61,25 @@ class Ui_MainWindow(object):
         self.ui_create_post = Ui_create_posts_form()
         self.ui_create_post.setupUi(self.create_post_mainwindow)
         self.create_post_mainwindow.show()
+
+    def sign_up_insert(self):  # sourcery skip: merge-else-if-into-elif
+        sign_up_insert = Sign_Up(email_id=self.up_email_entry.text(
+        ), name=self.up_name_entry.text(), username=self.up_username_entry.text(), password=self.up_password_entry.text())
+        if sign_up_insert.unique_username_constraint and sign_up_insert.unique_emailid_constraint:
+            sign_up_insert.insert()
+            self.in_warning_label.setText(
+                "Successfully Signed up enter details to continue")
+            self.in_outer_frame.show()
+            self.up_outer_frame.hide()
+            self.main_class_frame.hide()
+        else:
+            if sign_up_insert.unique_username_constraint == False:
+                self.up_warning_label.setText(
+                    "Username already exists")
+            else:
+                self.up_warning_label.setText(
+                    "Email Id already exists")
+####
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -309,7 +336,16 @@ class Ui_MainWindow(object):
                                              "border-radius: 7px;\n"
                                              "\n"
                                              "")
+        ###
+        self.up_password_radio = QtWidgets.QRadioButton(self.up_password_frame)
+        self.up_password_radio.setGeometry(QtCore.QRect(300, 0, 121, 30))
+        self.up_password_radio.setObjectName("up_password_radio")
+        self.up_password_radio.setText(
+            QtCore.QCoreApplication.translate("MainWindow", "show password"))
+        self.up_password_radio.toggled.connect(self.checked_connection_up)
+        ###
         self.up_password_entry.setObjectName("up_password_entry")
+        self.up_password_entry.setEchoMode(QtWidgets.QLineEdit.Password)
         self.up_warning_label = QtWidgets.QLabel(self.up_inner_frame)
         self.up_warning_label.setGeometry(QtCore.QRect(10, 35, 421, 21))
         self.up_warning_label.setStyleSheet("position: absolute;\n"
@@ -327,6 +363,7 @@ class Ui_MainWindow(object):
                                             "/* Dark / Medium */\n"
                                             "\n"
                                             "color: #FF0000;")
+
         self.up_warning_label.setAlignment(
             QtCore.Qt.AlignLeading | QtCore.Qt.AlignLeft | QtCore.Qt.AlignVCenter)
         self.up_warning_label.setObjectName("up_warning_label")
