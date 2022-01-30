@@ -39,6 +39,16 @@ class join_classes_cl():
         if rows != []:
             # print(1)
             self.Valid = False
+            #error
+            #error
+            #error
+            #error
+            #error
+            #error
+            #error
+            #error
+            #error
+            #gives true insetead of false to change
             # print(self.valid)
             self.errors = "Can't join class which you had created"
         else:
