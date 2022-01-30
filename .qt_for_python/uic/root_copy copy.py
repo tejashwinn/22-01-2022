@@ -538,6 +538,9 @@ class Ui_MainWindow(object):
 "\n"
 "")
         self.in_password_entry.setObjectName("in_password_entry")
+        self.in_password_radio = QtWidgets.QRadioButton(self.in_password_frame)
+        self.in_password_radio.setGeometry(QtCore.QRect(314, 0, 121, 30))
+        self.in_password_radio.setObjectName("in_password_radio")
         self.in_sign_in_button = QtWidgets.QPushButton(self.in_inner_frame)
         self.in_sign_in_button.setGeometry(QtCore.QRect(15, 290, 430, 40))
         self.in_sign_in_button.setStyleSheet("\n"
@@ -929,9 +932,9 @@ class Ui_MainWindow(object):
         self.events_scroll_area.raise_()
         self.static_assignment.raise_()
         self.assign_scroll_area.raise_()
-        self.in_outer_frame.raise_()
         self.main_class_frame.raise_()
         self.up_outer_frame.raise_()
+        self.in_outer_frame.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1094, 26))
@@ -1044,6 +1047,7 @@ class Ui_MainWindow(object):
         self.static_in_heading.setText(_translate("MainWindow", "Sign In"))
         self.in_email_label.setText(_translate("MainWindow", "Email Id"))
         self.in_password_label.setText(_translate("MainWindow", "Password"))
+        self.in_password_radio.setText(_translate("MainWindow", "show password"))
         self.in_sign_in_button.setText(_translate("MainWindow", "Sign In"))
         self.in_sign_up_button.setText(_translate("MainWindow", "New user? Sign Up"))
         self.in_warning_label.setText(_translate("MainWindow", "Please enter your details to continue."))

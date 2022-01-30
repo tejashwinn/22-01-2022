@@ -2,7 +2,7 @@ import sqlite3
 from sqlite3 import Error
 
 
-class Sign_Up():
+class Sign_Up_Insert():
 
     database = r"C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\college_virtual_space.db"
 

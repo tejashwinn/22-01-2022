@@ -923,6 +923,19 @@ border-radius: 7px;
 </string>
          </property>
         </widget>
+        <widget class="QRadioButton" name="in_password_radio">
+         <property name="geometry">
+          <rect>
+           <x>314</x>
+           <y>0</y>
+           <width>121</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>show password</string>
+         </property>
+        </widget>
        </widget>
        <widget class="QPushButton" name="in_sign_in_button">
         <property name="geometry">
@@ -1544,9 +1557,9 @@ border-radius: 10px;}</string>
     <zorder>static_assignment</zorder>
     <zorder>assign_scroll_area</zorder>
    </widget>
-   <zorder>in_outer_frame</zorder>
    <zorder>main_class_frame</zorder>
    <zorder>up_outer_frame</zorder>
+   <zorder>in_outer_frame</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

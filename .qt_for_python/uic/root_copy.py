@@ -11,7 +11,8 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from create_posts import Ui_create_posts_form
 from posts import Ui_posts_form
-from sign_up import Sign_Up
+from sign_up import Sign_Up_Insert
+from sign_in import Sign_In_Check
 
 
 class Ui_MainWindow(object):
@@ -22,6 +23,12 @@ class Ui_MainWindow(object):
         else:
             self.up_password_entry.setEchoMode(QtWidgets.QLineEdit.Password)
 
+    def checked_connection_in(self):
+        if self.in_password_radio.isChecked():
+            self.in_password_entry.setEchoMode(QtWidgets.QLineEdit.Normal)
+        else:
+            self.in_password_entry.setEchoMode(QtWidgets.QLineEdit.Password)
+
     def show_post(self):
         self.post_mainwindow = QtWidgets.QMainWindow()
         self.ui_post = Ui_posts_form()
@@ -29,7 +36,6 @@ class Ui_MainWindow(object):
         self.post_mainwindow.show()
 
     def return_post_button(self, window, head):
-
         _translate = QtCore.QCoreApplication.translate
         post_button = QtWidgets.QPushButton(window, clicked=self.show_post)
         post_button.setMaximumSize(QtCore.QSize(505, 80))
@@ -62,9 +68,36 @@ class Ui_MainWindow(object):
         self.ui_create_post.setupUi(self.create_post_mainwindow)
         self.create_post_mainwindow.show()
 
-    def sign_up_insert(self):  # sourcery skip: merge-else-if-into-elif
-        sign_up_insert = Sign_Up(email_id=self.up_email_entry.text(
+    def write_cred_to_json(self, name, username, email_id):
+        import json
+        with open(r'C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json') as settings_json_file:
+            data = json.load(settings_json_file)
+            data["log"]["name"] = name
+            data["log"]["email_id"] = email_id
+            data["log"]["username"] = username
+
+        with open(r"C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json", "w") as settings_json_file:
+            json.dump(data, settings_json_file, indent=4)
+
+    def sign_in_credentials(self):
+        check = Sign_In_Check(email_id=self.in_email_entry.text(
+        ), password=self.in_password_entry.text())
+        if check.credentials_exists:
+            self.main_class_frame.show()
+            self.up_outer_frame.hide()
+            self.in_outer_frame.hide()
+            self.all_classes_frame.hide()
+            self.write_cred_to_json(
+                name=check.name, username=check.username, email_id=check.email_id)
+        else:
+            self.in_warning_label.setText("Credentials doesn't match")
+            self.write_cred_to_json(
+                name=check.name, username=check.username, email_id=check.email_id)
+
+    def sign_up_insert(self):
+        sign_up_insert = Sign_Up_Insert(email_id=self.up_email_entry.text(
         ), name=self.up_name_entry.text(), username=self.up_username_entry.text(), password=self.up_password_entry.text())
+
         if sign_up_insert.unique_username_constraint and sign_up_insert.unique_emailid_constraint:
             sign_up_insert.insert()
             self.in_warning_label.setText(
@@ -72,7 +105,9 @@ class Ui_MainWindow(object):
             self.in_outer_frame.show()
             self.up_outer_frame.hide()
             self.main_class_frame.hide()
+            self.write_cred_to_json("", "", "")
         else:
+            self.write_cred_to_json("", "", "")
             if sign_up_insert.unique_username_constraint == False:
                 self.up_warning_label.setText(
                     "Username already exists")
@@ -343,9 +378,9 @@ class Ui_MainWindow(object):
         self.up_password_radio.setText(
             QtCore.QCoreApplication.translate("MainWindow", "show password"))
         self.up_password_radio.toggled.connect(self.checked_connection_up)
-        ###
         self.up_password_entry.setObjectName("up_password_entry")
         self.up_password_entry.setEchoMode(QtWidgets.QLineEdit.Password)
+        ###
         self.up_warning_label = QtWidgets.QLabel(self.up_inner_frame)
         self.up_warning_label.setGeometry(QtCore.QRect(10, 35, 421, 21))
         self.up_warning_label.setStyleSheet("position: absolute;\n"
@@ -624,6 +659,16 @@ class Ui_MainWindow(object):
                                              "\n"
                                              "")
         self.in_password_entry.setObjectName("in_password_entry")
+        self.in_password_entry.setEchoMode(QtWidgets.QLineEdit.Password)
+
+        self.in_password_radio = QtWidgets.QRadioButton(self.in_password_frame)
+        self.in_password_radio.setGeometry(QtCore.QRect(314, 0, 121, 30))
+        self.in_password_radio.setObjectName("in_password_radio")
+        self.in_password_radio.setText(
+            QtCore.QCoreApplication.translate("MainWindow", "show password"))
+        self.in_password_radio.toggled.connect(self.checked_connection_in)
+        ###
+
         self.in_sign_in_button = QtWidgets.QPushButton(self.in_inner_frame)
         self.in_sign_in_button.setGeometry(QtCore.QRect(15, 290, 430, 40))
         self.in_sign_in_button.setStyleSheet("\n"
@@ -652,6 +697,7 @@ class Ui_MainWindow(object):
                                              "\n"
                                              "")
         self.in_sign_in_button.setObjectName("in_sign_in_button")
+        self.in_sign_in_button.clicked.connect(self.sign_in_credentials)
         self.in_sign_up_button = QtWidgets.QPushButton(self.in_inner_frame)
         self.in_sign_up_button.setGeometry(QtCore.QRect(15, 350, 430, 40))
         self.in_sign_up_button.setStyleSheet("\n"
