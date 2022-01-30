@@ -285,5 +285,4 @@ assests/icons/zap.svg
 assests/icons/zoom-in.svg
 assests/icons/zoom-out.svg
 
-.qt_for_python/uic/__pycache__/*.pyc
-.qt_for_python/uic/__pycache__/*
+
