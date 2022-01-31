@@ -1,7 +1,13 @@
+from logging.config import valid_ident
 from tempfile import tempdir
 from PyQt5 import QtCore, QtGui, QtWidgets
 from root_copy import Ui_MainWindow
 from sql.fetch_classes_sql import Fetch_Classes_Cl
+from compon.mini_components import Individual_Class_Button
+
+
+
+
 
 
 def sign_up_switch(variable):
@@ -61,8 +67,6 @@ if __name__ == "__main__":
     ui.in_sign_up_button.clicked.connect(lambda: sign_up_switch(ui))
     ui.up_sign_in_button.clicked.connect(lambda: sign_in_switch(ui))
 
-    # default hide actions
-    # ui.all_classes_frame.hide()
 
     # actions
     ui.posts_scroll_area.setHorizontalScrollBarPolicy(
@@ -73,9 +77,13 @@ if __name__ == "__main__":
         temp = ui.return_post_button(MainWindow, str(i))
         ui.verticalLayout.addWidget(temp)
 
-    # sign_up_switch(ui)
-    # individual_class_posts(ui)
-    show_all_classes_frame(ui)
+    for i in range(10):
+        temp = Individual_Class_Button(
+            mainwindow=MainWindow, name=str(i), description=str(i)+str(i),ui_te=ui)
+        ui.verticalLayout_5.addWidget(temp.child)
+    
     Fetch_Classes_Cl()
+    
+    show_all_classes_frame(ui)
     MainWindow.show()
     sys.exit(app.exec_())

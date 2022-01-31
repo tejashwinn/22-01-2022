@@ -1545,17 +1545,261 @@ background: #FFFFFF;
 mix-blend-mode: hard-light;
 border-radius: 10px;}</string>
        </property>
-       <layout class="QVBoxLayout" name="verticalLayout_5"/>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QFrame" name="class_view_frame">
+          <property name="minimumSize">
+           <size>
+            <width>250</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>500</width>
+            <height>140</height>
+           </size>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">*{
+position: absolute;
+width: 370px;
+height: 110px;
+left: 7px;
+top: 28px;
+
+background: rgba(0, 0, 0, 0.05);
+border: 1px solid rgba(0, 0, 0, 0.3);
+box-sizing: border-box;
+border-radius: 10px}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QLabel" name="class_view_cass_name_label">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>0</y>
+             <width>441</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Poppins</family>
+             <pointsize>-1</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">position: absolute;
+left: 20px;
+right: 30px;
+top: 10px;
+bottom: 10px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 37px;
+letter-spacing: 0.05em;
+background: rgba(0, 0, 0, 0.01);
+color: #000000;
+border:0px</string>
+           </property>
+           <property name="text">
+            <string>Class Name</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="class_view_class_des_label">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>50</y>
+             <width>441</width>
+             <height>81</height>
+            </rect>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">position: absolute;
+left: 20px;
+right: 30px;
+top: 10px;
+bottom: 10px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+line-height: 37px;
+letter-spacing: 0.05em;
+background: rgba(0, 0, 0, 0.01);
+color: #000000;
+border:0px;</string>
+           </property>
+           <property name="text">
+            <string>Des</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="class_view_frame_2">
+          <property name="minimumSize">
+           <size>
+            <width>250</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>461</width>
+            <height>140</height>
+           </size>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">*{
+position: absolute;
+width: 370px;
+height: 110px;
+left: 7px;
+top: 28px;
+
+background: rgba(0, 0, 0, 0.05);
+border: 1px solid rgba(0, 0, 0, 0.3);
+box-sizing: border-box;
+border-radius: 10px}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QLabel" name="class_view_cass_name_label_2">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>0</y>
+             <width>231</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Poppins</family>
+             <pointsize>-1</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">position: absolute;
+left: 20px;
+right: 30px;
+top: 10px;
+bottom: 10px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 37px;
+letter-spacing: 0.05em;
+background: rgba(0, 0, 0, 0.01);
+color: #000000;
+border:0px</string>
+           </property>
+           <property name="text">
+            <string>Class Name</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="class_view_class_des_label_2">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>50</y>
+             <width>231</width>
+             <height>81</height>
+            </rect>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">position: absolute;
+left: 20px;
+right: 30px;
+top: 10px;
+bottom: 10px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+line-height: 37px;
+letter-spacing: 0.05em;
+background: rgba(0, 0, 0, 0.01);
+color: #000000;
+border:0px;</string>
+           </property>
+           <property name="text">
+            <string>Des</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
       </widget>
      </widget>
     </widget>
-    <zorder>all_classes_frame</zorder>
-    <zorder>class_name_frame</zorder>
-    <zorder>posts_scroll_area</zorder>
-    <zorder>static_events</zorder>
-    <zorder>events_scroll_area</zorder>
-    <zorder>static_assignment</zorder>
-    <zorder>assign_scroll_area</zorder>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
