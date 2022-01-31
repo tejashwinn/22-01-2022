@@ -22,8 +22,10 @@ class Ui_join_classes_form(object):
             te.join()
             self.join_class_warning_label.setText("Successfully Joined Class")
             self.join_class_button.setDisabled(True)
-            
             te.valid=False
+            from sql.fetch_classes_sql import Fetch_Classes_Cl
+            Fetch_Classes_Cl()
+            
         else:
             self.join_class_warning_label.setText(te.errors)
     ###

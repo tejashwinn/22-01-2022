@@ -1330,4 +1330,3 @@ class Ui_MainWindow(object):
             _translate("MainWindow", "Create Class"))
         self.actionJoinClass.setText(_translate("MainWindow", "Join CLass"))
 
-        ###

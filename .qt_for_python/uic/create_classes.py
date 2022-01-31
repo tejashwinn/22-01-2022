@@ -28,7 +28,8 @@ class Ui_create_classes_form(object):
             self.create_class_button.setDisabled(True)
             self.create_class_warning_label.setText(
                 "Class created successfully")
-
+            from sql.fetch_classes_sql import Fetch_Classes_Cl
+            Fetch_Classes_Cl()
         else:
             self.create_class_warning_label.setText(
                 "You already have a class in the same name")

@@ -1,19 +1,27 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-from pkg_resources import safe_name
+import json
 
 
 class Individual_Class_Button():
 
-    def open_class(self,event):
+    def open_class(self, event):
         self.ui_te.all_classes_frame.hide()
         self.ui_te.class_name_frame.show()
         self.ui_te.posts_scroll_area.show()
+        self.ui_te.class_name_label_dynamic.setText(self.name)
+        self.ui_te.class_description_label_dynamic.setText(self.description)
+        with open(r'C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json') as settings_json_file:
+            data = json.load(settings_json_file)
+            data["class_selected"] = self.class_code
+        with open(r"C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json", "w") as settings_json_file:
+            json.dump(data, settings_json_file, indent=4)
 
-    def __init__(self, mainwindow, name, description, ui_te):
+    def __init__(self, mainwindow, name, description, ui_te, class_code):
         self.mainwindow = mainwindow
         self.name = name
         self.description = description
         self.ui_te = ui_te
+        self.class_code = class_code
         self.child = self.return_object()
 
     def return_object(self):
@@ -97,10 +105,10 @@ class Individual_Class_Button():
         self.class_view_class_des_label.setObjectName(
             self.name +
             "class_view_class_des_label")
-        
+
         self.class_view_class_des_label.mousePressEvent = self.open_class
         self.class_view_cass_name_label.mousePressEvent = self.open_class
-        
+
         QtCore.QMetaObject.connectSlotsByName(self.mainwindow)
         _translate = QtCore.QCoreApplication.translate
         self.class_view_cass_name_label.setText(
