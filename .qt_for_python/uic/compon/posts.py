@@ -11,7 +11,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_posts_form(object):
+class Ui_posts_form(object):    
     def setupUi(self, posts_form):
         posts_form.setObjectName("posts_form")
         posts_form.resize(563, 611)

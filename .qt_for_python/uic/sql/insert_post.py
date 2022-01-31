@@ -63,9 +63,11 @@ class Create_Post():
             data = json.load(settings_json_file)
             self.class_code = data["class_selected"]
             self.username = data["log"]["username"]
-        if self.username not in data["classes_owned"]["class_admin"]:
-            self.valid=False
-            self.errors="No admin privilege"
+            for i in data["classes_owned"]:
+                if i["class_admin"] == self.username:
+                    continue
+                self.valid = False
+                self.errors = "No Admin Privilege"
 
     def __init__(self, name, description, file_path=""):
         self.name = name

@@ -24,10 +24,19 @@ class Individual_Post_Button():
         self.cursor.execute(sql, (self.post_code,))
         rows = self.cursor.fetchall()
         file1 = rows[0][0]
-        # print(type(file1))
-        with open(r'C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\temp_file_storage\\'+self.post_file_name, 'wb') as file:
+        temp_storage = 'C:/Users/tejas/Desktop/22-01-22/.qt_for_python/uic/temp_file_storage/' + \
+            self.post_file_name
+        with open(temp_storage, 'wb') as file:
             file.write(file1)
-        # print("wrote to file", r"C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\temp_file_storage",self.post_file_name)
+        file = str(QtWidgets.QFileDialog.getExistingDirectory(
+            self.ui_post.frame_2, "Select Directory"))
+        import shutil
+        file += "/"+self.post_file_name
+        src_path = temp_storage
+        dst_path = file
+        shutil.move(src_path, dst_path)
+        # print(src_path, "\n", dst_path)
+        self.ui_post.label_2.setText("Downloaded: "+self.post_file_name)
 
     def open_post(self, event):
         with open(r'C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json') as settings_json_file:
@@ -46,7 +55,7 @@ class Individual_Post_Button():
             self.post_description)
 
         self.ui_post.close_button_posts.hide()
-        print(self.post_file_name, self.post_file_exten)
+        # print(self.post_file_name, self.post_file_exten)
         if self.post_file_name != '' and self.post_file_exten != "":
             self.ui_post.label_2.setText("File Name: "+self.post_file_name)
             self.ui_post.button_file_download.clicked.connect(

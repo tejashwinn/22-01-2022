@@ -18,7 +18,7 @@
             "class_code": "uRX40t0uq7",
             "class_admin": "123",
             "class_students": [
-                "1"
+                "12`3"
             ]
         },
         {
@@ -60,48 +60,7 @@
             ]
         }
     ],
-    "class_selected": "uRX40t0uq7",
-    "post_selected": "qcCU3kzuDD",
-    "posts_in_class": [
-        {
-            "post_code": "dseioSbIYK",
-            "post_class": "uRX40t0uq7",
-            "post_heading": "123",
-            "post_description": "123",
-            "post_file_name": "create_assignments.ui",
-            "post_date": "2022-01-31 17:27:37.723457",
-            "post_file_exten": "ui",
-            "post_comments": []
-        },
-        {
-            "post_code": "75EMibtVRO",
-            "post_class": "uRX40t0uq7",
-            "post_heading": "123",
-            "post_description": "123",
-            "post_file_name": "components.ui",
-            "post_date": "2022-01-31 17:44:16.840263",
-            "post_file_exten": "ui",
-            "post_comments": []
-        },
-        {
-            "post_code": "qcCU3kzuDD",
-            "post_class": "uRX40t0uq7",
-            "post_heading": "123",
-            "post_description": "123",
-            "post_file_name": "assignments.ui",
-            "post_date": "2022-01-31 18:11:41.053718",
-            "post_file_exten": "ui",
-            "post_comments": []
-        },
-        {
-            "post_code": "FvdGPizQmD",
-            "post_class": "uRX40t0uq7",
-            "post_heading": "tej",
-            "post_description": "fasfads",
-            "post_file_name": "create_posts.ui",
-            "post_date": "2022-01-31 18:14:44.113899",
-            "post_file_exten": "ui",
-            "post_comments": []
-        }
-    ]
+    "class_selected": "66JfsqINmh",
+    "post_selected": "FvdGPizQmD",
+    "posts_in_class": []
 }
