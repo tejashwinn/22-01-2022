@@ -11,8 +11,8 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from create_posts import Ui_create_posts_form
 from posts import Ui_posts_form
-from sign_up import Sign_Up_Insert
-from sign_in import Sign_In_Check
+from sql.sign_up_sql import Sign_Up_Insert
+from sql.sign_in_sql import Sign_In_Check
 from create_classes import Ui_create_classes_form
 from join_classes import Ui_join_classes_form
 

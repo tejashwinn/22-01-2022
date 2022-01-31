@@ -1557,9 +1557,6 @@ border-radius: 10px;}</string>
     <zorder>static_assignment</zorder>
     <zorder>assign_scroll_area</zorder>
    </widget>
-   <zorder>main_class_frame</zorder>
-   <zorder>up_outer_frame</zorder>
-   <zorder>in_outer_frame</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

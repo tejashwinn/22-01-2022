@@ -1,10 +1,101 @@
 {
+    
     "log": {
         "username": "123",
-        "name": "12312",
-        "email_id": "1"
+        "name": "123",
+        "email_id": "123"
     },
-    "admin": {
-        "classopen": ""
-    }
+    "classes_owned": [
+        {
+            "class_name": "1",
+            "class_description": "1",
+            "class_code": "LfHVDRmCed",
+            "class_admin": "123",
+            "class_students": []
+        },
+        {
+            "class_name": "123",
+            "class_description": "123",
+            "class_code": "uRX40t0uq7",
+            "class_admin": "123",
+            "class_students": [
+                "12`3",
+                "123"
+            ]
+        },
+        {
+            "class_name": "123",
+            "class_description": "123",
+            "class_code": "66JfsqINmh",
+            "class_admin": "123",
+            "class_students": []
+        },
+        {
+            "class_name": "1231",
+            "class_description": "1123",
+            "class_code": "JPVJWEgyZU",
+            "class_admin": "123",
+            "class_students": [
+                "1",
+                "123",
+                "1213",
+                "12`3",
+                "11233",
+                "tej"
+            ]
+        },
+        {
+            "class_name": "q1",
+            "class_description": "12",
+            "class_code": "jZ97QfzwS2",
+            "class_admin": "123",
+            "class_students": [
+                "123"
+            ]
+        }
+    ],
+    "classes_joined": [
+        {
+            "class_name": "123",
+            "class_description": "123",
+            "class_code": "uRX40t0uq7",
+            "class_admin": "123",
+            "class_students": [
+                "12`3",
+                "123"
+            ]
+        },
+        {
+            "class_name": "1231",
+            "class_description": "1123",
+            "class_code": "JPVJWEgyZU",
+            "class_admin": "123",
+            "class_students": [
+                "1",
+                "123",
+                "1213",
+                "12`3",
+                "11233",
+                "tej"
+            ]
+        },
+        {
+            "class_name": "q1",
+            "class_description": "12",
+            "class_code": "jZ97QfzwS2",
+            "class_admin": "123",
+            "class_students": [
+                "123"
+            ]
+        },
+        {
+            "class_name": "123",
+            "class_description": "123",
+            "class_code": "F9vewHlXFw",
+            "class_admin": "tej",
+            "class_students": [
+                "123"
+            ]
+        }
+    ]
 }

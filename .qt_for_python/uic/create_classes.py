@@ -9,7 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from create_class_sql import Create_Classes
+from sql.create_class_sql import Create_Classes
 
 
 class Ui_create_classes_form(object):

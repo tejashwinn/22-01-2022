@@ -3,7 +3,7 @@ from sqlite3 import Error
 import json
 
 
-class join_classes_cl():
+class Join_Classes_Cl():
     database = r"C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\college_virtual_space.db"
 
     def create_connection(self):

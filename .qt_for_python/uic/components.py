@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_mainwindow(object):
     def setupUi(self, mainwindow):
         mainwindow.setObjectName("mainwindow")
-        mainwindow.resize(1070, 625)
+        mainwindow.resize(1070, 878)
         mainwindow.setStyleSheet("")
         self.post_button = QtWidgets.QPushButton(mainwindow)
         self.post_button.setGeometry(QtCore.QRect(10, 10, 525, 80))
@@ -254,6 +254,74 @@ class Ui_mainwindow(object):
 "\n"
 "")
         self.sign_in_button.setObjectName("sign_in_button")
+        self.events_view_3 = QtWidgets.QFrame(mainwindow)
+        self.events_view_3.setGeometry(QtCore.QRect(420, 620, 250, 140))
+        self.events_view_3.setMinimumSize(QtCore.QSize(250, 100))
+        self.events_view_3.setMaximumSize(QtCore.QSize(461, 140))
+        self.events_view_3.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.events_view_3.setStyleSheet("*{\n"
+"position: absolute;\n"
+"width: 370px;\n"
+"height: 110px;\n"
+"left: 7px;\n"
+"top: 28px;\n"
+"\n"
+"background: rgba(0, 0, 0, 0.05);\n"
+"border: 1px solid rgba(0, 0, 0, 0.3);\n"
+"box-sizing: border-box;\n"
+"border-radius: 10px}")
+        self.events_view_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.events_view_3.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.events_view_3.setObjectName("events_view_3")
+        self.label_12 = QtWidgets.QLabel(self.events_view_3)
+        self.label_12.setGeometry(QtCore.QRect(10, 0, 231, 61))
+        font = QtGui.QFont()
+        font.setFamily("Poppins")
+        font.setPointSize(-1)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.label_12.setFont(font)
+        self.label_12.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.label_12.setStyleSheet("position: absolute;\n"
+"left: 20px;\n"
+"right: 30px;\n"
+"top: 10px;\n"
+"bottom: 10px;\n"
+"\n"
+"font-family: Poppins;\n"
+"font-style: normal;\n"
+"font-weight: normal;\n"
+"font-size: 18px;\n"
+"line-height: 37px;\n"
+"letter-spacing: 0.05em;\n"
+"background: rgba(0, 0, 0, 0.01);\n"
+"color: #000000;\n"
+"border:0px")
+        self.label_12.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
+        self.label_12.setWordWrap(True)
+        self.label_12.setObjectName("label_12")
+        self.label_13 = QtWidgets.QLabel(self.events_view_3)
+        self.label_13.setGeometry(QtCore.QRect(10, 50, 231, 81))
+        self.label_13.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.label_13.setStyleSheet("position: absolute;\n"
+"left: 20px;\n"
+"right: 30px;\n"
+"top: 10px;\n"
+"bottom: 10px;\n"
+"\n"
+"font-family: Poppins;\n"
+"font-style: normal;\n"
+"font-weight: normal;\n"
+"font-size: 15px;\n"
+"line-height: 37px;\n"
+"letter-spacing: 0.05em;\n"
+"background: rgba(0, 0, 0, 0.01);\n"
+"color: #000000;\n"
+"border:0px;")
+        self.label_13.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
+        self.label_13.setWordWrap(True)
+        self.label_13.setObjectName("label_13")
 
         self.retranslateUi(mainwindow)
         QtCore.QMetaObject.connectSlotsByName(mainwindow)
@@ -269,4 +337,6 @@ class Ui_mainwindow(object):
         self.pushButton.setText(_translate("mainwindow", "Menu"))
         self.sign_up_button.setText(_translate("mainwindow", "Sign Up"))
         self.sign_in_button.setText(_translate("mainwindow", "Already a user? Sign In"))
+        self.label_12.setText(_translate("mainwindow", "Class Name"))
+        self.label_13.setText(_translate("mainwindow", "User"))
 import temp_rc

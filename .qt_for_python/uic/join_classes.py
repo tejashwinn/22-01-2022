@@ -9,19 +9,21 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from join_class_sql import join_classes_cl
+from sql.join_class_sql import Join_Classes_Cl
 
 
 class Ui_join_classes_form(object):
     ###
     def join_class_user(self):
-        te = join_classes_cl(
+        
+        te = Join_Classes_Cl(
             class_code=self.join_class_code_entry.toPlainText())
         if te.valid and te.errors == "":
-            # te.join()
+            te.join()
             self.join_class_warning_label.setText("Successfully Joined Class")
-            # self.join_class_button.setDisabled(True)
-            # te.valid=False
+            self.join_class_button.setDisabled(True)
+            
+            te.valid=False
         else:
             self.join_class_warning_label.setText(te.errors)
     ###
@@ -119,6 +121,9 @@ class Ui_join_classes_form(object):
         self.static_join_class_naming_label.setObjectName(
             "static_join_class_naming_label")
         self.join_class_button = QtWidgets.QPushButton(self.join_classes_frame)
+        ###
+        self.join_class_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        ###
         self.join_class_button.setGeometry(QtCore.QRect(160, 200, 221, 40))
         self.join_class_button.setStyleSheet("\n"
                                              "*{\n"
