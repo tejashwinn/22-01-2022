@@ -3,14 +3,13 @@
 * [X] create class
 * [X] join class
 * [X] fetch class
-* [ ] view all joined classes
-* [ ] view all owned classes
-* [ ] view posts from classes
-* [ ] view post
-* [ ] create post
+* [X] view all joined classes
+* [X] view all owned classes
+* [X] view posts from classes
+* [X] view post
+* [X] create post
 * [ ] all assignments
 * [ ] create assignments
 * [ ] all clubs
 * [ ] events
 * [ ] create events
-* [ ]
