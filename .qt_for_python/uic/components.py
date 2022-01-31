@@ -339,6 +339,74 @@ class Ui_mainwindow(object):
         self.class_view_class_des_label.setWordWrap(True)
         self.class_view_class_des_label.setObjectName(
             "class_view_class_des_label")
+        self.post_single_button = QtWidgets.QFrame(mainwindow)
+        self.post_single_button.setGeometry(QtCore.QRect(240, 530, 461, 70))
+        self.post_single_button.setMinimumSize(QtCore.QSize(0, 70))
+        self.post_single_button.setMaximumSize(QtCore.QSize(461, 70))
+        self.post_single_button.setCursor(
+            QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.post_single_button.setStyleSheet("*{position: absolute;\n"
+                                              "width: 370px;\n"
+                                              "height: 110px;\n"
+                                              "left: 7px;\n"
+                                              "top: 28px;\n"
+                                              "\n"
+                                              "background: rgba(0, 0, 0, 0.05);\n"
+                                              "border: 1px solid rgba(0, 0, 0, 0.3);\n"
+                                              "box-sizing: border-box;\n"
+                                              "border-radius: 10px}")
+        self.post_single_button.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.post_single_button.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.post_single_button.setObjectName("post_single_button")
+        self.post_single_heading = QtWidgets.QLabel(self.post_single_button)
+        self.post_single_heading.setGeometry(QtCore.QRect(10, 0, 441, 41))
+        font = QtGui.QFont()
+        font.setFamily("Poppins")
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.post_single_heading.setFont(font)
+        self.post_single_heading.setCursor(
+            QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.post_single_heading.setStyleSheet("position: absolute;\n"
+                                               "left: 20px;\n"
+                                               "right: 30px;\n"
+                                               "top: 10px;\n"
+                                               "bottom: 10px;\n"
+                                               "\n"
+                                               "font-family: Poppins;\n"
+                                               "font-style: normal;\n"
+                                               "font-weight: normal;\n"
+                                               "font-size: 15\n"
+                                               "px;\n"
+                                               "line-height: 37px;\n"
+                                               "letter-spacing: 0.05em;\n"
+                                               "background: rgba(0, 0, 0, 0.01);\n"
+                                               "color: #000000;\n"
+                                               "border:0px;")
+        self.post_single_heading.setObjectName("post_single_heading")
+        self.post_single_timings = QtWidgets.QLabel(self.post_single_button)
+        self.post_single_timings.setGeometry(QtCore.QRect(10, 40, 441, 21))
+        self.post_single_timings.setCursor(
+            QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.post_single_timings.setStyleSheet("position: absolute;\n"
+                                               "left: 20px;\n"
+                                               "right: 30px;\n"
+                                               "top: 10px;\n"
+                                               "bottom: 10px;\n"
+                                               "\n"
+                                               "font-family: Poppins;\n"
+                                               "font-style: normal;\n"
+                                               "font-weight: normal;\n"
+                                               "font-size: 15px;\n"
+                                               "line-height: 37px;\n"
+                                               "letter-spacing: 0.05em;\n"
+                                               "background: rgba(0, 0, 0, 0.01);\n"
+                                               "color: #000000;\n"
+                                               "border:0px;")
+        self.post_single_timings.setAlignment(
+            QtCore.Qt.AlignLeading | QtCore.Qt.AlignLeft | QtCore.Qt.AlignTop)
+        self.post_single_timings.setObjectName("post_single_timings")
 
         self.retranslateUi(mainwindow)
         QtCore.QMetaObject.connectSlotsByName(mainwindow)
@@ -359,3 +427,5 @@ class Ui_mainwindow(object):
             _translate("mainwindow", "Class Name"))
         self.class_view_class_des_label.setText(
             _translate("mainwindow", "Des"))
+        self.post_single_heading.setText(_translate("mainwindow", "Heading"))
+        self.post_single_timings.setText(_translate("mainwindow", "Timings"))

@@ -1,8 +1,29 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import json
+from compon.post_buttons import Individual_Post_Button
+from compon.fetch_posts import Retrieve_Post_Cl
 
 
 class Individual_Class_Button():
+    def create_buttons_post(self):
+        def json_data():
+            with open(r'C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json') as settings_json_file:
+                return json.load(settings_json_file)
+
+        data = json_data()
+
+        def clearLayout(layout):
+            if layout is not None:
+                while layout.count():
+                    child = layout.takeAt(0)
+                    if child.widget() is not None:
+                        child.widget().deleteLater()
+                    elif child.layout() is not None:
+                        clearLayout(child.layout())
+        clearLayout(self.ui_te.verticalLayout)
+        for i in data["posts_in_class"]:
+            temp = Individual_Post_Button(mainwindow=self.mainwindow, di=i)
+            self.ui_te.verticalLayout.addWidget(temp.child)
 
     def open_class(self, event):
         self.ui_te.all_classes_frame.hide()
@@ -15,6 +36,8 @@ class Individual_Class_Button():
             data["class_selected"] = self.class_code
         with open(r"C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json", "w") as settings_json_file:
             json.dump(data, settings_json_file, indent=4)
+        Retrieve_Post_Cl()
+        self.create_buttons_post()
 
     def __init__(self, mainwindow, name, description, ui_te, class_code):
         self.mainwindow = mainwindow

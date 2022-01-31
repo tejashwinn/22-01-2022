@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'c:\Users\tejas\Desktop\22-01-22\assignments.ui'
+# Form implementation generated from reading ui file 'c:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\temp_file_storage\assignments.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -393,7 +393,7 @@ class Ui_Form(object):
         self.pushButton = QtWidgets.QPushButton(self.frame_2)
         self.pushButton.setGeometry(QtCore.QRect(412, 310, 121, 31))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("c:\\Users\\tejas\\Desktop\\22-01-22\\assests/icons/plus.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("c:\\Users\\tejas\\Desktop\\22-01-22\\.qt_for_python\\uic\\temp_file_storage\\assests/icons/plus.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton.setIcon(icon)
         self.pushButton.setObjectName("pushButton")
         self.lineEdit = QtWidgets.QLineEdit(self.frame_2)
@@ -480,7 +480,7 @@ class Ui_Form(object):
 "}")
         self.close_button_create_assignment.setText("")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("c:\\Users\\tejas\\Desktop\\22-01-22\\assests/icons/x-square.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap("c:\\Users\\tejas\\Desktop\\22-01-22\\.qt_for_python\\uic\\temp_file_storage\\assests/icons/x-square.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.close_button_create_assignment.setIcon(icon1)
         self.close_button_create_assignment.setIconSize(QtCore.QSize(40, 40))
         self.close_button_create_assignment.setObjectName("close_button_create_assignment")

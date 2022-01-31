@@ -77,4 +77,4 @@ class Fetch_Classes_Cl():
         self.write_classes_owned_to_json()
 
 
-Fetch_Classes_Cl()
+# Fetch_Classes_Cl()

@@ -9,21 +9,23 @@ from datetime import datetime
 
 class Create_Post():
 
+    database = r"C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\college_virtual_space.db"
+    chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'
+
     def to_binary(self):
         try:
             with open(self.file_path, 'rb') as file:
                 blobData = file.read()
             self.file = blobData
+            self.valid = True
         except:
             self.valid = False
             self.errors = "Invalid File"
 
-    database = r"C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\college_virtual_space.db"
-    chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'
-
     def random_generator(self):
         self.random_name = "".join(random.choice(self.chars)
                                    for _ in range(10))
+        self.valid = True
 
     def create_connection(self):
         self.connection = None
@@ -49,7 +51,6 @@ class Create_Post():
             sql,  [self.random_name, self.class_code, self.name, self.description, self.date])
         self.final_pro()
 
-    # TODO Rename this here and in `insert_with_file` and `insert`
     def final_pro(self):
         self.connection.commit()
         self.cursor.close()
@@ -61,16 +62,20 @@ class Create_Post():
         with open(r'C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json') as settings_json_file:
             data = json.load(settings_json_file)
             self.class_code = data["class_selected"]
+            self.username = data["log"]["username"]
+        if self.username not in data["classes_owned"]["class_admin"]:
+            self.valid=False
+            self.errors="No admin privilege"
 
     def __init__(self, name, description, file_path=""):
         self.name = name
         self.description = description
         self.file_path = file_path
-        # print(file_path)
         self.file_name = file_path.split('/')[-1]
         self.file_extension = file_path.split('/')[-1].split('.')[-1]
-        # self.connection()
         self.date = str(datetime.now())
-        self.fetch_class_code()
+        self.valid = False
+        self.errors = ""
         self.create_connection()
         self.random_generator()
+        self.fetch_class_code()
