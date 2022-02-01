@@ -109,8 +109,8 @@ class Ui_posts_form(object):
                 self.verticalLayout_39.addWidget(
                     self.return_comment(user1=i["user"], comment1=i["comment"]))
 
-            # self.verticalLayout_39.addItem(QtWidgets.QSpacerItem(
-            #     20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding))
+            self.verticalLayout_39.addItem(QtWidgets.QSpacerItem(
+                20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding))
 
     def add_comment(self):
         def json_data():
@@ -123,7 +123,10 @@ class Ui_posts_form(object):
                             post=data["post_selected"], comment=self.lineEdit.text())
         print(self.lineEdit.text())
         self.te1.insert()
-        self.load_comment()
+        self.verticalLayout_39.addWidget(
+            self.return_comment(user1=data["log"]["username"], comment1=self.lineEdit.text()))
+        self.verticalLayout_39.addItem(QtWidgets.QSpacerItem(
+            20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding))
 
     def setupUi(self, posts_form):
         self.p_f = posts_form
@@ -470,6 +473,8 @@ class Ui_posts_form(object):
                                               "")
         self.dynamic_time_label.setObjectName("dynamic_time_label")
         self.gridLayout.addWidget(self.frame_2, 0, 0, 1, 1)
+        self.verticalLayout_39.addItem(QtWidgets.QSpacerItem(
+            20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding))
 
         ###
         self.button_add_comment.clicked.connect(self.add_comment)
@@ -486,8 +491,6 @@ class Ui_posts_form(object):
                             post=data["post_selected"], comment="")
 
         self.load_comment()
-        print(0)
-
         self.retranslateUi(posts_form)
         QtCore.QMetaObject.connectSlotsByName(posts_form)
 
