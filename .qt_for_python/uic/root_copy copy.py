@@ -438,7 +438,7 @@ class Ui_MainWindow(object):
         self.in_inner_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.in_inner_frame.setObjectName("in_inner_frame")
         self.static_in_heading = QtWidgets.QLabel(self.in_inner_frame)
-        self.static_in_heading.setGeometry(QtCore.QRect(10, 10, 81, 30))
+        self.static_in_heading.setGeometry(QtCore.QRect(10, 10, 441, 30))
         self.static_in_heading.setStyleSheet("position: absolute;\n"
 "left: 20px;\n"
 "right: 30px;\n"
@@ -992,75 +992,12 @@ class Ui_MainWindow(object):
         self.class_view_class_des_label.setWordWrap(True)
         self.class_view_class_des_label.setObjectName("class_view_class_des_label")
         self.verticalLayout_5.addWidget(self.class_view_frame)
-        self.class_view_frame_2 = QtWidgets.QFrame(self.all_classes_scroll_area_widget)
-        self.class_view_frame_2.setMinimumSize(QtCore.QSize(250, 100))
-        self.class_view_frame_2.setMaximumSize(QtCore.QSize(461, 140))
-        self.class_view_frame_2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.class_view_frame_2.setStyleSheet("*{\n"
-"position: absolute;\n"
-"width: 370px;\n"
-"height: 110px;\n"
-"left: 7px;\n"
-"top: 28px;\n"
-"\n"
-"background: rgba(0, 0, 0, 0.05);\n"
-"border: 1px solid rgba(0, 0, 0, 0.3);\n"
-"box-sizing: border-box;\n"
-"border-radius: 10px}")
-        self.class_view_frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.class_view_frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.class_view_frame_2.setObjectName("class_view_frame_2")
-        self.class_view_cass_name_label_2 = QtWidgets.QLabel(self.class_view_frame_2)
-        self.class_view_cass_name_label_2.setGeometry(QtCore.QRect(10, 0, 231, 61))
-        font = QtGui.QFont()
-        font.setFamily("Poppins")
-        font.setPointSize(-1)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setWeight(50)
-        self.class_view_cass_name_label_2.setFont(font)
-        self.class_view_cass_name_label_2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.class_view_cass_name_label_2.setStyleSheet("position: absolute;\n"
-"left: 20px;\n"
-"right: 30px;\n"
-"top: 10px;\n"
-"bottom: 10px;\n"
-"\n"
-"font-family: Poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 18px;\n"
-"line-height: 37px;\n"
-"letter-spacing: 0.05em;\n"
-"background: rgba(0, 0, 0, 0.01);\n"
-"color: #000000;\n"
-"border:0px")
-        self.class_view_cass_name_label_2.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
-        self.class_view_cass_name_label_2.setWordWrap(True)
-        self.class_view_cass_name_label_2.setObjectName("class_view_cass_name_label_2")
-        self.class_view_class_des_label_2 = QtWidgets.QLabel(self.class_view_frame_2)
-        self.class_view_class_des_label_2.setGeometry(QtCore.QRect(10, 50, 231, 81))
-        self.class_view_class_des_label_2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.class_view_class_des_label_2.setStyleSheet("position: absolute;\n"
-"left: 20px;\n"
-"right: 30px;\n"
-"top: 10px;\n"
-"bottom: 10px;\n"
-"\n"
-"font-family: Poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 15px;\n"
-"line-height: 37px;\n"
-"letter-spacing: 0.05em;\n"
-"background: rgba(0, 0, 0, 0.01);\n"
-"color: #000000;\n"
-"border:0px;")
-        self.class_view_class_des_label_2.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
-        self.class_view_class_des_label_2.setWordWrap(True)
-        self.class_view_class_des_label_2.setObjectName("class_view_class_des_label_2")
-        self.verticalLayout_5.addWidget(self.class_view_frame_2)
+        spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_5.addItem(spacerItem)
         self.all_classes_scroll_area.setWidget(self.all_classes_scroll_area_widget)
+        self.in_outer_frame.raise_()
+        self.up_outer_frame.raise_()
+        self.main_class_frame.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1094, 26))
@@ -1199,8 +1136,6 @@ class Ui_MainWindow(object):
         self.static_assignment.setText(_translate("MainWindow", "Assignments"))
         self.class_view_cass_name_label.setText(_translate("MainWindow", "Class Name"))
         self.class_view_class_des_label.setText(_translate("MainWindow", "Des"))
-        self.class_view_cass_name_label_2.setText(_translate("MainWindow", "Class Name"))
-        self.class_view_class_des_label_2.setText(_translate("MainWindow", "Des"))
         self.menuUser.setTitle(_translate("MainWindow", "User"))
         self.menuViews.setTitle(_translate("MainWindow", "Views"))
         self.menuClassesMain.setTitle(_translate("MainWindow", "Classes"))

@@ -13,3 +13,7 @@
 * [ ] all clubs
 * [ ] events
 * [ ] create events
+* [X] sync posts
+* [ ] sync classes
+* [ ] sync comments
+* [ ]

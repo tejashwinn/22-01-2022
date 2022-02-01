@@ -1,6 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from create_posts import Ui_create_posts_form
-from posts import Ui_posts_form
+from compon.posts import Ui_posts_form
 from sql.sign_up_sql import Sign_Up_Insert
 from sql.sign_in_sql import Sign_In_Check
 from create_classes import Ui_create_classes_form
@@ -9,6 +9,7 @@ from join_classes import Ui_join_classes_form
 
 class Ui_MainWindow(object):
     ###
+    # EXIT_CODE_REBOOT = -123
     def checked_connection_up(self):
         if self.up_password_radio.isChecked():
             self.up_password_entry.setEchoMode(QtWidgets.QLineEdit.Normal)
@@ -25,12 +26,6 @@ class Ui_MainWindow(object):
         else:
             self.in_password_entry.setEchoMode(QtWidgets.QLineEdit.Password)
 
-    def show_post(self):
-        self.post_mainwindow = QtWidgets.QMainWindow()
-        self.ui_post = Ui_posts_form()
-        self.ui_post.setupUi(self.post_mainwindow)
-        self.post_mainwindow.show()
-
     def show_create_class(self):
         self.create_class_main_window = QtWidgets.QMainWindow()
         self.ui_class_create = Ui_create_classes_form()
@@ -43,37 +38,11 @@ class Ui_MainWindow(object):
         self.ui_class_join.setupUi(self.join_class_main_window)
         self.join_class_main_window.show()
 
-    def return_post_button(self, window, head):
-        _translate = QtCore.QCoreApplication.translate
-        post_button = QtWidgets.QPushButton(window, clicked=self.show_post)
-        post_button.setMaximumSize(QtCore.QSize(505, 80))
-        font = QtGui.QFont()
-        font.setFamily("Poppins Medium")
-        font.setPointSize(14)
-        post_button.setFont(font)
-        post_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        post_button.setLayoutDirection(QtCore.Qt.LeftToRight)
-        post_button.setStyleSheet("position: absolute;\n"
-                                  "width: 1000px;\n"
-                                  "height: 148px;\n"
-                                  "left: calc(50% - 1000px/2 + 2px);\n"
-                                  "top: calc(50% - 148px/2 + 249px);\n"
-                                  "\n"
-                                  "background: #FFFFFF;\n"
-                                  "border: 2px solid #000000;\n"
-                                  "box-sizing: border-box;\n"
-                                  "box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\n"
-                                  "border-radius: 10px;\n"
-                                  "")
-        post_button.setObjectName(head)
-        post_button.setText(_translate("mainwindow", head))
-
-        return post_button
-
     def show_create_post(self):
         self.create_post_mainwindow = QtWidgets.QMainWindow()
         self.ui_create_post = Ui_create_posts_form()
         self.ui_create_post.setupUi(self.create_post_mainwindow)
+        self.ui_create_post.mw=self.mw
         self.create_post_mainwindow.show()
 
     def write_cred_to_json(self, name, username, email_id):
@@ -84,6 +53,13 @@ class Ui_MainWindow(object):
             data["log"]["email_id"] = email_id
             data["log"]["username"] = username
 
+        with open(r'C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\temp.json') as temp_json_file:
+            template = json.load(settings_json_file)
+            template["log"]["name"] = name
+            template["log"]["email_id"] = email_id
+            template["log"]["username"] = username
+            
+        data=template.copy()
         with open(r"C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json", "w") as settings_json_file:
             json.dump(data, settings_json_file, indent=4)
 
@@ -108,8 +84,10 @@ class Ui_MainWindow(object):
             name=check.name, username=check.username, email_id=check.email_id)
 
     def sign_up_insert(self):
+        # QtGui.qApp.exit(Ui_MainWindow.EXIT_CODE_REBOOT )
         sign_up_insert = Sign_Up_Insert(email_id=self.up_email_entry.text(
         ), name=self.up_name_entry.text(), username=self.up_username_entry.text(), password=self.up_password_entry.text())
+        
         if self.up_password_entry.text() != self.up_confirm_password_entry.text():
             self.up_warning_label.setText("Passwords doesn't match")
             return
@@ -132,9 +110,11 @@ class Ui_MainWindow(object):
             self.up_username_entry.setText("")
             self.up_email_entry.setText("")
             self.up_password_entry.setText("")
-
+            self.up_confirm_password_entry.setText("")
+            
             self.in_email_entry.setText("")
             self.in_password_entry.setText("")
+            
         else:
             self.write_cred_to_json("", "", "")
             if sign_up_insert.unique_username_constraint == False:
@@ -143,9 +123,11 @@ class Ui_MainWindow(object):
             elif sign_up_insert.unique_username_constraint:
                 self.up_warning_label.setText(
                     "Email Id already exists")
+
 ####
 
     def setupUi(self, MainWindow):
+        self.mw = MainWindow
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1094, 658)
         MainWindow.setMinimumSize(QtCore.QSize(1094, 658))
@@ -1329,4 +1311,3 @@ class Ui_MainWindow(object):
         self.actionCreateClass.setText(
             _translate("MainWindow", "Create Class"))
         self.actionJoinClass.setText(_translate("MainWindow", "Join CLass"))
-

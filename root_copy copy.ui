@@ -752,7 +752,7 @@ border-radius: 8px;}</string>
          <rect>
           <x>10</x>
           <y>10</y>
-          <width>81</width>
+          <width>441</width>
           <height>30</height>
          </rect>
         </property>
@@ -1672,135 +1672,26 @@ border:0px;</string>
          </widget>
         </item>
         <item>
-         <widget class="QFrame" name="class_view_frame_2">
-          <property name="minimumSize">
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
            <size>
-            <width>250</width>
-            <height>100</height>
+            <width>20</width>
+            <height>40</height>
            </size>
           </property>
-          <property name="maximumSize">
-           <size>
-            <width>461</width>
-            <height>140</height>
-           </size>
-          </property>
-          <property name="cursor">
-           <cursorShape>PointingHandCursor</cursorShape>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">*{
-position: absolute;
-width: 370px;
-height: 110px;
-left: 7px;
-top: 28px;
-
-background: rgba(0, 0, 0, 0.05);
-border: 1px solid rgba(0, 0, 0, 0.3);
-box-sizing: border-box;
-border-radius: 10px}</string>
-          </property>
-          <property name="frameShape">
-           <enum>QFrame::StyledPanel</enum>
-          </property>
-          <property name="frameShadow">
-           <enum>QFrame::Raised</enum>
-          </property>
-          <widget class="QLabel" name="class_view_cass_name_label_2">
-           <property name="geometry">
-            <rect>
-             <x>10</x>
-             <y>0</y>
-             <width>231</width>
-             <height>61</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <family>Poppins</family>
-             <pointsize>-1</pointsize>
-             <weight>50</weight>
-             <italic>false</italic>
-             <bold>false</bold>
-            </font>
-           </property>
-           <property name="cursor">
-            <cursorShape>PointingHandCursor</cursorShape>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">position: absolute;
-left: 20px;
-right: 30px;
-top: 10px;
-bottom: 10px;
-
-font-family: Poppins;
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 37px;
-letter-spacing: 0.05em;
-background: rgba(0, 0, 0, 0.01);
-color: #000000;
-border:0px</string>
-           </property>
-           <property name="text">
-            <string>Class Name</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-           </property>
-           <property name="wordWrap">
-            <bool>true</bool>
-           </property>
-          </widget>
-          <widget class="QLabel" name="class_view_class_des_label_2">
-           <property name="geometry">
-            <rect>
-             <x>10</x>
-             <y>50</y>
-             <width>231</width>
-             <height>81</height>
-            </rect>
-           </property>
-           <property name="cursor">
-            <cursorShape>PointingHandCursor</cursorShape>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">position: absolute;
-left: 20px;
-right: 30px;
-top: 10px;
-bottom: 10px;
-
-font-family: Poppins;
-font-style: normal;
-font-weight: normal;
-font-size: 15px;
-line-height: 37px;
-letter-spacing: 0.05em;
-background: rgba(0, 0, 0, 0.01);
-color: #000000;
-border:0px;</string>
-           </property>
-           <property name="text">
-            <string>Des</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-           </property>
-           <property name="wordWrap">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </widget>
+         </spacer>
         </item>
        </layout>
       </widget>
      </widget>
     </widget>
    </widget>
+   <zorder>in_outer_frame</zorder>
+   <zorder>up_outer_frame</zorder>
+   <zorder>main_class_frame</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

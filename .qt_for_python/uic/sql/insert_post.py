@@ -57,6 +57,10 @@ class Create_Post():
         self.connection.close()
         self.valid = True
         self.errors = ''
+        from sql.fetch_posts import Retrieve_Post_Cl
+        Retrieve_Post_Cl()
+        # self.create_buttons_post()
+        
 
     def fetch_class_code(self):
         with open(r'C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json') as settings_json_file:

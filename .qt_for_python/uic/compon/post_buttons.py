@@ -1,6 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import json
-from posts import Ui_posts_form
+from compon.posts import Ui_posts_form
 import sqlite3
 from sqlite3 import Error
 
@@ -53,6 +53,7 @@ class Individual_Post_Button():
         self.ui_post.dynamic_posts_heading_label.setText(self.post_heading)
         self.ui_post.dynamic_posts_description_label.setText(
             self.post_description)
+        
 
         self.ui_post.close_button_posts.hide()
         # print(self.post_file_name, self.post_file_exten)

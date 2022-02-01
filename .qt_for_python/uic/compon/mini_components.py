@@ -21,10 +21,14 @@ class Individual_Class_Button():
                     elif child.layout() is not None:
                         clearLayout(child.layout())
         clearLayout(self.ui_te.verticalLayout)
+        
         for i in data["posts_in_class"]:
             temp = Individual_Post_Button(mainwindow=self.mainwindow, di=i)
             self.ui_te.verticalLayout.addWidget(temp.child)
-
+        spacerItem = QtWidgets.QSpacerItem(
+        20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.ui_te.verticalLayout.addItem(spacerItem)
+        
     def open_class(self, event):
         self.ui_te.all_classes_frame.hide()
         self.ui_te.class_name_frame.show()

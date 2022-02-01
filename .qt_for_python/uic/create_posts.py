@@ -6,6 +6,34 @@ class Ui_create_posts_form(object):
 
     path = ["", ""]
 
+    # def sync_t(self):
+    #     from compon.post_buttons import Individual_Post_Button
+    #     from PyQt5 import QtWidgets
+    #     import json
+
+    #     def json_data():
+    #         with open(r'C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json') as settings_json_file:
+    #             return json.load(settings_json_file)
+
+    #     def clearLayout(layout):
+    #         if layout is not None:
+    #             while layout.count():
+    #                 child = layout.takeAt(0)
+    #                 if child.widget() is not None:
+    #                     child.widget().deleteLater()
+    #                 elif child.layout() is not None:
+    #                     clearLayout(child.layout())
+
+    #     clearLayout(self.mw.verticalLayout)
+    #     data = json_data()
+
+    #     for i in data["posts_in_class"]:
+    #         temp = Individual_Post_Button(mainwindow=self.mw, di=i)
+    #         self.verticalLayout.addWidget(temp.child)
+    #     spacerItem = QtWidgets.QSpacerItem(
+    #         20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+    #     self.mw.verticalLayout.addItem(spacerItem)
+
     def open_file(self):
         self.path = QtWidgets.QFileDialog.getOpenFileName(
             self.create_posts_frame, 'Select a File', '', 'All Files (*.*)')
@@ -20,16 +48,19 @@ class Ui_create_posts_form(object):
             ), description=self.create_post_des_entry.toPlainText())
             if temp.valid:
                 temp.insert()
+                self.dynamic_create_post_warning_label.setText("Post Posted")
         else:
             temp = Create_Post(name=self.create_post_name_entry.toPlainText(
             ), description=self.create_post_des_entry.toPlainText(), file_path=self.path[0])
             if temp.valid:
                 temp.insert_with_file()
-
+                self.dynamic_create_post_warning_label.setText("Post Posted")
+        # self.sync_t()
         self.create_post_button.setDisabled(True)
         self.dynamic_create_post_warning_label.setText(temp.errors)
 
     def setupUi(self, create_posts_form):
+        self.mw = None
         self.path = ["", ""]
         # self.t=create_posts_form
         create_posts_form.setObjectName("create_posts_form")
