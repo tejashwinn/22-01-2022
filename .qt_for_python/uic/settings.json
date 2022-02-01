@@ -1,7 +1,7 @@
 {
     "seek": "",
     "log": {
-        "username": "1",
+        "username": 1,
         "name": "1",
         "email_id": "1"
     },
@@ -19,26 +19,24 @@
             "class_code": "4O4Pj9Bi1e",
             "class_admin": "1",
             "class_students": []
+        },
+        {
+            "class_name": "aserea",
+            "class_description": "asd",
+            "class_code": "im8A2GR7I9",
+            "class_admin": "1",
+            "class_students": []
+        },
+        {
+            "class_name": "d",
+            "class_description": "123",
+            "class_code": "bcsT1iaTgH",
+            "class_admin": "1",
+            "class_students": []
         }
     ],
     "classes_joined": [],
-    "class_selected": "CGF0HgN2zv",
-    "post_selected": "uSZLV7yKqB",
-    "posts_in_class": [
-        {
-            "post_code": "uSZLV7yKqB",
-            "post_class": "CGF0HgN2zv",
-            "post_heading": "133",
-            "post_description": "23",
-            "post_file_name": "",
-            "post_date": "2022-02-01 22:55:17.590662",
-            "post_file_exten": "",
-            "post_comments": [
-                {
-                    "user": "1",
-                    "comment": "13"
-                }
-            ]
-        }
-    ]
+    "class_selected": "",
+    "post_selected": "",
+    "posts_in_class": []
 }
