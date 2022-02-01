@@ -46,7 +46,7 @@ class Create_Classes():
         self.cursor.execute(
             sql, [self.name, self.description, self.random_name, self.username, ])
         self.connection.commit()
-        from fetch_classes_sql import Fetch_Classes_Cl
+        from sql.fetch_classes_sql import Fetch_Classes_Cl
         Fetch_Classes_Cl
 
     def __init__(self, name, description):

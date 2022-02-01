@@ -60,18 +60,29 @@ class Create_Post():
         from sql.fetch_posts import Retrieve_Post_Cl
         Retrieve_Post_Cl()
         # self.create_buttons_post()
-        
 
     def fetch_class_code(self):
         with open(r'C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json') as settings_json_file:
             data = json.load(settings_json_file)
             self.class_code = data["class_selected"]
             self.username = data["log"]["username"]
+            from sql.fetch_classes_sql import Fetch_Classes_Cl
+            Fetch_Classes_Cl()
+            print(data["classes_owned"])
             for i in data["classes_owned"]:
-                if i["class_admin"] == self.username:
-                    continue
-                self.valid = False
-                self.errors = "No Admin Privilege"
+                print(i["class_admin"],
+                      self.username, data["class_selected"], i["class_code"])
+                if (str(i["class_admin"]) == str(self.username)) and (str(self.class_code) == str(i["class_code"])):
+                    # print(i["class_admin"],
+                    #       self.username, data["class_selected"], i["class_code"])
+                    print(1)
+                    self.valid = True
+                    self.errors = "Successfully Posted"
+                    break
+                else:
+                    print(0)
+                    self.valid = False
+                    self.errors = "No Admin Privilege"
 
     def __init__(self, name, description, file_path=""):
         self.name = name

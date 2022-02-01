@@ -18,7 +18,8 @@ class Ui_posts_form(object):
     def return_comment(self, user1, comment1, p=""):
         if p == "":
             p = self.p_f
-
+        user1=str(user1)
+        comment1=str(comment1)
         comment_view_frame = QtWidgets.QFrame(p)
         comment_view_frame.setGeometry(QtCore.QRect(410, 430, 461, 70))
         comment_view_frame.setMinimumSize(QtCore.QSize(0, 70))

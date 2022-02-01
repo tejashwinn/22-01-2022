@@ -54,7 +54,7 @@ class Ui_MainWindow(object):
             data["log"]["username"] = username
 
         with open(r'C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\temp.json') as temp_json_file:
-            template = json.load(settings_json_file)
+            template = json.load(temp_json_file)
             template["log"]["name"] = name
             template["log"]["email_id"] = email_id
             template["log"]["username"] = username

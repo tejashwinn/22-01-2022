@@ -1,212 +1,44 @@
 {
     "seek": "",
     "log": {
-        "username": "kek",
-        "name": "kek",
-        "email_id": "kek"
+        "username": "1",
+        "name": "1",
+        "email_id": "1"
     },
-    "classes_owned": [],
-    "classes_joined": [
+    "classes_owned": [
         {
             "class_name": "123",
             "class_description": "123",
-            "class_code": "F9vewHlXFw",
-            "class_admin": "tej",
-            "class_students": [
-                "123",
-                "kek"
-            ]
+            "class_code": "CGF0HgN2zv",
+            "class_admin": "1",
+            "class_students": []
+        },
+        {
+            "class_name": "qwe",
+            "class_description": "qwe",
+            "class_code": "4O4Pj9Bi1e",
+            "class_admin": "1",
+            "class_students": []
         }
     ],
-    "class_selected": "F9vewHlXFw",
-    "post_selected": "1jWLtWHijw",
+    "classes_joined": [],
+    "class_selected": "CGF0HgN2zv",
+    "post_selected": "uSZLV7yKqB",
     "posts_in_class": [
         {
-            "post_code": "ykkIk9neRp",
-            "post_class": "F9vewHlXFw",
-            "post_heading": "123",
-            "post_description": "123",
+            "post_code": "uSZLV7yKqB",
+            "post_class": "CGF0HgN2zv",
+            "post_heading": "133",
+            "post_description": "23",
             "post_file_name": "",
-            "post_date": "2022-02-01 16:06:02.626226",
+            "post_date": "2022-02-01 22:55:17.590662",
             "post_file_exten": "",
             "post_comments": [
                 {
-                    "user": "tej",
-                    "comment": "fd"
-                },
-                {
-                    "user": "1s",
-                    "comment": "fd"
-                },
-                {
-                    "user": "12",
-                    "comment": "123"
-                },
-                {
-                    "user": "12",
-                    "comment": "123"
-                },
-                {
-                    "user": "12",
-                    "comment": "123"
-                },
-                {
-                    "user": "kek",
-                    "comment": "123"
-                },
-                {
-                    "user": "kek",
-                    "comment": "132"
-                },
-                {
-                    "user": "kek",
-                    "comment": ""
-                },
-                {
-                    "user": "kek",
-                    "comment": ""
-                },
-                {
-                    "user": "kek",
-                    "comment": ""
-                },
-                {
-                    "user": "kek",
-                    "comment": ""
-                },
-                {
-                    "user": "kek",
-                    "comment": ""
-                },
-                {
-                    "user": "kek",
-                    "comment": ""
-                },
-                {
-                    "user": "kek",
-                    "comment": "123"
-                },
-                {
-                    "user": "kek",
-                    "comment": "132"
-                },
-                {
-                    "user": "kek",
-                    "comment": "123"
-                },
-                {
-                    "user": "kek",
-                    "comment": "123"
-                },
-                {
-                    "user": "kek",
-                    "comment": "qwe"
-                },
-                {
-                    "user": "kek",
-                    "comment": "qwe"
-                },
-                {
-                    "user": "kek",
-                    "comment": "qwe"
-                },
-                {
-                    "user": "kek",
-                    "comment": "qwe"
-                },
-                {
-                    "user": "kek",
-                    "comment": "qwe"
-                },
-                {
-                    "user": "kek",
-                    "comment": "v"
-                },
-                {
-                    "user": "kek",
-                    "comment": "v"
-                },
-                {
-                    "user": "kek",
-                    "comment": "123"
-                },
-                {
-                    "user": "kek",
-                    "comment": "2312"
+                    "user": "1",
+                    "comment": "13"
                 }
             ]
-        },
-        {
-            "post_code": "1jWLtWHijw",
-            "post_class": "F9vewHlXFw",
-            "post_heading": "1",
-            "post_description": "1",
-            "post_file_name": "",
-            "post_date": "2022-02-01 16:06:52.265525",
-            "post_file_exten": "",
-            "post_comments": [
-                {
-                    "user": "kek",
-                    "comment": "123"
-                },
-                {
-                    "user": "kek",
-                    "comment": "e"
-                },
-                {
-                    "user": "kek",
-                    "comment": "123"
-                },
-                {
-                    "user": "kek",
-                    "comment": "123"
-                }
-            ]
-        },
-        {
-            "post_code": "aT4Kmn7374",
-            "post_class": "F9vewHlXFw",
-            "post_heading": "123",
-            "post_description": "123",
-            "post_file_name": "",
-            "post_date": "2022-02-01 19:56:23.138466",
-            "post_file_exten": "",
-            "post_comments": []
-        },
-        {
-            "post_code": "8uYkbxesfQ",
-            "post_class": "F9vewHlXFw",
-            "post_heading": "123",
-            "post_description": "123",
-            "post_file_name": "",
-            "post_date": "2022-02-01 19:58:01.665826",
-            "post_file_exten": "",
-            "post_comments": []
-        },
-        {
-            "post_code": "26embQvoH6",
-            "post_class": "F9vewHlXFw",
-            "post_heading": "123",
-            "post_description": "123",
-            "post_file_name": "",
-            "post_date": "2022-02-01 20:01:54.011562",
-            "post_file_exten": "",
-            "post_comments": [
-                {
-                    "user": "kek",
-                    "comment": "temp"
-                }
-            ]
-        },
-        {
-            "post_code": "hfVLneWwF6",
-            "post_class": "F9vewHlXFw",
-            "post_heading": "123",
-            "post_description": "123",
-            "post_file_name": "",
-            "post_date": "2022-02-01 20:03:56.524480",
-            "post_file_exten": "",
-            "post_comments": []
         }
     ]
 }
