@@ -14,15 +14,16 @@ import json
 
 
 class Ui_posts_form(object):
-    
-    def return_comment(self, user1, comment1):
-        print(12)
-        comment_view_frame = QtWidgets.QFrame(self.p_f)
+
+    def return_comment(self, user1, comment1, p=""):
+        if p == "":
+            p = self.p_f
+
+        comment_view_frame = QtWidgets.QFrame(p)
         comment_view_frame.setGeometry(QtCore.QRect(410, 430, 461, 70))
         comment_view_frame.setMinimumSize(QtCore.QSize(0, 70))
         comment_view_frame.setMaximumSize(QtCore.QSize(520, 70))
-        # comment_view_frame.setCursor(
-        #     QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+
         comment_view_frame.setStyleSheet("*{\n"
                                          "position: absolute;\n"
                                          "width: 370px;\n"
@@ -36,7 +37,7 @@ class Ui_posts_form(object):
                                          "border-radius: 10px}")
         comment_view_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         comment_view_frame.setFrameShadow(QtWidgets.QFrame.Raised)
-        comment_view_frame.setObjectName("comment_view_frame")
+        comment_view_frame.setObjectName("comment_view_frame"+user1)
         comment = QtWidgets.QLabel(comment_view_frame)
         comment.setGeometry(QtCore.QRect(10, 0, 441, 40))
         font = QtGui.QFont()
@@ -45,7 +46,7 @@ class Ui_posts_form(object):
         font.setItalic(False)
         font.setWeight(50)
         comment.setFont(font)
-        comment.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        # comment.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         comment.setStyleSheet("position: absolute;\n"
                               "left: 20px;\n"
                               "right: 30px;\n"
@@ -62,7 +63,7 @@ class Ui_posts_form(object):
                               "background: rgba(0, 0, 0, 0.01);\n"
                               "color: #000000;\n"
                               "border:0px;")
-        comment.setObjectName("comment")
+        comment.setObjectName("comment"+user1+comment1)
         user = QtWidgets.QLabel(comment_view_frame)
         user.setGeometry(QtCore.QRect(10, 40, 441, 21))
         user.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
@@ -83,12 +84,15 @@ class Ui_posts_form(object):
                            "border:0px;")
         user.setAlignment(QtCore.Qt.AlignLeading |
                           QtCore.Qt.AlignLeft | QtCore.Qt.AlignTop)
-        user.setObjectName("user")
+        user.setObjectName("user"+user1+comment1)
         comment.setText(comment1)
         user.setText(user1)
+        # self.li1.append[comment_view_frame]
         return comment_view_frame
 
     def load_comment(self):
+        self.li1 = []
+
         def clearLayout(layout):
             if layout is not None:
                 while layout.count():
@@ -97,14 +101,16 @@ class Ui_posts_form(object):
                         child.widget().deleteLater()
                     elif child.layout() is not None:
                         clearLayout(child.layout())
-        clearLayout(self.verticalLayout_3)
+        clearLayout(self.verticalLayout_39)
+
         if self.te1.existing_comments != []:
+            print(self.te1.existing_comments)
             for i in self.te1.existing_comments:
-                self.verticalLayout_3.addWidget(
+                self.verticalLayout_39.addWidget(
                     self.return_comment(user1=i["user"], comment1=i["comment"]))
 
-            self.verticalLayout_3.addItem(QtWidgets.QSpacerItem(
-                20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding))
+            # self.verticalLayout_39.addItem(QtWidgets.QSpacerItem(
+            #     20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding))
 
     def add_comment(self):
         def json_data():
@@ -117,7 +123,7 @@ class Ui_posts_form(object):
                             post=data["post_selected"], comment=self.lineEdit.text())
         print(self.lineEdit.text())
         self.te1.insert()
-        # self.load_comment()
+        self.load_comment()
 
     def setupUi(self, posts_form):
         self.p_f = posts_form
@@ -127,6 +133,8 @@ class Ui_posts_form(object):
         self.gridLayout = QtWidgets.QGridLayout(posts_form)
         self.gridLayout.setObjectName("gridLayout")
         self.post_posts_scroll_area = QtWidgets.QScrollArea(posts_form)
+        self.post_posts_scroll_area.setGeometry(
+            QtCore.QRect(11, 309, 541, 291))
         self.post_posts_scroll_area.setMinimumSize(QtCore.QSize(541, 290))
         self.post_posts_scroll_area.setMaximumSize(QtCore.QSize(541, 291))
         self.post_posts_scroll_area.setStyleSheet("background: #FFFFFF;\n"
@@ -158,9 +166,81 @@ class Ui_posts_form(object):
                                                          "")
         self.post_posts_scroll_area_widget.setObjectName(
             "post_posts_scroll_area_widget")
-        self.verticalLayout_3 = QtWidgets.QVBoxLayout(
+        self.verticalLayout_39 = QtWidgets.QVBoxLayout(
             self.post_posts_scroll_area_widget)
-        self.verticalLayout_3.setObjectName("verticalLayout_3")
+        self.verticalLayout_39.setObjectName("verticalLayout_3")
+        self.comment_view_frame = QtWidgets.QFrame(
+            self.post_posts_scroll_area_widget)
+        self.comment_view_frame.setMinimumSize(QtCore.QSize(0, 70))
+        self.comment_view_frame.setMaximumSize(QtCore.QSize(461, 70))
+        self.comment_view_frame.setCursor(
+            QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.comment_view_frame.setStyleSheet("*{\n"
+                                              "position: absolute;\n"
+                                              "width: 370px;\n"
+                                              "height: 110px;\n"
+                                              "left: 7px;\n"
+                                              "top: 28px;\n"
+                                              "\n"
+                                              "background: rgba(0, 0, 0, 0.05);\n"
+                                              "border: 1px solid rgba(0, 0, 0, 0.3);\n"
+                                              "box-sizing: border-box;\n"
+                                              "border-radius: 10px}")
+        self.comment_view_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.comment_view_frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.comment_view_frame.setObjectName("comment_view_frame")
+        self.comment_2 = QtWidgets.QLabel(self.comment_view_frame)
+        self.comment_2.setGeometry(QtCore.QRect(10, 0, 441, 41))
+        font = QtGui.QFont()
+        font.setFamily("Poppins")
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.comment_2.setFont(font)
+        self.comment_2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.comment_2.setStyleSheet("position: absolute;\n"
+                                     "left: 20px;\n"
+                                     "right: 30px;\n"
+                                     "top: 10px;\n"
+                                     "bottom: 10px;\n"
+                                     "\n"
+                                     "font-family: Poppins;\n"
+                                     "font-style: normal;\n"
+                                     "font-weight: normal;\n"
+                                     "font-size: 15\n"
+                                     "px;\n"
+                                     "line-height: 37px;\n"
+                                     "letter-spacing: 0.05em;\n"
+                                     "background: rgba(0, 0, 0, 0.01);\n"
+                                     "color: #000000;\n"
+                                     "border:0px;")
+        self.comment_2.setObjectName("comment_2")
+        self.user_2 = QtWidgets.QLabel(self.comment_view_frame)
+        self.user_2.setGeometry(QtCore.QRect(10, 40, 441, 21))
+        self.user_2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.user_2.setStyleSheet("position: absolute;\n"
+                                  "left: 20px;\n"
+                                  "right: 30px;\n"
+                                  "top: 10px;\n"
+                                  "bottom: 10px;\n"
+                                  "\n"
+                                  "font-family: Poppins;\n"
+                                  "font-style: normal;\n"
+                                  "font-weight: normal;\n"
+                                  "font-size: 15px;\n"
+                                  "line-height: 37px;\n"
+                                  "letter-spacing: 0.05em;\n"
+                                  "background: rgba(0, 0, 0, 0.01);\n"
+                                  "color: #000000;\n"
+                                  "\n"
+                                  "border:0px;")
+        self.user_2.setAlignment(
+            QtCore.Qt.AlignLeading | QtCore.Qt.AlignLeft | QtCore.Qt.AlignTop)
+        self.user_2.setObjectName("user_2")
+        self.verticalLayout_39.addWidget(self.comment_view_frame)
+        spacerItem = QtWidgets.QSpacerItem(
+            20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_39.addItem(spacerItem)
         self.post_posts_scroll_area.setWidget(
             self.post_posts_scroll_area_widget)
         self.gridLayout.addWidget(self.post_posts_scroll_area, 1, 0, 1, 1)
@@ -389,39 +469,26 @@ class Ui_posts_form(object):
                                               "text-transform: capitalize;\n"
                                               "")
         self.dynamic_time_label.setObjectName("dynamic_time_label")
-        self.close_button_posts = QtWidgets.QPushButton(self.frame_2)
-        self.close_button_posts.setGeometry(QtCore.QRect(489, 10, 35, 35))
-        self.close_button_posts.setStyleSheet("*{border-radius:0px;}\n"
-                                              ":pressed{\n"
-                                              "    border: 3px solid  #FF0000;\n"
-                                              "boder:10px;\n"
-                                              "border-radius: 8px;\n"
-                                              "}")
-        self.close_button_posts.setText("")
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap(
-            "c:\\Users\\tejas\\Desktop\\22-01-22\\assests/icons/x-square.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.close_button_posts.setIcon(icon1)
-        self.close_button_posts.setIconSize(QtCore.QSize(40, 40))
-        self.close_button_posts.setObjectName("close_button_posts")
         self.gridLayout.addWidget(self.frame_2, 0, 0, 1, 1)
+
         ###
         self.button_add_comment.clicked.connect(self.add_comment)
         ###
+
+        def json_data():
+            with open(r'C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json') as settings_json_file:
+                return json.load(settings_json_file)
+
+        data = json_data()
+        from compon.add_insert_comment import Comments
+
+        self.te1 = Comments(user=data["log"]["username"],
+                            post=data["post_selected"], comment="")
+
+        self.load_comment()
+        print(0)
+
         self.retranslateUi(posts_form)
-
-        # def json_data():
-        #     with open(r'C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json') as settings_json_file:
-        #         return json.load(settings_json_file)
-
-        # data = json_data()
-        # from compon.add_insert_comment import Comments
-
-        # self.te1 = Comments(user=data["log"]["username"],
-        #                     post=data["post_selected"], comment="")
-
-        # self.load_comment()
-        # print(0)
         QtCore.QMetaObject.connectSlotsByName(posts_form)
 
     def retranslateUi(self, posts_form):
@@ -438,7 +505,6 @@ class Ui_posts_form(object):
         self.label_2.setText(_translate("posts_form", "Files: "))
         self.button_file_download.setText(_translate("posts_form", "Download"))
         self.dynamic_time_label.setText(_translate("posts_form", "Time"))
-
 
 
 if __name__ == "__main__":

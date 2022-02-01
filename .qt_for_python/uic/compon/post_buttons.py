@@ -44,6 +44,10 @@ class Individual_Post_Button():
             data["post_selected"] = self.post_code
         with open(r"C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json", "w") as settings_json_file:
             json.dump(data, settings_json_file, indent=4)
+
+        from sql.fetch_posts import Retrieve_Post_Cl
+        Retrieve_Post_Cl()
+        
         # open post
         self.post_mainwindow = QtWidgets.QMainWindow()
         self.ui_post = Ui_posts_form()
@@ -53,10 +57,7 @@ class Individual_Post_Button():
         self.ui_post.dynamic_posts_heading_label.setText(self.post_heading)
         self.ui_post.dynamic_posts_description_label.setText(
             self.post_description)
-        
 
-        self.ui_post.close_button_posts.hide()
-        # print(self.post_file_name, self.post_file_exten)
         if self.post_file_name != '' and self.post_file_exten != "":
             self.ui_post.label_2.setText("File Name: "+self.post_file_name)
             self.ui_post.button_file_download.clicked.connect(
@@ -65,6 +66,17 @@ class Individual_Post_Button():
             self.ui_post.label_2.setText("No attachments")
             self.ui_post.button_file_download.setDisabled(True)
         self.post_mainwindow.show()
+
+        # def json_data():
+        #     with open(r'C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json') as settings_json_file:
+        #         return json.load(settings_json_file)
+
+        # data = json_data()
+        # from compon.add_insert_comment import Comments
+        # self.te1 = Comments(user=data["log"]["username"],
+        #                     post=data["post_selected"], comment=self.ui_post.lineEdit.text())
+        # print(self.ui_post.lineEdit.text())
+        # self.load_comment()
 
     def __init__(self, mainwindow, di):
 

@@ -71,7 +71,138 @@ backdrop-filter: blur(4px);
 border-radius: 10px;
 </string>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_3"/>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QFrame" name="comment_view_frame">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>70</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>461</width>
+           <height>70</height>
+          </size>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">*{
+position: absolute;
+width: 370px;
+height: 110px;
+left: 7px;
+top: 28px;
+
+background: rgba(0, 0, 0, 0.05);
+border: 1px solid rgba(0, 0, 0, 0.3);
+box-sizing: border-box;
+border-radius: 10px}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="comment_2">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>0</y>
+            <width>441</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Poppins</family>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">position: absolute;
+left: 20px;
+right: 30px;
+top: 10px;
+bottom: 10px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 15
+px;
+line-height: 37px;
+letter-spacing: 0.05em;
+background: rgba(0, 0, 0, 0.01);
+color: #000000;
+border:0px;</string>
+          </property>
+          <property name="text">
+           <string>Comment</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="user_2">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>40</y>
+            <width>441</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">position: absolute;
+left: 20px;
+right: 30px;
+top: 10px;
+bottom: 10px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+line-height: 37px;
+letter-spacing: 0.05em;
+background: rgba(0, 0, 0, 0.01);
+color: #000000;
+
+border:0px;</string>
+          </property>
+          <property name="text">
+           <string>User</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+          </property>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
      </widget>
     </widget>
    </item>
@@ -416,37 +547,6 @@ text-transform: capitalize;
       </property>
       <property name="text">
        <string>Time</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="close_button_posts">
-      <property name="geometry">
-       <rect>
-        <x>489</x>
-        <y>10</y>
-        <width>35</width>
-        <height>35</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">*{border-radius:0px;}
-:pressed{
-	border: 3px solid  #FF0000;
-boder:10px;
-border-radius: 8px;
-}</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="icon">
-       <iconset>
-        <normaloff>assests/icons/x-square.svg</normaloff>assests/icons/x-square.svg</iconset>
-      </property>
-      <property name="iconSize">
-       <size>
-        <width>40</width>
-        <height>40</height>
-       </size>
       </property>
      </widget>
     </widget>
