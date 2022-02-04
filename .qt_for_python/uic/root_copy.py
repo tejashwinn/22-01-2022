@@ -9,7 +9,11 @@ from join_classes import Ui_join_classes_form
 
 class Ui_MainWindow(object):
     ###
-    # EXIT_CODE_REBOOT = -123
+    def un_block_log(self):
+        self.menuViews.setDisabled(False)
+        self.menuClassesMain.setDisabled(False)
+        self.menuClub.setDisabled(False)
+
     def checked_connection_up(self):
         if self.up_password_radio.isChecked():
             self.up_password_entry.setEchoMode(QtWidgets.QLineEdit.Normal)
@@ -42,7 +46,7 @@ class Ui_MainWindow(object):
         self.create_post_mainwindow = QtWidgets.QMainWindow()
         self.ui_create_post = Ui_create_posts_form()
         self.ui_create_post.setupUi(self.create_post_mainwindow)
-        self.ui_create_post.mw=self.mw
+        self.ui_create_post.mw = self.mw
         self.create_post_mainwindow.show()
 
     def write_cred_to_json(self, name, username, email_id):
@@ -58,8 +62,8 @@ class Ui_MainWindow(object):
             template["log"]["name"] = name
             template["log"]["email_id"] = email_id
             template["log"]["username"] = username
-            
-        data=template.copy()
+
+        data = template.copy()
         with open(r"C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json", "w") as settings_json_file:
             json.dump(data, settings_json_file, indent=4)
 
@@ -77,6 +81,9 @@ class Ui_MainWindow(object):
             self.all_classes_frame.hide()
             self.in_email_entry.setText("")
             self.in_password_entry.setText("")
+
+            self.un_block_log()
+
         else:
             self.in_warning_label.setText("Credentials doesn't match")
 
@@ -87,7 +94,7 @@ class Ui_MainWindow(object):
         # QtGui.qApp.exit(Ui_MainWindow.EXIT_CODE_REBOOT )
         sign_up_insert = Sign_Up_Insert(email_id=self.up_email_entry.text(
         ), name=self.up_name_entry.text(), username=self.up_username_entry.text(), password=self.up_password_entry.text())
-        
+
         if self.up_password_entry.text() != self.up_confirm_password_entry.text():
             self.up_warning_label.setText("Passwords doesn't match")
             return
@@ -111,10 +118,11 @@ class Ui_MainWindow(object):
             self.up_email_entry.setText("")
             self.up_password_entry.setText("")
             self.up_confirm_password_entry.setText("")
-            
+
             self.in_email_entry.setText("")
             self.in_password_entry.setText("")
-            
+
+            self.un_block_log()
         else:
             self.write_cred_to_json("", "", "")
             if sign_up_insert.unique_username_constraint == False:

@@ -12,15 +12,27 @@ def json_data():
         return json.load(settings_json_file)
 
 
+def block_log(variable):
+    variable.menuViews.setDisabled(True)
+    variable.menuClassesMain.setDisabled(True)
+    variable.menuClub.setDisabled(True)
+
+
 def sign_up_switch(variable):
+    block_log(variable)
     variable.up_outer_frame.show()
     variable.in_outer_frame.hide()
     variable.main_class_frame.hide()
     variable.in_email_entry.setText("")
     variable.in_password_entry.setText("")
+    variable.up_name_entry.setText("")
+    variable.up_username_entry.setText("")
+    variable.up_email_entry.setText("")
+    variable.up_password_entry.setText("")
 
 
 def sign_in_switch(variable):
+    block_log(variable)
 
     variable.in_outer_frame.show()
     variable.up_outer_frame.hide()
@@ -30,6 +42,8 @@ def sign_in_switch(variable):
     variable.up_username_entry.setText("")
     variable.up_email_entry.setText("")
     variable.up_password_entry.setText("")
+    variable.in_email_entry.setText("")
+    variable.in_password_entry.setText("")
 
 
 def show_main_frame(variable):
@@ -97,8 +111,37 @@ def show_all_classes_frame(variable, te):
     variable.posts_scroll_area.hide()
 
 
-if __name__ == "__main__":
+def log_out(variable):
+    import json
+    with open(r'C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\temp.json') as temp_json_file:
+        template = json.load(temp_json_file)
 
+    data = template.copy()
+    with open(r"C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json", "w") as settings_json_file:
+        json.dump(data, settings_json_file, indent=4)
+
+    block_log(variable)
+    
+    variable.up_outer_frame.show()
+    variable.in_outer_frame.hide()
+    variable.main_class_frame.hide()
+    variable.in_email_entry.setText("")
+    variable.in_password_entry.setText("")
+    variable.up_name_entry.setText("")
+    variable.up_username_entry.setText("")
+    variable.up_email_entry.setText("")
+    variable.up_password_entry.setText("")
+
+
+def show(variable):
+    data = json_data()
+    if data["log"]["name"] == '' or data["log"]["email_id"] == '' or data["log"]["username"] == "":
+        sign_up_switch(variable)
+    else:
+        show_all_classes_frame(variable, "classes_owned")
+
+
+if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     global MainWindow
     MainWindow = QtWidgets.QMainWindow()
@@ -110,7 +153,7 @@ if __name__ == "__main__":
     # switches
     ui.actionSignUp.triggered.connect(lambda: sign_up_switch(ui))
     ui.actionSignIn.triggered.connect(lambda: sign_in_switch(ui))
-
+    ui.actionLogOut.triggered.connect(lambda: log_out(ui))
     ui.actionClasses.triggered.connect(
         lambda: show_all_classes_frame(ui, "classes_joined"))
     ui.actionViewClasses.triggered.connect(
@@ -125,10 +168,9 @@ if __name__ == "__main__":
         QtCore.Qt.ScrollBarAlwaysOff)
     ui.up_sign_up_button.clicked.connect(ui.sign_up_insert)
 
-    # for i in range(100):
-    #     temp = ui.return_post_button(MainWindow, str(i))
-    #     ui.verticalLayout.addWidget(temp)
-    show_all_classes_frame(ui, "classes_owned")
+    # todo show_all_classes_frame(ui, "classes_owned")
+    show(ui)
+
     MainWindow.show()
-    
+
     sys.exit(app.exec_())

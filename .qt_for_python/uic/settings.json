@@ -1,40 +1,11 @@
 {
     "seek": "",
     "log": {
-        "username": 1,
-        "name": "1",
-        "email_id": "1"
+        "username": "",
+        "name": "",
+        "email_id": ""
     },
-    "classes_owned": [
-        {
-            "class_name": "123",
-            "class_description": "123",
-            "class_code": "CGF0HgN2zv",
-            "class_admin": "1",
-            "class_students": []
-        },
-        {
-            "class_name": "qwe",
-            "class_description": "qwe",
-            "class_code": "4O4Pj9Bi1e",
-            "class_admin": "1",
-            "class_students": []
-        },
-        {
-            "class_name": "aserea",
-            "class_description": "asd",
-            "class_code": "im8A2GR7I9",
-            "class_admin": "1",
-            "class_students": []
-        },
-        {
-            "class_name": "d",
-            "class_description": "123",
-            "class_code": "bcsT1iaTgH",
-            "class_admin": "1",
-            "class_students": []
-        }
-    ],
+    "classes_owned": [],
     "classes_joined": [],
     "class_selected": "",
     "post_selected": "",
