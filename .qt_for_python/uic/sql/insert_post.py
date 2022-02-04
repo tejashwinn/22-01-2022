@@ -68,19 +68,19 @@ class Create_Post():
             self.username = data["log"]["username"]
             from sql.fetch_classes_sql import Fetch_Classes_Cl
             Fetch_Classes_Cl()
-            print(data["classes_owned"])
+            # print(data["classes_owned"])
             for i in data["classes_owned"]:
-                print(i["class_admin"],
-                      self.username, data["class_selected"], i["class_code"])
+                # print(i["class_admin"],
+                #       self.username, data["class_selected"], i["class_code"])
                 if (str(i["class_admin"]) == str(self.username)) and (str(self.class_code) == str(i["class_code"])):
                     # print(i["class_admin"],
                     #       self.username, data["class_selected"], i["class_code"])
-                    print(1)
+                    # print(1)
                     self.valid = True
                     self.errors = "Successfully Posted"
                     break
                 else:
-                    print(0)
+                    # print(0)
                     self.valid = False
                     self.errors = "No Admin Privilege"
 

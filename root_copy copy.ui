@@ -1715,6 +1715,7 @@ border:0px;</string>
     <addaction name="separator"/>
     <addaction name="actionLogOut"/>
     <addaction name="separator"/>
+    <addaction name="actionRefresh_2"/>
    </widget>
    <widget class="QMenu" name="menuViews">
     <property name="title">
@@ -1874,6 +1875,20 @@ border:0px;</string>
    </property>
    <property name="text">
     <string>Join CLass</string>
+   </property>
+  </action>
+  <action name="actionRefresh">
+   <property name="text">
+    <string>Refresh</string>
+   </property>
+  </action>
+  <action name="actionRefresh_2">
+   <property name="icon">
+    <iconset>
+     <normaloff>assests/icons/refresh-ccw.svg</normaloff>assests/icons/refresh-ccw.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Refresh</string>
    </property>
   </action>
  </widget>

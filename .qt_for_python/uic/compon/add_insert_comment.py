@@ -28,7 +28,7 @@ class Comments():
 
     def insert(self):
         self.existing_comments.append(self.di)
-        print(self.di)
+        # print(self.di)
         sql = ''' UPDATE posts_cvs SET post_comments=? WHERE post_code=?'''
         # print("dumb", json.dumps(self.existing_comments))
         json_data = json.dumps(self.existing_comments)

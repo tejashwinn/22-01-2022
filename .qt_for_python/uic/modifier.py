@@ -16,6 +16,7 @@ def block_log(variable):
     variable.menuViews.setDisabled(True)
     variable.menuClassesMain.setDisabled(True)
     variable.menuClub.setDisabled(True)
+    variable.actionRefresh.setDisabled(True)
 
 
 def sign_up_switch(variable):
@@ -23,12 +24,15 @@ def sign_up_switch(variable):
     variable.up_outer_frame.show()
     variable.in_outer_frame.hide()
     variable.main_class_frame.hide()
+
     variable.in_email_entry.setText("")
     variable.in_password_entry.setText("")
+
     variable.up_name_entry.setText("")
     variable.up_username_entry.setText("")
     variable.up_email_entry.setText("")
     variable.up_password_entry.setText("")
+    variable.up_confirm_password_entry.setText("")
 
 
 def sign_in_switch(variable):
@@ -42,6 +46,8 @@ def sign_in_switch(variable):
     variable.up_username_entry.setText("")
     variable.up_email_entry.setText("")
     variable.up_password_entry.setText("")
+    variable.up_confirm_password_entry.setText("")
+
     variable.in_email_entry.setText("")
     variable.in_password_entry.setText("")
 
@@ -121,7 +127,7 @@ def log_out(variable):
         json.dump(data, settings_json_file, indent=4)
 
     block_log(variable)
-    
+
     variable.up_outer_frame.show()
     variable.in_outer_frame.hide()
     variable.main_class_frame.hide()
@@ -137,8 +143,21 @@ def show(variable):
     data = json_data()
     if data["log"]["name"] == '' or data["log"]["email_id"] == '' or data["log"]["username"] == "":
         sign_up_switch(variable)
+        show_all_classes_frame(variable, "classes_owned")
     else:
         show_all_classes_frame(variable, "classes_owned")
+        variable.main_class_frame.show()
+        variable.all_classes_frame.show()
+        variable.class_name_frame.hide()
+        variable.posts_scroll_area.hide()
+
+
+def restart(variable):
+    Fetch_Classes_Cl()
+    Retrieve_Post_Cl()
+    # print(1)
+    # show_all_classes_frame(variable, "classes_joined")
+    # show_all_classes_frame(variable, "classes_owned")
 
 
 if __name__ == "__main__":
@@ -158,6 +177,7 @@ if __name__ == "__main__":
         lambda: show_all_classes_frame(ui, "classes_joined"))
     ui.actionViewClasses.triggered.connect(
         lambda: show_all_classes_frame(ui, "classes_owned"))
+    ui.actionRefresh.triggered.connect(lambda: restart(ui))
 
     # button actions
     ui.in_sign_up_button.clicked.connect(lambda: sign_up_switch(ui))

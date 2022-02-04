@@ -42,22 +42,23 @@ class Ui_create_posts_form(object):
 
     def create(self):
         # print(self.path)
-
         if self.path[0] == "":
             temp = Create_Post(name=self.create_post_name_entry.toPlainText(
             ), description=self.create_post_des_entry.toPlainText())
             if temp.valid:
                 temp.insert()
-                self.dynamic_create_post_warning_label.setText("Post Posted")
         else:
             temp = Create_Post(name=self.create_post_name_entry.toPlainText(
             ), description=self.create_post_des_entry.toPlainText(), file_path=self.path[0])
             if temp.valid:
                 temp.insert_with_file()
-                self.dynamic_create_post_warning_label.setText("Post Posted")
+
         # self.sync_t()
         # self.create_post_button.setDisabled(True)
+        self.dynamic_create_post_warning_label.show()
         self.dynamic_create_post_warning_label.setText(temp.errors)
+        if temp.errors == "":
+            self.dynamic_create_post_warning_label.setText("Post Posted")
 
     def setupUi(self, create_posts_form):
         self.mw = None
@@ -275,7 +276,6 @@ class Ui_create_posts_form(object):
         self.gridLayout.addWidget(self.create_posts_frame, 0, 0, 1, 1)
         self.add_files_button_posts.clicked.connect(self.open_file)
         self.create_post_button.clicked.connect(self.create)
-        self.retranslateUi(create_posts_form)
         self.dynamic_create_post_warning_label = QtWidgets.QLabel(
             self.create_posts_frame)
         self.dynamic_create_post_warning_label.setGeometry(
@@ -293,6 +293,7 @@ class Ui_create_posts_form(object):
         self.dynamic_create_post_warning_label.setObjectName(
             "dynamic_create_post_warning_label")
 
+        self.retranslateUi(create_posts_form)
         QtCore.QMetaObject.connectSlotsByName(create_posts_form)
 
     def retranslateUi(self, create_posts_form):
@@ -311,6 +312,8 @@ class Ui_create_posts_form(object):
             _translate("create_posts_form", "Add Files"))
         self.create_post_button.setText(
             _translate("create_posts_form", "Create Post"))
+        self.dynamic_create_post_warning_label.setText(
+            _translate("create_posts_form", "Enter the details"))
 
 
 if __name__ == "__main__":

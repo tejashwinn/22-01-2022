@@ -16,7 +16,7 @@ import json
 class Ui_posts_form(object):
 
     def return_comment(self, user1, comment1, p=""):
-        print(12)
+        # print(12)
         if p == "":
             p=self.p_f
         
@@ -118,7 +118,7 @@ class Ui_posts_form(object):
         from compon.add_insert_comment import Comments
         self.te1 = Comments(user=data["log"]["username"],
                             post=data["post_selected"], comment=self.lineEdit.text())
-        print(self.lineEdit.text())
+        # print(self.lineEdit.text())
         self.te1.insert()
         self.load_comment()
 

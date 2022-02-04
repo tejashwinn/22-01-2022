@@ -105,7 +105,7 @@ class Ui_posts_form(object):
         clearLayout(self.verticalLayout_39)
 
         if self.te1.existing_comments != []:
-            print(self.te1.existing_comments)
+            # print(self.te1.existing_comments)
             for i in self.te1.existing_comments:
                 self.verticalLayout_39.addWidget(
                     self.return_comment(user1=i["user"], comment1=i["comment"]))
@@ -122,12 +122,12 @@ class Ui_posts_form(object):
         from compon.add_insert_comment import Comments
         self.te1 = Comments(user=data["log"]["username"],
                             post=data["post_selected"], comment=self.lineEdit.text())
-        print(self.lineEdit.text())
+        # print(self.lineEdit.text())
         self.te1.insert()
         self.verticalLayout_39.addWidget(
             self.return_comment(user1=data["log"]["username"], comment1=self.lineEdit.text()))
         self.verticalLayout_39.addItem(QtWidgets.QSpacerItem(
-            20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding))
+            0, 0, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding))
 
     def setupUi(self, posts_form):
         self.p_f = posts_form

@@ -1,6 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from create_posts import Ui_create_posts_form
-from compon.posts import Ui_posts_form
 from sql.sign_up_sql import Sign_Up_Insert
 from sql.sign_in_sql import Sign_In_Check
 from create_classes import Ui_create_classes_form
@@ -13,6 +12,8 @@ class Ui_MainWindow(object):
         self.menuViews.setDisabled(False)
         self.menuClassesMain.setDisabled(False)
         self.menuClub.setDisabled(False)
+        self.actionRefresh.setDisabled(False)
+        
 
     def checked_connection_up(self):
         if self.up_password_radio.isChecked():
@@ -82,8 +83,14 @@ class Ui_MainWindow(object):
             self.in_email_entry.setText("")
             self.in_password_entry.setText("")
 
+            self.up_confirm_password_entry.setText("")
+
             self.un_block_log()
 
+            self.main_class_frame.show()
+            self.all_classes_frame.show()
+            self.class_name_frame.hide()
+            self.posts_scroll_area.hide()
         else:
             self.in_warning_label.setText("Credentials doesn't match")
 
@@ -123,6 +130,11 @@ class Ui_MainWindow(object):
             self.in_password_entry.setText("")
 
             self.un_block_log()
+
+            self.main_class_frame.show()
+            self.all_classes_frame.show()
+            self.class_name_frame.hide()
+            self.posts_scroll_area.hide()
         else:
             self.write_cred_to_json("", "", "")
             if sign_up_insert.unique_username_constraint == False:
@@ -1127,6 +1139,8 @@ class Ui_MainWindow(object):
         self.menuClassesMain.setObjectName("menuAdmin")
         self.menuClub = QtWidgets.QMenu(self.menubar)
         self.menuClub.setObjectName("menuClub")
+        
+        
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
@@ -1228,6 +1242,12 @@ class Ui_MainWindow(object):
         self.actionJoinClass.setIcon(icon11)
         self.actionJoinClass.triggered.connect(
             lambda: self.show_join_class())
+        self.actionRefresh = QtWidgets.QAction(MainWindow)
+        icon221 = QtGui.QIcon()
+        icon221.addPixmap(QtGui.QPixmap(
+            "c:\\Users\\tejas\\Desktop\\22-01-22\\assests/icons/refresh-ccw.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.actionRefresh.setIcon(icon221)
+        self.actionRefresh.setObjectName("actionRefresh")
         ###
 
         self.menuUser.addAction(self.actionSignUp)
@@ -1236,6 +1256,10 @@ class Ui_MainWindow(object):
         self.menuUser.addSeparator()
         self.menuUser.addAction(self.actionLogOut)
         self.menuUser.addSeparator()
+        ###
+        self.menuUser.addAction(self.actionRefresh)
+        self.menuUser.addSeparator()
+        ###
 
         self.menuViews.addAction(self.actionClasses)
         self.menuViews.addSeparator()
@@ -1259,11 +1283,13 @@ class Ui_MainWindow(object):
         self.menuClub.addAction(self.actionClubEvents)
         self.menuClub.addSeparator()
         self.menuClub.addAction(self.actionClubs)
+        
+        
         self.menubar.addAction(self.menuUser.menuAction())
         self.menubar.addAction(self.menuViews.menuAction())
         self.menubar.addAction(self.menuClassesMain.menuAction())
         self.menubar.addAction(self.menuClub.menuAction())
-
+        
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
@@ -1291,9 +1317,9 @@ class Ui_MainWindow(object):
         self.in_warning_label.setText(_translate(
             "MainWindow", "Please enter your details to continue."))
         self.class_name_label_dynamic.setText(
-            _translate("MainWindow", "Class Name"))
+            _translate("MainWindow", ""))
         self.class_description_label_dynamic.setText(
-            _translate("MainWindow", "fd"))
+            _translate("MainWindow", ""))
         self.static_events.setText(_translate("MainWindow", "Events"))
         self.static_assignment.setText(_translate("MainWindow", "Assignments"))
         self.menuUser.setTitle(_translate("MainWindow", "User"))
@@ -1319,3 +1345,5 @@ class Ui_MainWindow(object):
         self.actionCreateClass.setText(
             _translate("MainWindow", "Create Class"))
         self.actionJoinClass.setText(_translate("MainWindow", "Join CLass"))
+        self.actionRefresh.setText(_translate("MainWindow", "Refresh"))
+        ###
