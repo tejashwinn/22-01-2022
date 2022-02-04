@@ -1,5 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-from create_posts import Ui_create_posts_form
+from create_posts_123123 import Ui_create_posts_form
 from sql.sign_up_sql import Sign_Up_Insert
 from sql.sign_in_sql import Sign_In_Check
 from create_classes import Ui_create_classes_form
