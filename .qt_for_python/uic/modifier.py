@@ -139,7 +139,11 @@ def log_out(variable):
 
 def show(variable):
     data = json_data()
-    if data["log"]["name"] == '' or data["log"]["email_id"] == '' or str(data["log"]["username"]) == "":
+    if (
+        data["log"]["name"] == ''
+        or data["log"]["email_id"] == ''
+        or not str(data["log"]["username"])
+    ):
         sign_up_switch(variable)
         show_all_classes_frame(variable, "classes_owned")
 
