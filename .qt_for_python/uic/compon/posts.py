@@ -120,12 +120,13 @@ class Ui_posts_form(object):
 
         data = json_data()
         from compon.add_insert_comment import Comments
-        self.te1 = Comments(user=data["log"]["username"],
+        self.te1 = Comments(user=str(data["log"]["username"]),
                             post=data["post_selected"], comment=self.lineEdit.text())
         # print(self.lineEdit.text())
         self.te1.insert()
         self.verticalLayout_39.addWidget(
-            self.return_comment(user1=data["log"]["username"], comment1=self.lineEdit.text()))
+            self.return_comment(
+                user1=str(data["log"]["username"]), comment1=self.lineEdit.text()))
         self.verticalLayout_39.addItem(QtWidgets.QSpacerItem(
             0, 0, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding))
 
@@ -488,7 +489,7 @@ class Ui_posts_form(object):
         data = json_data()
         from compon.add_insert_comment import Comments
 
-        self.te1 = Comments(user=data["log"]["username"],
+        self.te1 = Comments(user=str(data["log"]["username"]),
                             post=data["post_selected"], comment="")
 
         self.load_comment()

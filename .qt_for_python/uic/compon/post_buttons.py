@@ -73,7 +73,7 @@ class Individual_Post_Button():
 
         # data = json_data()
         # from compon.add_insert_comment import Comments
-        # self.te1 = Comments(user=data["log"]["username"],
+        # self.te1 = Comments(user=str(data["log"]["username"]),
         #                     post=data["post_selected"], comment=self.ui_post.lineEdit.text())
         # print(self.ui_post.lineEdit.text())
         # self.load_comment()

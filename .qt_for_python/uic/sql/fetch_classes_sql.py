@@ -9,7 +9,7 @@ class Fetch_Classes_Cl():
     def json_data(self):
         with open(r'C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json') as settings_json_file:
             data = json.load(settings_json_file)
-            self.username = data["log"]["username"]
+            self.username = str(data["log"]["username"])
 
     def create_connection(self, js=False):
         self.connection = None
@@ -40,14 +40,17 @@ class Fetch_Classes_Cl():
         classes = [
             rows_all[i][0]
             for i in range(len(rows_all))
-            if self.username in json.loads(rows_all[i][1])
+            if str(self.username) in json.loads(rows_all[i][1])
         ]
+        # print(classes)
+        # print(json.loads(rows_all[1][1]))
 
         self.create_connection(js=True)
         for i in classes:
             self.cursor.execute(
                 "SELECT class_name,class_description,class_code,class_admin,class_students FROM classes_cvs WHERE class_code=?", (i,))
             rows = self.cursor.fetchall()
+
             temp = dict(rows[0])
             temp["class_students"] = json.loads(temp["class_students"])
             self.joined_classes.append(temp)

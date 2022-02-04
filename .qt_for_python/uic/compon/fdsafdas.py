@@ -116,7 +116,7 @@ class Ui_posts_form(object):
 
         data = json_data()
         from compon.add_insert_comment import Comments
-        self.te1 = Comments(user=data["log"]["username"],
+        self.te1 = Comments(user=str(data["log"]["username"]),
                             post=data["post_selected"], comment=self.lineEdit.text())
         # print(self.lineEdit.text())
         self.te1.insert()
@@ -420,7 +420,7 @@ class Ui_posts_form(object):
         data = json_data()
         from compon.add_insert_comment import Comments
 
-        self.te1 = Comments(user=data["log"]["username"],
+        self.te1 = Comments(user=str(data["log"]["username"]),
                             post=data["post_selected"], comment="")
 
         self.load_comment()

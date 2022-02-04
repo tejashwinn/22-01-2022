@@ -24,7 +24,7 @@ class Create_Classes():
         import json
         with open(r'C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json') as settings_json_file:
             data = json.load(settings_json_file)
-            self.username = data["log"]["username"]
+            self.username = str(data["log"]["username"])
 
     def check_for_code(self):
         self.cursor.execute(

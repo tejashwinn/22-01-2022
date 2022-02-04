@@ -80,9 +80,7 @@ def show_all_classes_frame(variable, te):
     clearLayout(variable.verticalLayout_5)
 
     data = json_data()
-    variable.all_classes_frame.show()
-    variable.class_name_frame.hide()
-    variable.posts_scroll_area.hide()
+
     temp1 = QtWidgets.QLabel(variable.in_inner_frame)
     temp1.setGeometry(QtCore.QRect(10, 10, 441, 30))
     temp1.setStyleSheet("position: absolute;\n"
@@ -111,7 +109,7 @@ def show_all_classes_frame(variable, te):
         20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
     variable.verticalLayout_5.addItem(spacerItem)
 
-    Retrieve_Post_Cl()
+    # Retrieve_Post_Cl()
     variable.all_classes_frame.show()
     variable.class_name_frame.hide()
     variable.posts_scroll_area.hide()
@@ -141,9 +139,10 @@ def log_out(variable):
 
 def show(variable):
     data = json_data()
-    if data["log"]["name"] == '' or data["log"]["email_id"] == '' or data["log"]["username"] == "":
+    if data["log"]["name"] == '' or data["log"]["email_id"] == '' or str(data["log"]["username"]) == "":
         sign_up_switch(variable)
         show_all_classes_frame(variable, "classes_owned")
+
     else:
         show_all_classes_frame(variable, "classes_owned")
         variable.main_class_frame.show()
@@ -155,12 +154,26 @@ def show(variable):
 def restart(variable):
     Fetch_Classes_Cl()
     Retrieve_Post_Cl()
-    # print(1)
-    # show_all_classes_frame(variable, "classes_joined")
-    # show_all_classes_frame(variable, "classes_owned")
+    show_all_classes_frame(variable, "classes_joined")
+    show_all_classes_frame(variable, "classes_owned")
+    data = json_data()
+    data["class_selected"] = ""
+    data["post_selected"] = ""
+
+    with open(r"C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json", "w") as settings_json_file:
+        json.dump(data, settings_json_file, indent=4)
 
 
 if __name__ == "__main__":
+
+    # clears previous posts and class selected
+    data = json_data()
+    data["class_selected"] = ""
+    data["post_selected"] = ""
+
+    with open(r"C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json", "w") as settings_json_file:
+        json.dump(data, settings_json_file, indent=4)
+
     app = QtWidgets.QApplication(sys.argv)
     global MainWindow
     MainWindow = QtWidgets.QMainWindow()

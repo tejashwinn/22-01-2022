@@ -18,7 +18,7 @@ class Join_Classes_Cl():
     def json_data(self):
         with open(r'C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json') as settings_json_file:
             data = json.load(settings_json_file)
-            self.username = data["log"]["username"]
+            self.username = str(data["log"]["username"])
 
     def check_for_class(self):
         self.cursor.execute(
@@ -39,16 +39,16 @@ class Join_Classes_Cl():
         if rows != []:
             # print(1)
             self.Valid = False
-            #error
-            #error
-            #error
-            #error
-            #error
-            #error
-            #error
-            #error
-            #error
-            #gives true instead of false to change
+            # error
+            # error
+            # error
+            # error
+            # error
+            # error
+            # error
+            # error
+            # error
+            # gives true instead of false to change
             # print(self.valid)
             self.errors = "Can't join class which you had created"
         else:

@@ -47,14 +47,17 @@ class Ui_create_posts_form(object):
             ), description=self.create_post_des_entry.toPlainText())
             if temp.valid:
                 temp.insert()
+                self.create_post_button.setDisabled(True)
+
         else:
             temp = Create_Post(name=self.create_post_name_entry.toPlainText(
             ), description=self.create_post_des_entry.toPlainText(), file_path=self.path[0])
             if temp.valid:
                 temp.insert_with_file()
+                self.create_post_button.setDisabled(True)
+
 
         # self.sync_t()
-        # self.create_post_button.setDisabled(True)
         self.dynamic_create_post_warning_label.show()
         self.dynamic_create_post_warning_label.setText(temp.errors)
         if temp.errors == "":

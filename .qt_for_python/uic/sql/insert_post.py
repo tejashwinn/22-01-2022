@@ -65,7 +65,7 @@ class Create_Post():
         with open(r'C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json') as settings_json_file:
             data = json.load(settings_json_file)
             self.class_code = data["class_selected"]
-            self.username = data["log"]["username"]
+            self.username = str(data["log"]["username"])
             from sql.fetch_classes_sql import Fetch_Classes_Cl
             Fetch_Classes_Cl()
             # print(data["classes_owned"])

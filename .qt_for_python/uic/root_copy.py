@@ -54,9 +54,9 @@ class Ui_MainWindow(object):
         import json
         with open(r'C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json') as settings_json_file:
             data = json.load(settings_json_file)
-            data["log"]["name"] = name
-            data["log"]["email_id"] = email_id
-            data["log"]["username"] = username
+            data["log"]["name"] = str(name)
+            data["log"]["email_id"] = str(email_id)
+            data["log"]["username"] = str(username)
 
         with open(r'C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\temp.json') as temp_json_file:
             template = json.load(temp_json_file)

@@ -21,14 +21,14 @@ class Individual_Class_Button():
                     elif child.layout() is not None:
                         clearLayout(child.layout())
         clearLayout(self.ui_te.verticalLayout)
-        
+
         for i in data["posts_in_class"]:
             temp = Individual_Post_Button(mainwindow=self.mainwindow, di=i)
             self.ui_te.verticalLayout.addWidget(temp.child)
         spacerItem = QtWidgets.QSpacerItem(
-        20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+            20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.ui_te.verticalLayout.addItem(spacerItem)
-        
+
     def open_class(self, event):
         self.ui_te.all_classes_frame.hide()
         self.ui_te.class_name_frame.show()
@@ -38,6 +38,7 @@ class Individual_Class_Button():
         with open(r'C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json') as settings_json_file:
             data = json.load(settings_json_file)
             data["class_selected"] = self.class_code
+            data["post_selected"] = ""
         with open(r"C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json", "w") as settings_json_file:
             json.dump(data, settings_json_file, indent=4)
         Retrieve_Post_Cl()
