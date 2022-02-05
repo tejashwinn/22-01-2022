@@ -37,6 +37,9 @@ class Comments():
         from sql.fetch_posts import Retrieve_Post_Cl
         Retrieve_Post_Cl()
 
+        from sql.fetch_classes_sql import Fetch_Classes_Cl
+        Fetch_Classes_Cl()
+        
     def __init__(self, post, user, comment):
         self.existing_comments = []
         self.create_connection()

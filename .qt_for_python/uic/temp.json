@@ -9,5 +9,7 @@
     "classes_joined": [],
     "class_selected": "",
     "post_selected": "",
-    "posts_in_class": []
+    "as_selected": "",
+    "posts_in_class": [],
+    "as_in_class": []
 }

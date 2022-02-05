@@ -4,6 +4,7 @@ from sql.sign_up_sql import Sign_Up_Insert
 from sql.sign_in_sql import Sign_In_Check
 from create_classes import Ui_create_classes_form
 from join_classes import Ui_join_classes_form
+from compon.create_assignments import Ui_Assignment_form
 
 
 class Ui_MainWindow(object):
@@ -15,8 +16,6 @@ class Ui_MainWindow(object):
         self.menuClub.setDisabled(False)
         self.actionRefresh.setDisabled(False)
         
-
-
     def checked_connection_up(self):
         if self.up_password_radio.isChecked():
             self.up_password_entry.setEchoMode(QtWidgets.QLineEdit.Normal)
@@ -40,6 +39,15 @@ class Ui_MainWindow(object):
         self.ui_class_create = Ui_create_classes_form()
         self.ui_class_create.setupUi(self.create_class_main_window)
         self.create_class_main_window.show()
+
+
+    def show_create_as(self):
+        for _ in range(12):
+            print("\n")
+        self.create_as_main_window = QtWidgets.QMainWindow()
+        self.ui_as_create = Ui_Assignment_form()
+        self.ui_as_create.setupUi(self.create_as_main_window)
+        self.create_as_main_window.show()
 
 
     def show_join_class(self):
@@ -73,6 +81,15 @@ class Ui_MainWindow(object):
         with open(r"C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json", "w") as settings_json_file:
             json.dump(data, settings_json_file, indent=4)
 
+    def log_set(self):
+        self.up_name_entry.setText("")
+        self.up_username_entry.setText("")
+        self.up_email_entry.setText("")
+        self.up_password_entry.setText("")
+        self.up_confirm_password_entry.setText("")
+
+        self.in_email_entry.setText("")
+        self.in_password_entry.setText("")
 
     def sign_in_credentials(self):
         check = Sign_In_Check(email_id=self.in_email_entry.text(
@@ -80,19 +97,27 @@ class Ui_MainWindow(object):
         if self.in_email_entry.text() == "" or self.in_password_entry.text() == "":
             self.in_warning_label.setText("Fields can't be empty")
             return
-        if check.credentials_exists:
-            self.main_class_frame.show()
-            self.up_outer_frame.hide()
-            self.in_outer_frame.hide()
-            self.all_classes_frame.hide()
-            self.in_email_entry.setText("")
-            self.in_password_entry.setText("")
-            self.up_confirm_password_entry.setText("")
-            self.un_block_log()   
+        if check.credentials_exists:    
             self.main_class_frame.show()
             self.all_classes_frame.show()
+            
             self.class_name_frame.hide()
             self.posts_scroll_area.hide()
+            self.up_outer_frame.hide()
+            self.in_outer_frame.hide()
+
+            self.un_block_log()
+
+            def clearLayout(layout):
+                if layout is not None:
+                    while layout.count():
+                        child = layout.takeAt(0)
+                        if child.widget() is not None:
+                            child.widget().deleteLater()
+                        elif child.layout() is not None:
+                            clearLayout(child.layout())
+                            
+            clearLayout(self.verticalLayout_5)
         else:
             self.in_warning_label.setText("Credentials doesn't match")
         self.write_cred_to_json(
@@ -100,7 +125,6 @@ class Ui_MainWindow(object):
 
 
     def sign_up_insert(self):
-        # QtGui.qApp.exit(Ui_MainWindow.EXIT_CODE_REBOOT )
         sign_up_insert = Sign_Up_Insert(email_id=self.up_email_entry.text(
         ), name=self.up_name_entry.text(), username=self.up_username_entry.text(), password=self.up_password_entry.text())
         if self.up_password_entry.text() != self.up_confirm_password_entry.text():
@@ -114,23 +138,20 @@ class Ui_MainWindow(object):
             self.in_warning_label.setText(
                 "Successfully Signed up enter details to continue")
             self.write_cred_to_json("", "", "")
-            self.in_outer_frame.show()
-            self.up_outer_frame.hide()
-            self.main_class_frame.hide()
+            
             self.up_name_entry.setText("")
             self.up_username_entry.setText("")
             self.up_email_entry.setText("")
             self.up_password_entry.setText("")
             self.up_confirm_password_entry.setText("")
+            
             self.in_email_entry.setText("")
             self.in_password_entry.setText("")
-            self.main_class_frame.show()
-            self.all_classes_frame.show()
-            self.class_name_frame.hide()
-            self.posts_scroll_area.hide()
+            
+            self.in_outer_frame.show()
+            self.up_outer_frame.hide()
+            self.main_class_frame.hide()
             self.un_block_log()
-
-
         else:
             self.write_cred_to_json("", "", "")
             if sign_up_insert.unique_username_constraint == False:
@@ -1181,6 +1202,7 @@ class Ui_MainWindow(object):
         ###
         self.actionCreatePost.triggered.connect(
             lambda: self.show_create_post())
+        
         ###
         icon6 = QtGui.QIcon()
         icon6.addPixmap(QtGui.QPixmap(
@@ -1343,4 +1365,7 @@ class Ui_MainWindow(object):
             _translate("MainWindow", "Create Class"))
         self.actionJoinClass.setText(_translate("MainWindow", "Join CLass"))
         self.actionRefresh.setText(_translate("MainWindow", "Refresh"))
+        self.actionCreateAssignment.triggered.connect(
+            lambda: self.show_create_as())
+
         ###

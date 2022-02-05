@@ -4,7 +4,7 @@ import sqlite3
 from sqlite3 import Error
 
 
-class Retrieve_Post_Cl():
+class Retrieve_As_Cl():
 
     database = r"C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\college_virtual_space.db"
 
@@ -21,12 +21,14 @@ class Retrieve_Post_Cl():
 
     def ret(self):
         self.cursor.execute(
-            "SELECT post_code,post_class,post_heading,post_description,post_file_name,post_date,post_file_exten,post_comments FROM posts_cvs WHERE post_class=?", (self.class_code,))
+            "SELECT as_code,as_class,as_heading,as_des,as_date,as_sub_date,as_marks,as_file_name,as_exten,as_comments FROM as_cvs WHERE as_class =?", (self.class_code,))
         rows = self.cursor.fetchall()
         for ix in rows:
             temp = dict(ix)
-            temp["post_comments"] = json.loads(temp["post_comments"])
-            self.post_in.append(temp)
+            # print(temp)
+            temp["as_comments"] = json.loads(temp["as_comments"])
+            
+            self.as_in.append(temp)
 
     def fetch_class_code(self):
         with open(r'C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json') as settings_json_file:
@@ -34,16 +36,13 @@ class Retrieve_Post_Cl():
             self.class_code = self.data["class_selected"]
 
     def write_to_json(self):
-        self.data["posts_in_class"] = self.post_in
+        self.data["as_in_class"] = self.as_in
         with open(r"C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json", "w") as settings_json_file:
             json.dump(self.data, settings_json_file, indent=4)
 
     def __init__(self):
-        self.post_in = []
+        self.as_in = []
         self.create_connection()
         self.fetch_class_code()
         self.ret()
         self.write_to_json()
-
-
-# Retrieve_Post_Cl()

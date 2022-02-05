@@ -1,45 +1,34 @@
 {
     "seek": "",
     "log": {
-        "username": 1,
-        "name": "1",
-        "email_id": "1"
+        "username": 123,
+        "name": "123",
+        "email_id": "123"
     },
     "classes_owned": [
         {
+            "class_name": "1",
+            "class_description": "1",
+            "class_code": "LfHVDRmCed",
+            "class_admin": "123",
+            "class_students": []
+        },
+        {
             "class_name": "123",
             "class_description": "123",
-            "class_code": "CGF0HgN2zv",
-            "class_admin": "1",
+            "class_code": "uRX40t0uq7",
+            "class_admin": "123",
             "class_students": [
-                "123"
+                "12`3"
             ]
         },
         {
-            "class_name": "qwe",
-            "class_description": "qwe",
-            "class_code": "4O4Pj9Bi1e",
-            "class_admin": "1",
-            "class_students": []
-        },
-        {
-            "class_name": "aserea",
-            "class_description": "asd",
-            "class_code": "im8A2GR7I9",
-            "class_admin": "1",
-            "class_students": []
-        },
-        {
-            "class_name": "d",
+            "class_name": "123",
             "class_description": "123",
-            "class_code": "bcsT1iaTgH",
-            "class_admin": "1",
-            "class_students": [
-                "123"
-            ]
-        }
-    ],
-    "classes_joined": [
+            "class_code": "66JfsqINmh",
+            "class_admin": "123",
+            "class_students": []
+        },
         {
             "class_name": "1231",
             "class_description": "1123",
@@ -63,7 +52,240 @@
             ]
         }
     ],
-    "class_selected": "JPVJWEgyZU",
+    "classes_joined": [
+        {
+            "class_name": "123",
+            "class_description": "123",
+            "class_code": "F9vewHlXFw",
+            "class_admin": "tej",
+            "class_students": [
+                "123",
+                "kek"
+            ]
+        },
+        {
+            "class_name": "123",
+            "class_description": "123",
+            "class_code": "CGF0HgN2zv",
+            "class_admin": "1",
+            "class_students": [
+                "123"
+            ]
+        },
+        {
+            "class_name": "d",
+            "class_description": "123",
+            "class_code": "bcsT1iaTgH",
+            "class_admin": "1",
+            "class_students": [
+                "123"
+            ]
+        }
+    ],
+    "class_selected": "LfHVDRmCed",
     "post_selected": "",
-    "posts_in_class": []
+    "as_selected": "",
+    "posts_in_class": [
+        {
+            "post_code": "wmmn9RFLVm",
+            "post_class": "LfHVDRmCed",
+            "post_heading": "123",
+            "post_description": "123",
+            "post_file_name": "",
+            "post_date": "2022-02-01 15:20:24.986962",
+            "post_file_exten": "",
+            "post_comments": [
+                {
+                    "user": 123,
+                    "comment": "123"
+                },
+                {
+                    "user": 123,
+                    "comment": "123"
+                },
+                {
+                    "user": 123,
+                    "comment": "d"
+                },
+                {
+                    "user": 123,
+                    "comment": "f"
+                }
+            ]
+        },
+        {
+            "post_code": "vnxUSq7LOE",
+            "post_class": "LfHVDRmCed",
+            "post_heading": "123",
+            "post_description": "fasdfasdfsadf",
+            "post_file_name": "",
+            "post_date": "2022-02-01 15:32:33.291064",
+            "post_file_exten": "",
+            "post_comments": []
+        },
+        {
+            "post_code": "tI086ckBNp",
+            "post_class": "LfHVDRmCed",
+            "post_heading": "q",
+            "post_description": "q",
+            "post_file_name": "",
+            "post_date": "2022-02-01 16:04:11.385951",
+            "post_file_exten": "",
+            "post_comments": []
+        },
+        {
+            "post_code": "uZwNRMpcK5",
+            "post_class": "LfHVDRmCed",
+            "post_heading": "1",
+            "post_description": "1",
+            "post_file_name": "",
+            "post_date": "2022-02-01 16:05:32.466288",
+            "post_file_exten": "",
+            "post_comments": []
+        },
+        {
+            "post_code": "kFDZfkBwMf",
+            "post_class": "LfHVDRmCed",
+            "post_heading": "t",
+            "post_description": "t",
+            "post_file_name": "__init__.py",
+            "post_date": "2022-02-04 21:36:24.360715",
+            "post_file_exten": "py",
+            "post_comments": []
+        },
+        {
+            "post_code": "cbfwpZR7nd",
+            "post_class": "LfHVDRmCed",
+            "post_heading": "t",
+            "post_description": "t",
+            "post_file_name": "__init__.py",
+            "post_date": "2022-02-04 21:36:27.863784",
+            "post_file_exten": "py",
+            "post_comments": []
+        },
+        {
+            "post_code": "XJ6Tbr6ikH",
+            "post_class": "LfHVDRmCed",
+            "post_heading": "v",
+            "post_description": "v",
+            "post_file_name": "__init__.py",
+            "post_date": "2022-02-04 21:51:05.605180",
+            "post_file_exten": "py",
+            "post_comments": []
+        },
+        {
+            "post_code": "9udEL27Yn3",
+            "post_class": "LfHVDRmCed",
+            "post_heading": "v",
+            "post_description": "v",
+            "post_file_name": "__init__.py",
+            "post_date": "2022-02-04 21:51:07.438248",
+            "post_file_exten": "py",
+            "post_comments": []
+        },
+        {
+            "post_code": "noesMvy7Fe",
+            "post_class": "LfHVDRmCed",
+            "post_heading": "v",
+            "post_description": "v",
+            "post_file_name": "__init__.py",
+            "post_date": "2022-02-04 21:52:01.380341",
+            "post_file_exten": "py",
+            "post_comments": []
+        },
+        {
+            "post_code": "erOSnvKG1q",
+            "post_class": "LfHVDRmCed",
+            "post_heading": "123",
+            "post_description": "123",
+            "post_file_name": "",
+            "post_date": "2022-02-05 21:17:59.816241",
+            "post_file_exten": "",
+            "post_comments": []
+        },
+        {
+            "post_code": "y7TSO3YqBd",
+            "post_class": "LfHVDRmCed",
+            "post_heading": "g",
+            "post_description": "g",
+            "post_file_name": "",
+            "post_date": "2022-02-05 21:18:08.016434",
+            "post_file_exten": "",
+            "post_comments": []
+        }
+    ],
+    "as_in_class": [
+        {
+            "as_code": "QPyLfSbRaS",
+            "as_class": "LfHVDRmCed",
+            "as_heading": "12312",
+            "as_des": "123",
+            "as_date": "2022-02-05 20:47:51.989028",
+            "as_sub_date": "05-02-2022 20:47:37",
+            "as_marks": 123,
+            "as_file_name": "",
+            "as_exten": "",
+            "as_comments": []
+        },
+        {
+            "as_code": "wV00gPq0X6",
+            "as_class": "LfHVDRmCed",
+            "as_heading": "12312",
+            "as_des": "123",
+            "as_date": "2022-02-05 20:53:44.813303",
+            "as_sub_date": "05-02-2022 20:53:33",
+            "as_marks": 123,
+            "as_file_name": "__init__.py",
+            "as_exten": "py",
+            "as_comments": []
+        },
+        {
+            "as_code": "HanyNklTVQ",
+            "as_class": "LfHVDRmCed",
+            "as_heading": "123",
+            "as_des": "123",
+            "as_date": "2022-02-05 21:02:04.378779",
+            "as_sub_date": "05-02-2022 21:01:53",
+            "as_marks": 123,
+            "as_file_name": "",
+            "as_exten": "",
+            "as_comments": []
+        },
+        {
+            "as_code": "KnQWuqGij9",
+            "as_class": "LfHVDRmCed",
+            "as_heading": "123",
+            "as_des": "13",
+            "as_date": "2022-02-05 21:02:42.187201",
+            "as_sub_date": "05-02-2022 21:02:34",
+            "as_marks": 1,
+            "as_file_name": "",
+            "as_exten": "",
+            "as_comments": []
+        },
+        {
+            "as_code": "ZelgSiJe2v",
+            "as_class": "LfHVDRmCed",
+            "as_heading": "123",
+            "as_des": "123",
+            "as_date": "2022-02-05 21:03:51.512242",
+            "as_sub_date": "05-02-2022 21:03:46",
+            "as_marks": 123,
+            "as_file_name": "",
+            "as_exten": "",
+            "as_comments": []
+        },
+        {
+            "as_code": "35gzAAPvft",
+            "as_class": "LfHVDRmCed",
+            "as_heading": "r",
+            "as_des": "r",
+            "as_date": "2022-02-05 21:18:24.080635",
+            "as_sub_date": "05-02-2022 21:18:19",
+            "as_marks": "r",
+            "as_file_name": "",
+            "as_exten": "",
+            "as_comments": []
+        }
+    ]
 }

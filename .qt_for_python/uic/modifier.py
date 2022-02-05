@@ -1,3 +1,4 @@
+from sql.fetch_assignments import Retrieve_As_Cl
 import json
 import sys
 from PyQt5 import QtCore, QtGui, QtWidgets
@@ -5,6 +6,7 @@ from root_copy import Ui_MainWindow
 from sql.fetch_classes_sql import Fetch_Classes_Cl
 from compon.mini_components import Individual_Class_Button
 from sql.fetch_posts import Retrieve_Post_Cl
+from sql.fetch_classes_sql import Fetch_Classes_Cl
 
 
 def json_data():
@@ -20,36 +22,21 @@ def block_log(variable):
 
 
 def sign_up_switch(variable):
-    block_log(variable)
     variable.up_outer_frame.show()
     variable.in_outer_frame.hide()
     variable.main_class_frame.hide()
 
-    variable.in_email_entry.setText("")
-    variable.in_password_entry.setText("")
-
-    variable.up_name_entry.setText("")
-    variable.up_username_entry.setText("")
-    variable.up_email_entry.setText("")
-    variable.up_password_entry.setText("")
-    variable.up_confirm_password_entry.setText("")
+    variable.log_set()
+    block_log(variable)
 
 
 def sign_in_switch(variable):
-    block_log(variable)
-
     variable.in_outer_frame.show()
     variable.up_outer_frame.hide()
     variable.main_class_frame.hide()
 
-    variable.up_name_entry.setText("")
-    variable.up_username_entry.setText("")
-    variable.up_email_entry.setText("")
-    variable.up_password_entry.setText("")
-    variable.up_confirm_password_entry.setText("")
-
-    variable.in_email_entry.setText("")
-    variable.in_password_entry.setText("")
+    variable.log_set()
+    block_log(variable)
 
 
 def show_main_frame(variable):
@@ -68,7 +55,6 @@ def show_posts_scroll_and_class_frame(variable):
 
 
 def show_all_classes_frame(variable, te):
-
     def clearLayout(layout):
         if layout is not None:
             while layout.count():
@@ -80,7 +66,6 @@ def show_all_classes_frame(variable, te):
     clearLayout(variable.verticalLayout_5)
 
     data = json_data()
-
     temp1 = QtWidgets.QLabel(variable.in_inner_frame)
     temp1.setGeometry(QtCore.QRect(10, 10, 441, 30))
     temp1.setStyleSheet("position: absolute;\n"
@@ -109,7 +94,10 @@ def show_all_classes_frame(variable, te):
         20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
     variable.verticalLayout_5.addItem(spacerItem)
 
-    # Retrieve_Post_Cl()
+    Retrieve_Post_Cl()
+    Retrieve_As_Cl()
+
+
     variable.all_classes_frame.show()
     variable.class_name_frame.hide()
     variable.posts_scroll_area.hide()
@@ -129,12 +117,8 @@ def log_out(variable):
     variable.up_outer_frame.show()
     variable.in_outer_frame.hide()
     variable.main_class_frame.hide()
-    variable.in_email_entry.setText("")
-    variable.in_password_entry.setText("")
-    variable.up_name_entry.setText("")
-    variable.up_username_entry.setText("")
-    variable.up_email_entry.setText("")
-    variable.up_password_entry.setText("")
+
+    variable.log_set()
 
 
 def show(variable):
@@ -157,15 +141,22 @@ def show(variable):
 
 def restart(variable):
     Fetch_Classes_Cl()
-    Retrieve_Post_Cl()
+    # Retrieve_Post_Cl()
+
     show_all_classes_frame(variable, "classes_joined")
     show_all_classes_frame(variable, "classes_owned")
+
     data = json_data()
     data["class_selected"] = ""
     data["post_selected"] = ""
 
     with open(r"C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json", "w") as settings_json_file:
         json.dump(data, settings_json_file, indent=4)
+
+    variable.main_class_frame.show()
+    variable.all_classes_frame.show()
+    variable.class_name_frame.hide()
+    variable.posts_scroll_area.hide()
 
 
 if __name__ == "__main__":
@@ -190,6 +181,7 @@ if __name__ == "__main__":
     ui.actionSignUp.triggered.connect(lambda: sign_up_switch(ui))
     ui.actionSignIn.triggered.connect(lambda: sign_in_switch(ui))
     ui.actionLogOut.triggered.connect(lambda: log_out(ui))
+
     ui.actionClasses.triggered.connect(
         lambda: show_all_classes_frame(ui, "classes_joined"))
     ui.actionViewClasses.triggered.connect(

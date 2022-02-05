@@ -2,6 +2,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 import json
 from compon.post_buttons import Individual_Post_Button
 from compon.fetch_posts import Retrieve_Post_Cl
+from sql.fetch_assignments import Retrieve_As_Cl
 
 
 class Individual_Class_Button():
@@ -42,6 +43,7 @@ class Individual_Class_Button():
         with open(r"C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json", "w") as settings_json_file:
             json.dump(data, settings_json_file, indent=4)
         Retrieve_Post_Cl()
+        Retrieve_As_Cl()
         self.create_buttons_post()
 
     def __init__(self, mainwindow, name, description, ui_te, class_code):

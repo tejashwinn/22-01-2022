@@ -47,7 +47,11 @@ class Individual_Post_Button():
 
         from sql.fetch_posts import Retrieve_Post_Cl
         Retrieve_Post_Cl()
+
+        from sql.fetch_assignments import Retrieve_As_Cl
+        Retrieve_As_Cl()
         
+
         # open post
         self.post_mainwindow = QtWidgets.QMainWindow()
         self.ui_post = Ui_posts_form()

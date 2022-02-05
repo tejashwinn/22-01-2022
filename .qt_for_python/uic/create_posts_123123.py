@@ -5,34 +5,33 @@ from sql.insert_post import Create_Post
 class Ui_create_posts_form(object):
 
     path = ["", ""]
-
     # def sync_t(self):
-    #     from compon.post_buttons import Individual_Post_Button
-    #     from PyQt5 import QtWidgets
-    #     import json
+        #     from compon.post_buttons import Individual_Post_Button
+        #     from PyQt5 import QtWidgets
+        #     import json
 
-    #     def json_data():
-    #         with open(r'C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json') as settings_json_file:
-    #             return json.load(settings_json_file)
+        #     def json_data():
+        #         with open(r'C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json') as settings_json_file:
+        #             return json.load(settings_json_file)
 
-    #     def clearLayout(layout):
-    #         if layout is not None:
-    #             while layout.count():
-    #                 child = layout.takeAt(0)
-    #                 if child.widget() is not None:
-    #                     child.widget().deleteLater()
-    #                 elif child.layout() is not None:
-    #                     clearLayout(child.layout())
+        #     def clearLayout(layout):
+        #         if layout is not None:
+        #             while layout.count():
+        #                 child = layout.takeAt(0)
+        #                 if child.widget() is not None:
+        #                     child.widget().deleteLater()
+        #                 elif child.layout() is not None:
+        #                     clearLayout(child.layout())
 
-    #     clearLayout(self.mw.verticalLayout)
-    #     data = json_data()
+        #     clearLayout(self.mw.verticalLayout)
+        #     data = json_data()
 
-    #     for i in data["posts_in_class"]:
-    #         temp = Individual_Post_Button(mainwindow=self.mw, di=i)
-    #         self.mw.verticalLayout.addWidget(temp.child)
-    #     spacerItem = QtWidgets.QSpacerItem(
-    #         20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-    #     self.mw.verticalLayout.addItem(spacerItem)
+        #     for i in data["posts_in_class"]:
+        #         temp = Individual_Post_Button(mainwindow=self.mw, di=i)
+        #         self.mw.verticalLayout.addWidget(temp.child)
+        #     spacerItem = QtWidgets.QSpacerItem(
+        #         20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        #     self.mw.verticalLayout.addItem(spacerItem)
 
     def open_file(self):
         self.path = QtWidgets.QFileDialog.getOpenFileName(
@@ -57,7 +56,6 @@ class Ui_create_posts_form(object):
                 self.create_post_button.setDisabled(True)
 
 
-        # self.sync_t()
         self.dynamic_create_post_warning_label.show()
         self.dynamic_create_post_warning_label.setText(temp.errors)
         if temp.errors == "":
