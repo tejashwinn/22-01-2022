@@ -470,20 +470,6 @@ class Ui_Form(object):
 "text-transform: capitalize;\n"
 "")
         self.label_3.setObjectName("label_3")
-        self.close_button_create_assignment = QtWidgets.QPushButton(self.frame_2)
-        self.close_button_create_assignment.setGeometry(QtCore.QRect(490, 10, 40, 40))
-        self.close_button_create_assignment.setStyleSheet("*{border-radius:0px;}\n"
-":pressed{\n"
-"    border: 3px solid  #FF0000;\n"
-"boder:10px;\n"
-"border-radius: 8px;\n"
-"}")
-        self.close_button_create_assignment.setText("")
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("c:\\Users\\tejas\\Desktop\\22-01-22\\assests/icons/x-square.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.close_button_create_assignment.setIcon(icon1)
-        self.close_button_create_assignment.setIconSize(QtCore.QSize(40, 40))
-        self.close_button_create_assignment.setObjectName("close_button_create_assignment")
         self.gridLayout.addWidget(self.frame_2, 0, 0, 1, 1)
 
         self.retranslateUi(Form)
