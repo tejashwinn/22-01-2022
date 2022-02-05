@@ -50,7 +50,6 @@ class Individual_Post_Button():
 
         from sql.fetch_assignments import Retrieve_As_Cl
         Retrieve_As_Cl()
-        
 
         # open post
         self.post_mainwindow = QtWidgets.QMainWindow()
@@ -168,7 +167,7 @@ class Individual_Post_Button():
         self.post_single_heading.setText(
             _translate("mainwindow", self.post_heading))
         self.post_single_timings.setText(
-            _translate("mainwindow", self.post_date))
+            _translate("mainwindow", self.post_date.rsplit(":", 1)[0]))
 
         self.post_single_heading.mousePressEvent = self.open_post
         self.post_single_timings.mousePressEvent = self.open_post

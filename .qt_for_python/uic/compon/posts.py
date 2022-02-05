@@ -176,6 +176,7 @@ class Ui_posts_form(object):
         self.verticalLayout_39.setObjectName("verticalLayout_3")
         self.comment_view_frame = QtWidgets.QFrame(
             self.post_posts_scroll_area_widget)
+        
         self.comment_view_frame.setMinimumSize(QtCore.QSize(0, 70))
         self.comment_view_frame.setMaximumSize(QtCore.QSize(461, 70))
         self.comment_view_frame.setCursor(
@@ -250,6 +251,9 @@ class Ui_posts_form(object):
             self.post_posts_scroll_area_widget)
         self.gridLayout.addWidget(self.post_posts_scroll_area, 1, 0, 1, 1)
         self.frame_2 = QtWidgets.QFrame(posts_form)
+        
+        self.frame_2.setGeometry(
+            QtCore.QRect(11, 11, 541, 291))
         self.frame_2.setMinimumSize(QtCore.QSize(541, 291))
         self.frame_2.setMaximumSize(QtCore.QSize(541, 291))
         self.frame_2.setStyleSheet("#frame_2{/* Auto layout */\n"

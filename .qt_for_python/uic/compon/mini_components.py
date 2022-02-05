@@ -1,6 +1,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import json
 from compon.post_buttons import Individual_Post_Button
+from compon.assignment_buttons import Individual_As_Button
 from compon.fetch_posts import Retrieve_Post_Cl
 from sql.fetch_assignments import Retrieve_As_Cl
 
@@ -10,7 +11,6 @@ class Individual_Class_Button():
         def json_data():
             with open(r'C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json') as settings_json_file:
                 return json.load(settings_json_file)
-
         data = json_data()
 
         def clearLayout(layout):
@@ -23,12 +23,22 @@ class Individual_Class_Button():
                         clearLayout(child.layout())
         clearLayout(self.ui_te.verticalLayout)
 
+        clearLayout(self.ui_te.verticalLayout_3)
+
         for i in data["posts_in_class"]:
             temp = Individual_Post_Button(mainwindow=self.mainwindow, di=i)
             self.ui_te.verticalLayout.addWidget(temp.child)
         spacerItem = QtWidgets.QSpacerItem(
             20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.ui_te.verticalLayout.addItem(spacerItem)
+
+        for i in data["as_in_class"]:
+            # print(i)
+            temp = Individual_As_Button(mainwindow=self.mainwindow, di=i)
+            self.ui_te.verticalLayout_3.addWidget(temp.child)
+        spacerItem = QtWidgets.QSpacerItem(
+            20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.ui_te.verticalLayout_3.addItem(spacerItem)
 
     def open_class(self, event):
         self.ui_te.all_classes_frame.hide()

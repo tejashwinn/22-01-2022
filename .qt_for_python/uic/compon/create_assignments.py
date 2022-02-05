@@ -19,7 +19,7 @@ class Ui_Assignment_form(object):
             temp = Create_Assignment(
                 head=self.head_entry.toPlainText(),
                 description=self.des_entry.toPlainText(),
-                sub_date=self.dt.toString("dd-MM-yyyy hh:mm:ss"),
+                sub_date=self.dt.toString("yyyy-MM-dd hh:mm:ss"),
                 marks=self.marks_entry.toPlainText()
             )
             if temp.valid:
@@ -29,7 +29,7 @@ class Ui_Assignment_form(object):
             temp = Create_Assignment(
                 head=self.head_entry.toPlainText(),
                 description=self.des_entry.toPlainText(),
-                sub_date=self.dt.toString("dd-MM-yyyy hh:mm:ss"),
+                sub_date=self.dt.toString("yyyy-MM-dd hh:mm:ss"),
                 marks=self.marks_entry.toPlainText(),
                 file_path=self.path[0]
             )

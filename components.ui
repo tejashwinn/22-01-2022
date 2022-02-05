@@ -64,8 +64,8 @@ border-radius: 10px;
   <widget class="QFrame" name="events_view">
    <property name="geometry">
     <rect>
-     <x>600</x>
-     <y>170</y>
+     <x>400</x>
+     <y>160</y>
      <width>229</width>
      <height>70</height>
     </rect>
@@ -371,8 +371,7 @@ border-radius: 8px;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">
-#sign_up_button{
+    <string notr="true">*{
 font-family: Inter;
 font-style: normal;
 font-weight: 500;
@@ -389,7 +388,7 @@ background: #4F4F4F;
 border-radius: 8px;
 }
 
-#sign_up_button:pressed {
+:pressed {
     border-style: inset;
 	border: 1px solid  #4F4F4F;
 color: #4F4F4F;
@@ -413,34 +412,26 @@ background: #FFFFFF;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">
-#sign_in_button{
+    <string notr="true">*{
 font-family: Inter;
 font-style: normal;
 font-weight: 500;
 font-size: 14px;
 line-height: 17px;
-/* identical to box height */
-
 align-items: center;
-
-/* Grey / Light */
-
-
-    border-style: inset;
-	border: 1px solid  #4F4F4F;
+border-style: inset;
+border: 1px solid  #4F4F4F;
 color: #4F4F4F;
 background: #FFFFFF;
 border-radius:10px;
 }
 
-#sign_in_button:pressed {
-    border-style: inset;
-	color: white;
+:pressed {
+border-style: inset;
+color: white;
 background: #4F4F4F;
 border-radius: 8px;
 }
-/* Inside auto layout */
 
 </string>
    </property>
@@ -694,6 +685,168 @@ border:0px;</string>
     </property>
     <property name="text">
      <string>Timings</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="as_frame">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>40</y>
+     <width>248</width>
+     <height>120</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>120</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>99999</width>
+     <height>120</height>
+    </size>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">*{
+position: absolute;
+width: 370px;
+height: 110px;
+left: 7px;
+top: 28px;
+
+background: rgba(0, 0, 0, 0.05);
+border: 1px solid rgba(0, 0, 0, 0.3);
+box-sizing: border-box;
+border-radius: 10px}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="dynamic_name_label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>231</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Poppins</family>
+      <pointsize>-1</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">position: absolute;
+left: 20px;
+right: 30px;
+top: 10px;
+bottom: 10px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 37px;
+letter-spacing: 0.05em;
+background: rgba(0, 0, 0, 0.01);
+color: #000000;
+border:0px;
+</string>
+    </property>
+    <property name="text">
+     <string>Name</string>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="dynamic_in_label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>231</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">position: absolute;
+left: 20px;
+right: 30px;
+top: 10px;
+bottom: 10px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+line-height: 37px;
+letter-spacing: 0.05em;
+background: rgba(0, 0, 0, 0.01);
+color: #000000;
+border:0px;</string>
+    </property>
+    <property name="text">
+     <string>In Date: 17-12-2001 12:12</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="dynamic_sub_label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>90</y>
+      <width>231</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">position: absolute;
+left: 20px;
+right: 30px;
+top: 10px;
+bottom: 10px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+line-height: 37px;
+letter-spacing: 0.05em;
+background: rgba(0, 0, 0, 0.01);
+color: #000000;
+border:0px;</string>
+    </property>
+    <property name="text">
+     <string>Las Date: 17-12-2001 12:12</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
