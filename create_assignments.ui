@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>567</width>
-    <height>664</height>
+    <height>641</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,21 +18,21 @@
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
-    <widget class="QFrame" name="frame_2">
+    <widget class="QFrame" name="create_assignment_frame">
      <property name="minimumSize">
       <size>
        <width>541</width>
-       <height>598</height>
+       <height>607</height>
       </size>
      </property>
      <property name="maximumSize">
       <size>
        <width>541</width>
-       <height>565</height>
+       <height>607</height>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#frame_2{/* Auto layout */
+      <string notr="true">#create_assignment_frame{/* Auto layout */
 
 display: flex;
 flex-direction: column;
@@ -103,7 +103,7 @@ color: #000000;
        <string>Create Assignment</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_2">
+     <widget class="QLabel" name="static_des">
       <property name="geometry">
        <rect>
         <x>30</x>
@@ -128,7 +128,7 @@ text-transform: capitalize;
        <string>Description</string>
       </property>
      </widget>
-     <widget class="QPlainTextEdit" name="plainTextEdit">
+     <widget class="QPlainTextEdit" name="des_entry">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -152,10 +152,10 @@ text-transform: capitalize;
 color: #000000;</string>
       </property>
       <property name="plainText">
-       <string>fdfasdfas</string>
+       <string/>
       </property>
      </widget>
-     <widget class="QPlainTextEdit" name="plainTextEdit_2">
+     <widget class="QPlainTextEdit" name="head_entry">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -179,10 +179,10 @@ text-transform: capitalize;
 color: #000000;</string>
       </property>
       <property name="plainText">
-       <string>fdfasdfas</string>
+       <string/>
       </property>
      </widget>
-     <widget class="QLabel" name="label_4">
+     <widget class="QLabel" name="head_label">
       <property name="geometry">
        <rect>
         <x>30</x>
@@ -207,7 +207,7 @@ text-transform: capitalize;
        <string>Heading</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_5">
+     <widget class="QLabel" name="label_file_name">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -274,7 +274,7 @@ background: #FFFFFF;
        <string>Add Files</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_6">
+     <widget class="QLabel" name="date_entry">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -302,7 +302,7 @@ text-transform: capitalize;
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QDateTimeEdit" name="dateTimeEdit">
+     <widget class="QDateTimeEdit" name="date_time_edit">
       <property name="geometry">
        <rect>
         <x>70</x>
@@ -324,7 +324,7 @@ text-transform: capitalize;
 </string>
       </property>
      </widget>
-     <widget class="QPlainTextEdit" name="plainTextEdit_3">
+     <widget class="QPlainTextEdit" name="marks_entry">
       <property name="geometry">
        <rect>
         <x>390</x>
@@ -348,10 +348,10 @@ text-transform: capitalize;
 color: #000000;</string>
       </property>
       <property name="plainText">
-       <string>fdfasdfas</string>
+       <string/>
       </property>
      </widget>
-     <widget class="QLabel" name="label_7">
+     <widget class="QLabel" name="marks_label">
       <property name="geometry">
        <rect>
         <x>330</x>
@@ -376,38 +376,7 @@ text-transform: capitalize;
        <string>Marks:</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="close_button_create_assignment">
-      <property name="geometry">
-       <rect>
-        <x>490</x>
-        <y>10</y>
-        <width>40</width>
-        <height>40</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">*{border-radius:0px;}
-:pressed{
-	border: 3px solid  #FF0000;
-boder:10px;
-border-radius: 8px;
-}</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="icon">
-       <iconset>
-        <normaloff>assests/icons/x-square.svg</normaloff>assests/icons/x-square.svg</iconset>
-      </property>
-      <property name="iconSize">
-       <size>
-        <width>40</width>
-        <height>40</height>
-       </size>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="add_files_button_posts">
+     <widget class="QPushButton" name="add_files_button_assignment">
       <property name="geometry">
        <rect>
         <x>160</x>

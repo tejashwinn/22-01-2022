@@ -205,7 +205,6 @@ if __name__ == "__main__":
         QtCore.Qt.ScrollBarAlwaysOff)
     ui.up_sign_up_button.clicked.connect(ui.sign_up_insert)
 
-    # todo show_all_classes_frame(ui, "classes_owned")
     show(ui)
 
     MainWindow.show()

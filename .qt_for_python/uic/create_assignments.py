@@ -14,38 +14,40 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(567, 664)
+        Form.resize(567, 641)
         Form.setStyleSheet("")
         self.gridLayout = QtWidgets.QGridLayout(Form)
         self.gridLayout.setObjectName("gridLayout")
-        self.frame_2 = QtWidgets.QFrame(Form)
-        self.frame_2.setMinimumSize(QtCore.QSize(541, 598))
-        self.frame_2.setMaximumSize(QtCore.QSize(541, 565))
-        self.frame_2.setStyleSheet("#frame_2{/* Auto layout */\n"
-"\n"
-"display: flex;\n"
-"flex-direction: column;\n"
-"align-items: flex-start;\n"
-"padding: 40px 25px;\n"
-"\n"
-"position: absolute;\n"
-"width: 593px;\n"
-"height: 594px;\n"
-"left: calc(50% - 593px/2 - 0.5px);\n"
-"top: 243px;\n"
-"\n"
-"/* White */\n"
-"\n"
-"background: #FFFFFF;\n"
-"/* Grey / Dark */\n"
-"\n"
-"border: 1px solid #D1D1D1;\n"
-"box-sizing: border-box;\n"
-"border-radius: 8px;}")
-        self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_2.setObjectName("frame_2")
-        self.post_heading_posts = QtWidgets.QLabel(self.frame_2)
+        self.create_assignment_frame = QtWidgets.QFrame(Form)
+        self.create_assignment_frame.setMinimumSize(QtCore.QSize(541, 607))
+        self.create_assignment_frame.setMaximumSize(QtCore.QSize(541, 607))
+        self.create_assignment_frame.setStyleSheet("#create_assignment_frame{/* Auto layout */\n"
+                                                   "\n"
+                                                   "display: flex;\n"
+                                                   "flex-direction: column;\n"
+                                                   "align-items: flex-start;\n"
+                                                   "padding: 40px 25px;\n"
+                                                   "\n"
+                                                   "position: absolute;\n"
+                                                   "width: 593px;\n"
+                                                   "height: 594px;\n"
+                                                   "left: calc(50% - 593px/2 - 0.5px);\n"
+                                                   "top: 243px;\n"
+                                                   "\n"
+                                                   "/* White */\n"
+                                                   "\n"
+                                                   "background: #FFFFFF;\n"
+                                                   "/* Grey / Dark */\n"
+                                                   "\n"
+                                                   "border: 1px solid #D1D1D1;\n"
+                                                   "box-sizing: border-box;\n"
+                                                   "border-radius: 8px;}")
+        self.create_assignment_frame.setFrameShape(
+            QtWidgets.QFrame.StyledPanel)
+        self.create_assignment_frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.create_assignment_frame.setObjectName("create_assignment_frame")
+        self.post_heading_posts = QtWidgets.QLabel(
+            self.create_assignment_frame)
         self.post_heading_posts.setGeometry(QtCore.QRect(20, 20, 361, 31))
         font = QtGui.QFont()
         font.setFamily("Poppins")
@@ -55,226 +57,222 @@ class Ui_Form(object):
         font.setWeight(50)
         self.post_heading_posts.setFont(font)
         self.post_heading_posts.setStyleSheet("position: absolute;\n"
-"width: 233px;\n"
-"height: 60px;\n"
-"left: 92px;\n"
-"top: 48px;\n"
-"\n"
-"font-family: Poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 30px;\n"
-"line-height: 60px;\n"
-"/* identical to box height */\n"
-"\n"
-"letter-spacing: 0.05em;\n"
-"text-decoration-line: underline;\n"
-"text-transform: capitalize;\n"
-"\n"
-"color: #000000;\n"
-"")
+                                              "width: 233px;\n"
+                                              "height: 60px;\n"
+                                              "left: 92px;\n"
+                                              "top: 48px;\n"
+                                              "\n"
+                                              "font-family: Poppins;\n"
+                                              "font-style: normal;\n"
+                                              "font-weight: normal;\n"
+                                              "font-size: 30px;\n"
+                                              "line-height: 60px;\n"
+                                              "/* identical to box height */\n"
+                                              "\n"
+                                              "letter-spacing: 0.05em;\n"
+                                              "text-decoration-line: underline;\n"
+                                              "text-transform: capitalize;\n"
+                                              "\n"
+                                              "color: #000000;\n"
+                                              "")
         self.post_heading_posts.setObjectName("post_heading_posts")
-        self.label_2 = QtWidgets.QLabel(self.frame_2)
-        self.label_2.setGeometry(QtCore.QRect(30, 170, 111, 41))
-        self.label_2.setStyleSheet("font-family: Poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 15px;\n"
-"line-height: 30px;\n"
-"/* identical to box height */\n"
-"\n"
-"letter-spacing: 0.05em;\n"
-"text-transform: capitalize;\n"
-"")
-        self.label_2.setObjectName("label_2")
-        self.plainTextEdit = QtWidgets.QPlainTextEdit(self.frame_2)
-        self.plainTextEdit.setGeometry(QtCore.QRect(20, 210, 511, 131))
-        self.plainTextEdit.setStyleSheet("background: rgba(196, 196, 196, 0.1);\n"
-"font-family: Poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 15px;\n"
-"line-height: 30px;\n"
-"/* identical to box height */\n"
-"\n"
-"letter-spacing: 0.05em;\n"
-"text-transform: capitalize;\n"
-"\n"
-"color: #000000;")
-        self.plainTextEdit.setObjectName("plainTextEdit")
-        self.plainTextEdit_2 = QtWidgets.QPlainTextEdit(self.frame_2)
-        self.plainTextEdit_2.setGeometry(QtCore.QRect(20, 110, 511, 41))
-        self.plainTextEdit_2.setStyleSheet("background: rgba(196, 196, 196, 0.1);\n"
-"font-family: Poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 15px;\n"
-"line-height: 30px;\n"
-"/* identical to box height */\n"
-"\n"
-"letter-spacing: 0.05em;\n"
-"text-transform: capitalize;\n"
-"\n"
-"color: #000000;")
-        self.plainTextEdit_2.setObjectName("plainTextEdit_2")
-        self.label_4 = QtWidgets.QLabel(self.frame_2)
-        self.label_4.setGeometry(QtCore.QRect(30, 70, 81, 41))
-        self.label_4.setStyleSheet("font-family: Poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 15px;\n"
-"line-height: 30px;\n"
-"/* identical to box height */\n"
-"\n"
-"letter-spacing: 0.05em;\n"
-"text-transform: capitalize;\n"
-"")
-        self.label_4.setObjectName("label_4")
-        self.label_5 = QtWidgets.QLabel(self.frame_2)
-        self.label_5.setGeometry(QtCore.QRect(20, 430, 511, 41))
-        self.label_5.setStyleSheet("font-family: Poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 15px;\n"
-"line-height: 30px;\n"
-"/* identical to box height */\n"
-"\n"
-"letter-spacing: 0.05em;\n"
-"text-transform: capitalize;\n"
-"")
-        self.label_5.setObjectName("label_5")
-        self.add_files_button = QtWidgets.QPushButton(self.frame_2)
+        self.static_des = QtWidgets.QLabel(self.create_assignment_frame)
+        self.static_des.setGeometry(QtCore.QRect(30, 170, 111, 41))
+        self.static_des.setStyleSheet("font-family: Poppins;\n"
+                                      "font-style: normal;\n"
+                                      "font-weight: normal;\n"
+                                      "font-size: 15px;\n"
+                                      "line-height: 30px;\n"
+                                      "/* identical to box height */\n"
+                                      "\n"
+                                      "letter-spacing: 0.05em;\n"
+                                      "text-transform: capitalize;\n"
+                                      "")
+        self.static_des.setObjectName("static_des")
+        self.des_entry = QtWidgets.QPlainTextEdit(self.create_assignment_frame)
+        self.des_entry.setGeometry(QtCore.QRect(20, 210, 511, 131))
+        self.des_entry.setStyleSheet("background: rgba(196, 196, 196, 0.1);\n"
+                                     "font-family: Poppins;\n"
+                                     "font-style: normal;\n"
+                                     "font-weight: normal;\n"
+                                     "font-size: 15px;\n"
+                                     "line-height: 30px;\n"
+                                     "/* identical to box height */\n"
+                                     "\n"
+                                     "letter-spacing: 0.05em;\n"
+                                     "text-transform: capitalize;\n"
+                                     "\n"
+                                     "color: #000000;")
+        self.des_entry.setPlainText("")
+        self.des_entry.setObjectName("des_entry")
+        self.head_entry = QtWidgets.QPlainTextEdit(
+            self.create_assignment_frame)
+        self.head_entry.setGeometry(QtCore.QRect(20, 110, 511, 41))
+        self.head_entry.setStyleSheet("background: rgba(196, 196, 196, 0.1);\n"
+                                      "font-family: Poppins;\n"
+                                      "font-style: normal;\n"
+                                      "font-weight: normal;\n"
+                                      "font-size: 15px;\n"
+                                      "line-height: 30px;\n"
+                                      "/* identical to box height */\n"
+                                      "\n"
+                                      "letter-spacing: 0.05em;\n"
+                                      "text-transform: capitalize;\n"
+                                      "\n"
+                                      "color: #000000;")
+        self.head_entry.setPlainText("")
+        self.head_entry.setObjectName("head_entry")
+        self.head_label = QtWidgets.QLabel(self.create_assignment_frame)
+        self.head_label.setGeometry(QtCore.QRect(30, 70, 81, 41))
+        self.head_label.setStyleSheet("font-family: Poppins;\n"
+                                      "font-style: normal;\n"
+                                      "font-weight: normal;\n"
+                                      "font-size: 15px;\n"
+                                      "line-height: 30px;\n"
+                                      "/* identical to box height */\n"
+                                      "\n"
+                                      "letter-spacing: 0.05em;\n"
+                                      "text-transform: capitalize;\n"
+                                      "")
+        self.head_label.setObjectName("head_label")
+        self.label_file_name = QtWidgets.QLabel(self.create_assignment_frame)
+        self.label_file_name.setGeometry(QtCore.QRect(20, 430, 511, 41))
+        self.label_file_name.setStyleSheet("font-family: Poppins;\n"
+                                           "font-style: normal;\n"
+                                           "font-weight: normal;\n"
+                                           "font-size: 15px;\n"
+                                           "line-height: 30px;\n"
+                                           "/* identical to box height */\n"
+                                           "\n"
+                                           "letter-spacing: 0.05em;\n"
+                                           "text-transform: capitalize;\n"
+                                           "")
+        self.label_file_name.setObjectName("label_file_name")
+        self.add_files_button = QtWidgets.QPushButton(
+            self.create_assignment_frame)
         self.add_files_button.setGeometry(QtCore.QRect(160, 490, 221, 40))
         self.add_files_button.setStyleSheet("\n"
-"#add_files_button{\n"
-"font-family: Inter;\n"
-"font-style: normal;\n"
-"font-weight: 500;\n"
-"font-size: 14px;\n"
-"line-height: 17px;\n"
-"/* identical to box height */\n"
-"\n"
-"align-items: center;\n"
-"\n"
-"/* Grey / Light */\n"
-"\n"
-"color: white;\n"
-"background: #4F4F4F;\n"
-"border-radius: 8px;\n"
-"}\n"
-"\n"
-"#add_files_button:pressed {\n"
-"    border-style: inset;\n"
-"    border: 1px solid  #4F4F4F;\n"
-"color: #4F4F4F;\n"
-"background: #FFFFFF;\n"
-"}\n"
-"/* Inside auto layout */\n"
-"\n"
-"")
+                                            "#add_files_button{\n"
+                                            "font-family: Inter;\n"
+                                            "font-style: normal;\n"
+                                            "font-weight: 500;\n"
+                                            "font-size: 14px;\n"
+                                            "line-height: 17px;\n"
+                                            "/* identical to box height */\n"
+                                            "\n"
+                                            "align-items: center;\n"
+                                            "\n"
+                                            "/* Grey / Light */\n"
+                                            "\n"
+                                            "color: white;\n"
+                                            "background: #4F4F4F;\n"
+                                            "border-radius: 8px;\n"
+                                            "}\n"
+                                            "\n"
+                                            "#add_files_button:pressed {\n"
+                                            "    border-style: inset;\n"
+                                            "    border: 1px solid  #4F4F4F;\n"
+                                            "color: #4F4F4F;\n"
+                                            "background: #FFFFFF;\n"
+                                            "}\n"
+                                            "/* Inside auto layout */\n"
+                                            "\n"
+                                            "")
         self.add_files_button.setObjectName("add_files_button")
-        self.label_6 = QtWidgets.QLabel(self.frame_2)
-        self.label_6.setGeometry(QtCore.QRect(20, 370, 51, 41))
-        self.label_6.setStyleSheet("font-family: Poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 15px;\n"
-"line-height: 30px;\n"
-"/* identical to box height */\n"
-"\n"
-"letter-spacing: 0.05em;\n"
-"text-transform: capitalize;\n"
-"")
-        self.label_6.setWordWrap(True)
-        self.label_6.setObjectName("label_6")
-        self.dateTimeEdit = QtWidgets.QDateTimeEdit(self.frame_2)
-        self.dateTimeEdit.setGeometry(QtCore.QRect(70, 370, 211, 41))
-        self.dateTimeEdit.setStyleSheet("font-family: Poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 15px;\n"
-"line-height: 30px;\n"
-"/* identical to box height */\n"
-"\n"
-"letter-spacing: 0.05em;\n"
-"text-transform: capitalize;\n"
-"")
-        self.dateTimeEdit.setObjectName("dateTimeEdit")
-        self.plainTextEdit_3 = QtWidgets.QPlainTextEdit(self.frame_2)
-        self.plainTextEdit_3.setGeometry(QtCore.QRect(390, 370, 81, 41))
-        self.plainTextEdit_3.setStyleSheet("background: rgba(196, 196, 196, 0.1);\n"
-"font-family: Poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 15px;\n"
-"line-height: 30px;\n"
-"/* identical to box height */\n"
-"\n"
-"letter-spacing: 0.05em;\n"
-"text-transform: capitalize;\n"
-"\n"
-"color: #000000;")
-        self.plainTextEdit_3.setObjectName("plainTextEdit_3")
-        self.label_7 = QtWidgets.QLabel(self.frame_2)
-        self.label_7.setGeometry(QtCore.QRect(330, 370, 51, 41))
-        self.label_7.setStyleSheet("font-family: Poppins;\n"
-"font-style: normal;\n"
-"font-weight: normal;\n"
-"font-size: 15px;\n"
-"line-height: 30px;\n"
-"/* identical to box height */\n"
-"\n"
-"letter-spacing: 0.05em;\n"
-"text-transform: capitalize;\n"
-"")
-        self.label_7.setObjectName("label_7")
-        self.close_button_create_assignment = QtWidgets.QPushButton(self.frame_2)
-        self.close_button_create_assignment.setGeometry(QtCore.QRect(490, 10, 40, 40))
-        self.close_button_create_assignment.setStyleSheet("*{border-radius:0px;}\n"
-":pressed{\n"
-"    border: 3px solid  #FF0000;\n"
-"boder:10px;\n"
-"border-radius: 8px;\n"
-"}")
-        self.close_button_create_assignment.setText("")
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("c:\\Users\\tejas\\Desktop\\22-01-22\\assests/icons/x-square.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.close_button_create_assignment.setIcon(icon)
-        self.close_button_create_assignment.setIconSize(QtCore.QSize(40, 40))
-        self.close_button_create_assignment.setObjectName("close_button_create_assignment")
-        self.add_files_button_posts = QtWidgets.QPushButton(self.frame_2)
-        self.add_files_button_posts.setGeometry(QtCore.QRect(160, 550, 221, 40))
-        self.add_files_button_posts.setStyleSheet("*{\n"
-"font-family: Inter;\n"
-"font-style: normal;\n"
-"font-weight: 500;\n"
-"font-size: 14px;\n"
-"line-height: 17px;\n"
-"/* identical to box height */\n"
-"\n"
-"align-items: center;\n"
-"\n"
-"/* Grey / Light */\n"
-"\n"
-"\n"
-"    border-style: inset;\n"
-"    border: 1px solid  #4F4F4F;\n"
-"color: #4F4F4F;\n"
-"background: #FFFFFF;\n"
-"border-radius:10px;\n"
-"}\n"
-"\n"
-":pressed {\n"
-"    border-style: inset;\n"
-"    color: white;\n"
-"background: #4F4F4F;\n"
-"border-radius: 8px;\n"
-"}\n"
-"/* Inside auto layout */\n"
-"\n"
-"")
-        self.add_files_button_posts.setObjectName("add_files_button_posts")
-        self.gridLayout.addWidget(self.frame_2, 0, 0, 1, 1)
+        self.date_entry = QtWidgets.QLabel(self.create_assignment_frame)
+        self.date_entry.setGeometry(QtCore.QRect(20, 370, 51, 41))
+        self.date_entry.setStyleSheet("font-family: Poppins;\n"
+                                      "font-style: normal;\n"
+                                      "font-weight: normal;\n"
+                                      "font-size: 15px;\n"
+                                      "line-height: 30px;\n"
+                                      "/* identical to box height */\n"
+                                      "\n"
+                                      "letter-spacing: 0.05em;\n"
+                                      "text-transform: capitalize;\n"
+                                      "")
+        self.date_entry.setWordWrap(True)
+        self.date_entry.setObjectName("date_entry")
+        self.date_time_edit = QtWidgets.QDateTimeEdit(
+            self.create_assignment_frame)
+        self.date_time_edit.setGeometry(QtCore.QRect(70, 370, 211, 41))
+        self.date_time_edit.setStyleSheet("font-family: Poppins;\n"
+                                          "font-style: normal;\n"
+                                          "font-weight: normal;\n"
+                                          "font-size: 15px;\n"
+                                          "line-height: 30px;\n"
+                                          "/* identical to box height */\n"
+                                          "\n"
+                                          "letter-spacing: 0.05em;\n"
+                                          "text-transform: capitalize;\n"
+                                          "")
+        self.date_time_edit.setObjectName("date_time_edit")
+        self.marks_entry = QtWidgets.QPlainTextEdit(
+            self.create_assignment_frame)
+        self.marks_entry.setGeometry(QtCore.QRect(390, 370, 81, 41))
+        self.marks_entry.setStyleSheet("background: rgba(196, 196, 196, 0.1);\n"
+                                       "font-family: Poppins;\n"
+                                       "font-style: normal;\n"
+                                       "font-weight: normal;\n"
+                                       "font-size: 15px;\n"
+                                       "line-height: 30px;\n"
+                                       "/* identical to box height */\n"
+                                       "\n"
+                                       "letter-spacing: 0.05em;\n"
+                                       "text-transform: capitalize;\n"
+                                       "\n"
+                                       "color: #000000;")
+        self.marks_entry.setPlainText("")
+        self.marks_entry.setObjectName("marks_entry")
+        self.marks_label = QtWidgets.QLabel(self.create_assignment_frame)
+        self.marks_label.setGeometry(QtCore.QRect(330, 370, 51, 41))
+        self.marks_label.setStyleSheet("font-family: Poppins;\n"
+                                       "font-style: normal;\n"
+                                       "font-weight: normal;\n"
+                                       "font-size: 15px;\n"
+                                       "line-height: 30px;\n"
+                                       "/* identical to box height */\n"
+                                       "\n"
+                                       "letter-spacing: 0.05em;\n"
+                                       "text-transform: capitalize;\n"
+                                       "")
+        self.marks_label.setObjectName("marks_label")
+        self.add_files_button_assignment = QtWidgets.QPushButton(
+            self.create_assignment_frame)
+        self.add_files_button_assignment.setGeometry(
+            QtCore.QRect(160, 550, 221, 40))
+        self.add_files_button_assignment.setStyleSheet("*{\n"
+                                                       "font-family: Inter;\n"
+                                                       "font-style: normal;\n"
+                                                       "font-weight: 500;\n"
+                                                       "font-size: 14px;\n"
+                                                       "line-height: 17px;\n"
+                                                       "/* identical to box height */\n"
+                                                       "\n"
+                                                       "align-items: center;\n"
+                                                       "\n"
+                                                       "/* Grey / Light */\n"
+                                                       "\n"
+                                                       "\n"
+                                                       "    border-style: inset;\n"
+                                                       "    border: 1px solid  #4F4F4F;\n"
+                                                       "color: #4F4F4F;\n"
+                                                       "background: #FFFFFF;\n"
+                                                       "border-radius:10px;\n"
+                                                       "}\n"
+                                                       "\n"
+                                                       ":pressed {\n"
+                                                       "    border-style: inset;\n"
+                                                       "    color: white;\n"
+                                                       "background: #4F4F4F;\n"
+                                                       "border-radius: 8px;\n"
+                                                       "}\n"
+                                                       "/* Inside auto layout */\n"
+                                                       "\n"
+                                                       "")
+        self.add_files_button_assignment.setObjectName(
+            "add_files_button_assignment")
+        self.gridLayout.addWidget(self.create_assignment_frame, 0, 0, 1, 1)
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -282,14 +280,13 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
-        self.post_heading_posts.setText(_translate("Form", "Create Assignment"))
-        self.label_2.setText(_translate("Form", "Description"))
-        self.plainTextEdit.setPlainText(_translate("Form", "fdfasdfas"))
-        self.plainTextEdit_2.setPlainText(_translate("Form", "fdfasdfas"))
-        self.label_4.setText(_translate("Form", "Heading"))
-        self.label_5.setText(_translate("Form", "File Name: "))
+        self.post_heading_posts.setText(
+            _translate("Form", "Create Assignment"))
+        self.static_des.setText(_translate("Form", "Description"))
+        self.head_label.setText(_translate("Form", "Heading"))
+        self.label_file_name.setText(_translate("Form", "File Name: "))
         self.add_files_button.setText(_translate("Form", "Add Files"))
-        self.label_6.setText(_translate("Form", "Date"))
-        self.plainTextEdit_3.setPlainText(_translate("Form", "fdfasdfas"))
-        self.label_7.setText(_translate("Form", "Marks:"))
-        self.add_files_button_posts.setText(_translate("Form", "Post Assignment"))
+        self.date_entry.setText(_translate("Form", "Date"))
+        self.marks_label.setText(_translate("Form", "Marks:"))
+        self.add_files_button_assignment.setText(
+            _translate("Form", "Post Assignment"))
