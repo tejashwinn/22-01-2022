@@ -467,6 +467,93 @@ class Ui_mainwindow(object):
 "border:0px;")
         self.dynamic_sub_label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
         self.dynamic_sub_label.setObjectName("dynamic_sub_label")
+        self.as_frame_2 = QtWidgets.QFrame(mainwindow)
+        self.as_frame_2.setGeometry(QtCore.QRect(110, 670, 248, 120))
+        self.as_frame_2.setMinimumSize(QtCore.QSize(0, 120))
+        self.as_frame_2.setMaximumSize(QtCore.QSize(99999, 120))
+        self.as_frame_2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.as_frame_2.setStyleSheet("*{\n"
+"position: absolute;\n"
+"width: 370px;\n"
+"height: 110px;\n"
+"left: 7px;\n"
+"top: 28px;\n"
+"\n"
+"background: rgba(0, 0, 0, 0.05);\n"
+"border: 1px solid rgba(0, 0, 0, 0.3);\n"
+"box-sizing: border-box;\n"
+"border-radius: 10px}")
+        self.as_frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.as_frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.as_frame_2.setObjectName("as_frame_2")
+        self.dynamic_name_label_2 = QtWidgets.QLabel(self.as_frame_2)
+        self.dynamic_name_label_2.setGeometry(QtCore.QRect(10, 0, 231, 61))
+        font = QtGui.QFont()
+        font.setFamily("Poppins")
+        font.setPointSize(-1)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.dynamic_name_label_2.setFont(font)
+        self.dynamic_name_label_2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.dynamic_name_label_2.setStyleSheet("position: absolute;\n"
+"left: 20px;\n"
+"right: 30px;\n"
+"top: 10px;\n"
+"bottom: 10px;\n"
+"\n"
+"font-family: Poppins;\n"
+"font-style: normal;\n"
+"font-weight: normal;\n"
+"font-size: 20px;\n"
+"line-height: 37px;\n"
+"letter-spacing: 0.05em;\n"
+"background: rgba(0, 0, 0, 0.01);\n"
+"color: #000000;\n"
+"border:0px;\n"
+"")
+        self.dynamic_name_label_2.setWordWrap(True)
+        self.dynamic_name_label_2.setObjectName("dynamic_name_label_2")
+        self.dynamic_in_label_2 = QtWidgets.QLabel(self.as_frame_2)
+        self.dynamic_in_label_2.setGeometry(QtCore.QRect(10, 60, 231, 21))
+        self.dynamic_in_label_2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.dynamic_in_label_2.setStyleSheet("position: absolute;\n"
+"left: 20px;\n"
+"right: 30px;\n"
+"top: 10px;\n"
+"bottom: 10px;\n"
+"\n"
+"font-family: Poppins;\n"
+"font-style: normal;\n"
+"font-weight: normal;\n"
+"font-size: 15px;\n"
+"line-height: 37px;\n"
+"letter-spacing: 0.05em;\n"
+"background: rgba(0, 0, 0, 0.01);\n"
+"color: #000000;\n"
+"border:0px;")
+        self.dynamic_in_label_2.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
+        self.dynamic_in_label_2.setObjectName("dynamic_in_label_2")
+        self.dynamic_sub_label_2 = QtWidgets.QLabel(self.as_frame_2)
+        self.dynamic_sub_label_2.setGeometry(QtCore.QRect(10, 90, 231, 21))
+        self.dynamic_sub_label_2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.dynamic_sub_label_2.setStyleSheet("position: absolute;\n"
+"left: 20px;\n"
+"right: 30px;\n"
+"top: 10px;\n"
+"bottom: 10px;\n"
+"\n"
+"font-family: Poppins;\n"
+"font-style: normal;\n"
+"font-weight: normal;\n"
+"font-size: 15px;\n"
+"line-height: 37px;\n"
+"letter-spacing: 0.05em;\n"
+"background: rgba(0, 0, 0, 0.01);\n"
+"color: #000000;\n"
+"border:0px;")
+        self.dynamic_sub_label_2.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
+        self.dynamic_sub_label_2.setObjectName("dynamic_sub_label_2")
 
         self.retranslateUi(mainwindow)
         QtCore.QMetaObject.connectSlotsByName(mainwindow)
@@ -489,4 +576,7 @@ class Ui_mainwindow(object):
         self.dynamic_name_label.setText(_translate("mainwindow", "Name"))
         self.dynamic_in_label.setText(_translate("mainwindow", "In Date: 17-12-2001 12:12"))
         self.dynamic_sub_label.setText(_translate("mainwindow", "Las Date: 17-12-2001 12:12"))
+        self.dynamic_name_label_2.setText(_translate("mainwindow", "Name"))
+        self.dynamic_in_label_2.setText(_translate("mainwindow", "In Date: 17-12-2001 12:12"))
+        self.dynamic_sub_label_2.setText(_translate("mainwindow", "Las Date: 17-12-2001 12:12"))
 import temp_rc
