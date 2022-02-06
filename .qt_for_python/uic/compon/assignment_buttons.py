@@ -55,7 +55,7 @@ class Individual_As_Button():
             # print(json.dumps(i, indent=4))
 
             temp = Indi_marks()
-            temp.setupUi(self.mainwindow, i)
+            temp.setupUi(self.mainwindow.posts_scroll_area, i)
             self.mainwindow.verticalLayout.addWidget(temp.o)
         self.mainwindow.verticalLayout.addItem(QtWidgets.QSpacerItem(
             20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding))

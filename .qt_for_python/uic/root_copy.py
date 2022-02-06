@@ -1,3 +1,4 @@
+from this import d
 from PyQt5 import QtCore, QtGui, QtWidgets
 from create_posts_123123 import Ui_create_posts_form
 from sql.sign_up_sql import Sign_Up_Insert
@@ -5,11 +6,16 @@ from sql.sign_in_sql import Sign_In_Check
 from create_classes import Ui_create_classes_form
 from join_classes import Ui_join_classes_form
 from compon.create_assignments import Ui_Assignment_form
-
+from create_events import Ui_create_event
 
 class Ui_MainWindow(object):
     ###
-    
+    def add_events(self):
+        self.create_class_main_window1 = QtWidgets.QMainWindow()
+        self.ui_class_create1 = Ui_create_event()
+        self.ui_class_create1.setupUi(self.create_class_main_window1)
+        self.create_class_main_window1.show()
+        
     def un_block_log(self):
         self.menuViews.setDisabled(False)
         self.menuClassesMain.setDisabled(False)
@@ -42,8 +48,8 @@ class Ui_MainWindow(object):
 
 
     def show_create_as(self):
-        for _ in range(12):
-            print("\n")
+        # for _ in range(12):
+            # print("\n")
         self.create_as_main_window = QtWidgets.QMainWindow()
         self.ui_as_create = Ui_Assignment_form()
         self.ui_as_create.setupUi(self.create_as_main_window)
@@ -1280,11 +1286,11 @@ class Ui_MainWindow(object):
         ###
 
         self.menuViews.addAction(self.actionClasses)
-        self.menuViews.addSeparator()
-        self.menuViews.addAction(self.actionEvents)
-        self.menuViews.addSeparator()
-        self.menuViews.addAction(self.actionAssignments)
-        self.menuViews.addSeparator()
+        # self.menuViews.addSeparator()
+        # self.menuViews.addAction(self.actionEvents)
+        # self.menuViews.addSeparator()
+        # self.menuViews.addAction(self.actionAssignments)
+        # self.menuViews.addSeparator()
 
         self.menuClassesMain.addAction(self.actionCreatePost)
         self.menuClassesMain.addSeparator()
@@ -1300,7 +1306,7 @@ class Ui_MainWindow(object):
 
         self.menuClub.addAction(self.actionClubEvents)
         self.menuClub.addSeparator()
-        self.menuClub.addAction(self.actionClubs)
+        # self.menuClub.addAction(self.actionClubs)
         
         
         self.menubar.addAction(self.menuUser.menuAction())
@@ -1349,8 +1355,8 @@ class Ui_MainWindow(object):
         self.actionSignIn.setText(_translate("MainWindow", "Log In"))
         self.actionLogOut.setText(_translate("MainWindow", "Log Out"))
         self.actionClasses.setText(_translate("MainWindow", "Classes"))
-        self.actionEvents.setText(_translate("MainWindow", "Events"))
-        self.actionAssignments.setText(_translate("MainWindow", "Assignments"))
+        self.actionEvents.setText(_translate("MainWindow", "Admin Posts"))
+        self.actionAssignments.setText(_translate("MainWindow", "Posts"))
         self.actionCreatePost.setText(_translate("MainWindow", "Create Post"))
         self.actionCreateAssignment.setText(
             _translate("MainWindow", "Create Assignment"))
@@ -1367,5 +1373,5 @@ class Ui_MainWindow(object):
         self.actionRefresh.setText(_translate("MainWindow", "Refresh"))
         self.actionCreateAssignment.triggered.connect(
             lambda: self.show_create_as())
-
+        self.actionClubEvents.triggered.connect(lambda: self.add_events())
         ###

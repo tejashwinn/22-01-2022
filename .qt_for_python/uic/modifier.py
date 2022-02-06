@@ -205,6 +205,11 @@ def restart(variable):
     variable.class_name_frame.hide()
     variable.posts_scroll_area.hide()
 
+# def add_events(variable):
+#     create_class_main_window = QtWidgets.QMainWindow()
+#     variable.ui_class_create = Ui_create_classes_form()
+#     variable.ui_class_create.setupUi(self.create_class_main_window)
+#     variable.create_class_main_window.show()
 
 if __name__ == "__main__":
 
@@ -231,13 +236,11 @@ if __name__ == "__main__":
     ui.actionLogOut.triggered.connect(lambda: log_out(ui))
     ui.actionViewAssignment.triggered.connect(
         lambda: view_assignment(ui))
-
     ui.actionClasses.triggered.connect(
         lambda: show_all_classes_frame(ui, "classes_joined"))
     ui.actionViewClasses.triggered.connect(
         lambda: show_all_classes_frame(ui, "classes_owned"))
-    ui.actionRefresh.triggered.connect(lambda: restart(ui))
-
+    # ui.actionClubEvents.triggered.connect(lambda: add_events(ui))
     # button actions
     ui.in_sign_up_button.clicked.connect(lambda: sign_up_switch(ui))
     ui.up_sign_in_button.clicked.connect(lambda: sign_in_switch(ui))

@@ -1,17 +1,18 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import sqlite3
 from sqlite3 import Error
-import json
 
 
-class Indi_marks(object):
+class Indi_marks():
+    database = r"C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\college_virtual_space.db"
 
     def submit_marks(self):
-        sql = ''' UPDATE as_sub_cvs SET as_marks=? WHERE post_code=?'''
+        print(1)
+        sql = ''' UPDATE as_sub_cvs SET as_marks=? WHERE as_code=? and as_user=?'''
         # print("dumb", json.dumps(self.existing_comments))
         json_data = str(self.marks_entry.text())
         print(json_data)
-        self.cursor.execute(sql, (json_data, self.post))
+        self.cursor.execute(sql, (json_data, self.as_code, self.user))
         self.connection.commit()
         from sql.fetch_sub import Retrieve_Sub_Cl
         Retrieve_Sub_Cl()
@@ -35,42 +36,47 @@ class Indi_marks(object):
         rows = self.cursor.fetchall()
 
         file1 = rows[0][0]
-        temp_storage = 'C:/Users/tejas/Desktop/22-01-22/.qt_for_python/uic/temp_file_storage/' + \
-            self.as_file_name
+        temp_storage = 'C:/Users/tejas/Desktop/22-01-22/.qt_for_python/uic/temp_file_storage/' + self.file_name
         with open(temp_storage, 'wb') as file:
             file.write(file1)
 
         file = str(QtWidgets.QFileDialog.getExistingDirectory(
-            self.ui_post.assign_frame, "Select Directory"))
+            self.f, "Select Directory"))
         import shutil
-        file += "/"+self.as_file_name
-        src_path = temp_storage
-        dst_path = file
-        shutil.move(src_path, dst_path)
-        # print(src_path, "\n", dst_path)
-        self.ui_post.dynamic_files.setText("Downloaded: "+self.as_file_name)
+        if file != "":
+            file += "/"+self.as_file_name
+            src_path = temp_storage
+            dst_path = file
+            shutil.move(src_path, dst_path)
+            # print(src_path, "\n", dst_path)
+            # self.ui_post.dynamic_files.setText("Downloaded: "+self.as_file_name)
+            self.dynamic_file_name_label.setText("File Downloaded")
 
     def return_object(self):
-        self.dynamic_user_name_label.setText(self.di["as_user"])
+        self.dynamic_userr_name_label.setText(self.di["as_user"])
         self.dynamic_sub_date.setText(self.di["as_sub_date"])
         self.download_file_button.setText("Download File")
         self.static_marks.setText("Marks: ")
         self.submit_file_button.setText("Add Marks")
         self.dynamic_file_name_label.setText(self.di["as_file_name"])
         self.marks_entry.setText(self.di["as_marks"])
-        self.download_file_button.clicked.connect(self.download_file)
+        self.download_file_button.clicked.connect(lambda: self.download_file())
 
-        self.submit_file_button.clicked.connect(self.submit_marks)
+        self.submit_file_button.clicked.connect(lambda: self.submit_marks())
 
         self.o = self.username_form
 
     def setupUi(self, Form, di):
+        self.f = Form
+        self.create_connection()
         self.as_code = di["as_code"]
         self.user = di["as_user"]
+        self.file_name = di["as_file_name"]
+        self.as_file_name = di["as_file_name"]
         # print(di)
         self.di = di
-        self.username_form = QtWidgets.QFrame()
-        self.username_form.setGeometry(QtCore.QRect(10, 70, 451, 150))
+        self.username_form = QtWidgets.QFrame(self.f)
+        self.username_form.setGeometry(QtCore.QRect(10, 110, 451, 150))
         self.username_form.setMinimumSize(QtCore.QSize(0, 150))
         self.username_form.setMaximumSize(QtCore.QSize(99999, 150))
         self.username_form.setCursor(
@@ -89,35 +95,35 @@ class Indi_marks(object):
         self.username_form.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.username_form.setFrameShadow(QtWidgets.QFrame.Raised)
         self.username_form.setObjectName("username_form")
-        self.dynamic_name_label = QtWidgets.QLabel(self.username_form)
-        self.dynamic_name_label.setGeometry(QtCore.QRect(10, 0, 431, 61))
+        self.dynamic_userr_name_label = QtWidgets.QLabel(self.username_form)
+        self.dynamic_userr_name_label.setGeometry(QtCore.QRect(10, 0, 431, 61))
         font = QtGui.QFont()
         font.setFamily("Poppins")
         font.setPointSize(-1)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(50)
-        self.dynamic_name_label.setFont(font)
-        self.dynamic_name_label.setCursor(
+        self.dynamic_userr_name_label.setFont(font)
+        self.dynamic_userr_name_label.setCursor(
             QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.dynamic_name_label.setStyleSheet("position: absolute;\n"
-                                              "left: 20px;\n"
-                                              "right: 30px;\n"
-                                              "top: 10px;\n"
-                                              "bottom: 10px;\n"
-                                              "\n"
-                                              "font-family: Poppins;\n"
-                                              "font-style: normal;\n"
-                                              "font-weight: normal;\n"
-                                              "font-size: 20px;\n"
-                                              "line-height: 37px;\n"
-                                              "letter-spacing: 0.05em;\n"
-                                              "background: rgba(0, 0, 0, 0.01);\n"
-                                              "color: #000000;\n"
-                                              "border:0px;\n"
-                                              "")
-        self.dynamic_name_label.setWordWrap(True)
-        self.dynamic_name_label.setObjectName("dynamic_name_label")
+        self.dynamic_userr_name_label.setStyleSheet("position: absolute;\n"
+                                                    "left: 20px;\n"
+                                                    "right: 30px;\n"
+                                                    "top: 10px;\n"
+                                                    "bottom: 10px;\n"
+                                                    "\n"
+                                                    "font-family: Poppins;\n"
+                                                    "font-style: normal;\n"
+                                                    "font-weight: normal;\n"
+                                                    "font-size: 20px;\n"
+                                                    "line-height: 37px;\n"
+                                                    "letter-spacing: 0.05em;\n"
+                                                    "background: rgba(0, 0, 0, 0.01);\n"
+                                                    "color: #000000;\n"
+                                                    "border:0px;\n"
+                                                    "")
+        self.dynamic_userr_name_label.setWordWrap(True)
+        self.dynamic_userr_name_label.setObjectName("dynamic_userr_name_label")
         self.dynamic_sub_date = QtWidgets.QLabel(self.username_form)
         self.dynamic_sub_date.setGeometry(QtCore.QRect(10, 60, 181, 21))
         self.dynamic_sub_date.setCursor(
@@ -255,23 +261,6 @@ class Indi_marks(object):
                                                    "border:0px;")
         self.dynamic_file_name_label.setAlignment(
             QtCore.Qt.AlignLeading | QtCore.Qt.AlignLeft | QtCore.Qt.AlignTop)
-
         self.dynamic_file_name_label.setObjectName("dynamic_file_name_label")
-
-        self.dynamic_file_name_label.setObjectName("dynamic_file_name_label")
-
-        self.retranslateUi(Form)
-        QtCore.QMetaObject.connectSlotsByName(self.username_form)
-
-
-        _translate = QtCore.QCoreApplication.translate
-        # Form.setWindowTitle(_translate("Form", "Form"))
-        self.dynamic_name_label.setText(_translate("Form", "Username"))
-        self.dynamic_sub_date.setText(_translate(
-            "Form", "In Date: 17-12-2001 12:12"))
-        self.download_file_button.setText(_translate("Form", "Download File"))
-        self.static_marks.setText(_translate("Form", "Marks:"))
-        self.submit_file_button.setText(_translate("Form", "Submit"))
-        self.dynamic_file_name_label.setText(_translate("Form", "File Name:"))
 
         self.return_object()
