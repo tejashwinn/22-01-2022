@@ -44,6 +44,9 @@ class Retrieve_Post_Cl():
         self.fetch_class_code()
         self.ret()
         self.write_to_json()
+        from sql.fetch_assignments import Retrieve_As_Cl
+        Retrieve_As_Cl()
+
 
 
 # Retrieve_Post_Cl()

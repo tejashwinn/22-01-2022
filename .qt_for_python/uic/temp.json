@@ -11,5 +11,6 @@
     "post_selected": "",
     "as_selected": "",
     "posts_in_class": [],
-    "as_in_class": []
+    "as_in_class": [],
+    "sub_for_selected_as":[]
 }

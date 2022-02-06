@@ -79,5 +79,4 @@ class Fetch_Classes_Cl():
             self.joined_classes = []
         self.write_classes_owned_to_json()
 
-
 # Fetch_Classes_Cl()

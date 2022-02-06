@@ -46,3 +46,5 @@ class Retrieve_As_Cl():
         self.fetch_class_code()
         self.ret()
         self.write_to_json()
+        from sql.fetch_sub import Retrieve_Sub_Cl
+        Retrieve_As_Cl()

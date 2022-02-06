@@ -64,7 +64,7 @@ def show_all_classes_frame(variable, te):
                 elif child.layout() is not None:
                     clearLayout(child.layout())
     clearLayout(variable.verticalLayout_5)
-
+    clearLayout(variable.verticalLayout_3)
     data = json_data()
     temp1 = QtWidgets.QLabel(variable.in_inner_frame)
     temp1.setGeometry(QtCore.QRect(10, 10, 441, 30))
@@ -96,7 +96,6 @@ def show_all_classes_frame(variable, te):
 
     Retrieve_Post_Cl()
     Retrieve_As_Cl()
-
 
     variable.all_classes_frame.show()
     variable.class_name_frame.hide()
@@ -138,6 +137,23 @@ def show(variable):
         variable.class_name_frame.hide()
         variable.posts_scroll_area.hide()
 
+def view_assignment(variable):
+    def clearLayout(layout):
+        if layout is not None:
+            while layout.count():
+                child = layout.takeAt(0)
+                if child.widget() is not None:
+                    child.widget().deleteLater()
+                elif child.layout() is not None:
+                    clearLayout(child.layout())
+    # clearLayout(variable.verticalLayout_5)
+    clearLayout(variable.verticalLayout_3)
+    
+    
+    variable.all_classes_frame.show()
+    variable.class_name_frame.hide()
+    variable.posts_scroll_area.hide()
+    
 
 def restart(variable):
     Fetch_Classes_Cl()
@@ -149,6 +165,7 @@ def restart(variable):
     data = json_data()
     data["class_selected"] = ""
     data["post_selected"] = ""
+    data["as_selected"] = ""
 
     with open(r"C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json", "w") as settings_json_file:
         json.dump(data, settings_json_file, indent=4)
@@ -165,6 +182,7 @@ if __name__ == "__main__":
     data = json_data()
     data["class_selected"] = ""
     data["post_selected"] = ""
+    data["as_selected"] = ""
 
     with open(r"C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json", "w") as settings_json_file:
         json.dump(data, settings_json_file, indent=4)

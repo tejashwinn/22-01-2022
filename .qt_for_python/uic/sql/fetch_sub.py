@@ -21,22 +21,19 @@ class Retrieve_Sub_Cl():
 
     def ret(self):
         self.cursor.execute(
-            "SELECT as_code,as_user,as_last_date, as_sub_date, as_max_marks,as_marks,as_file_name, as_exten FROM as_sub_cvs WHERE as_class =?", (self.class_code,))
+            "SELECT as_code,as_user,as_last_date, as_sub_date, as_max_marks,as_marks,as_file_name, as_exten FROM as_sub_cvs WHERE as_code =?", (self.code,))
         rows = self.cursor.fetchall()
         for ix in rows:
             temp = dict(ix)
-            # print(temp)
-            temp["as_comments"] = json.loads(temp["as_comments"])
-
             self.as_in.append(temp)
 
     def fetch_class_code(self):
         with open(r'C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json') as settings_json_file:
             self.data = json.load(settings_json_file)
-            self.class_code = self.data["class_selected"]
+            self.code = self.data["as_selected"]
 
     def write_to_json(self):
-        self.data["as_in_class"] = self.as_in
+        self.data["sub_for_selected_as"] = self.as_in
         with open(r"C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json", "w") as settings_json_file:
             json.dump(self.data, settings_json_file, indent=4)
 
@@ -45,4 +42,8 @@ class Retrieve_Sub_Cl():
         self.create_connection()
         self.fetch_class_code()
         self.ret()
+
         self.write_to_json()
+
+
+# Retrieve_Sub_Cl()

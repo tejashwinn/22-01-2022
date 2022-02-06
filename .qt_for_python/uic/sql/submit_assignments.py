@@ -44,7 +44,7 @@ class Sub_Assignment():
                 as_file_name,
                 as_exten)
                 VALUES(?,?,?,?,?,?,?,?) '''
-                
+
             self.cursor.execute(sql, [
                 self.as_code,
                 self.username,
@@ -61,14 +61,25 @@ class Sub_Assignment():
             self.connection.close()
             self.valid = True
             self.errors = ''
+            from sql.fetch_sub import Retrieve_Sub_Cl
+            Retrieve_Sub_Cl()
 
     def fetch_as_code(self):
         with open(r'C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json') as settings_json_file:
             data = json.load(settings_json_file)
             self.as_code = str(data["as_selected"])
             self.username = str(data["log"]["username"])
-            self.valid=True
-            self.errors=""
+
+            for i in data["sub_for_selected_as"]:
+                if self.as_code == i["as_code"] and self.username == i["as_user"]:
+                    self.valid = False
+                    self.errors = "Already submitted"
+                    break
+                else:
+                    self.valid = True
+                    self.errors = ""
+
+
     def __init__(self, cur_date, di, file_path=""):
 
         self.file_path = file_path
