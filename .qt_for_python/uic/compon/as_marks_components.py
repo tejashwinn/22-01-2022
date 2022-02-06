@@ -1,13 +1,72 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
+import sqlite3
+from sqlite3 import Error
+import json
 
 
 class Indi_marks(object):
 
+    def submit_marks(self):
+        sql = ''' UPDATE as_sub_cvs SET as_marks=? WHERE post_code=?'''
+        # print("dumb", json.dumps(self.existing_comments))
+        json_data = str(self.marks_entry.text())
+        print(json_data)
+        self.cursor.execute(sql, (json_data, self.post))
+        self.connection.commit()
+        from sql.fetch_sub import Retrieve_Sub_Cl
+        Retrieve_Sub_Cl()
+
+    def create_connection(self):
+        print(2)
+        self.connection = None
+        self.cursor = None
+        try:
+            self.connection = sqlite3.connect(self.database)
+            self.cursor = self.connection.cursor()
+        except Error as e:
+            self.valid = False
+            print(e)
+
+    def download_file(self):
+        print(1)
+        sql = """SELECT as_file from as_sub_cvs where as_code = ? and as_user=?"""
+        self.create_connection()
+        self.cursor.execute(sql, (self.as_code, self.user))
+        rows = self.cursor.fetchall()
+
+        file1 = rows[0][0]
+        temp_storage = 'C:/Users/tejas/Desktop/22-01-22/.qt_for_python/uic/temp_file_storage/' + \
+            self.as_file_name
+        with open(temp_storage, 'wb') as file:
+            file.write(file1)
+
+        file = str(QtWidgets.QFileDialog.getExistingDirectory(
+            self.ui_post.assign_frame, "Select Directory"))
+        import shutil
+        file += "/"+self.as_file_name
+        src_path = temp_storage
+        dst_path = file
+        shutil.move(src_path, dst_path)
+        # print(src_path, "\n", dst_path)
+        self.ui_post.dynamic_files.setText("Downloaded: "+self.as_file_name)
 
     def return_object(self):
+        self.dynamic_user_name_label.setText(self.di["as_user"])
+        self.dynamic_sub_date.setText(self.di["as_sub_date"])
+        self.download_file_button.setText("Download File")
+        self.static_marks.setText("Marks: ")
+        self.submit_file_button.setText("Add Marks")
+        self.dynamic_file_name_label.setText(self.di["as_file_name"])
+        self.marks_entry.setText(self.di["as_marks"])
+        self.download_file_button.clicked.connect(self.download_file)
+
+        self.submit_file_button.clicked.connect(self.submit_marks)
+
         self.o = self.username_form
 
     def setupUi(self, Form, di):
+        self.as_code = di["as_code"]
+        self.user = di["as_user"]
         # print(di)
         self.di = di
         self.username_form = QtWidgets.QFrame()
@@ -197,11 +256,22 @@ class Indi_marks(object):
         self.dynamic_file_name_label.setAlignment(
             QtCore.Qt.AlignLeading | QtCore.Qt.AlignLeft | QtCore.Qt.AlignTop)
 
-        self.dynamic_file_name_label.setObjectName(self.di["as_file_name"])
-        self.dynamic_name_label.setText(self.di["as_user"])
-        self.dynamic_sub_date.setText(self.di[""])
-        self.download_file_button.setText(self.di[""])
-        self.static_marks.setText(self.di[""])
-        self.submit_file_button.setText(self.di[""])
-        self.dynamic_file_name_label.setText(self.di[""])
+        self.dynamic_file_name_label.setObjectName("dynamic_file_name_label")
+
+        self.dynamic_file_name_label.setObjectName("dynamic_file_name_label")
+
+        self.retranslateUi(Form)
+        QtCore.QMetaObject.connectSlotsByName(self.username_form)
+
+
+        _translate = QtCore.QCoreApplication.translate
+        # Form.setWindowTitle(_translate("Form", "Form"))
+        self.dynamic_name_label.setText(_translate("Form", "Username"))
+        self.dynamic_sub_date.setText(_translate(
+            "Form", "In Date: 17-12-2001 12:12"))
+        self.download_file_button.setText(_translate("Form", "Download File"))
+        self.static_marks.setText(_translate("Form", "Marks:"))
+        self.submit_file_button.setText(_translate("Form", "Submit"))
+        self.dynamic_file_name_label.setText(_translate("Form", "File Name:"))
+
         self.return_object()
