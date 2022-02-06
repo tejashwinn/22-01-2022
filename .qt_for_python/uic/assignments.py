@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'c:\Users\tejas\Desktop\22-01-22\assignments.ui'
+# Form implementation generated from reading ui file 'c:\Users\tejas\Desktop\22-01-22\assignments copy.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -12,10 +12,43 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class Ui_Assignments(object):
-    def submit(self):
-        pass
+    path = ["", ""]
 
-    def setupUi(self, Assignments):
+    
+
+    def check_date(self):
+        self.as_sub_date = self.dic["as_sub_date"].rsplit(":", 1)[0]
+        self.cur_date = QtCore.QDateTime.currentDateTime().toString("yyyy-MM-dd hh:mm")
+        if self.as_sub_date < self.cur_date:
+            self.add_file_button.setDisabled(True)
+            self.submit_button_assignment.setDisabled(True)
+            self.label.setText("Submissions are not longer accepted")
+
+    def open_file(self):
+        self.path = QtWidgets.QFileDialog.getOpenFileName(
+            self.assign_frame, 'Select a File', '', 'All Files (*.*)')
+        self.dynamic_add_files.setText(
+            "File Name: "+self.path[0].split('/')[-1])
+
+    def submit(self):
+        print(self.path)
+        if self.path[0] == "":
+            self.label.setText("No file selected")
+        else:
+            from sql.submit_assignments import Sub_Assignment
+            temp = Sub_Assignment(cur_date=self.cur_date,
+                                  file_path=self.path[0], di=self.dic)
+            
+            if temp.valid:
+                temp.submission()
+                self.submit_button_assignment.setDisabled(True)
+                self.label.setText("Submitted")
+            else:
+                self.label.setText(temp.errors)
+        self.label.show()
+
+    def setupUi(self, Assignments, di):
+        self.dic = di
         Assignments.setObjectName("Assignments")
         Assignments.resize(563, 522)
         Assignments.setStyleSheet("")
@@ -98,7 +131,7 @@ class Ui_Assignments(object):
         self.dynamic_des_label.setWordWrap(True)
         self.dynamic_des_label.setObjectName("dynamic_des_label")
         self.dynamic_files = QtWidgets.QLabel(self.assign_frame)
-        self.dynamic_files.setGeometry(QtCore.QRect(20, 280, 381, 31))
+        self.dynamic_files.setGeometry(QtCore.QRect(20, 300, 381, 31))
         self.dynamic_files.setStyleSheet("font-family: Poppins;\n"
                                          "font-style: normal;\n"
                                          "font-weight: normal;\n"
@@ -113,7 +146,7 @@ class Ui_Assignments(object):
         self.submit_button_assignment = QtWidgets.QPushButton(
             self.assign_frame)
         self.submit_button_assignment.setGeometry(
-            QtCore.QRect(170, 390, 191, 41))
+            QtCore.QRect(170, 420, 191, 41))
         self.submit_button_assignment.setStyleSheet("*{\n"
                                                     "font-family: Inter;\n"
                                                     "font-style: normal;\n"
@@ -168,7 +201,7 @@ class Ui_Assignments(object):
                                             "")
         self.dynamic_sub_date.setObjectName("dynamic_sub_date")
         self.download_button = QtWidgets.QPushButton(self.assign_frame)
-        self.download_button.setGeometry(QtCore.QRect(410, 280, 121, 31))
+        self.download_button.setGeometry(QtCore.QRect(410, 300, 121, 31))
         self.download_button.setStyleSheet("*{\n"
                                            "font-family: Inter;\n"
                                            "font-style: normal;\n"
@@ -193,7 +226,7 @@ class Ui_Assignments(object):
                                            "")
         self.download_button.setObjectName("download_button")
         self.dynamic_add_files = QtWidgets.QLabel(self.assign_frame)
-        self.dynamic_add_files.setGeometry(QtCore.QRect(20, 340, 371, 31))
+        self.dynamic_add_files.setGeometry(QtCore.QRect(20, 350, 371, 31))
         self.dynamic_add_files.setStyleSheet("font-family: Poppins;\n"
                                              "font-style: normal;\n"
                                              "font-weight: normal;\n"
@@ -206,7 +239,7 @@ class Ui_Assignments(object):
                                              "")
         self.dynamic_add_files.setObjectName("dynamic_add_files")
         self.add_file_button = QtWidgets.QPushButton(self.assign_frame)
-        self.add_file_button.setGeometry(QtCore.QRect(410, 340, 121, 31))
+        self.add_file_button.setGeometry(QtCore.QRect(410, 350, 121, 31))
         self.add_file_button.setStyleSheet("*{\n"
                                            "font-family: Inter;\n"
                                            "font-style: normal;\n"
@@ -243,10 +276,28 @@ class Ui_Assignments(object):
                                          "text-transform: capitalize;\n"
                                          "")
         self.dynamic_marks.setObjectName("dynamic_marks")
-
-        ###
+        self.label = QtWidgets.QLabel(self.assign_frame)
+        self.label.setGeometry(QtCore.QRect(20, 270, 501, 16))
+        self.label.setStyleSheet("position: absolute;\n"
+                                 "left: 0%;\n"
+                                 "right: 12.33%;\n"
+                                 "top: 15%;\n"
+                                 "bottom: 14.17%;\n"
+                                 "\n"
+                                 "font-family: poppins;\n"
+                                 "font-style: normal;\n"
+                                 "font-weight: normal;\n"
+                                 "font-size: 14px;\n"
+                                 "line-height: 17px;\n"
+                                 "\n"
+                                 "/* Dark / Medium */\n"
+                                 "\n"
+                                 "color: #FF0000;")
+        self.label.setText("")
+        self.label.setObjectName("label")
+        self.add_file_button.clicked.connect(self.open_file)
         self.submit_button_assignment.clicked.connect(self.submit)
-        ###
+
         self.retranslateUi(Assignments)
         QtCore.QMetaObject.connectSlotsByName(Assignments)
 
@@ -256,7 +307,7 @@ class Ui_Assignments(object):
         self.dynamic_heading_as.setText(
             _translate("Assignments", "Assignment Heading"))
         self.dynamic_des_label.setText(_translate(
-            "Assignments", "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat mass quis enim. Donec."))
+            "Assignments", ""))
         self.dynamic_files.setText(_translate("Assignments", "Files: "))
         self.submit_button_assignment.setText(
             _translate("Assignments", "Submit"))
@@ -269,3 +320,4 @@ class Ui_Assignments(object):
         self.dynamic_add_files.setText(_translate("Assignments", "Add Files"))
         self.add_file_button.setText(_translate("Assignments", "Add file"))
         self.dynamic_marks.setText(_translate("Assignments", "Max Marks:"))
+        self.check_date()

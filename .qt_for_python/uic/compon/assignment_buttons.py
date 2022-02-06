@@ -48,7 +48,7 @@ class Individual_As_Button():
     def open_post(self, event):
         with open(r'C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json') as settings_json_file:
             data = json.load(settings_json_file)
-            # data["as_selected"] = self.as_code
+            data["as_selected"] = self.as_code
         with open(r"C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json", "w") as settings_json_file:
             json.dump(data, settings_json_file, indent=4)
 
@@ -60,8 +60,8 @@ class Individual_As_Button():
         from assignments import Ui_Assignments
         self.ui_post = Ui_Assignments()
 
-        self.ui_post.setupUi(self.post_mainwindow)
-        self.ui_post.add_file_button.clicked.connect(self.open_file)
+        self.ui_post.setupUi(self.post_mainwindow, self.dic)
+        # self.ui_post.add_file_button.clicked.connect(self.open_file)
         self.ui_post.dynamic_as_date.setText("Date: " + self.as_date)
         self.ui_post.dynamic_sub_date.setText(
             "Submisson date: " + self.as_sub_date)
@@ -92,7 +92,7 @@ class Individual_As_Button():
         self.as_file_name = di["as_file_name"]
         self.as_exten = di["as_exten"]
         self.as_comments = di["as_comments"]
-
+        self.dic = di
         self.child = self.return_object()
         self.dynamic_name_label.setText(self.as_heading)
         self.dynamic_in_label.setText("Date: "+self.as_date)

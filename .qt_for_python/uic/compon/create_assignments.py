@@ -350,11 +350,11 @@ class Ui_Assignment_form(object):
         self.date_time_edit.setDateTime(QtCore.QDateTime.currentDateTime())
 
 
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    create_posts_form = QtWidgets.QWidget()
-    ui = Ui_Assignment_form()
-    ui.setupUi(create_posts_form)
-    create_posts_form.show()
-    sys.exit(app.exec_())
+# if __name__ == "__main__":
+#     import sys
+#     app = QtWidgets.QApplication(sys.argv)
+#     create_posts_form = QtWidgets.QWidget()
+#     ui = Ui_Assignment_form()
+#     ui.setupUi(create_posts_form)
+#     create_posts_form.show()
+#     sys.exit(app.exec_())

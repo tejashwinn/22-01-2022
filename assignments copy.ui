@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Assignments</class>
+ <widget class="QWidget" name="Assignments">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>563</width>
+    <height>522</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QFrame" name="assign_frame">
+   <property name="geometry">
+    <rect>
+     <x>11</x>
+     <y>11</y>
+     <width>541</width>
+     <height>500</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>541</width>
+     <height>500</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>541</width>
+     <height>500</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#assign_frame
+{/* Auto layout */
+
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 40px 25px;
+
+position: absolute;
+width: 593px;
+height: 594px;
+left: calc(50% - 593px/2 - 0.5px);
+top: 243px;
+
+/* White */
+
+background: #FFFFFF;
+/* Grey / Dark */
+
+border: 1px solid #D1D1D1;
+box-sizing: border-box;
+border-radius: 8px;}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="dynamic_heading_as">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>511</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Poppins</family>
+      <pointsize>-1</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">position: absolute;
+width: 233px;
+height: 60px;
+left: 92px;
+top: 48px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 30px;
+line-height: 60px;
+/* identical to box height */
+
+letter-spacing: 0.05em;
+text-decoration-line: underline;
+text-transform: capitalize;
+
+color: #000000;
+</string>
+    </property>
+    <property name="text">
+     <string>Assignment Heading</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="dynamic_des_label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>130</y>
+      <width>511</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>511</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: rgba(196, 196, 196, 0.1);
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+line-height: 30px;
+/* identical to box height */
+
+letter-spacing: 0.05em;
+text-transform: capitalize;
+
+color: #000000;</string>
+    </property>
+    <property name="text">
+     <string>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat mass quis enim. Donec.</string>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="dynamic_files">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>300</y>
+      <width>381</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+line-height: 30px;
+/* identical to box height */
+
+letter-spacing: 0.05em;
+text-transform: capitalize;
+</string>
+    </property>
+    <property name="text">
+     <string>Files: </string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="submit_button_assignment">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>420</y>
+      <width>191</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+font-family: Inter;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+align-items: center;
+
+/* Grey / Light */
+
+color: white;
+background: #4F4F4F;
+border-radius: 8px;
+}
+
+:pressed {
+    border-style: inset;
+	border: 1px solid  #4F4F4F;
+color: #4F4F4F;
+background: #FFFFFF;
+}
+/* Inside auto layout */
+
+</string>
+    </property>
+    <property name="text">
+     <string>Submit</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="dynamic_as_date">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>501</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 13px;
+line-height: 30px;
+/* identical to box height */
+
+letter-spacing: 0.05em;
+text-transform: capitalize;
+</string>
+    </property>
+    <property name="text">
+     <string>Assignment Date:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="dynamic_sub_date">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>90</y>
+      <width>351</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 13px;
+line-height: 30px;
+/* identical to box height */
+
+letter-spacing: 0.05em;
+text-transform: capitalize;
+</string>
+    </property>
+    <property name="text">
+     <string>Submisson Date:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="download_button">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>300</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+font-family: Inter;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 17px;
+align-items: center;
+border-style: inset;
+border: 1px solid  #4F4F4F;
+color: #4F4F4F;
+background: #FFFFFF;
+border-radius:10px;
+}
+
+:pressed {
+border-style: inset;
+color: white;
+background: #4F4F4F;
+border-radius: 8px;
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>Download File</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="dynamic_add_files">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>350</y>
+      <width>371</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+line-height: 30px;
+/* identical to box height */
+
+letter-spacing: 0.05em;
+text-transform: capitalize;
+</string>
+    </property>
+    <property name="text">
+     <string>Add Files</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="add_file_button">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>350</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+font-family: Inter;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 17px;
+align-items: center;
+border-style: inset;
+border: 1px solid  #4F4F4F;
+color: #4F4F4F;
+background: #FFFFFF;
+border-radius:10px;
+}
+
+:pressed {
+border-style: inset;
+color: white;
+background: #4F4F4F;
+border-radius: 8px;
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>Add file</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="dynamic_marks">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>90</y>
+      <width>141</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 13px;
+line-height: 30px;
+/* identical to box height */
+
+letter-spacing: 0.05em;
+text-transform: capitalize;
+</string>
+    </property>
+    <property name="text">
+     <string>Max Marks:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>270</y>
+      <width>501</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">position: absolute;
+left: 0%;
+right: 12.33%;
+top: 15%;
+bottom: 14.17%;
+
+font-family: poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 17px;
+
+/* Dark / Medium */
+
+color: #FF0000;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
