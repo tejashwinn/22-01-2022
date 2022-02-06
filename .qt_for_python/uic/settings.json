@@ -84,7 +84,7 @@
     ],
     "class_selected": "LfHVDRmCed",
     "post_selected": "",
-    "as_selected": "QPyLfSbRaS",
+    "as_selected": "F8EoADeb3z",
     "posts_in_class": [
         {
             "post_code": "wmmn9RFLVm",
@@ -323,5 +323,9 @@
             "as_file_name": "__init__.py",
             "as_exten": "py"
         }
-    ]
+    ],
+    "sub_selected": {
+        "as_code": "",
+        "as_user": ""
+    }
 }

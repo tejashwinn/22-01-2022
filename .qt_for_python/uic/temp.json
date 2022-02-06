@@ -12,5 +12,9 @@
     "as_selected": "",
     "posts_in_class": [],
     "as_in_class": [],
-    "sub_for_selected_as":[]
+    "sub_for_selected_as": [],
+    "sub_selected": {
+        "as_code": "",
+        "as_user": ""
+    }
 }

@@ -45,5 +45,3 @@ class Retrieve_Post_Cl():
         self.ret()
         self.write_to_json()
 
-
-Retrieve_Post_Cl()

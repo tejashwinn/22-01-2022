@@ -42,7 +42,6 @@ class Retrieve_Sub_Cl():
         self.create_connection()
         self.fetch_class_code()
         self.ret()
-
         self.write_to_json()
 
 

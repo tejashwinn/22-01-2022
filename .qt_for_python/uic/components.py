@@ -102,7 +102,7 @@ class Ui_mainwindow(object):
         self.label_7.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
         self.label_7.setObjectName("label_7")
         self.comment_view_frame = QtWidgets.QFrame(mainwindow)
-        self.comment_view_frame.setGeometry(QtCore.QRect(410, 430, 461, 70))
+        self.comment_view_frame.setGeometry(QtCore.QRect(530, 460, 461, 70))
         self.comment_view_frame.setMinimumSize(QtCore.QSize(0, 70))
         self.comment_view_frame.setMaximumSize(QtCore.QSize(461, 70))
         self.comment_view_frame.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
@@ -168,7 +168,7 @@ class Ui_mainwindow(object):
         self.user.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
         self.user.setObjectName("user")
         self.pushButton = QtWidgets.QPushButton(mainwindow)
-        self.pushButton.setGeometry(QtCore.QRect(240, 220, 101, 31))
+        self.pushButton.setGeometry(QtCore.QRect(900, 170, 101, 31))
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(True)
@@ -181,7 +181,7 @@ class Ui_mainwindow(object):
         self.pushButton.setIcon(icon)
         self.pushButton.setObjectName("pushButton")
         self.pushButton_2 = QtWidgets.QPushButton(mainwindow)
-        self.pushButton_2.setGeometry(QtCore.QRect(200, 380, 40, 40))
+        self.pushButton_2.setGeometry(QtCore.QRect(940, 400, 40, 40))
         self.pushButton_2.setStyleSheet("*{border-radius:0px;}\n"
 ":pressed{\n"
 "    border: 3px solid  #FF0000;\n"
@@ -317,7 +317,7 @@ class Ui_mainwindow(object):
         self.class_view_class_des_label.setWordWrap(True)
         self.class_view_class_des_label.setObjectName("class_view_class_des_label")
         self.post_single_button = QtWidgets.QFrame(mainwindow)
-        self.post_single_button.setGeometry(QtCore.QRect(240, 530, 461, 70))
+        self.post_single_button.setGeometry(QtCore.QRect(280, 550, 461, 70))
         self.post_single_button.setMinimumSize(QtCore.QSize(0, 70))
         self.post_single_button.setMaximumSize(QtCore.QSize(461, 70))
         self.post_single_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
@@ -468,7 +468,7 @@ class Ui_mainwindow(object):
         self.dynamic_sub_label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
         self.dynamic_sub_label.setObjectName("dynamic_sub_label")
         self.as_frame_2 = QtWidgets.QFrame(mainwindow)
-        self.as_frame_2.setGeometry(QtCore.QRect(110, 670, 248, 120))
+        self.as_frame_2.setGeometry(QtCore.QRect(110, 670, 241, 120))
         self.as_frame_2.setMinimumSize(QtCore.QSize(0, 120))
         self.as_frame_2.setMaximumSize(QtCore.QSize(99999, 120))
         self.as_frame_2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
@@ -554,6 +554,273 @@ class Ui_mainwindow(object):
 "border:0px;")
         self.dynamic_sub_label_2.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
         self.dynamic_sub_label_2.setObjectName("dynamic_sub_label_2")
+        self.as_frame_3 = QtWidgets.QFrame(mainwindow)
+        self.as_frame_3.setGeometry(QtCore.QRect(20, 230, 351, 120))
+        self.as_frame_3.setMinimumSize(QtCore.QSize(0, 120))
+        self.as_frame_3.setMaximumSize(QtCore.QSize(99999, 120))
+        self.as_frame_3.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.as_frame_3.setStyleSheet("*{\n"
+"position: absolute;\n"
+"width: 370px;\n"
+"height: 110px;\n"
+"left: 7px;\n"
+"top: 28px;\n"
+"\n"
+"background: rgba(0, 0, 0, 0.05);\n"
+"border: 1px solid rgba(0, 0, 0, 0.3);\n"
+"box-sizing: border-box;\n"
+"border-radius: 10px}")
+        self.as_frame_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.as_frame_3.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.as_frame_3.setObjectName("as_frame_3")
+        self.dynamic_name_label_3 = QtWidgets.QLabel(self.as_frame_3)
+        self.dynamic_name_label_3.setGeometry(QtCore.QRect(10, 0, 341, 61))
+        font = QtGui.QFont()
+        font.setFamily("Poppins")
+        font.setPointSize(-1)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.dynamic_name_label_3.setFont(font)
+        self.dynamic_name_label_3.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.dynamic_name_label_3.setStyleSheet("position: absolute;\n"
+"left: 20px;\n"
+"right: 30px;\n"
+"top: 10px;\n"
+"bottom: 10px;\n"
+"\n"
+"font-family: Poppins;\n"
+"font-style: normal;\n"
+"font-weight: normal;\n"
+"font-size: 20px;\n"
+"line-height: 37px;\n"
+"letter-spacing: 0.05em;\n"
+"background: rgba(0, 0, 0, 0.01);\n"
+"color: #000000;\n"
+"border:0px;\n"
+"")
+        self.dynamic_name_label_3.setWordWrap(True)
+        self.dynamic_name_label_3.setObjectName("dynamic_name_label_3")
+        self.dynamic_in_label_3 = QtWidgets.QLabel(self.as_frame_3)
+        self.dynamic_in_label_3.setGeometry(QtCore.QRect(10, 60, 231, 21))
+        self.dynamic_in_label_3.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.dynamic_in_label_3.setStyleSheet("position: absolute;\n"
+"left: 20px;\n"
+"right: 30px;\n"
+"top: 10px;\n"
+"bottom: 10px;\n"
+"\n"
+"font-family: Poppins;\n"
+"font-style: normal;\n"
+"font-weight: normal;\n"
+"font-size: 15px;\n"
+"line-height: 37px;\n"
+"letter-spacing: 0.05em;\n"
+"background: rgba(0, 0, 0, 0.01);\n"
+"color: #000000;\n"
+"border:0px;")
+        self.dynamic_in_label_3.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
+        self.dynamic_in_label_3.setObjectName("dynamic_in_label_3")
+        self.dynamic_sub_label_3 = QtWidgets.QLabel(self.as_frame_3)
+        self.dynamic_sub_label_3.setGeometry(QtCore.QRect(10, 90, 341, 21))
+        self.dynamic_sub_label_3.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.dynamic_sub_label_3.setStyleSheet("position: absolute;\n"
+"left: 20px;\n"
+"right: 30px;\n"
+"top: 10px;\n"
+"bottom: 10px;\n"
+"\n"
+"font-family: Poppins;\n"
+"font-style: normal;\n"
+"font-weight: normal;\n"
+"font-size: 15px;\n"
+"line-height: 37px;\n"
+"letter-spacing: 0.05em;\n"
+"background: rgba(0, 0, 0, 0.01);\n"
+"color: #000000;\n"
+"border:0px;")
+        self.dynamic_sub_label_3.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
+        self.dynamic_sub_label_3.setObjectName("dynamic_sub_label_3")
+        self.username_label = QtWidgets.QFrame(mainwindow)
+        self.username_label.setGeometry(QtCore.QRect(20, 390, 451, 150))
+        self.username_label.setMinimumSize(QtCore.QSize(0, 120))
+        self.username_label.setMaximumSize(QtCore.QSize(99999, 150))
+        self.username_label.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.username_label.setStyleSheet("*{\n"
+"position: absolute;\n"
+"width: 370px;\n"
+"height: 110px;\n"
+"left: 7px;\n"
+"top: 28px;\n"
+"\n"
+"background: rgba(0, 0, 0, 0.05);\n"
+"border: 1px solid rgba(0, 0, 0, 0.3);\n"
+"box-sizing: border-box;\n"
+"border-radius: 10px}")
+        self.username_label.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.username_label.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.username_label.setObjectName("username_label")
+        self.dynamic_name_label_6 = QtWidgets.QLabel(self.username_label)
+        self.dynamic_name_label_6.setGeometry(QtCore.QRect(10, 0, 431, 61))
+        font = QtGui.QFont()
+        font.setFamily("Poppins")
+        font.setPointSize(-1)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.dynamic_name_label_6.setFont(font)
+        self.dynamic_name_label_6.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.dynamic_name_label_6.setStyleSheet("position: absolute;\n"
+"left: 20px;\n"
+"right: 30px;\n"
+"top: 10px;\n"
+"bottom: 10px;\n"
+"\n"
+"font-family: Poppins;\n"
+"font-style: normal;\n"
+"font-weight: normal;\n"
+"font-size: 20px;\n"
+"line-height: 37px;\n"
+"letter-spacing: 0.05em;\n"
+"background: rgba(0, 0, 0, 0.01);\n"
+"color: #000000;\n"
+"border:0px;\n"
+"")
+        self.dynamic_name_label_6.setWordWrap(True)
+        self.dynamic_name_label_6.setObjectName("dynamic_name_label_6")
+        self.sub_date = QtWidgets.QLabel(self.username_label)
+        self.sub_date.setGeometry(QtCore.QRect(10, 60, 181, 21))
+        self.sub_date.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.sub_date.setStyleSheet("position: absolute;\n"
+"left: 20px;\n"
+"right: 30px;\n"
+"top: 10px;\n"
+"bottom: 10px;\n"
+"\n"
+"font-family: Poppins;\n"
+"font-style: normal;\n"
+"font-weight: normal;\n"
+"font-size: 15px;\n"
+"line-height: 37px;\n"
+"letter-spacing: 0.05em;\n"
+"background: rgba(0, 0, 0, 0.01);\n"
+"color: #000000;\n"
+"border:0px;")
+        self.sub_date.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
+        self.sub_date.setObjectName("sub_date")
+        self.pushButton_3 = QtWidgets.QPushButton(self.username_label)
+        self.pushButton_3.setGeometry(QtCore.QRect(320, 110, 121, 28))
+        self.pushButton_3.setStyleSheet("*{\n"
+"font-family: Inter;\n"
+"font-style: normal;\n"
+"font-weight: 500;\n"
+"font-size: 14px;\n"
+"line-height: 17px;\n"
+"align-items: center;\n"
+"border-style: inset;\n"
+"border: 1px solid  #4F4F4F;\n"
+"color: #4F4F4F;\n"
+"background: #FFFFFF;\n"
+"border-radius:10px;\n"
+"}\n"
+"\n"
+":pressed {\n"
+"border-style: inset;\n"
+"color: white;\n"
+"background: #4F4F4F;\n"
+"border-radius: 8px;\n"
+"}\n"
+"\n"
+"\n"
+"")
+        self.pushButton_3.setObjectName("pushButton_3")
+        self.label = QtWidgets.QLabel(self.username_label)
+        self.label.setGeometry(QtCore.QRect(10, 110, 71, 30))
+        self.label.setStyleSheet("position: absolute;\n"
+"left: 20px;\n"
+"right: 30px;\n"
+"top: 10px;\n"
+"bottom: 10px;\n"
+"\n"
+"font-family: Poppins;\n"
+"font-style: normal;\n"
+"font-weight: normal;\n"
+"font-size: 20px;\n"
+"line-height: 37px;\n"
+"letter-spacing: 0.05em;\n"
+"background: rgba(0, 0, 0, 0.01);\n"
+"color: #000000;\n"
+"border:0px;\n"
+"")
+        self.label.setObjectName("label")
+        self.lineEdit = QtWidgets.QLineEdit(self.username_label)
+        self.lineEdit.setGeometry(QtCore.QRect(90, 110, 113, 30))
+        self.lineEdit.setStyleSheet("position: static;\n"
+"width: 535px;\n"
+"height: 53px;\n"
+"left: 0px;\n"
+"top: 0px;\n"
+"\n"
+"/* White */\n"
+"\n"
+"background: #FFFFFF;\n"
+"/* Dark / Medium */\n"
+"\n"
+"border: 2px solid #4F4F4F;\n"
+"box-sizing: border-box;\n"
+"border-radius: 7px;\n"
+"\n"
+"")
+        self.lineEdit.setObjectName("lineEdit")
+        self.pushButton_4 = QtWidgets.QPushButton(self.username_label)
+        self.pushButton_4.setGeometry(QtCore.QRect(220, 110, 93, 30))
+        self.pushButton_4.setStyleSheet("*{\n"
+"font-family: Inter;\n"
+"font-style: normal;\n"
+"font-weight: 500;\n"
+"font-size: 14px;\n"
+"line-height: 17px;\n"
+"/* identical to box height */\n"
+"\n"
+"align-items: center;\n"
+"\n"
+"/* Grey / Light */\n"
+"\n"
+"color: white;\n"
+"background: #4F4F4F;\n"
+"border-radius: 8px;\n"
+"}\n"
+"\n"
+":pressed {\n"
+"    border-style: inset;\n"
+"    border: 1px solid  #4F4F4F;\n"
+"color: #4F4F4F;\n"
+"background: #FFFFFF;\n"
+"}\n"
+"/* Inside auto layout */\n"
+"\n"
+"")
+        self.pushButton_4.setObjectName("pushButton_4")
+        self.dynamic_file_name_label_6 = QtWidgets.QLabel(self.username_label)
+        self.dynamic_file_name_label_6.setGeometry(QtCore.QRect(200, 60, 241, 21))
+        self.dynamic_file_name_label_6.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.dynamic_file_name_label_6.setStyleSheet("position: absolute;\n"
+"left: 20px;\n"
+"right: 30px;\n"
+"top: 10px;\n"
+"bottom: 10px;\n"
+"\n"
+"font-family: Poppins;\n"
+"font-style: normal;\n"
+"font-weight: normal;\n"
+"font-size: 15px;\n"
+"line-height: 37px;\n"
+"letter-spacing: 0.05em;\n"
+"background: rgba(0, 0, 0, 0.01);\n"
+"color: #000000;\n"
+"border:0px;")
+        self.dynamic_file_name_label_6.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
+        self.dynamic_file_name_label_6.setObjectName("dynamic_file_name_label_6")
 
         self.retranslateUi(mainwindow)
         QtCore.QMetaObject.connectSlotsByName(mainwindow)
@@ -579,4 +846,13 @@ class Ui_mainwindow(object):
         self.dynamic_name_label_2.setText(_translate("mainwindow", "Name"))
         self.dynamic_in_label_2.setText(_translate("mainwindow", "In Date: 17-12-2001 12:12"))
         self.dynamic_sub_label_2.setText(_translate("mainwindow", "Las Date: 17-12-2001 12:12"))
+        self.dynamic_name_label_3.setText(_translate("mainwindow", "Name"))
+        self.dynamic_in_label_3.setText(_translate("mainwindow", "In Date: 17-12-2001 12:12"))
+        self.dynamic_sub_label_3.setText(_translate("mainwindow", "Las Date: 17-12-2001 12:12"))
+        self.dynamic_name_label_6.setText(_translate("mainwindow", "Username"))
+        self.sub_date.setText(_translate("mainwindow", "In Date: 17-12-2001 12:12"))
+        self.pushButton_3.setText(_translate("mainwindow", "Download File"))
+        self.label.setText(_translate("mainwindow", "Marks:"))
+        self.pushButton_4.setText(_translate("mainwindow", "Submit"))
+        self.dynamic_file_name_label_6.setText(_translate("mainwindow", "File Name:"))
 import temp_rc

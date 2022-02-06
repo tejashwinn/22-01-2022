@@ -2,11 +2,12 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 import json
 from compon.post_buttons import Individual_Post_Button
 from compon.assignment_buttons import Individual_As_Button
-from compon.fetch_posts import Retrieve_Post_Cl
+from sql.fetch_posts import Retrieve_Post_Cl
 from sql.fetch_assignments import Retrieve_As_Cl
 
 
 class Individual_Class_Button():
+
     def create_buttons_post(self):
         def json_data():
             with open(r'C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json') as settings_json_file:
@@ -24,7 +25,26 @@ class Individual_Class_Button():
         clearLayout(self.ui_te.verticalLayout)
 
         clearLayout(self.ui_te.verticalLayout_3)
-
+        temp1 = QtWidgets.QLabel()
+        temp1.setGeometry(QtCore.QRect(10, 10, 441, 30))
+        temp1.setStyleSheet("position: absolute;\n"
+                            "left: 20px;\n"
+                            "right: 30px;\n"
+                            "top: 10px;\n"
+                            "bottom: 10px;\n"
+                            "\n"
+                            "font-family: Poppins;\n"
+                            "font-style: normal;\n"
+                            "font-weight: normal;\n"
+                            "font-size: 20px;\n"
+                            "line-height: 37px;\n"
+                            "letter-spacing: 0.05em;\n"
+                            "background: rgba(0, 0, 0, 0.01);\n"
+                            "color: #000000;")
+        temp1.setObjectName("temp1")
+        temp1.setText("Posts")
+        self.ui_te.verticalLayout.addWidget(temp1)
+        
         for i in data["posts_in_class"]:
             temp = Individual_Post_Button(mainwindow=self.mainwindow, di=i)
             self.ui_te.verticalLayout.addWidget(temp.child)
