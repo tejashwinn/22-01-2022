@@ -8,15 +8,15 @@
 * [X] view posts from classes
 * [X] view post
 * [X] create post
-* [ ] view all assignments
-* [ ] create assignments
-* [ ] view assignments
-* [ ] view responses
-* [ ] comments assignments
+* [X] view all assignments
+* [X] create assignments
+* [X] view assignments
+* [X] view responses
+* [ ] ~~comments assignments~~
 * [ ] ~~all clubs~~
-* [ ] events
-* [ ] view events
-* [ ] create events
-* [ ] sync posts
-* [ ] sync classes
+* [X] events
+* [X] view events
+* [X] create events
+* [ ] ~~sync posts~~
+* [ ] ~~sync classes~~
 * [X] sync comments posts
