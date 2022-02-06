@@ -1,3 +1,4 @@
+from sql.fetch_events import Retrieve_Events_Cl
 import random
 import json
 
@@ -35,6 +36,7 @@ class Create_Event_cl():
         self.connection.commit()
         self.cursor.close()
         self.connection.close()
+        Retrieve_Events_Cl()
 
     def __init__(self, name, description):
         self.name = name

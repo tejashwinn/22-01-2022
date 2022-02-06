@@ -235,6 +235,8 @@ if __name__ == "__main__":
     ui.setupUi(MainWindow)
 
     Fetch_Classes_Cl()
+    Retrieve_Events_Cl
+
 
     # switches
     ui.actionSignUp.triggered.connect(lambda: sign_up_switch(ui))
@@ -248,6 +250,7 @@ if __name__ == "__main__":
         lambda: show_all_classes_frame(ui, "classes_owned"))
     # ui.actionClubEvents.triggered.connect(lambda: add_events(ui))
     # button actions
+    ui.actionRefresh.triggered.connect(lambda: restart(ui))
     ui.in_sign_up_button.clicked.connect(lambda: sign_up_switch(ui))
     ui.up_sign_in_button.clicked.connect(lambda: sign_in_switch(ui))
 

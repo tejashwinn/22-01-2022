@@ -9,6 +9,7 @@ class Ui_events_form(object):
         self.gridLayout = QtWidgets.QGridLayout(posts_form)
         self.gridLayout.setObjectName("gridLayout")
         self.frame_2 = QtWidgets.QFrame(posts_form)
+        self.frame_2.setGeometry(QtCore.QRect(10, 10, 541, 251))
         self.frame_2.setMinimumSize(QtCore.QSize(541, 251))
         self.frame_2.setMaximumSize(QtCore.QSize(541, 251))
         self.frame_2.setStyleSheet("#frame_2{/* Auto layout */\n"
