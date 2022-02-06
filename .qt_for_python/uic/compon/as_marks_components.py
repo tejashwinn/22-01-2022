@@ -58,24 +58,24 @@ class Indi_marks():
         self.download_file_button.setText("Download File")
         self.static_marks.setText("Marks: ")
         self.submit_file_button.setText("Add Marks")
-        self.dynamic_file_name_label.setText(self.di["as_file_name"])
+        self.dynamic_file_name_label.setText("File"+self.di["as_file_name"])
         self.marks_entry.setText(self.di["as_marks"])
         self.download_file_button.clicked.connect(lambda: self.download_file())
 
         self.submit_file_button.clicked.connect(lambda: self.submit_marks())
 
-        self.o = self.username_form
+        self.o=self.username_form
 
     def setupUi(self, Form, di):
-        self.f = Form
+        self.f=Form
         self.create_connection()
-        self.as_code = di["as_code"]
-        self.user = di["as_user"]
-        self.file_name = di["as_file_name"]
-        self.as_file_name = di["as_file_name"]
+        self.as_code=di["as_code"]
+        self.user=di["as_user"]
+        self.file_name=di["as_file_name"]
+        self.as_file_name=di["as_file_name"]
         # print(di)
-        self.di = di
-        self.username_form = QtWidgets.QFrame(self.f)
+        self.di=di
+        self.username_form=QtWidgets.QFrame(self.f)
         self.username_form.setGeometry(QtCore.QRect(10, 110, 451, 150))
         self.username_form.setMinimumSize(QtCore.QSize(0, 150))
         self.username_form.setMaximumSize(QtCore.QSize(99999, 150))
@@ -95,9 +95,9 @@ class Indi_marks():
         self.username_form.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.username_form.setFrameShadow(QtWidgets.QFrame.Raised)
         self.username_form.setObjectName("username_form")
-        self.dynamic_userr_name_label = QtWidgets.QLabel(self.username_form)
+        self.dynamic_userr_name_label=QtWidgets.QLabel(self.username_form)
         self.dynamic_userr_name_label.setGeometry(QtCore.QRect(10, 0, 431, 61))
-        font = QtGui.QFont()
+        font=QtGui.QFont()
         font.setFamily("Poppins")
         font.setPointSize(-1)
         font.setBold(False)
@@ -124,7 +124,7 @@ class Indi_marks():
                                                     "")
         self.dynamic_userr_name_label.setWordWrap(True)
         self.dynamic_userr_name_label.setObjectName("dynamic_userr_name_label")
-        self.dynamic_sub_date = QtWidgets.QLabel(self.username_form)
+        self.dynamic_sub_date=QtWidgets.QLabel(self.username_form)
         self.dynamic_sub_date.setGeometry(QtCore.QRect(10, 60, 181, 21))
         self.dynamic_sub_date.setCursor(
             QtGui.QCursor(QtCore.Qt.PointingHandCursor))
@@ -146,7 +146,7 @@ class Indi_marks():
         self.dynamic_sub_date.setAlignment(
             QtCore.Qt.AlignLeading | QtCore.Qt.AlignLeft | QtCore.Qt.AlignTop)
         self.dynamic_sub_date.setObjectName("dynamic_sub_date")
-        self.download_file_button = QtWidgets.QPushButton(self.username_form)
+        self.download_file_button=QtWidgets.QPushButton(self.username_form)
         self.download_file_button.setGeometry(QtCore.QRect(320, 110, 121, 28))
         self.download_file_button.setStyleSheet("*{\n"
                                                 "font-family: Inter;\n"
@@ -172,7 +172,7 @@ class Indi_marks():
                                                 "\n"
                                                 "")
         self.download_file_button.setObjectName("download_file_button")
-        self.static_marks = QtWidgets.QLabel(self.username_form)
+        self.static_marks=QtWidgets.QLabel(self.username_form)
         self.static_marks.setGeometry(QtCore.QRect(10, 110, 71, 30))
         self.static_marks.setStyleSheet("position: absolute;\n"
                                         "left: 20px;\n"

@@ -7,7 +7,11 @@ class Individual_Event_Button():
     def open_post(self, event):
         self.create_class_main_window = QtWidgets.QMainWindow()
         self.ui_class_create = Ui_events_form()
+     
         self.ui_class_create.setupUi(self.create_class_main_window)
+        self.ui_class_create.label_2.setText(self.name)
+        self.ui_class_create.label.setText(self.description)
+        self.ui_class_create.label_3.setText(self.date)
         self.create_class_main_window.show()
 
     def __init__(self, mainwindow, name, description, ui_te, date):
@@ -16,7 +20,7 @@ class Individual_Event_Button():
         self.description = description
         self.ui_te = ui_te
         
-        self.date= date
+        self.date = date.rsplit(":", 1)[0]
         self.child = self.return_object()
 
     def return_object(self):

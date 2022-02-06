@@ -89,13 +89,16 @@ class Individual_As_Button():
             file.write(file1)
         file = str(QtWidgets.QFileDialog.getExistingDirectory(
             self.ui_post.assign_frame, "Select Directory"))
-        import shutil
-        file += "/"+self.as_file_name
-        src_path = temp_storage
-        dst_path = file
-        shutil.move(src_path, dst_path)
-        # print(src_path, "\n", dst_path)
-        self.ui_post.dynamic_files.setText("Downloaded: "+self.as_file_name)
+        if file != "":
+
+            import shutil
+            file += "/"+self.as_file_name
+            src_path = temp_storage
+            dst_path = file
+            shutil.move(src_path, dst_path)
+            # print(src_path, "\n", dst_path)
+            self.ui_post.dynamic_files.setText(
+                "Downloaded: "+self.as_file_name)
 
     def open_post(self, event):
         with open(r'C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json') as settings_json_file:

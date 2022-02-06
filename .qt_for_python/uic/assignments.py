@@ -19,25 +19,30 @@ class Ui_Assignments(object):
             "File Name: "+self.path[0].split('/')[-1])
 
     def submit(self):
-        print(self.path)
+        # print(self.path)
         if self.path[0] == "":
             self.label.setText("No file selected")
         else:
+            
             from sql.submit_assignments import Sub_Assignment
             temp = Sub_Assignment(cur_date=self.cur_date,
                                   file_path=self.path[0], di=self.dic)
 
             if temp.valid:
+                print(1)
                 temp.submission()
                 self.submit_button_assignment.setDisabled(True)
                 self.add_file_button.setDisabled(True)
                 self.label.setText("Submitted")
+
             else:
                 if temp.errors == 'Already submitted':
                     self.submit_button_assignment.setDisabled(True)
                     self.add_file_button.setDisabled(True)
                 self.label.setText(temp.errors)
         self.label.show()
+        from sql.fetch_sub import Retrieve_Sub_Cl
+        Retrieve_Sub_Cl()
 
     def setupUi(self, Assignments, di):
         self.dic = di
@@ -312,4 +317,5 @@ class Ui_Assignments(object):
         self.dynamic_add_files.setText(_translate("Assignments", "Add Files"))
         self.add_file_button.setText(_translate("Assignments", "Add file"))
         self.dynamic_marks.setText(_translate("Assignments", "Max Marks:"))
+        self.label.show()
         self.check_date()

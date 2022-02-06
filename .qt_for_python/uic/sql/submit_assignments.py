@@ -26,6 +26,8 @@ class Sub_Assignment():
         try:
             self.connection = sqlite3.connect(self.database)
             self.cursor = self.connection.cursor()
+            self.valid = True
+
         except Error as e:
             self.valid = False
             print(e)
@@ -69,7 +71,8 @@ class Sub_Assignment():
             data = json.load(settings_json_file)
             self.as_code = str(data["as_selected"])
             self.username = str(data["log"]["username"])
-
+            self.valid = True
+            self.errors = ""
             for i in data["sub_for_selected_as"]:
                 if self.as_code == i["as_code"] and self.username == i["as_user"]:
                     self.valid = False

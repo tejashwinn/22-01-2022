@@ -30,13 +30,15 @@ class Individual_Post_Button():
             file.write(file1)
         file = str(QtWidgets.QFileDialog.getExistingDirectory(
             self.ui_post.frame_2, "Select Directory"))
-        import shutil
-        file += "/"+self.post_file_name
-        src_path = temp_storage
-        dst_path = file
-        shutil.move(src_path, dst_path)
-        # print(src_path, "\n", dst_path)
-        self.ui_post.label_2.setText("Downloaded: "+self.post_file_name)
+        if file != "":
+
+            import shutil
+            file += "/"+self.post_file_name
+            src_path = temp_storage
+            dst_path = file
+            shutil.move(src_path, dst_path)
+            # print(src_path, "\n", dst_path)
+            self.ui_post.label_2.setText("Downloaded: "+self.post_file_name)
 
     def open_post(self, event):
         with open(r'C:\Users\tejas\Desktop\22-01-22\.qt_for_python\uic\settings.json') as settings_json_file:
