@@ -39,7 +39,7 @@ class Ui_mainwindow(object):
 "")
         self.post_button.setObjectName("post_button")
         self.events_view = QtWidgets.QFrame(mainwindow)
-        self.events_view.setGeometry(QtCore.QRect(400, 160, 229, 70))
+        self.events_view.setGeometry(QtCore.QRect(510, 180, 229, 70))
         self.events_view.setMinimumSize(QtCore.QSize(229, 70))
         self.events_view.setMaximumSize(QtCore.QSize(229, 70))
         self.events_view.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
@@ -1001,6 +1001,71 @@ class Ui_mainwindow(object):
 "border:0px;")
         self.dynamic_file_name_label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
         self.dynamic_file_name_label.setObjectName("dynamic_file_name_label")
+        self.events_view_2 = QtWidgets.QFrame(mainwindow)
+        self.events_view_2.setGeometry(QtCore.QRect(830, 240, 229, 70))
+        self.events_view_2.setMinimumSize(QtCore.QSize(229, 70))
+        self.events_view_2.setMaximumSize(QtCore.QSize(229, 70))
+        self.events_view_2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.events_view_2.setStyleSheet("*{\n"
+"position: absolute;\n"
+"width: 370px;\n"
+"height: 110px;\n"
+"left: 7px;\n"
+"top: 28px;\n"
+"\n"
+"background: rgba(0, 0, 0, 0.05);\n"
+"border: 1px solid rgba(0, 0, 0, 0.3);\n"
+"box-sizing: border-box;\n"
+"border-radius: 10px}")
+        self.events_view_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.events_view_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.events_view_2.setObjectName("events_view_2")
+        self.label_8 = QtWidgets.QLabel(self.events_view_2)
+        self.label_8.setGeometry(QtCore.QRect(10, 0, 211, 41))
+        font = QtGui.QFont()
+        font.setFamily("Poppins")
+        font.setPointSize(-1)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.label_8.setFont(font)
+        self.label_8.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.label_8.setStyleSheet("position: absolute;\n"
+"left: 20px;\n"
+"right: 30px;\n"
+"top: 10px;\n"
+"bottom: 10px;\n"
+"\n"
+"font-family: Poppins;\n"
+"font-style: normal;\n"
+"font-weight: normal;\n"
+"font-size: 20px;\n"
+"line-height: 37px;\n"
+"letter-spacing: 0.05em;\n"
+"background: rgba(0, 0, 0, 0.01);\n"
+"color: #000000;\n"
+"border:0px;")
+        self.label_8.setObjectName("label_8")
+        self.label_9 = QtWidgets.QLabel(self.events_view_2)
+        self.label_9.setGeometry(QtCore.QRect(10, 40, 211, 41))
+        self.label_9.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.label_9.setStyleSheet("position: absolute;\n"
+"left: 20px;\n"
+"right: 30px;\n"
+"top: 10px;\n"
+"bottom: 10px;\n"
+"\n"
+"font-family: Poppins;\n"
+"font-style: normal;\n"
+"font-weight: normal;\n"
+"font-size: 15px;\n"
+"line-height: 37px;\n"
+"letter-spacing: 0.05em;\n"
+"border:0px;\n"
+"background: rgba(0, 0, 0, 0.01);\n"
+"color: #000000;")
+        self.label_9.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
+        self.label_9.setObjectName("label_9")
 
         self.retranslateUi(mainwindow)
         QtCore.QMetaObject.connectSlotsByName(mainwindow)
@@ -1041,4 +1106,6 @@ class Ui_mainwindow(object):
         self.static_marks.setText(_translate("mainwindow", "Marks:"))
         self.submit_file_button.setText(_translate("mainwindow", "Submit"))
         self.dynamic_file_name_label.setText(_translate("mainwindow", "File Name:"))
+        self.label_8.setText(_translate("mainwindow", "Name"))
+        self.label_9.setText(_translate("mainwindow", "Time"))
 import temp_rc

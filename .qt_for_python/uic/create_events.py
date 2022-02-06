@@ -1,7 +1,19 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
+from sql.insert_event import Create_Event_cl
 
 
 class Ui_create_event(object):
+
+    def submit(self):
+        head = self.plainTextEdit.toPlainText()
+        des = self.plainTextEdit.toPlainText()
+        if head != '' and des != '':
+            Create_Event_cl(name=head, description=des).insert()
+            self.create_post_button.setText("Posted")
+            self.create_post_button.setDisabled(True)
+
+        else:
+            self.create_post_button.setText("try again")
 
     def setupUi(self, create_event):
         create_event.setObjectName("create_event")
@@ -234,3 +246,4 @@ class Ui_create_event(object):
             _translate("create_event", "Create Post"))
         self.add_files_button_posts.hide()
         self.dynamic_file_name.hide()
+        self.create_post_button.clicked.connect(lambda: self.submit())

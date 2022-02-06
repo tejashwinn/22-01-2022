@@ -8,6 +8,7 @@ from compon.mini_components import Individual_Class_Button
 from sql.fetch_posts import Retrieve_Post_Cl
 from sql.fetch_classes_sql import Fetch_Classes_Cl
 from compon.assignment_buttons import Individual_As_Button
+from sql.fetch_events import Retrieve_Events_Cl
 
 
 def json_data():
@@ -102,6 +103,8 @@ def show_all_classes_frame(variable, te):
                     clearLayout(child.layout())
     clearLayout(variable.verticalLayout_5)
     clearLayout(variable.verticalLayout_3)
+    clearLayout(variable.verticalLayout_2)
+
     data = json_data()
     temp1 = QtWidgets.QLabel(variable.in_inner_frame)
     temp1.setGeometry(QtCore.QRect(10, 10, 441, 30))
@@ -130,7 +133,15 @@ def show_all_classes_frame(variable, te):
     spacerItem = QtWidgets.QSpacerItem(
         20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
     variable.verticalLayout_5.addItem(spacerItem)
+    from compon.individual_event import Individual_Event_Button
 
+    for i in data["events"]:
+        temp = Individual_Event_Button(
+            mainwindow=MainWindow, name=i["ev_heading"], description=i["ev_description"], ui_te=ui, date=i["ev_date"])
+        variable.verticalLayout_2.addWidget(temp.child)
+        spacerItem = QtWidgets.QSpacerItem(
+            20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+    variable.verticalLayout_2   .addItem(spacerItem)
     Retrieve_Post_Cl()
     Retrieve_As_Cl()
 
@@ -188,7 +199,7 @@ def view_assignment(variable):
 def restart(variable):
     Fetch_Classes_Cl()
     # Retrieve_Post_Cl()
-
+    Retrieve_Events_Cl()
     show_all_classes_frame(variable, "classes_joined")
     show_all_classes_frame(variable, "classes_owned")
 
@@ -205,11 +216,6 @@ def restart(variable):
     variable.class_name_frame.hide()
     variable.posts_scroll_area.hide()
 
-# def add_events(variable):
-#     create_class_main_window = QtWidgets.QMainWindow()
-#     variable.ui_class_create = Ui_create_classes_form()
-#     variable.ui_class_create.setupUi(self.create_class_main_window)
-#     variable.create_class_main_window.show()
 
 if __name__ == "__main__":
 
@@ -255,4 +261,3 @@ if __name__ == "__main__":
     MainWindow.show()
 
     sys.exit(app.exec_())
-
